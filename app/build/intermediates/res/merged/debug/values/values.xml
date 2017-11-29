@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="diet_tips">  
+	</string-array>
+    <string-array name="hother_sport">  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	<item>6</item>  
+  	</string-array>
+    <string-array name="hsport">  
+<item>420</item>  
+  	<item>400</item>  
+  	<item>360</item>  
+  	<item>300</item>  
+  	<item>300</item>  
+  	<item>273</item>  
+  	<item>225</item>  
+  	<item>224</item>
+  	<item>216</item>  
+  	<item>210</item>  
+  	<item>200</item>  
+  	<item>190</item>  
+  	<item>177</item>  
+  	<item>176</item> 
+  	<item>165</item>  
+  	<item>150</item>  
+  	<item>150</item>  
+  	<item>141</item>  
+  	<item>138</item>  
+  	<item>135</item>  
+  	<item>135</item> 
+  	<item>126</item>  
+  	<item>120</item>  
+  	<item>114</item>  
+  	<item>112</item>  
+  	<item>102</item>  
+  	<item>92</item>  
+  	<item>90</item>  
+  	<item>90</item>  
+  	<item>66</item>  
+  	<item>43</item>  
+  	<item>90</item>  
+  	<item>90</item>  
+  	<item>66</item>  
+  	<item>43</item>	
+  	</string-array>
+    <string-array name="kind">  
+  	<item>0</item>
+	<item>外食</item>
+	<item>肉鬆飯糰(1個),208</item>
+	<item>鮪魚飯糰(1個),222</item>
+	<item>火腿手捲(1個),297</item>
+	<item>鮪魚手捲(1個),337</item>
+	<item>火腿沙拉三明治(1個),210</item>
+	<item>千層鮪魚三明治(1個),320</item>
+	<item>0</item>
+	<item>熟食類</item>
+	<item>饅頭(1個),280</item>
+	<item>鮮肉包(1個),210</item>		
+	<item>茶葉蛋(1個),75</item>
+	<item>熱狗(1個),245</item>
+	<item>0</item>
+	<item>乳製品</item>
+	<item>全脂牛奶(240毫升),150</item>
+	<item>低脂牛奶(240毫升),120</item>
+	<item>脫脂牛奶(240毫升),80</item>
+	<item>0</item>
+	<item>飲料類</item>
+	<item>蕃茄汁(350ml/瓶),64</item>	
+	<item>可口可樂(350ml/1罐),178</item>
+	<item>柳橙原汁(236ml/瓶),110</item>			
+	<item>雪碧(350ml/1罐),147</item>		
+	<item>蘋果西打(350ml/1罐),147</item>
+	<item>黑松沙士(350ml/1罐),126</item>
+	<item>0</item>
+	<item>水果類</item>
+	<item>蓮霧(2-3顆),60</item>	
+	<item>奇異果(中1顆),60</item>
+	<item>香蕉(小1根),90</item>
+	<item>楊桃(小1個),60</item>
+	<item>0</item>
+	<item>五榖類</item>
+	<item>白米飯(1碗),225</item>
+	<item>意大利肉醬麵(1份),330</item>
+	<item>白吐司(1片),75</item>
+	<item>全麥吐司(1片),65</item>
+	<item>麵線(1碗),330</item>
+	<item>玉米(1碗),346</item>
+  	</string-array>
+    <string-array name="kind_sport">  
+  	<item>運動</item>  
+  	<item>健身</item>
+  	</string-array>
+    <string-array name="other_sport">  
+	<item>跪姿版伏地挺身(初階)[單位: 組]</item>
+	<item>夾肘版伏地挺身[單位: 組]</item>
+	<item>寬版伏地挺身[單位: 組]</item>
+	<item>心型伏地挺身[單位: 組]</item>
+	<item>一前一後式伏地挺身[單位: 組]</item>
+	<item>腳墊高版伏地挺身[單位: 組]</item>
+	<item>下壓式三頭訓練[單位: 組]</item>
+	<item>深蹲(初階)[單位: 組]</item>
+	<item>深蹲[單位: 組]</item>
+	<item>前後弓箭步[單位: 組]</item>
+	<item>前後跳躍弓箭步[單位: 組]</item>
+	<item>前後跳躍弓箭步(進階版)[單位: 組]</item>
+	<item>前後跳躍深蹲(進階版)[單位: 組]</item>
+	<item>窄版深蹲(進階版)[單位: 組]</item>
+	<item>階梯運動[單位: 組]</item>
+	<item>墊腳尖(小腿訓練)[單位: 組]</item>
+	<item>側面棒式稱體[單位: 組]</item>
+	<item>原地跑步稱體[單位: 組]</item>
+	<item>大字型稱體[單位: 組]</item>
+	<item>正面棒式稱體[單位: 組]</item>
+	<item>狗爬式[單位: 組]</item>
+	<item>雙腳前後擺動稱體[單位: 組]</item>
+	<item>雙腳開合稱體[單位: 組]</item>
+	<item>V-up[單位: 組]</item>
+	<item>上下擺腿[單位: 組]</item>
+	<item>交叉腿[單位: 組]</item>
+	<item>左右碰膝[單位: 組]</item>
+	<item>手碰腳踝仰臥起坐[單位: 組]</item>
+	<item>空中腳踏車[單位: 組]</item>
+  	</string-array>
+    <string-array name="sport">  
+  	<item>划艇器械</item>  
+  	<item>Spinning(地獄單車)</item>  
+  	<item>壁球</item>  
+  	<item>柔道</item>  
+  	<item>劍擊</item>  
+  	<item>游泳</item>  
+  	<item>打拳</item>  
+  	<item>跳繩</item>
+  	<item>仰臥起坐</item>  
+  	<item>足球</item>  
+  	<item>藍球</item>  
+  	<item>健身舞</item>  
+  	<item>滑雪</item>  
+  	<item>打網球</item> 
+  	<item>跑步</item>  
+  	<item>舉重</item>  
+  	<item>爬山</item>  
+  	<item>踏步器(約1050步)</item>  
+  	<item>爬樓梯</item>  
+  	<item>騎馬</item> 
+  	<item>羽毛球</item>  
+  	<item>桌球</item>  
+  	<item>有氧運動</item>  
+  	<item>乒乓球</item>  
+  	<item>快步走</item>  
+  	<item>慢跑</item>  
+  	<item>跳舞</item>  
+  	<item>普通單車</item>  
+  	<item>排球</item>  
+  	<item>保齡球</item>  
+  	<item>快步走</item>  
+  	<item>散步</item>  
+  	<item>打高爾夫球</item>    	 	  	  	  
+  	</string-array>
+    <color name="black">#000000</color>
+    <color name="darkgray">#A9A9A9</color>
+    <color name="white">#FFFFFF</color>
+    <string name="about_me">這是個步伐快速的時代，現代人常常因生活繁忙、壓力大等因素，多吃少動，不但容易造成體重過重，甚至會影響到健康。因此我們想透過此app，可以用簡易的程式輕鬆做到隨身的體重控管與運動管理，達到促進人人擁有健康體態的目的。</string>
+    <string name="app_name">Terminator</string>
+    <string name="hello">Hello World, diet</string>
+</resources>

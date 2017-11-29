@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:gravity="right"
+    android:orientation="vertical"
+    android:padding="5px" >
+
+    <EditText
+        android:id="@+id/mtitle"
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:ems="10"
+        android:hint="運動標題"
+        android:imeOptions="actionGo"
+        android:shadowColor="#ff00ff" />
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left" >
+     <Button
+        android:id="@+id/button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="選擇日期" />
+     <TextView
+        android:id="@+id/mdate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text=" 顯示日期"  />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="内容" />
+
+    <EditText
+        android:id="@+id/mcontent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="5px"
+        android:gravity="left" />
+
+</LinearLayout>

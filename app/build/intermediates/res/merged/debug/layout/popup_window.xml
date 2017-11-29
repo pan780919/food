@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  android:gravity="center_horizontal"
+  android:fadingEdge="vertical"
+  android:id="@+id/popbg"
+  >
+  	<LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:gravity="center_horizontal">
+	    <Button 
+			android:id="@+id/btnEdit" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:background="@drawable/edit"
+			android:layout_margin="10dip" />
+   
+	    <Button 
+			android:id="@+id/btnChange" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:background="@drawable/cycle"
+			android:layout_marginLeft="0dip"
+			android:layout_marginTop="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="10dip" 
+			/>
+		<Button 
+			android:id="@+id/btnClose" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="@drawable/error_blue"
+			android:layout_marginLeft="0dip"
+			android:layout_marginTop="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="10dip"
+			 />
+		 <Button 
+			android:id="@+id/btnAbout" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="@drawable/page_help"
+			android:layout_marginLeft="0dip"
+			android:layout_marginTop="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="10dip"
+			 />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.diet"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".diet"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:label="@string/app_name" android:name="dlogin"></activity>
+        <activity android:label="@string/app_name" android:name="food"></activity>
+        <activity android:label="@string/app_name" android:name="checkfood"></activity>
+        <activity android:label="@string/app_name" android:name="checkfoodhot"></activity>
+        <activity android:label="@string/app_name" android:name="main"></activity>
+        <activity android:label="@string/app_name" android:name="sport"></activity>
+        <activity android:label="@string/app_name" android:name="DiaryList"></activity>
+        <activity android:label="@string/app_name" android:name="DiaryEdit"></activity>
+        <activity android:label="@string/app_name" android:name="DiaryShow"></activity>
+        <activity android:label="@string/app_name" android:name="DiaryFoodList"></activity>
+        
+        <activity
+            android:name="WalKStepActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+        </activity>        
+        <activity
+    		android:name="Query"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+        </activity>        
+        <activity
+   			android:name="UserMgr"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+        </activity>     
+        
+         
+    </application>
+    
+    
+  	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+	
+	<uses-permission 
+     android:name="android.permission.ACCESS_COARSE_LOCATION"/> 
+	<uses-permission
+	    android:name="android.permission.ACCESS_FINE_LOCATION"/> 
+	<uses-permission 
+	 	 android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission 
+		 android:name="android.permission.ACCESS_MOCK_LOCATION"></uses-permission>     
+	<uses-permission
+	    android:name="android.permission.INTERNET"/>
+	<uses-permission
+	    android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission 
+	    android:name="android.permission.READ_PHONE_STATE" /> 
+	<uses-permission 
+	 	 android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission 
+	    android:name="android.permission.ACCESS_FINE_LOCATION" />
+</manifest> 

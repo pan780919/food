@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView    
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/sview" 
+  android:background="@drawable/myb" 
+  android:orientation="vertical" 
+  android:layout_width="fill_parent" 
+  android:layout_height="fill_parent">
+
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical" >
+
+      <TextView
+          android:id="@+id/textView1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="22dp"
+          android:text="0步"
+          android:textColor="#ff222222"
+          android:textSize="50sp" />
+
+      <TextView
+          android:id="@+id/textView2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/button1"
+          android:layout_below="@+id/button1"
+          android:layout_marginTop="29dp"
+          android:text="消耗卡路里:"
+          android:textColor="#ff222222"
+          android:textSize="22sp" />
+
+      <TextView
+          android:id="@+id/textView3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/textView2"
+          android:layout_below="@+id/textView2"
+          android:layout_marginTop="20dp"
+          android:text="公里(KM):"
+          android:textColor="#ff222222"
+          android:textSize="22sp" />
+
+      <TextView
+          android:id="@+id/k1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/textView3"
+          android:layout_alignParentRight="true"
+          android:layout_marginLeft="14dp"
+          android:layout_toRightOf="@+id/textView2"
+          android:text="0"
+          android:textColor="#ff222222"
+          android:textSize="22sp" />
+
+      <TextView
+          android:id="@+id/textView4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/textView3"
+          android:layout_below="@+id/textView3"
+          android:layout_marginTop="22dp"
+          android:text="執行時間:"
+          android:textColor="#ff222222"
+          android:textSize="22sp" />
+
+      <TextView
+          android:id="@+id/textView5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/textView3"
+          android:layout_alignBottom="@+id/textView3"
+          android:layout_toLeftOf="@+id/button6"
+          android:text="0"
+          android:textColor="#ff222222"
+          android:textSize="22sp" />
+
+      <TextView
+          android:id="@+id/textView7"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/textView4"
+          android:layout_alignBottom="@+id/textView4"
+          android:layout_alignRight="@+id/textView5"
+          android:text="0:0"
+          android:textColor="#ff222222"
+          android:textSize="22sp" />
+
+      <TextView
+          android:id="@+id/textView8"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:text="模式"
+          android:textColor="#ff222222"
+          android:textSize="25sp" />
+
+      <Button
+          android:id="@+id/button6"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentTop="true"
+          android:text="停止"
+          android:textSize="25sp" />
+	       
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView2"
+            android:layout_alignParentRight="true"
+            android:text="歸零"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:text="開始"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="26dp"
+            android:text="暫停"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView4"
+            android:layout_marginTop="46dp"
+            android:text=""
+            android:textColor="#ff222222"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="200sp"
+            android:layout_height="200sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView4"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/a1" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="GOAL" />
+
+  </RelativeLayout>
+  
+ 
+</ScrollView>
