@@ -504,7 +504,7 @@ public class main extends Activity
                 n2 = Integer.toString(sex.getSelectedItemPosition());
                 n3 = we.getText().toString();
                 n4 = he.getText().toString();
-                n5 = wa.getText().toString();
+                n5 = "28";
                 n6 = age.getText().toString();
 
                 if (n1.equals("") || n2.equals("") ||n3.equals("") ||n4.equals("") ||n5.equals("")||n6.equals(""))
@@ -526,8 +526,9 @@ public class main extends Activity
                         {
                             member sitem = new member();
                             sitem.id = cursor.getString(0);
-                            sitem.sex = cursor.getString(1);
-                            sitem.name = cursor.getString(2);
+                            sitem.name = cursor.getString(1);
+                            sitem.sex = cursor.getString(2);
+
                             sitem.weight = cursor.getString(3);
                             sitem.height = cursor.getString(4);
                             sitem.waist = cursor.getString(5);
