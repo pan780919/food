@@ -1,14 +1,14 @@
 <RelativeLayout android:id="@+id/RelativeLayout01"   
 android:layout_width="fill_parent" android:layout_height="wrap_content"  
-android:paddingBottom="2dip"  
-android:paddingLeft="12dip"  
-android:paddingRight="12dip"  
+android:paddingBottom="2dp"
+android:paddingLeft="12dp"
+android:paddingRight="12dp"
 xmlns:android="http://schemas.android.com/apk/res/android">  
 
 <TextView android:text="TextView1" 
  android:id="@+id/topTextView"  
  android:layout_width="fill_parent"  
- android:textSize="14dip"  
+ android:textSize="14dp"
  android:textColor="@android:color/black"
  android:layout_height="wrap_content"></TextView>  
 

@@ -593,16 +593,16 @@ public class WalKStepActivity extends Activity
                 if (steps > mygoal)
                 {
                 	mmode.setText("目標達成!");
-                	Uri uri = Uri.fromFile(myvoice);
-                    mMediaPlayer = MediaPlayer.create(WalKStepActivity.this, uri);
-                    mMediaPlayer.setLooping(true);
-                    mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mp) {
-                           
-                        }
-                    });
-                    mMediaPlayer.start();
+//                	Uri uri = Uri.fromFile(myvoice);
+//                    mMediaPlayer = MediaPlayer.create(WalKStepActivity.this, uri);
+////                    mMediaPlayer.setLooping(true);
+//                    mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+//                        @Override
+//                        public void onCompletion(MediaPlayer mp) {
+//
+//                        }
+//                    });
+//                    mMediaPlayer.start();
                 }
                 
                 

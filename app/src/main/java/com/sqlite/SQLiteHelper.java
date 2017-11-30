@@ -15,6 +15,7 @@ public class SQLiteHelper extends SQLiteOpenHelper
 	public static final String MYDIARY_NAME = "mydiary";
 	public static final String USER_REC_TABLE = "user_rec_table";
 	public static final String INFO_TABLE = "info_table";
+	public static final String USER_RUN_TABLE = "user_run_table";
 
 	public SQLiteHelper(Context context, String name, CursorFactory factory,
 			int version) {

@@ -9,7 +9,7 @@
     <TableRow
         android:id="@+id/widget55"
         android:layout_width="fill_parent"
-        android:layout_height="40px"
+        android:layout_height="40dp"
         android:orientation="horizontal" >
 
         <TextView
@@ -26,14 +26,14 @@
     <TableRow
         android:id="@+id/widget5"
         android:layout_width="fill_parent"
-        android:layout_height="40px"
+        android:layout_height="40dp"
         android:orientation="horizontal" >
     </TableRow>
 
     <TableRow
         android:id="@+id/widget33"
         android:layout_width="fill_parent"
-        android:layout_height="160px"
+        android:layout_height="160dp"
         android:orientation="horizontal" >
 
         
@@ -42,7 +42,7 @@
     <TableRow
         android:id="@+id/widget57"
         android:layout_width="fill_parent"
-        android:layout_height="320px"
+        android:layout_height="320dp"
         android:orientation="horizontal" >
 
         <ListView

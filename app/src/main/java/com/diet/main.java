@@ -13,30 +13,18 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.StringTokenizer;
-
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
-import org.xml.sax.InputSource;
-import org.xml.sax.XMLReader;
-
 import com.sqlite.RecWeight;
 import com.sqlite.SQLiteHelper;
 import com.sqlite.hotdiary;
 import com.sqlite.member;
+import com.weather.MainActivity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
-import android.content.Context;
+
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -235,6 +223,10 @@ public class main extends Activity
         map.put("ItemTitle", "計步器" );
         map.put("ItemText", "Pedometer");
         menu.add(map);
+        map = new HashMap<String, Object>();
+        map.put("ItemTitle", "天氣預報" );
+        map.put("ItemText", "weather");
+        menu.add(map);
 
         map = new HashMap<String, Object>();
         map.put("ItemTitle", "結束程式" );
@@ -286,6 +278,9 @@ public class main extends Activity
                         startActivity(intent);
                         break;
                     case 5:
+                        startActivity(new Intent(main.this, MainActivity.class));
+                        break;
+                    case 6:
                         finish();
                         break;
                 }
