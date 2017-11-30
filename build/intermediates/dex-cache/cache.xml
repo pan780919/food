@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.3.1_10516fd9ccbcfb5cfea4e561a160711ea341046c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_739c38fa5a7cb4ce3f8a07a8af310c2b4008948b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.3.1_a702fb163dda24c4de73fc36388798cd2d44311c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.3.1_75b0625dbcca4751c3dbb8122e28e1ec4ada99da.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_df7a7edfc5c9a5532712594c9d0e9e12576e1b94.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/gson-2.7_199b183e5b57a5aee312ead864e941e0acfa7a61.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.3.1_8ba436ccd8c33fa7b6ddde9c66633ee54c4faea3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.3.1_25cea9d236fba3ca14f42b4fccea3ff793386f2f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support.constraint-constraint-layout-1.0.2_5b02938954365977cc37c463b6b598a40d336fd3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.3.1_1458f63ac07a0ab5c1b14cd52dac0681d734ac62.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.3.1_d739a8b251a6860d920e7e6bbb5e91c7008a7855.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/support-annotations-25.3.1_eeae65129188daeb8cf001ee795a527a58ba916e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.3.1_5d483e8154c4b8dc80679905fddc8067a41bfdef.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.3.1_e88e2e59dfdba512def28c6e6a00d2a850ab15e6.jar" />
+    </item>
+
+</items>
