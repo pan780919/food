@@ -1,159 +1,159 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:2:1-68:12
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:2:1-68:12
 	package
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:3:7-25
-		INJECTED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:3:7-25
+		INJECTED from /Users/jackpan/food/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jackpan/food/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:5:7-32
-		INJECTED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:5:7-32
+		INJECTED from /Users/jackpan/food/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jackpan/food/app/src/main/AndroidManifest.xml
 	android:versionCode
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:4:7-30
-		INJECTED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:4:7-30
+		INJECTED from /Users/jackpan/food/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jackpan/food/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:6:5-43:19
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:6:5-43:19
 	android:label
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:6:48-80
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:6:48-80
 	android:icon
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:6:18-47
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:6:18-47
 activity#com.diet.diet
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:7:9-13:20
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:7:9-13:20
 	android:label
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:8:19-51
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:8:19-51
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:7:19-39
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:7:19-39
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:9:13-12:29
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:9:13-12:29
 action#android.intent.action.MAIN
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:10:17-69
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:10:17-69
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:10:25-66
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:10:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:11:17-77
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:11:17-77
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:11:27-74
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:11:27-74
 activity#com.diet.dlogin
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:15:9-85
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:15:9-85
 	android:label
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:15:19-51
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:15:19-51
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:15:52-73
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:15:52-73
 activity#com.diet.food
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:16:9-83
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:16:9-83
 	android:label
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:16:19-51
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:16:19-51
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:16:52-71
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:16:52-71
 activity#com.diet.checkfood
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:17:9-88
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:17:9-88
 	android:label
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:17:19-51
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:17:19-51
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:17:52-76
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:17:52-76
 activity#com.diet.checkfoodhot
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:18:9-91
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:18:9-91
 	android:label
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:18:19-51
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:18:19-51
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:18:52-79
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:18:52-79
 activity#com.diet.main
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:19:9-83
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:19:9-83
 	android:label
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:19:19-51
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:19:19-51
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:19:52-71
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:19:52-71
 activity#com.diet.sport
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:20:9-84
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:20:9-84
 	android:label
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:20:19-51
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:20:19-51
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:20:52-72
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:20:52-72
 activity#com.diet.DiaryList
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:21:9-88
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:21:9-88
 	android:label
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:21:19-51
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:21:19-51
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:21:52-76
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:21:52-76
 activity#com.diet.DiaryEdit
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:22:9-88
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:22:9-88
 	android:label
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:22:19-51
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:22:19-51
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:22:52-76
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:22:52-76
 activity#com.diet.DiaryShow
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:23:9-88
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:23:9-88
 	android:label
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:23:19-51
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:23:19-51
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:23:52-76
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:23:52-76
 activity#com.diet.DiaryFoodList
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:24:9-92
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:24:9-92
 	android:label
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:24:19-51
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:24:19-51
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:24:52-80
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:24:52-80
 activity#com.diet.WalKStepActivity
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:26:9-30:20
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:26:9-30:20
 	android:screenOrientation
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:28:13-49
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:28:13-49
 	android:label
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:29:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:29:13-45
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:27:13-44
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:27:13-44
 activity#com.diet.Query
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:31:9-35:20
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:31:9-35:20
 	android:screenOrientation
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:33:13-49
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:33:13-49
 	android:label
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:34:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:34:13-45
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:32:7-27
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:32:7-27
 activity#com.diet.UserMgr
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:36:9-40:20
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:36:9-40:20
 	android:screenOrientation
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:38:13-49
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:38:13-49
 	android:label
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:39:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:39:13-45
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:37:7-29
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:37:7-29
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:46:4-94
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:46:4-94
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:46:21-75
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:46:21-75
 uses-permission#android.permission.INTERNET
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:47:2-80
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:47:2-80
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:47:19-61
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:47:19-61
 uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:48:2-97
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:48:2-97
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:48:19-78
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:48:19-78
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:50:2-51:64
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:50:2-51:64
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:51:6-62
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:51:6-62
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:54:2-55:62
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:54:2-55:62
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:55:5-59
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:55:5-59
 uses-permission#android.permission.ACCESS_MOCK_LOCATION
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:56:2-57:77
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:56:2-57:77
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:57:4-58
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:57:4-58
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:60:2-61:64
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:60:2-61:64
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:61:6-62
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:61:6-62
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:62:2-63:59
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:62:2-63:59
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:63:6-56
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:63:6-56
 uses-permission#android.permission.WRITE_SETTINGS
-ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:64:2-65:56
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:64:2-65:56
 	android:name
-		ADDED from /Users/jackpan/Downloads/fappApp/app/src/main/AndroidManifest.xml:65:5-53
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:65:5-53

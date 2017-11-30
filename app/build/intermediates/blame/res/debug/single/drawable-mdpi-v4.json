@@ -4,6 +4,10 @@
         "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/drawable-mdpi/icon.jpg"
     },
     {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/icon.jpg",
+        "source": "/Users/jackpan/food/app/src/main/res/drawable-mdpi/icon.jpg"
+    },
+    {
         "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/icon.jpg",
         "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/drawable-mdpi/icon.jpg"
     }

@@ -1,5 +1,13 @@
 [
     {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/main2.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/main2.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/diaryedit.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/diaryedit.xml"
+    },
+    {
         "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/dlayout.xml",
         "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/dlayout.xml"
     },
@@ -8,44 +16,28 @@
         "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/diaryedit.xml"
     },
     {
-        "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/sport.xml",
-        "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/sport.xml"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/checkfood.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/checkfood.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/dlogin.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/dlogin.xml"
     },
     {
         "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/checkfood.xml",
         "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/checkfood.xml"
     },
     {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/food.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/food.xml"
+    },
+    {
         "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/diary_list.xml",
         "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/diary_list.xml"
     },
     {
-        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/showdiary.xml",
-        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/showdiary.xml"
-    },
-    {
         "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/splash.xml",
         "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/splash.xml"
-    },
-    {
-        "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/main.xml",
-        "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/main.xml"
-    },
-    {
-        "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/popup_window.xml",
-        "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/popup_window.xml"
-    },
-    {
-        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/main.xml",
-        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/main.xml"
-    },
-    {
-        "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/showdiary.xml",
-        "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/showdiary.xml"
-    },
-    {
-        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/storelist.xml",
-        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/storelist.xml"
     },
     {
         "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/food.xml",
@@ -56,36 +48,20 @@
         "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/diaryedit.xml"
     },
     {
-        "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/food.xml",
-        "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/food.xml"
-    },
-    {
-        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/dlogin.xml",
-        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/dlogin.xml"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/popup_window.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/popup_window.xml"
     },
     {
         "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/storelist.xml",
         "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/storelist.xml"
     },
     {
-        "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/no_listview_style.xml",
-        "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/no_listview_style.xml"
-    },
-    {
         "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/main2.xml",
         "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/main2.xml"
     },
     {
-        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/diary_list.xml",
-        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/diary_list.xml"
-    },
-    {
         "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/checkhotfood.xml",
         "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/checkhotfood.xml"
-    },
-    {
-        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/sport.xml",
-        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/sport.xml"
     },
     {
         "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/popup_window.xml",
@@ -96,20 +72,12 @@
         "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/main2.xml"
     },
     {
-        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/diet.xml",
-        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/diet.xml"
-    },
-    {
-        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/dlayout.xml",
-        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/dlayout.xml"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/storelist.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/storelist.xml"
     },
     {
         "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/checkhotfood.xml",
         "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/checkhotfood.xml"
-    },
-    {
-        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/splash.xml",
-        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/splash.xml"
     },
     {
         "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/no_listview_style.xml",
@@ -122,6 +90,102 @@
     {
         "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/checkfood.xml",
         "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/checkfood.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/splash.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/splash.xml"
+    },
+    {
+        "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/sport.xml",
+        "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/sport.xml"
+    },
+    {
+        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/showdiary.xml",
+        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/showdiary.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/checkhotfood.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/checkhotfood.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/dlayout.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/dlayout.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/main.xml"
+    },
+    {
+        "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/main.xml"
+    },
+    {
+        "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/popup_window.xml",
+        "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/popup_window.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/showdiary.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/showdiary.xml"
+    },
+    {
+        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/main.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/diet.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/diet.xml"
+    },
+    {
+        "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/showdiary.xml",
+        "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/showdiary.xml"
+    },
+    {
+        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/storelist.xml",
+        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/storelist.xml"
+    },
+    {
+        "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/food.xml",
+        "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/food.xml"
+    },
+    {
+        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/dlogin.xml",
+        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/dlogin.xml"
+    },
+    {
+        "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/no_listview_style.xml",
+        "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/layout/no_listview_style.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/diary_list.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/diary_list.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/no_listview_style.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/no_listview_style.xml"
+    },
+    {
+        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/diary_list.xml",
+        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/diary_list.xml"
+    },
+    {
+        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/sport.xml",
+        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/sport.xml"
+    },
+    {
+        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/diet.xml",
+        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/diet.xml"
+    },
+    {
+        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/dlayout.xml",
+        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/dlayout.xml"
+    },
+    {
+        "merged": "/Users/jackpan/Downloads/fappApp/app/build/intermediates/res/merged/debug/layout/splash.xml",
+        "source": "/Users/jackpan/Downloads/fappApp/app/src/main/res/layout/splash.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/sport.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/sport.xml"
     },
     {
         "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/layout/dlogin.xml",

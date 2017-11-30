@@ -166,6 +166,7 @@ public class sport extends Activity implements OnClickListener
 
 	}
 
+	private static final String TAG = "sport";
 	public void onClick(View v)
 	{
 		switch (v.getId()) {
@@ -231,7 +232,7 @@ public class sport extends Activity implements OnClickListener
 
 												//顯示用
 												listarray.add(item.foodname.get(i) + "(" + item.hot.get(i) + ")");
-
+												Log.d(TAG, "onClick: "+item.foodname.get(i) + "(" + item.hot.get(i) + ")");
 												//計算熱量
 												try
 												{
@@ -253,6 +254,7 @@ public class sport extends Activity implements OnClickListener
 											{
 												listv = listv + listarray.get(j) + "\n";
 											}
+											Log.d(TAG, "onClick: "+listv);
 											showlist.setText(listv);
 										}
 									});

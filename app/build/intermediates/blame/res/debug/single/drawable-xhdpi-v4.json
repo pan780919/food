@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/icon.jpg",
+        "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/icon.jpg"
+    },
+    {
         "merged": "/Users/shulong/Desktop/fappApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/icon.jpg",
         "source": "/Users/shulong/Desktop/fappApp/app/src/main/res/drawable-xhdpi/icon.jpg"
     },
