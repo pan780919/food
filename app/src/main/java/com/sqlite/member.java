@@ -11,13 +11,13 @@ public class member
 	public static final String AGE = "age";
 	public static final String RDATE = "date";
   
-	public String id;
-	public String sex;
-	public String name;
-	public String weight;
- 	public String height;
-	public String waist;	
-	public String age;	
-	public String rdate;
+	public String id="";
+	public String sex="";
+	public String name ="";
+	public String weight="";
+ 	public String height="";
+	public String waist="";
+	public String age="";
+	public String rdate="";
  
 }

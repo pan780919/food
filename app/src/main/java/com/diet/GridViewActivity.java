@@ -50,6 +50,7 @@ public class GridViewActivity extends AppCompatActivity {
             {
                 Log.d(TAG, "onItemClick: "+ "" + position);
                 MySharedPrefernces.saveUserId(mContext,position);
+                GridViewActivity.this.finish();
             }
         });
     }

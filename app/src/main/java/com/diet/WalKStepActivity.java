@@ -164,7 +164,12 @@ public class WalKStepActivity extends Activity
   File myvoice;
   
   int mygoal;
-  
+    private int[] image = {
+            R.drawable.a1, R.drawable.a2, R.drawable.a3,
+            R.drawable.a4, R.drawable.a5, R.drawable.a6,
+            R.drawable.a7, R.drawable.a8,R.drawable.a9,
+            R.drawable.a10,R.drawable.a11,R.drawable.a12
+    };
   @Override 
   protected void onCreate(Bundle icicle) 
   { 
@@ -206,13 +211,10 @@ public class WalKStepActivity extends Activity
     
     iv = (ImageView) findViewById(R.id.imageView1);
     
-    settings = getSharedPreferences(mydata,0);
-    int imageid = settings.getInt(nameField, 0);
-    
-    if (imageid != 0)
-    {
-    	iv.setImageResource(imageid);
-    }
+
+
+    int imageid = MySharedPrefernces.getUserId(WalKStepActivity.this);
+      iv.setImageResource(image[imageid]);
     
     tpause = (Button)findViewById(R.id.button1);
     treset = (Button)findViewById(R.id.button2);
