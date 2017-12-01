@@ -114,23 +114,26 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
 
                 break;
             case R.id.button3:
-                final EditText editText = new EditText(this);
-                new AlertDialog.Builder(this)
-                        .setView(editText)
-                        .setTitle("忘記密碼")
-                        .setMessage("請輸入當初設定的email帳號")
-                        .setPositiveButton("送出", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                String emailAddress = editText.getText().toString().trim();
-                                if (emailAddress.equals("")) {
-                                    Toast.makeText(LoginActivity.this, "請勿輸入空白", Toast.LENGTH_SHORT).show();
-                                    return;
-                                }
-                                mfiebaselibsClass.sendPasswordResetEmail(emailAddress);
-                                dialogInterface.dismiss();
-                            }
-                        }).show();
+
+                startActivity(new Intent(LoginActivity.this,sport.class));
+                this.finish();
+//                final EditText editText = new EditText(this);
+//                new AlertDialog.Builder(this)
+//                        .setView(editText)
+//                        .setTitle("忘記密碼")
+//                        .setMessage("請輸入當初設定的email帳號")
+//                        .setPositiveButton("送出", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialogInterface, int i) {
+//                                String emailAddress = editText.getText().toString().trim();
+//                                if (emailAddress.equals("")) {
+//                                    Toast.makeText(LoginActivity.this, "請勿輸入空白", Toast.LENGTH_SHORT).show();
+//                                    return;
+//                                }
+//                                mfiebaselibsClass.sendPasswordResetEmail(emailAddress);
+//                                dialogInterface.dismiss();
+//                            }
+//                        }).show();
 
 
                 break;

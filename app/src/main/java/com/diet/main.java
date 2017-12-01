@@ -482,7 +482,7 @@ public class main extends Activity
         ll.addView(he);
 
         tage = new TextView(this);
-        tage.setText("年齡: ");
+        tage.setText("生日: ");
         age = new EditText(this);
         age.setText("");
         ll.addView(tage);

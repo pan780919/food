@@ -662,7 +662,7 @@ public class DateTask extends TimerTask {
     ll.addView(sname);
 
     TextView tlogin = new TextView(this);
-    tlogin.setText("年齡: ");
+    tlogin.setText("生日: ");
     s1 = new EditText(this);
     s1.setInputType(InputType.TYPE_CLASS_NUMBER);
     s1.setText("");
