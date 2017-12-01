@@ -443,7 +443,7 @@ public class main extends Activity
     {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
-        alert.setTitle("新增姓名");
+        alert.setTitle("個人資料設定");
         alert.setMessage("請輸入帳號 和 密碼");
 
         ScrollView sv = new ScrollView(this);
@@ -616,7 +616,7 @@ public class main extends Activity
         ll.addView(he);
 
         tage = new TextView(this);
-        tage.setText("年齡: ");
+        tage.setText("生日: ");
         age = new EditText(this);
         age.setText(memberlist.get(selector).age);
         ll.addView(tage);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hello">Hello World, diet</string>
-    <string name="app_name">Terminator</string>
+    <string name="app_name">Chu Health</string>
     <string name="about_me">這是個步伐快速的時代，現代人常常因生活繁忙、壓力大等因素，多吃少動，不但容易造成體重過重，甚至會影響到健康。因此我們想透過此app，可以用簡易的程式輕鬆做到隨身的體重控管與運動管理，達到促進人人擁有健康體態的目的。</string>
     <color name="white">#FFFFFF</color>    
 	<color name="black">#000000</color>  
