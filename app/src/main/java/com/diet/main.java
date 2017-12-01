@@ -631,7 +631,7 @@ public class main extends Activity
                 n2 = Integer.toString(sex.getSelectedItemPosition());
                 n3 = we.getText().toString();
                 n4 = he.getText().toString();
-                n5 = wa.getText().toString();
+                n5 = "28";
                 n6 = age.getText().toString();
 
                 Log.i("TAG", "n2: " + n2);
