@@ -194,71 +194,71 @@ public class food extends Activity implements OnClickListener
 						ll.addView(et[i]);
 					}
 
-					//顯示出來Dialog
-					AlertDialog.Builder builder = new AlertDialog.Builder(this)
-							.setTitle("請選擇")
-							.setMessage("")
-							.setView(sv)
-							.setPositiveButton("Ok",
-									new DialogInterface.OnClickListener() {
-										public void onClick(DialogInterface dialog, int which)
-										{
-											//用迴圈把所有使用者輸入的東西整理出來: 食物, 依量來計算總熱量
-											int total = 0;
-											for(int i = 0; i < item.foodname.size(); i++)
-											{
-												//若是0代表food沒吃
-												if (et[i].getText().toString().equals("0") || et[i].getText().toString().equals("")) continue;
-
-												//顯示用
-												listarray.add(item.foodname.get(i) + "(" + item.hot.get(i) + ")");
-
-												//計算熱量
-												try
-												{
-													total = total + Integer.parseInt(et[i].getText().toString()) * item.hot.get(i);
-
-												}
-												catch (Exception x)
-												{
-													x.printStackTrace();
-												}
-											}
-
-											for (int i=0; i<namelist.size(); i++)
-											{
-												listarray.add(namelist.get(i) + "(" + unitlist.get(i) + "x" + numlist.get(i) + ")");
-
-												//計算熱量
-												try
-												{
-													total = total + Integer.parseInt(unitlist.get(i)) * Integer.parseInt(numlist.get(i));
-
-												}
-												catch (Exception x)
-												{
-													x.printStackTrace();
-												}
-											}
-
-											//計算總熱量
-											hot += total;
-
-											//把所有顯示用的整理出來
-											listv = "";
-											for (int j=0; j<listarray.size(); j++)
-											{
-												listv = listv + listarray.get(j) + "\n";
-											}
-											showlist.setText(listv);
-										}
-									});
-
-					builder.show();
+//					//顯示出來Dialog
+//					AlertDialog.Builder builder = new AlertDialog.Builder(this)
+//							.setTitle("請選擇")
+//							.setMessage("")
+//							.setView(sv)
+//							.setPositiveButton("Ok",
+//									new DialogInterface.OnClickListener() {
+//										public void onClick(DialogInterface dialog, int which)
+//										{
+//											//用迴圈把所有使用者輸入的東西整理出來: 食物, 依量來計算總熱量
+//											int total = 0;
+//											for(int i = 0; i < item.foodname.size(); i++)
+//											{
+//												//若是0代表food沒吃
+//												if (et[i].getText().toString().equals("0") || et[i].getText().toString().equals("")) continue;
+//
+//												//顯示用
+//												listarray.add(item.foodname.get(i) + "(" + item.hot.get(i) + ")");
+//
+//												//計算熱量
+//												try
+//												{
+//													total = total + Integer.parseInt(et[i].getText().toString()) * item.hot.get(i);
+//
+//												}
+//												catch (Exception x)
+//												{
+//													x.printStackTrace();
+//												}
+//											}
+//
+//											for (int i=0; i<namelist.size(); i++)
+//											{
+//												listarray.add(namelist.get(i) + "(" + unitlist.get(i) + "x" + numlist.get(i) + ")");
+//
+//												//計算熱量
+//												try
+//												{
+//													total = total + Integer.parseInt(unitlist.get(i)) * Integer.parseInt(numlist.get(i));
+//
+//												}
+//												catch (Exception x)
+//												{
+//													x.printStackTrace();
+//												}
+//											}
+//
+//											//計算總熱量
+//											hot += total;
+//
+//											//把所有顯示用的整理出來
+//											listv = "";
+//											for (int j=0; j<listarray.size(); j++)
+//											{
+//												listv = listv + listarray.get(j) + "\n";
+//											}
+//											showlist.setText(listv);
+//										}
+//									});
+//
+//					builder.show();
 
 
 				}
-
+				input();
 				//若找不到類別, 就返回
 				//if (msg == null)  return;
 

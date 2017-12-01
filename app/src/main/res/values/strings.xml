@@ -10,45 +10,45 @@
 	<string-array name="kind">
 		<item>0</item>
 		<item>外食</item>
-		<item>肉鬆飯糰(1個),208</item>
-		<item>鮪魚飯糰(1個),222</item>
-		<item>火腿手捲(1個),297</item>
-		<item>鮪魚手捲(1個),337</item>
-		<item>火腿沙拉三明治(1個),210</item>
-		<item>千層鮪魚三明治(1個),320</item>
+		<item>肉鬆飯糰,208</item>
+		<item>鮪魚飯糰,222</item>
+		<item>火腿手捲,297</item>
+		<item>鮪魚手捲,337</item>
+		<item>火腿沙拉三明治,210</item>
+		<item>千層鮪魚三明治,320</item>
 		<item>0</item>
 		<item>熟食類</item>
-		<item>饅頭(1個),280</item>
-		<item>鮮肉包(1個),210</item>
-		<item>茶葉蛋(1個),75</item>
-		<item>熱狗(1個),245</item>
+		<item>饅頭,280</item>
+		<item>鮮肉包,210</item>
+		<item>茶葉蛋,75</item>
+		<item>熱狗,245</item>
 		<item>0</item>
 		<item>乳製品</item>
-		<item>全脂牛奶(240毫升),150</item>
-		<item>低脂牛奶(240毫升),120</item>
-		<item>脫脂牛奶(240毫升),80</item>
+		<item>全脂牛奶,150</item>
+		<item>低脂牛奶,120</item>
+		<item>脫脂牛奶,80</item>
 		<item>0</item>
 		<item>飲料類</item>
-		<item>蕃茄汁(350ml/瓶),64</item>
-		<item>可口可樂(350ml/1罐),178</item>
-		<item>柳橙原汁(236ml/瓶),110</item>
-		<item>雪碧(350ml/1罐),147</item>
-		<item>蘋果西打(350ml/1罐),147</item>
-		<item>黑松沙士(350ml/1罐),126</item>
+		<item>蕃茄汁,64</item>
+		<item>可口可樂,178</item>
+		<item>柳橙原汁,110</item>
+		<item>雪碧,147</item>
+		<item>蘋果西打,147</item>
+		<item>黑松沙士,126</item>
 		<item>0</item>
 		<item>水果類</item>
-		<item>蓮霧(2-3顆),60</item>
-		<item>奇異果(中1顆),60</item>
-		<item>香蕉(小1根),90</item>
-		<item>楊桃(小1個),60</item>
+		<item>蓮霧,60</item>
+		<item>奇異果,60</item>
+		<item>香蕉,90</item>
+		<item>楊桃,60</item>
 		<item>0</item>
 		<item>五榖類</item>
-		<item>白米飯(1碗),225</item>
-		<item>意大利肉醬麵(1份),330</item>
-		<item>白吐司(1片),75</item>
-		<item>全麥吐司(1片),65</item>
-		<item>麵線(1碗),330</item>
-		<item>玉米(1碗),346</item>
+		<item>白米飯,225</item>
+		<item>意大利肉醬麵,330</item>
+		<item>白吐司,75</item>
+		<item>全麥吐司,65</item>
+		<item>麵線,330</item>
+		<item>玉米,346</item>
 	</string-array>
 
 

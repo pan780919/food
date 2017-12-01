@@ -231,8 +231,8 @@ public class sport extends Activity implements OnClickListener
 												if (et[i].getText().toString().equals("0") || et[i].getText().toString().equals("")) continue;
 
 												//顯示用
-												listarray.add(item.foodname.get(i) + "(" + item.hot.get(i) + ")");
-												Log.d(TAG, "onClick: "+item.foodname.get(i) + "(" + item.hot.get(i) + ")");
+												listarray.add(et[i].getText().toString()+"份"+item.foodname.get(i) + "(" + item.hot.get(i) *Integer.parseInt(et[i].getText().toString())+ "卡"+")");
+												Log.d(TAG, "onClick:"+et[i].getText().toString()+"份"+item.foodname.get(i) + "(" + item.hot.get(i) + ")");
 												//計算熱量
 												try
 												{
