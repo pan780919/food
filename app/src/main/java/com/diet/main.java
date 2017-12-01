@@ -229,6 +229,11 @@ public class main extends Activity
         menu.add(map);
 
         map = new HashMap<String, Object>();
+        map.put("ItemTitle", "問與答" );
+        map.put("ItemText", "QANDA");
+        menu.add(map);
+
+        map = new HashMap<String, Object>();
         map.put("ItemTitle", "結束程式" );
         map.put("ItemText", "login out");
         menu.add(map);
@@ -280,6 +285,9 @@ public class main extends Activity
                         startActivity(new Intent(main.this, MainActivity.class));
                         break;
                     case 6:
+                        startActivity(new Intent(main.this,QAActivity.class));
+                        break;
+                    case 7:
                         finish();
                         break;
                 }

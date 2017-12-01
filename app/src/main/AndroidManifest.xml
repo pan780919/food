@@ -87,7 +87,10 @@
             android:name=".GridViewActivity"
             android:label="@string/title_activity_grid_view"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-
+        <activity
+            android:name=".QAActivity"
+            android:label="@string/title_activity_grid_view"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
 
