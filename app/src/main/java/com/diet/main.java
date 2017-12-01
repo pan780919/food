@@ -254,8 +254,7 @@ public class main extends Activity
                 {
                     case 0:
                         intent = new Intent();
-                        intent.setClass(main.this, food.class);
-
+                        intent.setClass(main.this, GridViewActivity.class);
                         startActivity(intent);
                         break;
                     case 1:
