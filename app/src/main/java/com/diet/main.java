@@ -443,8 +443,7 @@ public class main extends Activity
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
         alert.setTitle("個人資料設定");
-        alert.setMessage("請輸入帳號 和 密碼");
-
+//        alert.setMessage("請輸入帳號 和 密碼");
         ScrollView sv = new ScrollView(this);
         LinearLayout ll = new LinearLayout(this);
         ll.setOrientation(LinearLayout.VERTICAL);
