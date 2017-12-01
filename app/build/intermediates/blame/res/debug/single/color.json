@@ -32,12 +32,12 @@
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-share/4.28.0/res/color/com_facebook_send_button_text_color.xml"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/color/abc_primary_text_material_light.xml"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/color/design_error.xml",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/res/color/design_error.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/color/abc_primary_text_material_light.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
@@ -96,16 +96,16 @@
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/color/abc_tint_btn_checkable.xml"
     },
     {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/color/wallet_secondary_text_holo_dark.xml",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/10.0.1/res/color/wallet_secondary_text_holo_dark.xml"
+    },
+    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/color/abc_btn_colored_text_material.xml",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/color/abc_btn_colored_text_material.xml"
-    },
-    {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/color/wallet_secondary_text_holo_dark.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/10.0.1/res/color/wallet_secondary_text_holo_dark.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/color/com_facebook_button_text_color.xml",

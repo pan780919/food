@@ -1362,6 +1362,7 @@
     <string name="debug_menu_title">Select a Debug Mode</string>
     <string name="debug_menu_troubleshooting">Troubleshooting</string>
     <string name="decline">Decline</string>
+    <string name="default_web_client_id" translatable="false">384839578977-r0jmoq50cjgmmdjf75s232vvpc3v800n.apps.googleusercontent.com</string>
     <string name="exo_controls_fastforward_description">Fast forward</string>
     <string name="exo_controls_next_description">Next track</string>
     <string name="exo_controls_pause_description">Pause</string>
@@ -1369,6 +1370,12 @@
     <string name="exo_controls_previous_description">Previous track</string>
     <string name="exo_controls_rewind_description">Rewind</string>
     <string name="exo_controls_stop_description">Stop</string>
+    <string name="firebase_database_url" translatable="false">https://food-4997e.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">384839578977</string>
+    <string name="google_api_key" translatable="false">AIzaSyAgFYFkJ229KDH5kaUSYoiQtwDA9cqKpHg</string>
+    <string name="google_app_id" translatable="false">1:384839578977:android:b7127f5d3ded918e</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAgFYFkJ229KDH5kaUSYoiQtwDA9cqKpHg</string>
+    <string name="google_storage_bucket" translatable="false">food-4997e.appspot.com</string>
     <string name="hello">Hello World, diet</string>
     <string name="messenger_send_button_text">Send</string>
     <string name="mr_button_content_description">Cast button</string>

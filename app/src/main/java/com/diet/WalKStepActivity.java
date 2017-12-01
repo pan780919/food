@@ -213,7 +213,7 @@ public class WalKStepActivity extends Activity
     
 
 
-    int imageid = MySharedPrefernces.getUserId(WalKStepActivity.this);
+    int imageid = MySharedPrefernces.getId(WalKStepActivity.this);
       iv.setImageResource(image[imageid]);
     
     tpause = (Button)findViewById(R.id.button1);

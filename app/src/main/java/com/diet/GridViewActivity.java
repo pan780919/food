@@ -49,7 +49,7 @@ public class GridViewActivity extends AppCompatActivity {
             public void onItemClick(AdapterView parent, View v, int position, long id)
             {
                 Log.d(TAG, "onItemClick: "+ "" + position);
-                MySharedPrefernces.saveUserId(mContext,position);
+                MySharedPrefernces.saveId(mContext,position);
                 GridViewActivity.this.finish();
             }
         });

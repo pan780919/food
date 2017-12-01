@@ -12,20 +12,20 @@
         "source": "/Users/jackpan/food/app/src/main/res/drawable-hdpi/success.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-hdpi/write.png",
-        "source": "/Users/jackpan/food/app/src/main/res/drawable-hdpi/write.png"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-hdpi/back.png",
         "source": "/Users/jackpan/food/app/src/main/res/drawable-hdpi/back.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-hdpi/day.png",
-        "source": "/Users/jackpan/food/app/src/main/res/drawable-hdpi/day.png"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-hdpi/write.png",
+        "source": "/Users/jackpan/food/app/src/main/res/drawable-hdpi/write.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-hdpi/edit.png",
         "source": "/Users/jackpan/food/app/src/main/res/drawable-hdpi/edit.png"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-hdpi/day.png",
+        "source": "/Users/jackpan/food/app/src/main/res/drawable-hdpi/day.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-hdpi/sava.png",
@@ -40,12 +40,12 @@
         "source": "/Users/jackpan/food/app/src/main/res/drawable-hdpi/unrent.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-hdpi/exec.png",
-        "source": "/Users/jackpan/food/app/src/main/res/drawable-hdpi/exec.png"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-hdpi/login_input.9.png",
         "source": "/Users/jackpan/food/app/src/main/res/drawable-hdpi/login_input.9.png"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-hdpi/exec.png",
+        "source": "/Users/jackpan/food/app/src/main/res/drawable-hdpi/exec.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-hdpi/cycle.png",
