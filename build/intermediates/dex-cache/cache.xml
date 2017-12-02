@@ -3,6 +3,15 @@
 
     <item
         is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f3e51e9c5233b8897f61e08a6a27bc36283c2724">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-places-10.0.1_2c2188cd3172638ea0a759f4d2671f52f2971cc8.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -12,102 +21,120 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/jackpan/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_739c38fa5a7cb4ce3f8a07a8af310c2b4008948b.jar" />
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-10.0.1_5fe0e379bd97021610edf933f05ad91121eb2aeb.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/jackpan/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/transition/25.3.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
-        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_df7a7edfc5c9a5532712594c9d0e9e12576e1b94.jar" />
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.3.1_f7505ec43c27437ebfb7888897e7c3a2465a52e2.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/jars/classes.jar"
+        jar="/Users/jackpan/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-android/2.3.1/be29b24233711c419ce935aa0a1b12ebc49d1c9a/firebase-client-android-2.3.1.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.3.1_25cea9d236fba3ca14f42b4fccea3ff793386f2f.jar" />
+        sha1="be29b24233711c419ce935aa0a1b12ebc49d1c9a">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/firebase-client-android-2.3.1_2a2256cefcfc9c644c32a5e6a86294d5eae15419.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.2/jars/classes.jar"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.3.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
-        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support.constraint-constraint-layout-1.0.2_5b02938954365977cc37c463b6b598a40d336fd3.jar" />
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.3.1_d96361558561cba7390c32e326b8433abd3bfdff.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/jars/classes.jar"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.3.1_d739a8b251a6860d920e7e6bbb5e91c7008a7855.jar" />
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-10.0.1_009ed96e8731a067826e7b6aee2f166d524439aa.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/jars/classes.jar"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.3.1_5d483e8154c4b8dc80679905fddc8067a41bfdef.jar" />
+        sha1="1e11c68fec92a17c84dd8d1dd80e74c4e67b12e2">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-games-10.0.1_aa54175ddcde01e764b7587653d6331f3828b8ac.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/jars/classes.jar"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.3.1_a702fb163dda24c4de73fc36388798cd2d44311c.jar" />
+        sha1="c6e1f361e9d61aece9dac39b77fcc98a337a144d">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-nearby-10.0.1_ed5d4e0849eee2eb5766479ec6d6ea1f28a72eca.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/jars/classes.jar"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.3.1_75b0625dbcca4751c3dbb8122e28e1ec4ada99da.jar" />
+        sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-connection-10.0.1_a7fe8f8736b1f13d20214c2ee1828bcc347ec926.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/jackpan/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jar="/Users/jackpan/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
-        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/gson-2.7_199b183e5b57a5aee312ead864e941e0acfa7a61.jar" />
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_0a093deaaa72507ca79ffdf09f1f5e3994ca6a4b.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/jars/classes.jar"
+        jar="/Users/jackpan/food/app/libs/mFirebaseLibs.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.3.1_8ba436ccd8c33fa7b6ddde9c66633ee54c4faea3.jar" />
+        sha1="be44477387c16a9ec6a70f5ae3ae082a3bf5dc7d">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/mFirebaseLibs_a6f03b1165e097b83f8228a990f2fcd953bf957e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/jars/classes.jar"
+        jar="/Users/jackpan/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-jvm/2.3.1/4d53b7d6983247af02b8fe7e4228fff555a5e828/firebase-client-jvm-2.3.1.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.3.1_1458f63ac07a0ab5c1b14cd52dac0681d734ac62.jar" />
+        sha1="4d53b7d6983247af02b8fe7e4228fff555a5e828">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/firebase-client-jvm-2.3.1_5fe399feeb951e0dc06839e5f3755af27fc8dd45.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-mediarouter-v7-24.0.0_f74ea282b4d669ecac95f46d02174c32505f01d3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="92c871a22463a247e8a77a9f3fd231c278788c4a">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-panorama-10.0.1_7a661a5ad143f6da32751806ec10614840c00c06.jar" />
     </item>
     <item
         is-multidex="false"
@@ -120,12 +147,687 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f6cf557be4dbd0282ea2388633e5378634423226">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-safetynet-10.0.1_8d06571543a5d54d7adf349d144745de0c8cb414.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fa112f9589a72edd6c8458764cd65e80a39e6d8c">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.exoplayer-exoplayer-r2.0.3_0ae8ccb19821edadf453190ab6a5955b3ceeb7ba.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
         <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.3.1_e88e2e59dfdba512def28c6e6a00d2a850ab15e6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.2.2/285cb9c666f0f0f3dd8a1be04e1f457eb7b15113/jackson-annotations-2.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/jackson-annotations-2.2.2_7091ab1fd4a99230adf6c2780d4343efc5a806c1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="1d193729baf37df3d902a423291423a0df7e3779">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-clearcut-10.0.1_b7500861bf6c1281b1d3901e1e16bfdc757a8a67.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-messenger/4.28.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2482bfd874e8b3927f4141105674ad392ff83698">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-messenger-4.28.0_5ce089efe2ca26938fa8769d668f7cc8825ca1ea.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-places/4.28.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0d394688dd7030b83dea8eed3fa483410c24afe0">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-places-4.28.0_9a58d1c2d682fd801907e2f29efaeef685ccb16b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_739c38fa5a7cb4ce3f8a07a8af310c2b4008948b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b955cb3a1ad6f1b6ff728ce1e0cd592c1717b440">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-lite-10.0.1_ccfde298821c7dcddac086919dd1f3258f20df86.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.28.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="287f4dec8dc2d40a238b12562b437438499cd2fb">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-common-4.28.0_ee7336d46ebed1f45b81824c398896e436b01f96.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-v4-impl/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f23ad0f8e58713ff4b55f61c0bbde3830378347c">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tagmanager-v4-impl-10.0.1_61c71ff52edb9968a94c46654475586ecb71a8a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="028f8255cb977b29cdffbfcf05caa0459686120c">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-drive-10.0.1_332177a60cbe2a46577c3c22e314ba1fe0389a8c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/libs/glide-3.6.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="86b122e640af09b0723e1fa44083c354ba6d9089">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/glide-3.6.1_56131b6df96a8a770c433b2ee872e5582f9ab4fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ffc15e965a9e8c28f24455eedd4cac215c45d1fc">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-config-10.0.1_73533229a0b904dacdffd82b214818f7c8d1903b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.3.1_5d483e8154c4b8dc80679905fddc8067a41bfdef.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="57c2eceb8548de84509d1ebc293fedec53231f6c">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gass-10.0.1_459ebc37fb89d9eeccdbde38169a212bc8508e3a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-10.0.1_f0e8a7d4f1e4470fd4a229223f7d3658b8ec90f3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="df1cb17511aabbb63264a0024949d1e42502a512">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-cast-framework-10.0.1_5e8bc4e57843a258d0b7800619257f6e0da34f4b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="09cf6aa1390f95157e8295d02be7868f568825fc">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-storage-common-10.0.1_7ad47d16282e812a256a2a6d4e9330363f3b204b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-10.0.1_80ed43667e7d0375d7d6cee2dc45686d5acc78f8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/palette-v7/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-palette-v7-24.0.0_9cc55fbfd66cafb89df5f39b45356cec5d4cb5e5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/gson-2.7_199b183e5b57a5aee312ead864e941e0acfa7a61.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/audience-network-sdk/4.26.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="dae2154348a4c38a18e8d1042cf445faea4647d0">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.facebook.android-audience-network-sdk-4.26.1_c312bb0bd0b51c6c0199e3c6c365f886aaf22acb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-10.0.1_dda72d28974266ea2bef46acc4907aa5ee4eb2c0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.firebase/firebase-appindexing/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ae80d328a8548b4610ead6c624bab8c6a6984f5b">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-appindexing-10.0.1_5bb7e5dea8065d5862918ecea1888425ee89b7fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.3.0/73c49077166faa4c3c0059c5f583d1d7bd1475fe/core-3.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="73c49077166faa4c3c0059c5f583d1d7bd1475fe">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/core-3.3.0_1f243f04c16e5aa3129adbc395365219238b8a28.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8308ed003522a2ee8958311afcc4cfd0470377cd">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-10.0.1_76ccdc84f23d3d2f236a74e0bd35fc0986098026.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44a694d4095be84c2888764b1f7256b385c030ad">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-10.0.1_ab0d9fd0d142f23aa804abd02096a2d89182f08c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-auth-10.0.1_540b61e25d5d7a4d5e022e122099a1033096dff6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b1df8fa3d372a27e4e969ce00b00689ee1eed031">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tagmanager-api-10.0.1_87e2d37686879ab97776cdfc8eb5e2f237a5f987.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c14f0c89f28cf782e42581ab0aba5f63af39b3d2">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-plus-10.0.1_64d7518239bb52a4e40af1fd62b1d1e48ce81700.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_df7a7edfc5c9a5532712594c9d0e9e12576e1b94.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="4b17463c814bdc562fb0392fa3494063623a0904">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-messaging-10.0.1_aed9995982e746f75c985f29dda4f66f3658df71.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/bolts-applinks-1.4.0_bd8d4713051d4b0bfecb511daddd555d9fc7899a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-awareness/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="4385ccc0a88b33d182a836eadb47be55c8eb1107">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-awareness-10.0.1_31aa81cbb0a02049ea5370c29ff5f80552443a81.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/jackson-databind-2.2.2_3b6ae740ba256592e8e6aabe1430cff8c4bc5544.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.3.1_25cea9d236fba3ca14f42b4fccea3ff793386f2f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d0460bf07cc3657e0be518ca01c174493951c6b8">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-10.0.1_86a27d00af03b38113cc1de8625ca963e96475e2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.3.1_d739a8b251a6860d920e7e6bbb5e91c7008a7855.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-instantapps/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="45305e6af414dab5aba6c3225081c2f15c3bdd1e">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-instantapps-10.0.1_22e270a8ef86f87b96ac906ca3fbc8c22c2deea3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-10.0.1_ad02173b44185899523bfde846ae4a92668401ec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a48dc0b148059764d32500be558702d5ff932058">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-identity-10.0.1_3bce389395433c4636e9cb5e4c3fd7801f2e0f20.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="771267c5b0c7a5b348d3205dcfa1f871af7e0177">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-cast-10.0.1_b2ea3c37f61e3101c22056c2ed93d672beaa3b9a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.3.1_a702fb163dda24c4de73fc36388798cd2d44311c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="971509bbe30bb7b971fc1c49d7b23d0d818830ac">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tagmanager-10.0.1_a403f695d4514e861834259a55a0fee1525fa46b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.2_623e9be0f4fcc2613e7cfa2691b0d12adc132424.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-25.3.1_5f37dadf717dc5ad672f66007d5baed1d916c405.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.28.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="53e8932b1ac8c7dfc35cfeda1f9efbc9822ceaf3">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-android-sdk-4.28.0_f9d2c8ea027ca7182d742e709852b28b4d5701ed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7a64bf6dc775198eed9db9468a133adf7dfe6562">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-fitness-10.0.1_ddd075325e6d82409c99f143f1ae4e2d240b4d63.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="de29a39f9260f88151b1ef453140e71c76b6c415">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-crash-10.0.1_5a7391ccb8a4ffdb567c0de0810037e4cbd7323c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.3.1_1458f63ac07a0ab5c1b14cd52dac0681d734ac62.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e871881b36b32e6bfd271a830c6eeb54ff0fc185">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-analytics-impl-10.0.1_c5cc993ad9a3487f16acc320f991ed41d11abcbe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/customtabs/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="807751a24cf96566fd8675517c94d8463cf364db">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-customtabs-25.3.1_9da1cfa87098b20666616e2ff9fed9a3dd9db9e5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.3.1_640a706751425fc98b74b6db2e3d533c7402527b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="408a599ac77cd17fe8e8919326bec617b3d005bd">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wearable-10.0.1_72782ee73c9ad8eaca0bd8457a32cf359539864f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-base-10.0.1_116d1086ca9837846c0cfc2e92633c02d7d02c06.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ba6aa5e69ef31dee57208125323cee958fc67565">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-vision-10.0.1_4a47508a73e9dff466b1b692b75547190227bbf2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6bb5d347ebc0c6ef3c83a905222a688da5d2f7b4">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-iid-10.0.1_5fae74c51b66a6d7d611620dac78ff9b7fd36c7d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="4c829ff0ccfecb28a999ee46d9e75948dfc777a4">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-analytics-10.0.1_009e94f84364d528e4e832b8851de852b4e0df7b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="27777b3cad3c20b1acab19f6e37fe3e03371bf6e">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-10.0.1_42506817d3919176d1bff4c92661fd9e7c6fa56b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-10.0.1_bf1131c6cc229663e47e7fbe48c6bd64d7dcfbaf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-10.0.1_ece34e68862e1b2ff7936c0e45c57b4291637b93.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support.constraint-constraint-layout-1.0.2_5b02938954365977cc37c463b6b598a40d336fd3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2d5d113b0352ab60946fc44c518cf68fd26cbb79">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wallet-10.0.1_d07b92e647fe520e899ab70a38754f91144e26d5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/.gradle/caches/modules-2/files-2.1/com.firebase/tubesock/0.0.11/d37cb67277928cf59344b4196af8d9cee1f1a27c/tubesock-0.0.11.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d37cb67277928cf59344b4196af8d9cee1f1a27c">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/tubesock-0.0.11_d355d4ed4a00596109def735a7c7145a8bf21dab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-share/4.28.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="dc83ab7a5ce1e0296cf18a52a6edbcfef815e6cf">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-share-4.28.0_26aaa23a269798efba76934e23646357ffa8a50f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="39907d5c8f5902fffef30160ca7447c93b82405c">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appinvite-10.0.1_0522c26a3b89220ccfd81599aaf911340ad29646.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_8160b243b08e34571cbd4696e85d1ca8013ac77a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.3.1_75b0625dbcca4751c3dbb8122e28e1ec4ada99da.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="dd39827d2067497e60e21da48a7926000b6d4b0c">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-storage-10.0.1_dda73697bd3da9859e698a262d22f1d00c252698.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.3.1_8ba436ccd8c33fa7b6ddde9c66633ee54c4faea3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b8b26b28aae0ba8e2db55ad9fe0ebc770530c5ef">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-login-4.28.0_7cf4f773f4761a32ae5be78caa60012a3a2b7c94.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-core/4.28.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ab6e491b5d7bda2f47991a30f6bfe9a8b134ff8b">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-core-4.28.0_9fa9cc6e03b525666032fdbf153a9ebb84fe5c3b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-applinks/4.28.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="82ea5a937ab84229fbd2f3fc8cf2a72cbdf0ee0f">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-applinks-4.28.0_bbcb3dc34bd3a7761e3ba40dc318c78af4dcae5a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.android.support-multidex-1.0.1_7ba1a9cca119b88ea141b9b778568dc96258507f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="/Users/jackpan/food/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-10.0.1_908922ad0f1be768fed64591c946f6690975a3b5.jar" />
     </item>
 
 </items>

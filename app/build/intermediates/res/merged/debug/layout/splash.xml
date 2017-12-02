@@ -13,8 +13,16 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="161dp"
-        android:text="Terminator"
+        android:text="Chu Health"
         android:textColor="@android:color/black"
         android:textSize="40sp" />
+
+    <ImageView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/textView1"
+        android:src="@drawable/splash"
+
+        ></ImageView>
 
 </RelativeLayout>

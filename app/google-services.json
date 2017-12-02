@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "384839578977",
+    "firebase_url": "https://food-4997e.firebaseio.com",
+    "project_id": "food-4997e",
+    "storage_bucket": "food-4997e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384839578977:android:b7127f5d3ded918e",
+        "android_client_info": {
+          "package_name": "com.diet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "384839578977-r0jmoq50cjgmmdjf75s232vvpc3v800n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgFYFkJ229KDH5kaUSYoiQtwDA9cqKpHg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

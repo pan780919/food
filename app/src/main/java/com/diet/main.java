@@ -229,6 +229,16 @@ public class main extends Activity
         menu.add(map);
 
         map = new HashMap<String, Object>();
+        map.put("ItemTitle", "常見問題" );
+        map.put("ItemText", "QANDA");
+        menu.add(map);
+
+        map = new HashMap<String, Object>();
+        map.put("ItemTitle", "音樂播放器" );
+        map.put("ItemText", "MusicPlayer");
+        menu.add(map);
+
+        map = new HashMap<String, Object>();
         map.put("ItemTitle", "結束程式" );
         map.put("ItemText", "login out");
         menu.add(map);
@@ -254,8 +264,7 @@ public class main extends Activity
                 {
                     case 0:
                         intent = new Intent();
-                        intent.setClass(main.this, food.class);
-
+                        intent.setClass(main.this, GridViewActivity.class);
                         startActivity(intent);
                         break;
                     case 1:
@@ -281,6 +290,12 @@ public class main extends Activity
                         startActivity(new Intent(main.this, MainActivity.class));
                         break;
                     case 6:
+                        startActivity(new Intent(main.this,QAActivity.class));
+                        break;
+                    case 7:
+                        startActivity(new Intent(main.this,MusicActivity.class));
+                        break;
+                    case 8:
                         finish();
                         break;
                 }
@@ -443,9 +458,8 @@ public class main extends Activity
     {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
-        alert.setTitle("新增姓名");
-        alert.setMessage("請輸入帳號 和 密碼");
-
+        alert.setTitle("個人資料設定");
+//        alert.setMessage("請輸入帳號 和 密碼");
         ScrollView sv = new ScrollView(this);
         LinearLayout ll = new LinearLayout(this);
         ll.setOrientation(LinearLayout.VERTICAL);
@@ -484,7 +498,7 @@ public class main extends Activity
         ll.addView(he);
 
         tage = new TextView(this);
-        tage.setText("年齡: ");
+        tage.setText("生日: ");
         age = new EditText(this);
         age.setText("");
         ll.addView(tage);
@@ -616,7 +630,7 @@ public class main extends Activity
         ll.addView(he);
 
         tage = new TextView(this);
-        tage.setText("年齡: ");
+        tage.setText("生日: ");
         age = new EditText(this);
         age.setText(memberlist.get(selector).age);
         ll.addView(tage);
@@ -632,7 +646,7 @@ public class main extends Activity
                 n2 = Integer.toString(sex.getSelectedItemPosition());
                 n3 = we.getText().toString();
                 n4 = he.getText().toString();
-                n5 = wa.getText().toString();
+                n5 = "28";
                 n6 = age.getText().toString();
 
                 Log.i("TAG", "n2: " + n2);

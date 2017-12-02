@@ -29,7 +29,7 @@
     <TableRow
         android:id="@+id/widget38"
         android:layout_width="fill_parent"
-        android:layout_height="68px"
+        android:layout_height="68dp"
         android:orientation="horizontal">
 
         <TextView
@@ -49,7 +49,7 @@
     <TableRow
         android:id="@+id/widget131"
         android:layout_width="fill_parent"
-        android:layout_height="68px"
+        android:layout_height="68dp"
         android:baselineAligned="false"
         android:orientation="horizontal">
 
@@ -90,9 +90,9 @@
 
         <Button
             android:id="@+id/foodchoice"
-            android:layout_width="150px"
+            android:layout_width="150dp"
             android:background="@drawable/buttonbg"
-            android:padding="20px"
+            android:padding="20dp"
             android:text="請選擇"
             android:layout_height="50dp"></Button>
     </TableRow>
@@ -108,13 +108,13 @@
         <ScrollView
             android:id="@+id/ScrollView01"
             android:layout_width="fill_parent"
-            android:layout_height="200px">
+            android:layout_height="200dp">
 
 
             <TextView
                 android:id="@+id/showlist"
                 android:layout_width="fill_parent"
-                android:layout_height="200px"
+                android:layout_height="200dp"
                 android:text="清單"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -130,29 +130,29 @@
 
         <Button
             android:id="@+id/cal"
-            android:layout_width="100px"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
             android:background="@drawable/buttonbg"
-            android:padding="20px"
-            android:text="計算"
-            android:layout_height="65dp" />
+            android:padding="20dp"
+            android:text="計算" />
 
         <Button
             android:id="@+id/clear"
-            android:layout_width="100px"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
             android:background="@drawable/buttonbg"
             android:gravity="center"
-            android:padding="20px"
-            android:text="清除"
-            android:layout_height="65dp" />
+            android:padding="20dp"
+            android:text="清除" />
 
         <Button
             android:id="@+id/exit"
-            android:layout_width="100px"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
             android:background="@drawable/buttonbg"
             android:gravity="center"
-            android:padding="20px"
-            android:text="取消"
-            android:layout_height="65dp" />
+            android:padding="20dp"
+            android:text="取消" />
     </TableRow>
 
 </LinearLayout>

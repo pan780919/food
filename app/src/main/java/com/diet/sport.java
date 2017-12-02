@@ -225,14 +225,15 @@ public class sport extends Activity implements OnClickListener
 										{
 											//用迴圈把所有使用者輸入的東西整理出來: 食物, 依量來計算總熱量
 											int total = 0;
+											listv = "";
 											for(int i = 0; i < item.foodname.size(); i++)
 											{
 												//若是0代表food沒吃
 												if (et[i].getText().toString().equals("0") || et[i].getText().toString().equals("")) continue;
 
 												//顯示用
-												listarray.add(item.foodname.get(i) + "(" + item.hot.get(i) + ")");
-												Log.d(TAG, "onClick: "+item.foodname.get(i) + "(" + item.hot.get(i) + ")");
+
+												listarray.add(et[i].getText().toString()+"份"+item.foodname.get(i) + "(" + item.hot.get(i) *Integer.parseInt(et[i].getText().toString())+ "卡"+")");
 												//計算熱量
 												try
 												{
@@ -249,12 +250,11 @@ public class sport extends Activity implements OnClickListener
 											hot += total;
 
 											//把所有顯示用的整理出來
-											listv = "";
+
 											for (int j=0; j<listarray.size(); j++)
 											{
 												listv = listv + listarray.get(j) + "\n";
 											}
-											Log.d(TAG, "onClick: "+listv);
 											showlist.setText(listv);
 										}
 									});
