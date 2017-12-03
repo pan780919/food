@@ -1,19 +1,19 @@
 [
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/cast_ic_mini_controller_skip_prev.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/drawable/cast_ic_mini_controller_skip_prev.xml"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/cast_ic_expanded_controller_skip_next.xml",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/drawable/cast_ic_expanded_controller_skip_next.xml"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_forward.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/drawable/cast_ic_notification_forward.xml"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/cast_ic_mini_controller_skip_prev.xml",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/drawable/cast_ic_mini_controller_skip_prev.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_on_dark.xml",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable/mr_ic_media_route_on_dark.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_forward.xml",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/drawable/cast_ic_notification_forward.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/com_facebook_favicon_blue.xml",
@@ -80,12 +80,12 @@
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/drawable/cast_ic_notification_pause.xml"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_like_background.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.28.0/res/drawable/com_facebook_button_like_background.xml"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_like_background.xml",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.28.0/res/drawable/com_facebook_button_like_background.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_focused.xml",
@@ -261,7 +261,7 @@
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/navigation_empty_icon.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/res/drawable/navigation_empty_icon.xml"
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable/navigation_empty_icon.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/cast_ic_expanded_controller_closed_caption.xml",
@@ -277,7 +277,7 @@
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/res/drawable/design_snackbar_background.xml"
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable/design_snackbar_background.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/mr_ic_cast_dark.xml",
@@ -389,7 +389,7 @@
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/design_password_eye.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/res/drawable/design_password_eye.xml"
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable/design_password_eye.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/mr_ic_pause_light.xml",
@@ -465,7 +465,7 @@
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/design_bottom_navigation_item_background.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/res/drawable/design_bottom_navigation_item_background.xml"
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable/design_bottom_navigation_item_background.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/cast_expanded_controller_seekbar_thumb.xml",
@@ -501,7 +501,7 @@
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/res/drawable/design_fab_background.xml"
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable/design_fab_background.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",

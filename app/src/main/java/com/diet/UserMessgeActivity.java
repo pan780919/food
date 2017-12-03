@@ -57,7 +57,7 @@ public class UserMessgeActivity extends Activity implements View.OnClickListener
     }
     private void toMsg(final String msg) {
 
-        String url = "https://sevenpeoplebook.firebaseio.com/GayPlace";
+        String url = "https://food-4997e.firebaseio.com/foodList";
         Firebase mFirebaseRef = new Firebase(url);
 
         Firebase countRef = mFirebaseRef.child(id).child("tomsg");

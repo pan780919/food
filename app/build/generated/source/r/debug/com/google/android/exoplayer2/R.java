@@ -24,25 +24,25 @@ public final class R {
 		public static final int exo_controls_rewind = 0x7f0200de;
 	}
 	public static final class id {
-		public static final int control = 0x7f0f0167;
-		public static final int ffwd = 0x7f0f015f;
+		public static final int control = 0x7f0f017c;
+		public static final int ffwd = 0x7f0f0174;
 		public static final int fit = 0x7f0f0026;
 		public static final int fixed_height = 0x7f0f0027;
 		public static final int fixed_width = 0x7f0f0028;
-		public static final int mediacontroller_progress = 0x7f0f0162;
-		public static final int next = 0x7f0f0160;
-		public static final int play = 0x7f0f015e;
-		public static final int prev = 0x7f0f015c;
-		public static final int rew = 0x7f0f015d;
-		public static final int shutter = 0x7f0f0165;
-		public static final int subtitles = 0x7f0f0166;
-		public static final int time = 0x7f0f0163;
-		public static final int time_current = 0x7f0f0161;
-		public static final int video_frame = 0x7f0f0164;
+		public static final int mediacontroller_progress = 0x7f0f0177;
+		public static final int next = 0x7f0f0175;
+		public static final int play = 0x7f0f0173;
+		public static final int prev = 0x7f0f0171;
+		public static final int rew = 0x7f0f0172;
+		public static final int shutter = 0x7f0f017a;
+		public static final int subtitles = 0x7f0f017b;
+		public static final int time = 0x7f0f0178;
+		public static final int time_current = 0x7f0f0176;
+		public static final int video_frame = 0x7f0f0179;
 	}
 	public static final class layout {
-		public static final int exo_playback_control_view = 0x7f030041;
-		public static final int exo_simple_player_view = 0x7f030042;
+		public static final int exo_playback_control_view = 0x7f030045;
+		public static final int exo_simple_player_view = 0x7f030046;
 	}
 	public static final class string {
 		public static final int exo_controls_fastforward_description = 0x7f08006a;

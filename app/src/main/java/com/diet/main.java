@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -27,6 +29,9 @@ import android.app.ProgressDialog;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
@@ -36,6 +41,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Images.Media;
+import android.util.Base64;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -187,7 +193,24 @@ public class main extends Activity
             e.printStackTrace();
         }
 
-
+        PackageInfo info;
+        try {
+            info = getPackageManager().getPackageInfo("com.diet", PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md;
+                md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                String something = new String(Base64.encode(md.digest(), 0));
+                //String something = new String(Base64.encodeBytes(md.digest()));
+                Log.e("hash key", something);
+            }
+        } catch (PackageManager.NameNotFoundException e1) {
+            Log.e("name not found", e1.toString());
+        } catch (NoSuchAlgorithmException e) {
+            Log.e("no such an algorithm", e.toString());
+        } catch (Exception e) {
+            Log.e("exception", e.toString());
+        }
         year = c.get(Calendar.YEAR);
         month = c.get(Calendar.MONTH) + 1;
         day = c.get(Calendar.DAY_OF_MONTH);
@@ -238,6 +261,10 @@ public class main extends Activity
         map.put("ItemText", "MusicPlayer");
         menu.add(map);
 
+        map = new HashMap<String, Object>();
+        map.put("ItemTitle", "討論區" );
+        map.put("ItemText","share");
+        menu.add(map);
         map = new HashMap<String, Object>();
         map.put("ItemTitle", "結束程式" );
         map.put("ItemText", "login out");
@@ -296,6 +323,9 @@ public class main extends Activity
                         startActivity(new Intent(main.this,MusicActivity.class));
                         break;
                     case 8:
+                        startActivity(new Intent(main.this, com.diet.MainActivity.class));
+                        break;
+                    case 9:
                         finish();
                         break;
                 }

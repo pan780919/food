@@ -90,8 +90,6 @@ public class ForIdeaAndShareActivity extends Activity implements View.OnClickLis
     }
 
     private void initLayout() {
-        mPicName = (TextView) findViewById(R.id.picnametext);
-        mVideoName = (TextView) findViewById(R.id.videonametext);
         mNameEdt = (EditText) findViewById(R.id.nameedt);
         mMailEdt = (EditText) findViewById(R.id.mailedt);
         mTiitleEdt = (EditText) findViewById(R.id.tittle);
@@ -100,8 +98,6 @@ public class ForIdeaAndShareActivity extends Activity implements View.OnClickLis
         mCancelBtn = (Button) findViewById(R.id.btn_cancel_send);
         findViewById(R.id.btn_sure_send).setOnClickListener(this);
         findViewById(R.id.btn_cancel_send).setOnClickListener(this);
-        findViewById(R.id.picbtn).setOnClickListener(this);
-        findViewById(R.id.videobtn).setOnClickListener(this);
     }
 
 
@@ -112,28 +108,20 @@ public class ForIdeaAndShareActivity extends Activity implements View.OnClickLis
                 setFireBaseDB(MySharedPrefernces.getUserId(this),
                         mTiitleEdt.getText().toString().trim(),
                         mMessageEdt.getText().toString().trim(),
-                        picUri,
                         mNameEdt.getText().toString().trim(),
-                        videoUri,
                         String.valueOf(s));
                 break;
             case R.id.btn_cancel_send:
                 ForIdeaAndShareActivity.this.finish();
-                break;
-            case R.id.picbtn:
-                selectPic();
-                break;
-            case R.id.videobtn:
-                selectVideo();
                 break;
         }
 
 
     }
 
-    private void setFireBaseDB(String id, String tittle, String message, String uri, String name, String videoUri, String date
+    private void setFireBaseDB(String id, String tittle, String message, String name, String date
                                ) {
-        String url = "https://sevenpeoplebook.firebaseio.com/GayPlace";
+        String url = "https://food-4997e.firebaseio.com/foodList";
         Firebase mFirebaseRef = new Firebase(url);
 //		Firebase userRef = mFirebaseRef.child("user");
 //		Map newUserData = new HashMap();
@@ -149,11 +137,7 @@ public class ForIdeaAndShareActivity extends Activity implements View.OnClickLis
         newPost.put("name", name);
         newPost.put("tittle", tittle);
         newPost.put("message", message);
-        newPost.put("pic", uri);
-        newPost.put("url", videoUri);
         newPost.put("date", date);
-        newPost.put("like",1);
-        newPost.put("view",1);
         newPost.put("tomsg","");
         Map updatedUserData = new HashMap();
 //		updatedUserData.put("3/posts/" + newPostKey, true);
