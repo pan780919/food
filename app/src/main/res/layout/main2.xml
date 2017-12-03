@@ -156,16 +156,22 @@
             android:layout_alignParentRight="true"
             android:layout_below="@+id/textView4"
             android:layout_marginTop="14dp"
-            android:src="@drawable/a1" />
-
+            android:src="@drawable/a1"
+            android:visibility="visible"/>
+      <Button
+          android:id="@+id/button5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentLeft="true"
+          android:text="紀錄" />
         <Button
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:text="GOAL" />
-
+            android:text="設定目標" />
   </RelativeLayout>
   
  

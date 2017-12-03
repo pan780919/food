@@ -31,7 +31,7 @@ public class MusicActivity extends AppCompatActivity implements
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_music);
         super.onCreate(savedInstanceState);
 
 
