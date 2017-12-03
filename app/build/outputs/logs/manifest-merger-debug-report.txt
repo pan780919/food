@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:2:1-106:12
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:2:1-109:12
 	package
 		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:3:5-23
 		INJECTED from /Users/jackpan/food/app/src/main/AndroidManifest.xml
@@ -83,7 +83,7 @@ ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:25:5-98
 	android:name
 		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:25:22-95
 application
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:27:5-104:19
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:27:5-107:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.2/AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.android:audience-network-sdk:4.26.1] /Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/audience-network-sdk/4.26.1/AndroidManifest.xml:14:5-18:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.28.0] /Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.28.0/AndroidManifest.xml:28:5-29:19
@@ -297,6 +297,10 @@ ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:94:9-103:20
 		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:95:13-69
 	android:name
 		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:97:13-42
+activity#com.diet.MusicActivity
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:105:9-106:20
+	android:name
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:105:19-48
 uses-sdk
 INJECTED from /Users/jackpan/food/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:multidex:1.0.1] /Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/AndroidManifest.xml:18:5-42
