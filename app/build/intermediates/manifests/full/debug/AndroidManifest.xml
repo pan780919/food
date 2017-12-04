@@ -55,6 +55,11 @@
         <activity
             android:name="com.diet.diet"
             android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.diet.dlogin"
@@ -104,17 +109,16 @@
             android:label="@string/title_activity_grid_view"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name="com.diet.QAActivity"
+            android:label="@string/title_activity_grid_view"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="com.diet.LoginActivity"
             android:configChanges="orientation|screenSize"
             android:hardwareAccelerated="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.facebook.ads.AudienceNetworkActivity"
