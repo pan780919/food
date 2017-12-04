@@ -136,7 +136,7 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
                 Log.d(TAG, "onComplete: "+loginResult.getAccessToken().getUserId());
                 MySharedPrefernces.saveUserId(LoginActivity.this, loginResult.getAccessToken().getUserId());
 
-                Toast.makeText(LoginActivity.this, "登入成功,將跳到商品列表", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "登入成功,將跳到列表", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(LoginActivity.this, main.class));
                 LoginActivity.this.finish();
             }
@@ -231,7 +231,7 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
     @Override
     public void createUserState(boolean b) {
         if (b) {
-            Toast.makeText(this, "註冊成功,將跳到商品列表", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "註冊成功,將跳到列表", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(LoginActivity.this, main.class));
             LoginActivity.this.finish();
         } else {
@@ -243,7 +243,7 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
     @Override
     public void useLognState(boolean b) {
         if (b) {
-            Toast.makeText(this, "登入成功,將跳到商品列表", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "登入成功,將跳到列表", Toast.LENGTH_SHORT).show();
 
             startActivity(new Intent(LoginActivity.this, Main.class));
             LoginActivity.this.finish();

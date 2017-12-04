@@ -15,8 +15,12 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.MutableData;
 import com.firebase.client.Transaction;
+import com.firebase.client.ValueEventListener;
+import com.google.gson.Gson;
 
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class UserMessgeActivity extends Activity implements View.OnClickListener {
@@ -56,35 +60,51 @@ public class UserMessgeActivity extends Activity implements View.OnClickListener
         setTitle(name+"的留言板");
     }
     private void toMsg(final String msg) {
-
+        String value = tomsg;
+        String Usrmsg ="你"+"對"+name+"說："+"\t"+msg+"\t"+s;
+        String tomsg = Usrmsg+"\n"+value;
         String url = "https://food-4997e.firebaseio.com/foodList";
         Firebase mFirebaseRef = new Firebase(url);
 
-        Firebase countRef = mFirebaseRef.child(id).child("tomsg");
-        countRef.runTransaction(new Transaction.Handler() {
-
+        Firebase countRef = mFirebaseRef.child(id);
+        Map<String,Object>nameMap = new HashMap<>();
+        nameMap.put("tomsg", tomsg);
+        countRef.updateChildren(nameMap);
+        countRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public Transaction.Result doTransaction(MutableData currentData) {
-
-//                if (currentData.getValue() == null) {
-//                    currentData.setValue("");
-////                    userMsgText.setText(currentData.getValue().toString());
-//                } else {
-                    String value = currentData.getValue().toString();
-                    String Usrmsg = msg+"\t"+s;
-                    String tomsg = Usrmsg+"\n"+value;
-                    currentData.setValue(tomsg);
-//                    userMsgText.setText(currentData.getValue().toString());
-//
-//                }
-                return Transaction.success(currentData); //we can also abort by calling Transaction.abort()
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                userMsgText.setText(dataSnapshot.child("tomsg").getValue().toString());
             }
 
             @Override
-            public void onComplete(FirebaseError firebaseError, boolean committed, DataSnapshot currentData) {
-                //This method will be called once with the results of the transaction.
+            public void onCancelled(FirebaseError firebaseError) {
+
             }
         });
+//        countRef.runTransaction(new Transaction.Handler() {
+//
+//            @Override
+//            public Transaction.Result doTransaction(MutableData currentData) {
+////
+////                if (currentData.getValue() == null) {
+////                    currentData.setValue("");
+////                    userMsgText.setText(currentData.getValue().toString());
+////                } else {
+//                    String value = currentData.getValue().toString();
+//                    String Usrmsg = msg+"\t"+s;
+//                    String tomsg = Usrmsg+"\n"+value;
+//                    currentData.setValue(tomsg);
+//                    userMsgText.setText(currentData.getValue().toString());
+////
+////                }
+//                return Transaction.success(currentData); //we can also abort by calling Transaction.abort()
+//            }
+//
+//            @Override
+//            public void onComplete(FirebaseError firebaseError, boolean committed, DataSnapshot currentData) {
+//                //This method will be called once with the results of the transaction.
+//            }
+//        });
 
     }
         @Override
