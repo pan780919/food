@@ -28,7 +28,8 @@
         android:layout_marginStart="16dp"
         app:layout_constraintLeft_toRightOf="@+id/btnPickAudio"
         android:layout_marginLeft="16dp"
-        android:onClick="onPick" />
+        android:onClick="onPick"
+        android:visibility="gone"/>
 
     <TextView
         android:text="檔名"
