@@ -70,7 +70,6 @@ com/fasterxml/jackson/annotation/JacksonInject.class
 com/google/android/exoplayer2/extractor/PositionHolder.class
 com/google/android/gms/internal/zzey.class
 com/firebase/client/Query.class
-com/bumptech/glide/load/DecodeFormat.class
 com/fasterxml/jackson/databind/ser/std/StringSerializer.class
 com/google/android/gms/internal/zzob.class
 android/support/design/widget/VisibilityAwareImageButton.class
@@ -205,7 +204,6 @@ android/support/v4/media/session/MediaSessionCompat.class
 com/google/android/gms/wallet/fragment/BuyButtonText.class
 android/support/design/widget/TabLayout$AdapterChangeListener.class
 com/google/android/exoplayer2/extractor/TrackOutput.class
-com/bumptech/glide/DrawableRequestBuilder.class
 com/google/android/gms/wallet/CountrySpecification.class
 com/google/android/exoplayer2/upstream/HttpDataSource$1.class
 com/google/android/gms/internal/zzil.class
@@ -283,7 +281,6 @@ android/support/v4/view/accessibility/AccessibilityEventCompat.class
 com/google/android/gms/internal/zzgp.class
 com/google/android/gms/internal/zzis.class
 com/google/android/gms/fitness/data/Goal$ObjectiveType.class
-com/bumptech/glide/RequestManager.class
 com/google/android/gms/common/GoogleApiAvailability.class
 com/facebook/share/internal/LikeDialogFeature.class
 com/fasterxml/jackson/annotation/JsonFormat$Value.class
@@ -324,7 +321,6 @@ com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer$StringKD.class
 com/fasterxml/jackson/databind/annotation/JacksonStdImpl.class
 android/support/annotation/XmlRes.class
 com/google/android/gms/internal/zzlx.class
-android/support/design/widget/ValueAnimatorCompat$AnimatorListener.class
 com/google/android/exoplayer2/extractor/ts/DefaultStreamReaderFactory$Flags.class
 com/google/android/exoplayer2/upstream/DataSource.class
 com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer$BoolKD.class
@@ -354,7 +350,6 @@ android/support/v4/content/PermissionChecker.class
 com/google/android/gms/internal/zzqy.class
 com/fasterxml/jackson/annotation/JsonInclude.class
 com/google/android/gms/location/places/internal/zzs.class
-com/bumptech/glide/load/MultiTransformation.class
 android/support/v4/media/MediaBrowserCompat.class
 android/support/v7/widget/RecyclerView$RecyclerViewDataObserver.class
 com/google/android/gms/internal/zzly.class
@@ -463,7 +458,6 @@ com/fasterxml/jackson/core/Versioned.class
 android/support/design/widget/TabLayout$TabLayoutOnPageChangeListener.class
 android/support/v4/widget/MaterialProgressDrawable$ProgressDrawableSize.class
 com/google/android/gms/internal/zzbjv.class
-com/bumptech/glide/Glide.class
 android/support/v4/view/WindowInsetsCompat.class
 com/google/android/gms/cast/Cast$CastOptions.class
 android/support/annotation/InterpolatorRes.class
@@ -583,7 +577,6 @@ android/support/v4/media/session/MediaSessionCompat$QueueItem.class
 com/google/android/gms/internal/zzln.class
 com/google/android/gms/wearable/NodeApi$NodeListener.class
 com/google/android/gms/internal/zzmd$zza.class
-com/bumptech/glide/GenericRequestBuilder.class
 com/google/android/gms/internal/zzdx.class
 com/google/android/gms/internal/zzvp.class
 com/google/android/gms/internal/zzhg.class
@@ -603,7 +596,6 @@ android/support/v4/app/AppOpsManagerCompat.class
 com/google/android/gms/internal/zzia.class
 com/google/android/gms/internal/zzkq.class
 com/google/android/exoplayer2/upstream/cache/CacheDataSink.class
-com/bumptech/glide/load/resource/bitmap/TransformationUtils.class
 android/support/v4/media/session/PlaybackStateCompatApi21.class
 com/google/android/exoplayer2/source/hls/playlist/HlsPlaylist.class
 android/support/v4/media/MediaBrowserCompat$MediaItem.class
@@ -696,7 +688,6 @@ android/support/v4/media/MediaMetadataCompat$LongKey.class
 com/google/android/gms/wearable/ChannelApi$OpenChannelResult.class
 bolts/WebViewAppLinkResolver$2$2.class
 com/google/android/gms/internal/zzhr.class
-com/bumptech/glide/load/model/Headers.class
 android/support/design/widget/BaseTransientBottomBar.class
 com/fasterxml/jackson/databind/JavaType.class
 com/google/android/exoplayer2/source/MergingMediaSource$1.class
@@ -874,7 +865,6 @@ android/support/v4/media/MediaMetadataCompat$RatingKey.class
 com/google/android/gms/internal/zzhy$zzd.class
 com/google/android/gms/ads/internal/ClientApi.class
 android/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21.class
-com/bumptech/glide/GlideBuilder.class
 android/support/annotation/DimenRes.class
 com/google/android/gms/ads/NativeExpressAdView.class
 com/google/android/gms/internal/zzlr.class
@@ -1146,7 +1136,6 @@ com/google/ads/mediation/MediationInterstitialListener.class
 com/google/android/gms/internal/zznn.class
 com/google/android/gms/internal/zzip.class
 android/support/v4/media/MediaBrowserCompat$MediaBrowserImpl.class
-com/bumptech/glide/GifRequestBuilder.class
 com/google/android/gms/internal/zzgy.class
 android/support/v4/media/session/MediaSessionCompat$MediaSessionImpl.class
 android/support/design/widget/AppBarLayout$Behavior.class
@@ -1250,7 +1239,6 @@ android/support/v7/media/MediaRouteDescriptor.class
 com/google/android/gms/internal/zzde.class
 android/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper.class
 com/google/android/gms/cast/Cast$CastApi.class
-com/bumptech/glide/load/model/GenericLoaderFactory.class
 com/fasterxml/jackson/databind/KeyDeserializer.class
 com/fasterxml/jackson/databind/ser/std/StdArraySerializers$DoubleArraySerializer.class
 com/google/android/exoplayer2/extractor/ts/MpegAudioReader.class
@@ -1338,14 +1326,12 @@ com/facebook/ads/MediaView.class
 com/fasterxml/jackson/core/util/VersionUtil.class
 com/google/android/gms/internal/zzqj.class
 com/google/android/gms/wearable/CapabilityApi$CapabilityFilterType.class
-com/bumptech/glide/load/model/stream/StreamByteArrayLoader.class
 com/google/android/gms/instantapps/InstantAppsApi.class
 android/support/v4/content/res/ConfigurationHelper.class
 com/google/android/gms/R$styleable.class
 com/google/android/gms/ads/internal/zzj.class
 com/fasterxml/jackson/databind/ser/std/NumberSerializers$DoubleSerializer.class
 com/google/android/gms/internal/zzch.class
-com/bumptech/glide/BitmapRequestBuilder.class
 com/google/android/gms/fitness/Fitness.class
 android/support/v7/graphics/drawable/DrawerArrowDrawable$ArrowDirection.class
 com/google/android/gms/nearby/messages/Strategy.class
@@ -1405,7 +1391,6 @@ com/google/android/gms/ads/internal/purchase/zzi.class
 com/google/android/gms/location/places/internal/PlaceEntity.class
 android/support/v7/widget/StaggeredGridLayoutManager.class
 com/google/android/gms/ads/internal/overlay/zzl.class
-com/bumptech/glide/ListPreloader.class
 com/google/android/gms/internal/zzjo.class
 android/support/v7/view/menu/MenuView.class
 android/support/design/widget/FloatingActionButton$OnVisibilityChangedListener.class
@@ -1471,7 +1456,6 @@ android/support/v4/util/SimpleArrayMap.class
 com/google/android/gms/internal/zzqe.class
 com/fasterxml/jackson/annotation/JsonCreator.class
 android/support/v7/widget/LinearLayoutCompat$LayoutParams.class
-com/bumptech/glide/DrawableOptions.class
 com/google/android/gms/internal/zzcy.class
 com/fasterxml/jackson/databind/ser/impl/IndexedListSerializer.class
 android/support/v4/media/TransportStateListener.class
@@ -1554,7 +1538,6 @@ com/google/android/gms/ads/search/DynamicHeightSearchAdRequest.class
 com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer$UuidKD.class
 android/support/v4/media/session/PlaybackStateCompat$RepeatMode.class
 com/facebook/share/widget/LikeView$ObjectType.class
-com/bumptech/glide/util/Util.class
 android/support/v4/view/accessibility/AccessibilityRecordCompat.class
 android/support/design/widget/TabLayout$PagerAdapterObserver.class
 com/google/firebase/database/PropertyName.class

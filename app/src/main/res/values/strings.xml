@@ -197,5 +197,7 @@
 
 	<string-array name="diet_tips"></string-array>
     <string name="title_activity_grid_view">GridViewActivity</string>
+	<string name="facebook_app_id">309400006230600</string>
+	<string name="fb_login_protocol_scheme">fb309400006230600</string>
 
 </resources>

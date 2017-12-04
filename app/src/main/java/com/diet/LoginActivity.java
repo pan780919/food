@@ -65,15 +65,15 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        FacebookSdk.sdkInitialize(getApplicationContext());
-//        callbackManager = CallbackManager.Factory.create();
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        callbackManager = CallbackManager.Factory.create();
         mfiebaselibsClass = new MfiebaselibsClass(this, LoginActivity.this);
         mfiebaselibsClass.userLoginCheck();
         setContentView(R.layout.activity_login);
         findViewById(R.id.button).setOnClickListener(this);
         findViewById(R.id.button3).setOnClickListener(this);
         fbImg = (ImageView) findViewById(R.id.fdimg);
-//        fbLogin();
+        fbLogin();
 
 
     }
@@ -113,30 +113,6 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
             case R.id.button2:
 
                 break;
-            case R.id.button3:
-
-                startActivity(new Intent(LoginActivity.this,sport.class));
-                this.finish();
-//                final EditText editText = new EditText(this);
-//                new AlertDialog.Builder(this)
-//                        .setView(editText)
-//                        .setTitle("忘記密碼")
-//                        .setMessage("請輸入當初設定的email帳號")
-//                        .setPositiveButton("送出", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialogInterface, int i) {
-//                                String emailAddress = editText.getText().toString().trim();
-//                                if (emailAddress.equals("")) {
-//                                    Toast.makeText(LoginActivity.this, "請勿輸入空白", Toast.LENGTH_SHORT).show();
-//                                    return;
-//                                }
-//                                mfiebaselibsClass.sendPasswordResetEmail(emailAddress);
-//                                dialogInterface.dismiss();
-//                            }
-//                        }).show();
-
-
-                break;
         }
 
     }
@@ -144,43 +120,43 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-//        callbackManager.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
     //臉書登入
-//    private void fbLogin() {
-//        List<String> PERMISSIONS_PUBLISH = Arrays.asList("public_profile", "email", "user_friends");
-//        loginButton = (LoginButton) findViewById(R.id.fb_btn);
-//        loginButton.setReadPermissions(PERMISSIONS_PUBLISH);
-//        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-//            @Override
-//            public void onSuccess(LoginResult loginResult) {
-//                Log.d(TAG, "onSuccess: " + loginResult.getAccessToken());
-//                handleFacebookAccessToken(loginResult.getAccessToken());
-//                setUsetProfile();
-//                Log.d(TAG, "onComplete: "+loginResult.getAccessToken().getUserId());
-//                MySharedPrefernces.saveUserId(LoginActivity.this, loginResult.getAccessToken().getUserId());
-//
-//                Toast.makeText(LoginActivity.this, "登入成功,將跳到商品列表", Toast.LENGTH_SHORT).show();
-//                startActivity(new Intent(LoginActivity.this, Main.class));
-//                LoginActivity.this.finish();
-//            }
-//
-//            @Override
-//            public void onCancel() {
-//                Log.d(TAG, "onCancel: ");
-//            }
-//
-//            @Override
-//            public void onError(FacebookException error) {
-//                Log.d(TAG, "onError: ");
-//
-//            }
-//
-//        });
-//
-//
-//
-//    }
+    private void fbLogin() {
+        List<String> PERMISSIONS_PUBLISH = Arrays.asList("public_profile", "email", "user_friends");
+        loginButton = (LoginButton) findViewById(R.id.fb_btn);
+        loginButton.setReadPermissions(PERMISSIONS_PUBLISH);
+        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                Log.d(TAG, "onSuccess: " + loginResult.getAccessToken());
+                handleFacebookAccessToken(loginResult.getAccessToken());
+                setUsetProfile();
+                Log.d(TAG, "onComplete: "+loginResult.getAccessToken().getUserId());
+                MySharedPrefernces.saveUserId(LoginActivity.this, loginResult.getAccessToken().getUserId());
+
+                Toast.makeText(LoginActivity.this, "登入成功,將跳到商品列表", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(LoginActivity.this, Main.class));
+                LoginActivity.this.finish();
+            }
+
+            @Override
+            public void onCancel() {
+                Log.d(TAG, "onCancel: ");
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+                Log.d(TAG, "onError: ");
+
+            }
+
+        });
+
+
+
+    }
 
     private void handleFacebookAccessToken(AccessToken token) {
 

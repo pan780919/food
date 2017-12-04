@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -27,6 +29,9 @@ import android.app.ProgressDialog;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
@@ -36,6 +41,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Images.Media;
+import android.util.Base64;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -187,7 +193,24 @@ public class main extends Activity
             e.printStackTrace();
         }
 
-
+        PackageInfo info;
+        try {
+            info = getPackageManager().getPackageInfo("com.diet", PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md;
+                md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                String something = new String(Base64.encode(md.digest(), 0));
+                //String something = new String(Base64.encodeBytes(md.digest()));
+                Log.e("hash key", something);
+            }
+        } catch (PackageManager.NameNotFoundException e1) {
+            Log.e("name not found", e1.toString());
+        } catch (NoSuchAlgorithmException e) {
+            Log.e("no such an algorithm", e.toString());
+        } catch (Exception e) {
+            Log.e("exception", e.toString());
+        }
         year = c.get(Calendar.YEAR);
         month = c.get(Calendar.MONTH) + 1;
         day = c.get(Calendar.DAY_OF_MONTH);
@@ -229,10 +252,19 @@ public class main extends Activity
         menu.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("ItemTitle", "問與答" );
+        map.put("ItemTitle", "常見問題" );
         map.put("ItemText", "QANDA");
         menu.add(map);
 
+        map = new HashMap<String, Object>();
+        map.put("ItemTitle", "音樂播放器" );
+        map.put("ItemText", "MusicPlayer");
+        menu.add(map);
+
+        map = new HashMap<String, Object>();
+        map.put("ItemTitle", "討論區" );
+        map.put("ItemText","share");
+        menu.add(map);
         map = new HashMap<String, Object>();
         map.put("ItemTitle", "結束程式" );
         map.put("ItemText", "login out");
@@ -288,6 +320,12 @@ public class main extends Activity
                         startActivity(new Intent(main.this,QAActivity.class));
                         break;
                     case 7:
+                        startActivity(new Intent(main.this,MusicActivity.class));
+                        break;
+                    case 8:
+                        startActivity(new Intent(main.this, com.diet.MainActivity.class));
+                        break;
+                    case 9:
                         finish();
                         break;
                 }
@@ -581,11 +619,10 @@ public class main extends Activity
         LinearLayout ll = new LinearLayout(this);
         ll.setOrientation(LinearLayout.VERTICAL);
         sv.addView(ll);
-
         tname = new TextView(this);
         tname.setText("姓名: ");
         name = new EditText(this);
-        name.setText(memberlist.get(selector).name);
+
         ll.addView(tname);
         ll.addView(name);
 
@@ -597,12 +634,8 @@ public class main extends Activity
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down vieww
         sex.setAdapter(spinnerArrayAdapter);
 
-        Log.i("TAG", memberlist.get(selector).sex);
 
-        if (memberlist.get(selector).sex.equals("0"))
-            sex.setSelection(0);
-        else
-            sex.setSelection(1);
+
 
         ll.addView(tsex);
         ll.addView(sex);
@@ -610,24 +643,43 @@ public class main extends Activity
         twe = new TextView(this);
         twe.setText("體重: ");
         we = new EditText(this);
-        we.setText(memberlist.get(selector).weight);
+
         ll.addView(twe);
         ll.addView(we);
 
         the = new TextView(this);
         the.setText("身高: ");
         he = new EditText(this);
-        he.setText(memberlist.get(selector).height);
+
         ll.addView(the);
         ll.addView(he);
 
         tage = new TextView(this);
         tage.setText("生日: ");
         age = new EditText(this);
-        age.setText(memberlist.get(selector).age);
+
         ll.addView(tage);
         ll.addView(age);
         // Set an EditText view to get user input
+
+        if(memberlist.size()==0){
+            we.setText("有值沒填");
+            he.setText("有值沒填");
+            age.setText("有值沒填");
+            name.setText("有值沒填");
+            sex.setSelection(0);
+
+
+        }else {
+            name.setText(memberlist.get(selector).name);
+            we.setText(memberlist.get(selector).weight);
+            he.setText(memberlist.get(selector).height);
+            age.setText(memberlist.get(selector).age);
+            if (memberlist.get(selector).sex.equals("0"))
+                sex.setSelection(0);
+            else
+                sex.setSelection(1);
+        }
         alert.setView(sv);
 
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {

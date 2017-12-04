@@ -261,7 +261,7 @@
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/navigation_empty_icon.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/res/drawable/navigation_empty_icon.xml"
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable/navigation_empty_icon.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/cast_ic_expanded_controller_closed_caption.xml",
@@ -277,7 +277,7 @@
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/res/drawable/design_snackbar_background.xml"
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable/design_snackbar_background.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/mr_ic_cast_dark.xml",
@@ -389,7 +389,7 @@
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/design_password_eye.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/res/drawable/design_password_eye.xml"
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable/design_password_eye.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/mr_ic_pause_light.xml",
@@ -465,7 +465,7 @@
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/design_bottom_navigation_item_background.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/res/drawable/design_bottom_navigation_item_background.xml"
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable/design_bottom_navigation_item_background.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/cast_expanded_controller_seekbar_thumb.xml",
@@ -501,7 +501,7 @@
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/res/drawable/design_fab_background.xml"
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable/design_fab_background.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
