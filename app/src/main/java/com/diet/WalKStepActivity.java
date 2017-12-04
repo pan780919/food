@@ -3,7 +3,9 @@ package com.diet;
 //import java.util.ArrayList;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 
 
@@ -576,19 +578,15 @@ public class WalKStepActivity extends Activity {
                     ssteps.setText(Integer.toString(steps) + "步");
                     if(mygoal!=0){
                         if (steps > mygoal) {
-
+                            mMediaPlayer = new MediaPlayer();
                             try {
-                                mMediaPlayer = new MediaPlayer();
-                                mmode.setText("目標達成!");
+                                mMediaPlayer = MediaPlayer.create(WalKStepActivity.this,R.raw.run);
 
-                                mMediaPlayer.setDataSource(WalKStepActivity.this,Uri.parse( "android.resource://"+"com.diet"+"/"+R.raw.run));
 
-                                 mMediaPlayer.prepare();
-                            } catch (IOException e) {
+                                mMediaPlayer.start();
+                            } catch (Exception e) {
                                 e.printStackTrace();
-                                Log.d(TAG, "handleMessage: "+e.getMessage());
                             }
-                            mMediaPlayer.start();
 
                     }
 
