@@ -1,5 +1,7 @@
 package com.diet;
 
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.app.Activity;
@@ -31,6 +33,7 @@ public class UserMessgeActivity extends Activity implements View.OnClickListener
     String name = "";
     String  tomsg= "";
     CharSequence s;
+    private ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +50,6 @@ public class UserMessgeActivity extends Activity implements View.OnClickListener
         id = bundle.getString("id");
         name = bundle.getString("name");
         tomsg =bundle.getString("msg");
-        Log.d(TAG, "getUserid: "+tomsg);
         Calendar mCal = Calendar.getInstance();
         s = DateFormat.format("yyyy-MM-dd kk:mm:ss", mCal.getTime());
     }
@@ -73,7 +75,15 @@ public class UserMessgeActivity extends Activity implements View.OnClickListener
         countRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                userMsgText.setText(dataSnapshot.child("tomsg").getValue().toString());
+
+                progressDialog = ProgressDialog.show(UserMessgeActivity.this, "已經留言給他囉", "資料更新中！！", false, false, new DialogInterface.OnCancelListener() {
+
+                    @Override
+                    public void onCancel(DialogInterface dialog) {
+                        //
+                    }
+                });
+
             }
 
             @Override
@@ -117,7 +127,7 @@ public class UserMessgeActivity extends Activity implements View.OnClickListener
                     }else {
                         toMsg(userMsgEdt.getText().toString().trim());
                         userMsgEdt.setText("");
-                        Toast.makeText(UserMessgeActivity.this,"已經留言給他囉",Toast.LENGTH_SHORT).show();
+                        setFireBase();
 
                     }
 
@@ -127,5 +137,61 @@ public class UserMessgeActivity extends Activity implements View.OnClickListener
 
         }
 
+    private void setFireBase() {
+        Firebase.setAndroidContext(this);
+        String url = "https://food-4997e.firebaseio.com/foodList";
 
+        Firebase mFirebaseRef = new Firebase(url);
+
+
+//		if(Firebase.getDefaultConfig().isPersistenceEnabled()==false)mFirebaseRef.getDefaultConfig().setPersistenceEnabled(true);
+        mFirebaseRef.orderByChild(id).equalTo("tomsg").addChildEventListener(new com.firebase.client.ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+//                Log.d(TAG, "onChildAdded: " + dataSnapshot.getValue().toString());
+//				Log.d(TAG, "onChildAdded: "+ (String) dataSnapshot.child("tittle").getValue());
+//				Log.d(TAG, "onChildAdded: "+ (Long) dataSnapshot.child("message").getValue());
+//				TaipeiZoo taipeiZoo = new TaipeiZoo();
+//				taipeiZoo.setName((String)dataSnapshot.child("name").getValue());
+//                for (DataSnapshot alert: dataSnapshot.getChildren()) {
+//                    Log.d(TAG, "onChildAdded: "+alert.getValue().toString());
+//                    list.add(0,gayPlace);
+////                    for (DataSnapshot recipient: alert.child("formsg").getChildren()) {
+////                        Log.d(TAG, "onChildAdded: "+recipient.getValue().toString());
+////                    }
+//
+                ResultData resultData = dataSnapshot.getValue(ResultData.class);
+                Log.d(TAG, "onChildAdded: "+resultData.tomsg);
+
+
+                progressDialog.dismiss();
+
+
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                Log.d(TAG, "onChildChanged: " + "onChildChanged");
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+
+        });
+
+
+    }
     }

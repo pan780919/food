@@ -425,7 +425,7 @@ public class WalKStepActivity extends Activity {
         section = 1;
         mchildid = 0;
         if (main.mymain.memberlist.size() == 0) {
-            Log.d(TAG, "onCreate: " + "null");
+            return;
         } else {
             name = main.mymain.memberlist.get(mchildid).name;
             age = 20;
@@ -525,6 +525,17 @@ public class WalKStepActivity extends Activity {
                     if(mygoal!=0){
                         if (steps >= mygoal) {
                             mper.start();
+                            new AlertDialog.Builder(WalKStepActivity.this)
+                                    .setTitle("達成目標")
+                                    .setMessage("恭喜您！達成目標成就")
+                                    .setNegativeButton("確定", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            mper.pause();
+                                            dialogInterface.dismiss();
+                                        }
+                                    });
+
 
 
                         }

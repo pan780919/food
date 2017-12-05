@@ -248,7 +248,7 @@ ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:75:9-79:61
 	android:label
 		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:77:13-45
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:78:13-69
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:78:13-44
 	android:name
 		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:76:13-45
 activity#com.diet.Query

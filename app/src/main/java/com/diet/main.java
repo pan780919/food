@@ -183,7 +183,7 @@ public class main extends Activity
                 sitem.weight = cursor.getString(3);
                 sitem.height = cursor.getString(4);
                 sitem.waist = cursor.getString(5);
-                sitem.age = cursor.getString(6);
+                sitem.age = cursor.getInt(6);
                 sitem.rdate = cursor.getString(7);
 
                 memberlist.add(sitem);
@@ -307,7 +307,8 @@ public class main extends Activity
                         choice();
                         break;
                     case 3:
-                        modifymember();
+//
+                        fixmember();
                         break;
                     case 4:
                         intent = new Intent();
@@ -582,7 +583,7 @@ public class main extends Activity
                             sitem.weight = cursor.getString(3);
                             sitem.height = cursor.getString(4);
                             sitem.waist = cursor.getString(5);
-                            sitem.age = cursor.getString(6);
+                            sitem.age = cursor.getInt(6);
                             sitem.rdate = cursor.getString(7);
 
                             memberlist.add(sitem);
@@ -620,6 +621,142 @@ public class main extends Activity
 
 
     private void modifymember()
+    {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+        alert.setTitle("基本資料");
+
+        ScrollView sv = new ScrollView(this);
+        LinearLayout ll = new LinearLayout(this);
+        ll.setOrientation(LinearLayout.VERTICAL);
+        sv.addView(ll);
+        tname = new TextView(this);
+        tname.setText("姓名: ");
+        TextView textViewname = new TextView(this);
+
+        ll.addView(tname);
+        ll.addView(textViewname);
+
+        tsex = new TextView(this);
+        tsex.setText("性別: ");
+        TextView textViewsex = new TextView(this);
+
+        ll.addView(tsex);
+        ll.addView(textViewsex);
+
+        twe = new TextView(this);
+        twe.setText("體重: ");
+        TextView textViewwe = new TextView(this);
+
+        ll.addView(twe);
+        ll.addView(textViewwe);
+
+        the = new TextView(this);
+        the.setText("身高: ");
+        TextView textViewhe = new TextView(this);
+
+        ll.addView(the);
+        ll.addView(textViewhe);
+
+        tage = new TextView(this);
+        tage.setText("生日: ");
+        TextView textViewage = new TextView(this);
+        ll.addView(tage);
+        ll.addView(textViewage);
+        // Set an EditText view to get user input
+
+        if(memberlist.size()==0){
+            we.setText("有值沒填");
+            he.setText("有值沒填");
+            age.setText("有值沒填");
+            name.setText("有值沒填");
+            sex.setSelection(0);
+
+
+        }else {
+            name.setText(memberlist.get(selector).name);
+            we.setText(memberlist.get(selector).weight);
+            he.setText(memberlist.get(selector).height);
+            age.setText(memberlist.get(selector).age);
+            if (memberlist.get(selector).sex.equals("0"))
+                sex.setSelection(0);
+            else
+                sex.setSelection(1);
+        }
+        alert.setView(sv);
+//
+//        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface dialog, int whichButton)
+//            {
+//                String id = memberlist.get(selector).id;
+//                n1 = name.getText().toString();
+//                n2 = Integer.toString(sex.getSelectedItemPosition());
+//                n3 = we.getText().toString();
+//                n4 = he.getText().toString();
+//                n5 = "28";
+//                n6 = age.getText().toString();
+//
+//                Log.i("TAG", "n2: " + n2);
+//
+//                if (n3.equals("") ||n4.equals("") ||n5.equals("")||n6.equals("")||n1.equals(""))
+//                {
+//                    openOptionsDialog("有值沒填");
+//                    return;
+//                }
+//                else
+//                {
+//                    DBSQL.update(main.this, n1, n2, n3, n4, n5, n6, id);
+//                    memberlist.clear();
+//                    try{
+//                        cursor = db.query(SQLiteHelper.TB_NAME, null, null, null, null, null, null);
+//
+//                        cursor.moveToFirst();
+//
+//                        while(!cursor.isAfterLast())
+//                        {
+//                            member sitem = new member();
+//                            sitem.id = cursor.getString(0);
+//                            sitem.name = cursor.getString(1);
+//                            sitem.sex = cursor.getString(2);
+//                            sitem.weight = cursor.getString(3);
+//                            sitem.height = cursor.getString(4);
+//                            sitem.waist = cursor.getString(5);
+//                            sitem.age = cursor.getString(6);
+//                            sitem.rdate = cursor.getString(7);
+//
+//                            memberlist.add(sitem);
+//                            cursor.moveToNext();
+//                        }
+//                    }
+//                    catch (Exception e)
+//                    {
+//                        e.printStackTrace();
+//                    }
+//
+//                    selector = memberlist.size()-1;
+//
+//                    refresh_msg();
+//
+//                }
+//
+//
+//
+//            }
+//        });
+
+        alert.setNegativeButton("ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton)
+            {
+                dialog.dismiss();
+            }
+        });
+
+        alert.show();
+
+
+
+    }
+    private void fixmember()
     {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
@@ -738,7 +875,7 @@ public class main extends Activity
                             sitem.weight = cursor.getString(3);
                             sitem.height = cursor.getString(4);
                             sitem.waist = cursor.getString(5);
-                            sitem.age = cursor.getString(6);
+                            sitem.age = cursor.getInt(6);
                             sitem.rdate = cursor.getString(7);
 
                             memberlist.add(sitem);
