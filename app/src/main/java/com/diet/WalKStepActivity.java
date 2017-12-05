@@ -188,7 +188,7 @@ public class WalKStepActivity extends Activity {
         my = this;
 
         uri = Uri.parse("android.resource://" + //預設會播放程式內的音樂檔
-                getPackageName() + "/" + R.raw.likey);
+                getPackageName() + "/" + R.raw.goal);
         Log.d(TAG, "onCreate: "+uri);
         mper = new MediaPlayer();           //建立 MediaPlayer 物件
         try {
@@ -520,7 +520,7 @@ public class WalKStepActivity extends Activity {
 
                     ssteps.setText(Integer.toString(steps) + "步");
                     if(mygoal!=0){
-                        if (steps > mygoal) {
+                        if (steps >= mygoal) {
                             mper.start();
 
 

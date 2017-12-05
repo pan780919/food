@@ -5485,10 +5485,11 @@ containing a value of this type.
         public static final int support_simple_spinner_dropdown_item=0x7f030073;
     }
     public static final class raw {
-        public static final int gtm_analytics=0x7f070000;
-        public static final int likey=0x7f070001;
-        public static final int run=0x7f070002;
-        public static final int running=0x7f070003;
+        public static final int goal=0x7f070000;
+        public static final int gtm_analytics=0x7f070001;
+        public static final int likey=0x7f070002;
+        public static final int run=0x7f070003;
+        public static final int running=0x7f070004;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f080000;

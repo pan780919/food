@@ -2004,10 +2004,11 @@ int layout splash 0x7f030070
 int layout sport 0x7f030071
 int layout storelist 0x7f030072
 int layout support_simple_spinner_dropdown_item 0x7f030073
-int raw gtm_analytics 0x7f070000
-int raw likey 0x7f070001
-int raw run 0x7f070002
-int raw running 0x7f070003
+int raw goal 0x7f070000
+int raw gtm_analytics 0x7f070001
+int raw likey 0x7f070002
+int raw run 0x7f070003
+int raw running 0x7f070004
 int string abc_action_bar_home_description 0x7f080000
 int string abc_action_bar_home_description_format 0x7f080001
 int string abc_action_bar_home_subtitle_description_format 0x7f080002
