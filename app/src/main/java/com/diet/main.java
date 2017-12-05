@@ -41,6 +41,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Images.Media;
+import android.text.InputType;
 import android.util.Base64;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -119,6 +120,7 @@ public class main extends Activity
     int myYear, myMonth, myDay;
 
     CharSequence[] child_id = null;
+    private DatePickerDialog datePickerDialog;
 
     /** Called when the activity is first created. */
     @Override
@@ -374,7 +376,7 @@ public class main extends Activity
         double bmr = 0, bmi = 0, standrdweight = 0;
         int weight = Integer.valueOf(mydata.weight);
         int height = Integer.valueOf(mydata.height);
-        int age = Integer.valueOf(mydata.age);
+        int age = 20;
 
         double waist = Double.valueOf(mydata.waist);
         String rwaist = "";
@@ -471,6 +473,7 @@ public class main extends Activity
                 costdata += Double.valueOf(sitem.dhot);
 
                 cursor.moveToNext();
+
             }
         }
         catch (Exception e)
@@ -530,6 +533,14 @@ public class main extends Activity
         tage = new TextView(this);
         tage.setText("生日: ");
         age = new EditText(this);
+        age.setInputType(InputType.TYPE_NULL); // 關閉軟鍵盤
+
+        age.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setData();
+            }
+        });
         age.setText("");
         ll.addView(tage);
         ll.addView(age);
@@ -629,7 +640,7 @@ public class main extends Activity
         tsex = new TextView(this);
         tsex.setText("性別: ");
         sex = new Spinner(this);
-        String sexs[] = {"男","女"};
+        final String sexs[] = {"男","女"};
         ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this,   android.R.layout.simple_spinner_item, sexs);
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down vieww
         sex.setAdapter(spinnerArrayAdapter);
@@ -657,7 +668,16 @@ public class main extends Activity
         tage = new TextView(this);
         tage.setText("生日: ");
         age = new EditText(this);
+        age.setInputType(InputType.TYPE_NULL); // 關閉軟鍵盤
 
+        age.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                age.setInputType(InputType.TYPE_NULL); // 關閉軟鍵盤
+
+                setData();
+            }
+        });
         ll.addView(tage);
         ll.addView(age);
         // Set an EditText view to get user input
@@ -1331,5 +1351,28 @@ public class main extends Activity
                 .show();
     }
 
+    private  void  setData(){
+        int mYear, mMonth, mDay;
+
+        final Calendar c = Calendar.getInstance();
+        mYear = c.get(Calendar.YEAR);
+        mMonth = c.get(Calendar.MONTH);
+        mDay = c.get(Calendar.DAY_OF_MONTH);
+        new DatePickerDialog(main.this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int day) {
+
+              age.setText(setDateFormat(year,month,day));
+            }
+
+        }, mYear,mMonth, mDay).show();
+}
+
+    private String setDateFormat(int year,int monthOfYear,int dayOfMonth){
+        return String.valueOf(year) + "-"
+                + String.valueOf(monthOfYear + 1) + "-"
+                + String.valueOf(dayOfMonth);
+    }
 
 }
+

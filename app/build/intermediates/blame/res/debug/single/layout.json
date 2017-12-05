@@ -12,12 +12,12 @@
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/layout/cast_mini_controller.xml"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/cast_expanded_controller_activity.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/layout/cast_expanded_controller_activity.xml"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/cast_expanded_controller_activity.xml",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/layout/cast_expanded_controller_activity.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
@@ -36,24 +36,24 @@
         "source": "/Users/jackpan/food/app/src/main/res/layout/activity_user_messge.xml"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/messenger_button_send_blue_small.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-messenger/4.28.0/res/layout/messenger_button_send_blue_small.xml"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/place_autocomplete_fragment.xml",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/10.0.1/res/layout/place_autocomplete_fragment.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/messenger_button_send_blue_small.xml",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-messenger/4.28.0/res/layout/messenger_button_send_blue_small.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/layout/abc_screen_simple.xml"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_navigation_item.xml"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_navigation_item.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/content_grid_view.xml",
@@ -112,20 +112,20 @@
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_layout_snackbar_include.xml"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/layout/abc_action_mode_close_item_material.xml"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/activity_two.xml",
         "source": "/Users/jackpan/food/app/src/main/res/layout/activity_two.xml"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/dlayout.xml",
-        "source": "/Users/jackpan/food/app/src/main/res/layout/dlayout.xml"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
         "source": "/Users/jackpan/food/app/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/dlayout.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/dlayout.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/cast_tracks_chooser_dialog_layout.xml",

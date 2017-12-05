@@ -37,7 +37,9 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -156,16 +158,18 @@ public class WalKStepActivity extends Activity {
     Location slocation;
 
     ImageView iv;
+    private SoundPool soundPool;
+    private int alertId;
 
     private SharedPreferences settings;
     private static final String mydata = "DATA";
     private static final String nameField = "NAME";
 
-    private MediaPlayer mMediaPlayer;
-
     EditText ddate;
 
     File myvoice;
+    Uri uri;      //儲存影音檔案的 Uri
+    MediaPlayer mper;         //用來參照 MediaPlayer 物件
 
     int mygoal;
     private int[] image = {
@@ -183,10 +187,21 @@ public class WalKStepActivity extends Activity {
 
         my = this;
 
-//        myvoice = Environment.getExternalStorageDirectory()+"/yourfolderNAme/yopurfile.mp3";
-//
-////        myvoice = new File(Environment.getExternalStorageDirectory(), "run.wav");
-//        Log.d(TAG, "onCreate: "+myvoice.isFile());
+        uri = Uri.parse("android.resource://" + //預設會播放程式內的音樂檔
+                getPackageName() + "/" + R.raw.likey);
+        Log.d(TAG, "onCreate: "+uri);
+        mper = new MediaPlayer();           //建立 MediaPlayer 物件
+        try {
+            mper.reset();       //如果之前有播過, 必須 reset 後才能更換
+            mper.setDataSource(WalKStepActivity.this, uri);  //指定影音檔來源
+            mper.setLooping(true); //設定是否重複播放
+            mper.prepareAsync();  //要求 MediaPlayer 準備播放指定的影音檔
+
+            Log.d(TAG, "handleMessage: "+mper.isPlaying());
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.d(TAG, "handleMessage: "+e.getMessage());
+        }
         start = 0;
 
         sensorMgr = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -492,9 +507,26 @@ public class WalKStepActivity extends Activity {
                         now_shows = (now_km / 1000) * weight * 0.98;
                     }
 
-                    Message msg = new Message();
-                    msg.what = MSG_UPDATE_KM;
-                    myHandler.sendMessage(msg);
+//                    Message msg = new Message();
+//                    msg.what = MSG_UPDATE_KM;
+//                    myHandler.sendMessage(msg);
+                    java.text.DecimalFormat nf1 = new java.text.DecimalFormat("###,##0.000");
+                    km.setText(nf1.format(now_km / 1000));
+
+                    Log.i("TAG", "data: " + nf1.format(now_km / 1000));
+
+                    java.text.DecimalFormat nf2 = new java.text.DecimalFormat("###,##0.0000");
+                    shows.setText(nf2.format(now_shows));
+
+                    ssteps.setText(Integer.toString(steps) + "步");
+                    if(mygoal!=0){
+                        if (steps > mygoal) {
+                            mper.start();
+
+
+                        }
+
+                    }
                 }
             }
         }
@@ -567,30 +599,7 @@ public class WalKStepActivity extends Activity {
                     break;
                 case MSG_UPDATE_KM:
 
-                    java.text.DecimalFormat nf = new java.text.DecimalFormat("###,##0.000");
-                    km.setText(nf.format(now_km / 1000));
 
-                    Log.i("TAG", "data: " + nf.format(now_km / 1000));
-
-                    java.text.DecimalFormat nf2 = new java.text.DecimalFormat("###,##0.0000");
-                    shows.setText(nf2.format(now_shows));
-
-                    ssteps.setText(Integer.toString(steps) + "步");
-                    if(mygoal!=0){
-                        if (steps > mygoal) {
-                            mMediaPlayer = new MediaPlayer();
-                            try {
-                                mMediaPlayer = MediaPlayer.create(WalKStepActivity.this,R.raw.run);
-
-
-                                mMediaPlayer.start();
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
-
-                    }
-
-                    }
                     break;
 
                 default:
