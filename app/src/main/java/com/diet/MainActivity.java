@@ -151,7 +151,6 @@ public class MainActivity extends Activity {
                                     int position, long id) {
                 Intent petint = new Intent(MainActivity.this, TwoActivity.class);
                 petint.putExtra("json", new Gson().toJson(mAdapter.mDatas.get(position)));
-
                 startActivity(petint);
 
 

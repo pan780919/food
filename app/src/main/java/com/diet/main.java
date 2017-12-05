@@ -41,6 +41,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Images.Media;
+import android.text.InputType;
 import android.util.Base64;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -119,6 +120,7 @@ public class main extends Activity
     int myYear, myMonth, myDay;
 
     CharSequence[] child_id = null;
+    private DatePickerDialog datePickerDialog;
 
     /** Called when the activity is first created. */
     @Override
@@ -181,7 +183,7 @@ public class main extends Activity
                 sitem.weight = cursor.getString(3);
                 sitem.height = cursor.getString(4);
                 sitem.waist = cursor.getString(5);
-                sitem.age = cursor.getString(6);
+                sitem.age = cursor.getInt(6);
                 sitem.rdate = cursor.getString(7);
 
                 memberlist.add(sitem);
@@ -266,6 +268,10 @@ public class main extends Activity
         map.put("ItemText","share");
         menu.add(map);
         map = new HashMap<String, Object>();
+        map.put("ItemTitle", "會員中心" );
+        map.put("ItemText","membercenter");
+        menu.add(map);
+        map = new HashMap<String, Object>();
         map.put("ItemTitle", "結束程式" );
         map.put("ItemText", "login out");
         menu.add(map);
@@ -305,7 +311,8 @@ public class main extends Activity
                         choice();
                         break;
                     case 3:
-                        modifymember();
+//
+                        fixmember();
                         break;
                     case 4:
                         intent = new Intent();
@@ -326,6 +333,10 @@ public class main extends Activity
                         startActivity(new Intent(main.this, com.diet.MainActivity.class));
                         break;
                     case 9:
+                        startActivity(new Intent(main.this, UserActivity.class));
+
+                        break;
+                    case 10:
                         finish();
                         break;
                 }
@@ -374,7 +385,7 @@ public class main extends Activity
         double bmr = 0, bmi = 0, standrdweight = 0;
         int weight = Integer.valueOf(mydata.weight);
         int height = Integer.valueOf(mydata.height);
-        int age = Integer.valueOf(mydata.age);
+        int age = 20;
 
         double waist = Double.valueOf(mydata.waist);
         String rwaist = "";
@@ -471,6 +482,7 @@ public class main extends Activity
                 costdata += Double.valueOf(sitem.dhot);
 
                 cursor.moveToNext();
+
             }
         }
         catch (Exception e)
@@ -530,6 +542,14 @@ public class main extends Activity
         tage = new TextView(this);
         tage.setText("生日: ");
         age = new EditText(this);
+        age.setInputType(InputType.TYPE_NULL); // 關閉軟鍵盤
+
+        age.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setData();
+            }
+        });
         age.setText("");
         ll.addView(tage);
         ll.addView(age);
@@ -571,7 +591,7 @@ public class main extends Activity
                             sitem.weight = cursor.getString(3);
                             sitem.height = cursor.getString(4);
                             sitem.waist = cursor.getString(5);
-                            sitem.age = cursor.getString(6);
+                            sitem.age = cursor.getInt(6);
                             sitem.rdate = cursor.getString(7);
 
                             memberlist.add(sitem);
@@ -612,6 +632,142 @@ public class main extends Activity
     {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
+        alert.setTitle("基本資料");
+
+        ScrollView sv = new ScrollView(this);
+        LinearLayout ll = new LinearLayout(this);
+        ll.setOrientation(LinearLayout.VERTICAL);
+        sv.addView(ll);
+        tname = new TextView(this);
+        tname.setText("姓名: ");
+        TextView textViewname = new TextView(this);
+
+        ll.addView(tname);
+        ll.addView(textViewname);
+
+        tsex = new TextView(this);
+        tsex.setText("性別: ");
+        TextView textViewsex = new TextView(this);
+
+        ll.addView(tsex);
+        ll.addView(textViewsex);
+
+        twe = new TextView(this);
+        twe.setText("體重: ");
+        TextView textViewwe = new TextView(this);
+
+        ll.addView(twe);
+        ll.addView(textViewwe);
+
+        the = new TextView(this);
+        the.setText("身高: ");
+        TextView textViewhe = new TextView(this);
+
+        ll.addView(the);
+        ll.addView(textViewhe);
+
+        tage = new TextView(this);
+        tage.setText("生日: ");
+        TextView textViewage = new TextView(this);
+        ll.addView(tage);
+        ll.addView(textViewage);
+        // Set an EditText view to get user input
+
+        if(memberlist.size()==0){
+            we.setText("有值沒填");
+            he.setText("有值沒填");
+            age.setText("有值沒填");
+            name.setText("有值沒填");
+            sex.setSelection(0);
+
+
+        }else {
+            name.setText(memberlist.get(selector).name);
+            we.setText(memberlist.get(selector).weight);
+            he.setText(memberlist.get(selector).height);
+            age.setText(memberlist.get(selector).age);
+            if (memberlist.get(selector).sex.equals("0"))
+                sex.setSelection(0);
+            else
+                sex.setSelection(1);
+        }
+        alert.setView(sv);
+//
+//        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface dialog, int whichButton)
+//            {
+//                String id = memberlist.get(selector).id;
+//                n1 = name.getText().toString();
+//                n2 = Integer.toString(sex.getSelectedItemPosition());
+//                n3 = we.getText().toString();
+//                n4 = he.getText().toString();
+//                n5 = "28";
+//                n6 = age.getText().toString();
+//
+//                Log.i("TAG", "n2: " + n2);
+//
+//                if (n3.equals("") ||n4.equals("") ||n5.equals("")||n6.equals("")||n1.equals(""))
+//                {
+//                    openOptionsDialog("有值沒填");
+//                    return;
+//                }
+//                else
+//                {
+//                    DBSQL.update(main.this, n1, n2, n3, n4, n5, n6, id);
+//                    memberlist.clear();
+//                    try{
+//                        cursor = db.query(SQLiteHelper.TB_NAME, null, null, null, null, null, null);
+//
+//                        cursor.moveToFirst();
+//
+//                        while(!cursor.isAfterLast())
+//                        {
+//                            member sitem = new member();
+//                            sitem.id = cursor.getString(0);
+//                            sitem.name = cursor.getString(1);
+//                            sitem.sex = cursor.getString(2);
+//                            sitem.weight = cursor.getString(3);
+//                            sitem.height = cursor.getString(4);
+//                            sitem.waist = cursor.getString(5);
+//                            sitem.age = cursor.getString(6);
+//                            sitem.rdate = cursor.getString(7);
+//
+//                            memberlist.add(sitem);
+//                            cursor.moveToNext();
+//                        }
+//                    }
+//                    catch (Exception e)
+//                    {
+//                        e.printStackTrace();
+//                    }
+//
+//                    selector = memberlist.size()-1;
+//
+//                    refresh_msg();
+//
+//                }
+//
+//
+//
+//            }
+//        });
+
+        alert.setNegativeButton("ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton)
+            {
+                dialog.dismiss();
+            }
+        });
+
+        alert.show();
+
+
+
+    }
+    private void fixmember()
+    {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
         alert.setTitle("修改");
         alert.setMessage("請輸入");
 
@@ -629,7 +785,7 @@ public class main extends Activity
         tsex = new TextView(this);
         tsex.setText("性別: ");
         sex = new Spinner(this);
-        String sexs[] = {"男","女"};
+        final String sexs[] = {"男","女"};
         ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this,   android.R.layout.simple_spinner_item, sexs);
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down vieww
         sex.setAdapter(spinnerArrayAdapter);
@@ -657,7 +813,16 @@ public class main extends Activity
         tage = new TextView(this);
         tage.setText("生日: ");
         age = new EditText(this);
+        age.setInputType(InputType.TYPE_NULL); // 關閉軟鍵盤
 
+        age.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                age.setInputType(InputType.TYPE_NULL); // 關閉軟鍵盤
+
+                setData();
+            }
+        });
         ll.addView(tage);
         ll.addView(age);
         // Set an EditText view to get user input
@@ -718,7 +883,7 @@ public class main extends Activity
                             sitem.weight = cursor.getString(3);
                             sitem.height = cursor.getString(4);
                             sitem.waist = cursor.getString(5);
-                            sitem.age = cursor.getString(6);
+                            sitem.age = cursor.getInt(6);
                             sitem.rdate = cursor.getString(7);
 
                             memberlist.add(sitem);
@@ -1331,5 +1496,28 @@ public class main extends Activity
                 .show();
     }
 
+    private  void  setData(){
+        int mYear, mMonth, mDay;
+
+        final Calendar c = Calendar.getInstance();
+        mYear = c.get(Calendar.YEAR);
+        mMonth = c.get(Calendar.MONTH);
+        mDay = c.get(Calendar.DAY_OF_MONTH);
+        new DatePickerDialog(main.this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int day) {
+
+              age.setText(setDateFormat(year,month,day));
+            }
+
+        }, mYear,mMonth, mDay).show();
+}
+
+    private String setDateFormat(int year,int monthOfYear,int dayOfMonth){
+        return String.valueOf(year) + "-"
+                + String.valueOf(monthOfYear + 1) + "-"
+                + String.valueOf(dayOfMonth);
+    }
 
 }
+

@@ -3,7 +3,9 @@ package com.diet;
 //import java.util.ArrayList;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 
 
@@ -35,7 +37,9 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -154,23 +158,28 @@ public class WalKStepActivity extends Activity {
     Location slocation;
 
     ImageView iv;
+    private SoundPool soundPool;
+    private int alertId;
 
     private SharedPreferences settings;
     private static final String mydata = "DATA";
     private static final String nameField = "NAME";
 
-    private MediaPlayer mMediaPlayer;
-
     EditText ddate;
 
     File myvoice;
+    Uri uri;      //儲存影音檔案的 Uri
+    MediaPlayer mper;         //用來參照 MediaPlayer 物件
 
     int mygoal;
     private int[] image = {
-            R.drawable.a1, R.drawable.a2, R.drawable.a3,
-            R.drawable.a4, R.drawable.a5, R.drawable.a6,
-            R.drawable.a7, R.drawable.a8, R.drawable.a9,
-            R.drawable.a10, R.drawable.a11, R.drawable.a12
+            R.drawable.p01, R.drawable.p02, R.drawable.p03,
+            R.drawable.p05, R.drawable.p06, R.drawable.p07,
+            R.drawable.p08, R.drawable.p09, R.drawable.p10,
+            R.drawable.p12, R.drawable.p13, R.drawable.p14,
+            R.drawable.p15,R.drawable.p16,R.drawable.p17,R.drawable.p18,
+            R.drawable.p19,R.drawable.p20,R.drawable.p21,R.drawable.p22,
+
     };
 
     @Override
@@ -181,10 +190,21 @@ public class WalKStepActivity extends Activity {
 
         my = this;
 
-//        myvoice = Environment.getExternalStorageDirectory()+"/yourfolderNAme/yopurfile.mp3";
-//
-////        myvoice = new File(Environment.getExternalStorageDirectory(), "run.wav");
-//        Log.d(TAG, "onCreate: "+myvoice.isFile());
+        uri = Uri.parse("android.resource://" + //預設會播放程式內的音樂檔
+                getPackageName() + "/" + R.raw.goal);
+        Log.d(TAG, "onCreate: "+uri);
+        mper = new MediaPlayer();           //建立 MediaPlayer 物件
+        try {
+            mper.reset();       //如果之前有播過, 必須 reset 後才能更換
+            mper.setDataSource(WalKStepActivity.this, uri);  //指定影音檔來源
+            mper.setLooping(true); //設定是否重複播放
+            mper.prepareAsync();  //要求 MediaPlayer 準備播放指定的影音檔
+
+            Log.d(TAG, "handleMessage: "+mper.isPlaying());
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.d(TAG, "handleMessage: "+e.getMessage());
+        }
         start = 0;
 
         sensorMgr = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -405,10 +425,10 @@ public class WalKStepActivity extends Activity {
         section = 1;
         mchildid = 0;
         if (main.mymain.memberlist.size() == 0) {
-            Log.d(TAG, "onCreate: " + "null");
+            return;
         } else {
             name = main.mymain.memberlist.get(mchildid).name;
-            age = Integer.valueOf(main.mymain.memberlist.get(mchildid).age);
+            age = 20;
             tsex = Integer.valueOf(main.mymain.memberlist.get(mchildid).sex);
             weight = Integer.valueOf(main.mymain.memberlist.get(mchildid).weight);
             tall = Integer.valueOf(main.mymain.memberlist.get(mchildid).height);
@@ -490,9 +510,37 @@ public class WalKStepActivity extends Activity {
                         now_shows = (now_km / 1000) * weight * 0.98;
                     }
 
-                    Message msg = new Message();
-                    msg.what = MSG_UPDATE_KM;
-                    myHandler.sendMessage(msg);
+//                    Message msg = new Message();
+//                    msg.what = MSG_UPDATE_KM;
+//                    myHandler.sendMessage(msg);
+                    java.text.DecimalFormat nf1 = new java.text.DecimalFormat("###,##0.000");
+                    km.setText(nf1.format(now_km / 1000));
+
+                    Log.i("TAG", "data: " + nf1.format(now_km / 1000));
+
+                    java.text.DecimalFormat nf2 = new java.text.DecimalFormat("###,##0.0000");
+                    shows.setText(nf2.format(now_shows));
+
+                    ssteps.setText(Integer.toString(steps) + "步");
+                    if(mygoal!=0){
+                        if (steps >= mygoal) {
+                            mper.start();
+                            new AlertDialog.Builder(WalKStepActivity.this)
+                                    .setTitle("達成目標")
+                                    .setMessage("恭喜您！達成目標成就")
+                                    .setNegativeButton("確定", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            mper.pause();
+                                            dialogInterface.dismiss();
+                                        }
+                                    });
+
+
+
+                        }
+
+                    }
                 }
             }
         }
@@ -565,34 +613,7 @@ public class WalKStepActivity extends Activity {
                     break;
                 case MSG_UPDATE_KM:
 
-                    java.text.DecimalFormat nf = new java.text.DecimalFormat("###,##0.000");
-                    km.setText(nf.format(now_km / 1000));
 
-                    Log.i("TAG", "data: " + nf.format(now_km / 1000));
-
-                    java.text.DecimalFormat nf2 = new java.text.DecimalFormat("###,##0.0000");
-                    shows.setText(nf2.format(now_shows));
-
-                    ssteps.setText(Integer.toString(steps) + "步");
-                    if(mygoal!=0){
-                        if (steps > mygoal) {
-
-                            try {
-                                mMediaPlayer = new MediaPlayer();
-                                mmode.setText("目標達成!");
-
-                                mMediaPlayer.setDataSource(WalKStepActivity.this,Uri.parse( "android.resource://"+"com.diet"+"/"+R.raw.run));
-
-                                 mMediaPlayer.prepare();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                                Log.d(TAG, "handleMessage: "+e.getMessage());
-                            }
-                            mMediaPlayer.start();
-
-                    }
-
-                    }
                     break;
 
                 default:
@@ -696,7 +717,7 @@ public class WalKStepActivity extends Activity {
                 }
 
                 name = sname.getText().toString();
-                age = Integer.valueOf(s1.getText().toString());
+                age = 20;
                 weight = Integer.valueOf(s2.getText().toString());
                 tall = Integer.valueOf(s3.getText().toString());
                 tsex = s4.getSelectedItemPosition();

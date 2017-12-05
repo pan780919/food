@@ -62,7 +62,7 @@ public class sport extends Activity implements OnClickListener
 	public static int hot = 0;
 
 	sport mydiet = this;
-
+	String date ;
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState)
@@ -146,7 +146,7 @@ public class sport extends Activity implements OnClickListener
 		myYear = c.get(Calendar.YEAR);
 		myMonth = c.get(Calendar.MONTH);
 		myDay = c.get(Calendar.DAY_OF_MONTH);
-		String date = String.valueOf(myYear) + "-" + String.valueOf(myMonth+1) + "-" + String.valueOf(myDay);
+		 date = String.valueOf(myYear) + "-" + String.valueOf(myMonth+1) + "-" + String.valueOf(myDay);
 		mdate.setText(date);
 
 		//選單下拉式, 選food類別: 把從string.xml的食物放進去讓使用者選
@@ -233,7 +233,7 @@ public class sport extends Activity implements OnClickListener
 
 												//顯示用
 
-												listarray.add(et[i].getText().toString()+"份"+item.foodname.get(i) + "(" + item.hot.get(i) *Integer.parseInt(et[i].getText().toString())+ "卡"+")");
+												listarray.add(et[i].getText().toString()+"份"+item.foodname.get(i) + "(" + item.hot.get(i) *Integer.parseInt(et[i].getText().toString())+ "卡"+"\t"+"日期："+date+")");
 												//計算熱量
 												try
 												{
@@ -299,7 +299,7 @@ public class sport extends Activity implements OnClickListener
 		public void onDateSet(DatePicker view, int year,
 							  int monthOfYear, int dayOfMonth) {
 			// TODO Auto-generated method stub
-			String date = String.valueOf(year) + "-" + String.valueOf(monthOfYear+1) + "-" + String.valueOf(dayOfMonth);
+			date = String.valueOf(year) + "-" + String.valueOf(monthOfYear+1) + "-" + String.valueOf(dayOfMonth);
 			mdate.setText(date);
 		}
 	};

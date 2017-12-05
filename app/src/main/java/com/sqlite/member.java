@@ -17,7 +17,7 @@ public class member
 	public String weight="";
  	public String height="";
 	public String waist="";
-	public String age="";
+	public int age;
 	public String rdate="";
  
 }

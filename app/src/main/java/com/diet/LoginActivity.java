@@ -136,8 +136,8 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
                 Log.d(TAG, "onComplete: "+loginResult.getAccessToken().getUserId());
                 MySharedPrefernces.saveUserId(LoginActivity.this, loginResult.getAccessToken().getUserId());
 
-                Toast.makeText(LoginActivity.this, "登入成功,將跳到商品列表", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(LoginActivity.this, Main.class));
+                Toast.makeText(LoginActivity.this, "登入成功,將跳到列表", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(LoginActivity.this, main.class));
                 LoginActivity.this.finish();
             }
 
@@ -231,8 +231,8 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
     @Override
     public void createUserState(boolean b) {
         if (b) {
-            Toast.makeText(this, "註冊成功,將跳到商品列表", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(LoginActivity.this, Main.class));
+            Toast.makeText(this, "註冊成功,將跳到列表", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(LoginActivity.this, main.class));
             LoginActivity.this.finish();
         } else {
 
@@ -243,9 +243,9 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
     @Override
     public void useLognState(boolean b) {
         if (b) {
-            Toast.makeText(this, "登入成功,將跳到商品列表", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "登入成功,將跳到列表", Toast.LENGTH_SHORT).show();
 
-            startActivity(new Intent(LoginActivity.this, Main.class));
+            startActivity(new Intent(LoginActivity.this, main.class));
             LoginActivity.this.finish();
         } else {
             new AlertDialog.Builder(LoginActivity.this)
@@ -268,7 +268,7 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
     @Override
     public void getuseLoginId(String s) {
         if(!MySharedPrefernces.getUserId(LoginActivity.this).equals("")){
-            startActivity(new Intent(LoginActivity.this,Main.class));
+            startActivity(new Intent(LoginActivity.this,main.class));
             LoginActivity.this.finish();
             return;
         }
@@ -276,7 +276,7 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
         if (!s.equals("")) {
             userUID = s;
             MySharedPrefernces.saveUserId(LoginActivity.this, userUID);
-            startActivity(new Intent(LoginActivity.this,Main.class));
+            startActivity(new Intent(LoginActivity.this,UserActivity.class));
             LoginActivity.this.finish();
 
         } else {
@@ -291,7 +291,7 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
 
     @Override
     public void getuserLoginEmail(String s) {
-
+        MySharedPrefernces.saveUserMail(this,s);
 
     }
 

@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -27,8 +28,8 @@ public class MusicActivity extends AppCompatActivity implements
     CheckBox ckbLoop;         //用來參照重複播放多選鈕
     MediaPlayer mper;         //用來參照 MediaPlayer 物件
     Toast tos;                //用來參照 Toast 物件 (顯示訊息之用)
-
-
+    int state;
+    private static final String TAG = "MusicActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_main_music);
@@ -56,7 +57,6 @@ public class MusicActivity extends AppCompatActivity implements
         mper.setOnErrorListener(this);
         mper.setOnCompletionListener(this);
         tos = Toast.makeText(this, "", Toast.LENGTH_SHORT); //建立 Toast 物件
-
         prepareMedia();   //準備播放指定的影音檔
 
     }
@@ -75,6 +75,7 @@ public class MusicActivity extends AppCompatActivity implements
             tos.setText("指定影音檔錯誤！" + e.toString());
             tos.show();
         }
+        MySharedPrefernces.saveMusicState(MusicActivity.this,1);
     }
 
     public void onPick(View v) {
@@ -123,6 +124,7 @@ public class MusicActivity extends AppCompatActivity implements
         mper.seekTo(0);             //將播放位置歸 0
         btnPlay.setText("播放");    //讓播放鈕顯示 "播放"
         btnStop.setEnabled(false);  //讓停止鈕不能按
+
     }
 
     @Override
@@ -158,6 +160,7 @@ public class MusicActivity extends AppCompatActivity implements
         mper.seekTo(0); //移到音樂中 0 秒的位置
         btnPlay.setText("播放");
         btnStop.setEnabled(false);
+        MySharedPrefernces.saveMusicState(MusicActivity.this,0);
     }
 
     public void onMpLoop(View v) {   //按下【重複播放】多選鈕時
@@ -200,12 +203,20 @@ public class MusicActivity extends AppCompatActivity implements
     @Override
     protected void onResume() {
         super.onResume();
+
+        state =  MySharedPrefernces.getMusicState(MusicActivity.this);
+        if(state == 1){
+            btnStop.setEnabled(true);
+        }else
+        {
+            btnStop.setEnabled(false);
+        }
         Toast.makeText(this, "onResume", Toast.LENGTH_LONG).show();
     }
 
     @Override
     protected void onDestroy() {
-        mper.release();  //釋放 MediaPlayer 物件
+//        mper.release();  //釋放 MediaPlayer 物件
         super.onDestroy();
     }
 

@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
@@ -46,24 +47,10 @@ import java.net.URL;
 //import com.google.analytics.tracking.android.EasyTracker;
 
 public class TwoActivity extends Activity {
-	private TextView textview,textview2,textview3,textview4,
-	textview5,textview6,textview7,textview8,textview9,textview10,textview11,
-	textview12,textview13,textview14,textview15,textview16,textview17,textview18,textview19,textview20,textview21;
-	private ImageView img,img2,img3,img4;
-	private Button btn;
-	private boolean isCencel = false;
-	private ProgressDialog progressDialog;
-	private String name;
+	private TextView textview,textview2,textview3,textview4;
 	private Bitmap bitmap=null;
-	private InterstitialAd interstitial;
-	private 	AdView mAdView;
-	private  Button mShareBtn;
 	CallbackManager callbackManager;
 	ShareDialog shareDialog;
-	private com.facebook.ads.AdView adView,adView2,adView3;
-	String likeid;
-	private  Button mUserLikeBtn;
-	private  TextView mUserText;
 	private  Button toUserMsg;
 
 	@Override
@@ -172,17 +159,19 @@ public class TwoActivity extends Activity {
 //
 //			}
 //		});
+		Log.d(TAG, "loadIntent: "+data.id+data.date);
 		toUserMsg.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				if(data.tomsg ==null) return;
 				Intent i = new Intent(TwoActivity.this, UserMessgeActivity.class);
 				Bundle bundle = new Bundle();
-				bundle.putString("id",likeid);
+				bundle.putString("id",data.id+data.date);
 				bundle.putString("name",data.name);
 				bundle.putString("msg",data.tomsg);
 				i.putExtras(bundle);
 				startActivity(i);
+				TwoActivity.this.finish();
 			}
 		});
 

@@ -91,10 +91,10 @@
         <Button
             android:id="@+id/foodchoice"
             android:layout_width="150dp"
+            android:layout_height="80dp"
             android:background="@drawable/buttonbg"
             android:padding="20dp"
-            android:text="請選擇"
-            android:layout_height="50dp"></Button>
+            android:text="請選擇"></Button>
     </TableRow>
 
 

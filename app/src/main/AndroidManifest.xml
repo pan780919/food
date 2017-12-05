@@ -41,7 +41,8 @@
             android:label="@string/app_name" />
         <activity
             android:name=".food"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".checkfood"
             android:label="@string/app_name" />
@@ -50,35 +51,44 @@
             android:label="@string/app_name" />
         <activity
             android:name=".main"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".sport"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".DiaryList"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".DiaryEdit"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".DiaryShow"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".DiaryFoodList"
             android:label="@string/app_name" />
         <activity
             android:name=".WalKStepActivity"
             android:label="@string/app_name"
+            android:theme="@style/AppTheme"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".Query"
             android:label="@string/app_name"
+            android:theme="@style/AppTheme"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".UserMgr"
             android:label="@string/app_name"
+            android:theme="@style/AppTheme"
             android:screenOrientation="portrait"></activity>
-        <activity android:name="com.weather.MainActivity"></activity>
+        <activity android:name="com.weather.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">></activity>
         <activity
             android:name=".GridViewActivity"
             android:label="@string/title_activity_grid_view"
@@ -102,18 +112,24 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MusicActivity">
+        <activity android:name=".MusicActivity"
+            android:theme="@style/AppTheme">
         </activity>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:theme="@style/AppTheme"
+            android:launchMode="singleTask">
         </activity>
 
-        <activity android:name=".TwoActivity">
+        <activity android:name=".TwoActivity"
+            android:theme="@style/AppTheme">
         </activity>
 
-        <activity android:name=".ForIdeaAndShareActivity">
+        <activity android:name=".ForIdeaAndShareActivity"
+            android:theme="@style/AppTheme">
         </activity>
-
+        <activity android:name=".UserActivity"
+            android:theme="@style/AppTheme">
+        </activity>
         <activity android:name=".UserMessgeActivity">
         </activity>
         <meta-data android:name="com.facebook.sdk.ApplicationId"

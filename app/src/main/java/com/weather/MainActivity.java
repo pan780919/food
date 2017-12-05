@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         Location location = locationManager.getLastKnownLocation(provider);
         if (location == null){
             Log.e("TAG","No Location");
-
+            Log.d(TAG, "onCreate: "+Common.apiRequest(String.valueOf(lat),String.valueOf(lon)));
             new GetWeather().execute(Common.apiRequest(String.valueOf(lat),String.valueOf(lon)));
 
         }
@@ -111,6 +111,10 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             }, MY_PERMISSION);
         }
         locationManager.requestLocationUpdates(provider, 400, 1, this);
+
+
+        new GetWeather().execute(Common.apiRequest(String.valueOf(lat),String.valueOf(lon)));
+
     }
 
 
@@ -154,9 +158,10 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
         @Override
         protected String doInBackground(String... params) {
+            Log.d(TAG, "doInBackground: "+params);
             String stream = null;
             String urlString = params[0];
-
+            Log.d(TAG, "doInBackground: "+urlString);
             Helper http = new Helper();
             stream = http.getHTTPData(urlString);
             return stream;
@@ -165,6 +170,11 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+            Log.d(TAG, "onPostExecute: "+s);
+            if(s==null){
+                pd.dismiss();
+                return;
+            }
             if(s.contains("Error: Not found city")){
                 pd.dismiss();
                 return;
