@@ -205,7 +205,7 @@ public class MusicActivity extends AppCompatActivity implements
 
     @Override
     protected void onDestroy() {
-        mper.release();  //釋放 MediaPlayer 物件
+//        mper.release();  //釋放 MediaPlayer 物件
         super.onDestroy();
     }
 

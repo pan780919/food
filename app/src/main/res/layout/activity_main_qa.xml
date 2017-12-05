@@ -5,96 +5,108 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/textView1"
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Q：天氣預報提供者來源？"
-        android:textColor="@android:color/black"
-        android:textSize="24sp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q：天氣預報提供者來源？"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="OpenWeather。"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OpenWeather。"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Q：間歇訓練是什麼？"
-        android:textColor="@android:color/black"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q：間歇訓練是什麼？"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="運動過程中，變換強度，或基礎動作，在運動與運動區間反覆訓練的移動方法。"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="運動過程中，變換強度，或基礎動作，在運動與運動區間反覆訓練的移動方法。"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Q：運動一段時間後，停止運動易發福？"
-        android:textColor="@android:color/black"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q：運動一段時間後，停止運動易發福？"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="無絕對關係，不運動本來就會'緩慢'增加體脂肪。"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="無絕對關係，不運動本來就會'緩慢'增加體脂肪。"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Q：BMI如何計算？"
-        android:textColor="@android:color/black"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q：BMI如何計算？"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="BMI=體重(KG)÷身高(M)²。"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BMI=體重(KG)÷身高(M)²。"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Q：BMR是指？"
-        android:textColor="@android:color/black"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q：BMR是指？"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="人在安靜狀態下消耗的最低熱量，人的活動都建立在此基礎上。"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="人在安靜狀態下消耗的最低熱量，人的活動都建立在此基礎上。"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Q：BMR如何計算？"
-        android:textColor="@android:color/black"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q：BMR如何計算？"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="BMR(男)=(13.7×體重(KG))+(5.0×身高(CM))+(6.8×年齡)+66\nBMR(女)=(9.6×體重(KG))+(1.8×身高(CM))+(4.7×年齡)+655。"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BMR(男)=(13.7×體重(KG))+(5.0×身高(CM))+(6.8×年齡)+66\nBMR(女)=(9.6×體重(KG))+(1.8×身高(CM))+(4.7×年齡)+655。"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</ScrollView>
 
 
 </LinearLayout>

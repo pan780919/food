@@ -87,7 +87,8 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait"></activity>
-        <activity android:name="com.weather.MainActivity"></activity>
+        <activity android:name="com.weather.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">></activity>
         <activity
             android:name=".GridViewActivity"
             android:label="@string/title_activity_grid_view"

@@ -19,10 +19,13 @@ import java.util.Map;
 
 public class GridViewActivity extends AppCompatActivity {
     private int[] image = {
-            R.drawable.a1, R.drawable.a2, R.drawable.a3,
-            R.drawable.a4, R.drawable.a5, R.drawable.a6,
-            R.drawable.a7, R.drawable.a8,R.drawable.a9,
-            R.drawable.a10,R.drawable.a11,R.drawable.a12
+            R.drawable.p01, R.drawable.p02, R.drawable.p03,
+            R.drawable.p05, R.drawable.p06, R.drawable.p07,
+            R.drawable.p08, R.drawable.p09, R.drawable.p10,
+            R.drawable.p12, R.drawable.p13, R.drawable.p14,
+            R.drawable.p15,R.drawable.p16,R.drawable.p17,R.drawable.p18,
+            R.drawable.p19,R.drawable.p20,R.drawable.p21,R.drawable.p22,
+
     };
     private GridView gridView;
     private Context mContext = GridViewActivity.this;
