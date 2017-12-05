@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_call"
+        android:checked="true"
+        android:icon="@drawable/ic_media_play"
+        android:title="運動"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_chat"
+        android:checked="false"
+        android:icon="@drawable/ic_media_pause"
+        android:title="討論區"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_contact"
+        android:checked="false"
+        android:icon="@drawable/quantum_ic_forward_10_white_24"
+        android:title="系統"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_food"
+        android:checked="false"
+        android:icon="@drawable/quantum_ic_bigtop_updates_white_24"
+        android:title="飲食"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_teach"
+        android:checked="false"
+        android:icon="@drawable/quantum_ic_volume_up_grey600_36"
+        android:title="教學"
+        app:showAsAction="ifRoom" />
+</menu>

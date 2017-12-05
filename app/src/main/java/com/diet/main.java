@@ -41,6 +41,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Images.Media;
+import android.support.design.widget.BottomNavigationView;
 import android.text.InputType;
 import android.util.Base64;
 import android.util.Log;
@@ -121,6 +122,7 @@ public class main extends Activity
 
     CharSequence[] child_id = null;
     private DatePickerDialog datePickerDialog;
+    BottomNavigationView bottomNavigationView;
 
     /** Called when the activity is first created. */
     @Override
@@ -131,6 +133,7 @@ public class main extends Activity
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.main);
+        bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottom_navigation);
 
         mymain=this;
 
