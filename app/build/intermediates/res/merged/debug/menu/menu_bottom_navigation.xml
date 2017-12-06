@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_call"
-        android:checked="true"
+        android:checked="false"
         android:icon="@drawable/menu1"
         android:title="運動"
         app:showAsAction="ifRoom" />
@@ -15,7 +15,7 @@
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_contact"
-        android:checked="false"
+        android:checked="true"
         android:icon="@drawable/menu5"
         android:title="系統"
         app:showAsAction="ifRoom" />

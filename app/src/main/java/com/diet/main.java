@@ -15,6 +15,12 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+
+import com.diet.frgment.fragment_food;
+import com.diet.frgment.fragment_setting;
+import com.diet.frgment.fragment_share;
+import com.diet.frgment.fragment_sport;
+import com.diet.frgment.fragment_teach;
 import com.sqlite.RecWeight;
 import com.sqlite.SQLiteHelper;
 import com.sqlite.hotdiary;
@@ -41,12 +47,15 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Images.Media;
+import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Base64;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -125,6 +134,17 @@ public class main extends AppCompatActivity
     private DatePickerDialog datePickerDialog;
     BottomNavigationView bottomNavigationView;
 
+    private ViewPager viewPager;
+    fragment_food mfragment_food;
+    fragment_setting mfragment_setting;
+    fragment_share mfragment_share;
+
+    fragment_sport mfragment_sport;
+    fragment_teach mfragment_teach;
+
+    MenuItem prevMenuItem;
+
+
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -135,249 +155,330 @@ public class main extends AppCompatActivity
 
         setContentView(R.layout.main);
         bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottom_navigation);
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        bottomNavigationView.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.action_call:
+                                viewPager.setCurrentItem(0);
+                                break;
+                            case R.id.action_chat:
+                                viewPager.setCurrentItem(1);
+                                break;
+                            case R.id.action_contact:
+                                viewPager.setCurrentItem(2);
+                                break;
+                            case  R.id.action_food:
+                                viewPager.setCurrentItem(3);
 
-        mymain=this;
+                                break;
+                            case R.id.action_teach:
+                                viewPager.setCurrentItem(4);
 
-        tips = this.getResources().getStringArray(R.array.diet_tips);
+                                break;
+                        }
+                        return false;
+                    }
+                });
 
-        tips_size = tips.length;
-
-        final Calendar c = Calendar.getInstance();
-        myYear = c.get(Calendar.YEAR);
-        myMonth = c.get(Calendar.MONTH);
-        myDay = c.get(Calendar.DAY_OF_MONTH);
-
-        //資料庫
-        try{
-            dbHelper = new SQLiteHelper(this, SQLiteHelper.DB_NAME, null, DB_VERSION);
-            db = dbHelper.getWritableDatabase();
-        }
-        catch(IllegalArgumentException e){
-            e.printStackTrace();
-            ++ DB_VERSION;
-            dbHelper.onUpgrade(db, --DB_VERSION, DB_VERSION);
-        }
-
-
-        int nodata=0;
-
-        memberlist = new ArrayList<member>();
-
-        //first login
-        try{
-            cursor = db.query(SQLiteHelper.TB_NAME, null, null, null, null, null, null);
-
-            cursor.moveToFirst();
-
-            //no data
-            if (cursor.isAfterLast())
-            {
-                //openOptionsDialog("查無data, 請更新database");
-                nodata=1;
-                //return;
-            }
-
-
-            while(!cursor.isAfterLast())
-            {
-                member sitem = new member();
-                sitem.id = cursor.getString(0);
-                sitem.name = cursor.getString(1);
-                sitem.sex = cursor.getString(2);
-                sitem.weight = cursor.getString(3);
-                sitem.height = cursor.getString(4);
-                sitem.waist = cursor.getString(5);
-                sitem.age = cursor.getInt(6);
-                sitem.rdate = cursor.getString(7);
-
-                memberlist.add(sitem);
-                cursor.moveToNext();
-            }
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-
-        PackageInfo info;
-        try {
-            info = getPackageManager().getPackageInfo("com.diet", PackageManager.GET_SIGNATURES);
-            for (Signature signature : info.signatures) {
-                MessageDigest md;
-                md = MessageDigest.getInstance("SHA");
-                md.update(signature.toByteArray());
-                String something = new String(Base64.encode(md.digest(), 0));
-                //String something = new String(Base64.encodeBytes(md.digest()));
-                Log.e("hash key", something);
-            }
-        } catch (PackageManager.NameNotFoundException e1) {
-            Log.e("name not found", e1.toString());
-        } catch (NoSuchAlgorithmException e) {
-            Log.e("no such an algorithm", e.toString());
-        } catch (Exception e) {
-            Log.e("exception", e.toString());
-        }
-        year = c.get(Calendar.YEAR);
-        month = c.get(Calendar.MONTH) + 1;
-        day = c.get(Calendar.DAY_OF_MONTH);
-
-        //登入後, 顯示下列主選單
-        msg = (TextView)findViewById(R.id.rrmsg);
-        listview = (ListView)findViewById(R.id.listview);
-
-        menu = new ArrayList<HashMap<String, Object>>();
-
-        HashMap<String, Object> map = new HashMap<String, Object>();
-        map = new HashMap<String, Object>();
-        map.put("ItemTitle", "虛擬教練" );
-        map.put("ItemText", "sport man");
-        menu.add(map);
-
-        map = new HashMap<String, Object>();
-        map.put("ItemTitle", "卡路里計算" );
-        map.put("ItemText", "sport item");
-        menu.add(map);
-
-        map = new HashMap<String, Object>();
-        map.put("ItemTitle", "真人影片教學" );
-        map.put("ItemText", "training video");
-        menu.add(map);
-
-        map = new HashMap<String, Object>();
-        map.put("ItemTitle", "基本資料設定" );
-        map.put("ItemText", "setup");
-        menu.add(map);
-
-        map = new HashMap<String, Object>();
-        map.put("ItemTitle", "計步器" );
-        map.put("ItemText", "Pedometer");
-        menu.add(map);
-        map = new HashMap<String, Object>();
-        map.put("ItemTitle", "天氣預報" );
-        map.put("ItemText", "weather");
-        menu.add(map);
-
-        map = new HashMap<String, Object>();
-        map.put("ItemTitle", "常見問題" );
-        map.put("ItemText", "QANDA");
-        menu.add(map);
-
-        map = new HashMap<String, Object>();
-        map.put("ItemTitle", "音樂播放器" );
-        map.put("ItemText", "MusicPlayer");
-        menu.add(map);
-
-        map = new HashMap<String, Object>();
-        map.put("ItemTitle", "討論區" );
-        map.put("ItemText","share");
-        menu.add(map);
-        map = new HashMap<String, Object>();
-        map.put("ItemTitle", "會員中心" );
-        map.put("ItemText","membercenter");
-        menu.add(map);
-        map = new HashMap<String, Object>();
-        map.put("ItemTitle", "結束程式" );
-        map.put("ItemText", "login out");
-        menu.add(map);
-
-        //然後加入項目之後就準備接下來的工作
-        SimpleAdapter listitemAdapter=new SimpleAdapter(this,
-                menu,
-                R.layout.no_listview_style,
-                new String[]{"ItemTitle","ItemText"},
-                new int[]{R.id.topTextView,R.id.bottomTextView}
-        );
-        listview.setAdapter(listitemAdapter);
-        listview.setOnItemClickListener(new OnItemClickListener()
-        {
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
-            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-                                    long arg3)
-            {
-                //看使用者選什麼，就會去開啟服務
-                Intent intent = null;
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
-                switch (arg2)
-                {
-                    case 0:
-                        intent = new Intent();
-                        intent.setClass(main.this, GridViewActivity.class);
-                        startActivity(intent);
-                        break;
-                    case 1:
-                        intent = new Intent();
-                        intent.setClass(main.this, sport.class);
+            }
 
-                        startActivity(intent);
-                        break;
-                    case 2:
-                        tips_selector = 0;
-                        choice();
-                        break;
-                    case 3:
-//
-                        fixmember();
-                        break;
-                    case 4:
-                        intent = new Intent();
-                        intent.setClass(main.this, WalKStepActivity.class);
-
-                        startActivity(intent);
-                        break;
-                    case 5:
-                        startActivity(new Intent(main.this, MainActivity.class));
-                        break;
-                    case 6:
-                        startActivity(new Intent(main.this,QAActivity.class));
-                        break;
-                    case 7:
-                        startActivity(new Intent(main.this,MusicActivity.class));
-                        break;
-                    case 8:
-                        startActivity(new Intent(main.this, com.diet.MainActivity.class));
-                        break;
-                    case 9:
-                        startActivity(new Intent(main.this, UserActivity.class));
-
-                        break;
-                    case 10:
-                        finish();
-                        break;
+            @Override
+            public void onPageSelected(int position) {
+                if (prevMenuItem != null) {
+                    prevMenuItem.setChecked(false);
                 }
+                else
+                {
+                    bottomNavigationView.getMenu().getItem(0).setChecked(false);
+                }
+                Log.d("page", "onPageSelected: "+position);
+                bottomNavigationView.getMenu().getItem(position).setChecked(true);
+                prevMenuItem = bottomNavigationView.getMenu().getItem(position);
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
             }
         });
 
-
-        Log.i("TAG", Integer.toString(memberlist.size()));
-
-        if (nodata == 1)
+       /*  //Disable ViewPager Swipe
+       viewPager.setOnTouchListener(new View.OnTouchListener()
         {
-            addmember();
-        }
-        else
-        {
-
-            final CharSequence[] child_id = new String[memberlist.size()];
-
-            selector = 0;
-
-            for(int i = 0 ;i<memberlist.size(); i++)
+            @Override
+            public boolean onTouch(View v, MotionEvent event)
             {
-                child_id[i] = memberlist.get(i).name;
-                //Log.i(TAG, childlist.get(i).name);
+                return true;
             }
+        });
+        */
 
-            account = child_id[selector].toString();
+        setupViewPager(viewPager);
 
-            Log.i("TAG", "account: " + account);
-
-            refresh_msg();
-
-        }
+//        mymain=this;
+//
+//        tips = this.getResources().getStringArray(R.array.diet_tips);
+//
+//        tips_size = tips.length;
+//
+//        final Calendar c = Calendar.getInstance();
+//        myYear = c.get(Calendar.YEAR);
+//        myMonth = c.get(Calendar.MONTH);
+//        myDay = c.get(Calendar.DAY_OF_MONTH);
+//
+//        //資料庫
+//        try{
+//            dbHelper = new SQLiteHelper(this, SQLiteHelper.DB_NAME, null, DB_VERSION);
+//            db = dbHelper.getWritableDatabase();
+//        }
+//        catch(IllegalArgumentException e){
+//            e.printStackTrace();
+//            ++ DB_VERSION;
+//            dbHelper.onUpgrade(db, --DB_VERSION, DB_VERSION);
+//        }
+//
+//
+//        int nodata=0;
+//
+//        memberlist = new ArrayList<member>();
+//
+//        //first login
+//        try{
+//            cursor = db.query(SQLiteHelper.TB_NAME, null, null, null, null, null, null);
+//
+//            cursor.moveToFirst();
+//
+//            //no data
+//            if (cursor.isAfterLast())
+//            {
+//                //openOptionsDialog("查無data, 請更新database");
+//                nodata=1;
+//                //return;
+//            }
+//
+//
+//            while(!cursor.isAfterLast())
+//            {
+//                member sitem = new member();
+//                sitem.id = cursor.getString(0);
+//                sitem.name = cursor.getString(1);
+//                sitem.sex = cursor.getString(2);
+//                sitem.weight = cursor.getString(3);
+//                sitem.height = cursor.getString(4);
+//                sitem.waist = cursor.getString(5);
+//                sitem.age = cursor.getInt(6);
+//                sitem.rdate = cursor.getString(7);
+//
+//                memberlist.add(sitem);
+//                cursor.moveToNext();
+//            }
+//        }
+//        catch (Exception e)
+//        {
+//            e.printStackTrace();
+//        }
+//
+//        PackageInfo info;
+//        try {
+//            info = getPackageManager().getPackageInfo("com.diet", PackageManager.GET_SIGNATURES);
+//            for (Signature signature : info.signatures) {
+//                MessageDigest md;
+//                md = MessageDigest.getInstance("SHA");
+//                md.update(signature.toByteArray());
+//                String something = new String(Base64.encode(md.digest(), 0));
+//                //String something = new String(Base64.encodeBytes(md.digest()));
+//                Log.e("hash key", something);
+//            }
+//        } catch (PackageManager.NameNotFoundException e1) {
+//            Log.e("name not found", e1.toString());
+//        } catch (NoSuchAlgorithmException e) {
+//            Log.e("no such an algorithm", e.toString());
+//        } catch (Exception e) {
+//            Log.e("exception", e.toString());
+//        }
+//        year = c.get(Calendar.YEAR);
+//        month = c.get(Calendar.MONTH) + 1;
+//        day = c.get(Calendar.DAY_OF_MONTH);
+//
+//        //登入後, 顯示下列主選單
+//        msg = (TextView)findViewById(R.id.rrmsg);
+//        listview = (ListView)findViewById(R.id.listview);
+//
+//        menu = new ArrayList<HashMap<String, Object>>();
+//
+//        HashMap<String, Object> map = new HashMap<String, Object>();
+////        map = new HashMap<String, Object>();
+////        map.put("ItemTitle", "虛擬教練" );
+////        map.put("ItemText", "sport man");
+////        menu.add(map);
+////
+////        map = new HashMap<String, Object>();
+////        map.put("ItemTitle", "卡路里計算" );
+////        map.put("ItemText", "sport item");
+////        menu.add(map);
+////
+////        map = new HashMap<String, Object>();
+////        map.put("ItemTitle", "真人影片教學" );
+////        map.put("ItemText", "training video");
+////        menu.add(map);
+//
+//        map = new HashMap<String, Object>();
+//        map.put("ItemTitle", "基本資料設定" );
+//        map.put("ItemText", "setup");
+//        menu.add(map);
+//
+////        map = new HashMap<String, Object>();
+////        map.put("ItemTitle", "計步器" );
+////        map.put("ItemText", "Pedometer");
+////        menu.add(map);
+//        map = new HashMap<String, Object>();
+//        map.put("ItemTitle", "天氣預報" );
+//        map.put("ItemText", "weather");
+//        menu.add(map);
+//
+//        map = new HashMap<String, Object>();
+//        map.put("ItemTitle", "常見問題" );
+//        map.put("ItemText", "QANDA");
+//        menu.add(map);
+////
+////        map = new HashMap<String, Object>();
+////        map.put("ItemTitle", "音樂播放器" );
+////        map.put("ItemText", "MusicPlayer");
+////        menu.add(map);
+////
+////        map = new HashMap<String, Object>();
+////        map.put("ItemTitle", "討論區" );
+////        map.put("ItemText","share");
+////        menu.add(map);
+////        map = new HashMap<String, Object>();
+////        map.put("ItemTitle", "會員中心" );
+////        map.put("ItemText","membercenter");
+////        menu.add(map);
+////        map = new HashMap<String, Object>();
+////        map.put("ItemTitle", "結束程式" );
+////        map.put("ItemText", "login out");
+////        menu.add(map);
+//
+//        //然後加入項目之後就準備接下來的工作
+//        SimpleAdapter listitemAdapter=new SimpleAdapter(this,
+//                menu,
+//                R.layout.no_listview_style,
+//                new String[]{"ItemTitle","ItemText"},
+//                new int[]{R.id.topTextView,R.id.bottomTextView}
+//        );
+//        listview.setAdapter(listitemAdapter);
+//        listview.setOnItemClickListener(new OnItemClickListener()
+//        {
+//            @Override
+//            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+//                                    long arg3)
+//            {
+//                //看使用者選什麼，就會去開啟服務
+//                Intent intent = null;
+//
+//                switch (arg2)
+//                {
+////                    case 0:
+////                        intent = new Intent();
+////                        intent.setClass(main.this, GridViewActivity.class);
+////                        startActivity(intent);
+////                        break;
+////                    case 1:
+////                        intent = new Intent();
+////                        intent.setClass(main.this, sport.class);
+////
+////                        startActivity(intent);
+////                        break;
+////                    case 2:
+////                        tips_selector = 0;
+////                        choice();
+////                        break;
+//                    case 0:
+////
+//                        fixmember();
+//                        break;
+////                    case 4:
+////                        intent = new Intent();
+////                        intent.setClass(main.this, WalKStepActivity.class);
+////
+////                        startActivity(intent);
+////                        break;
+//                    case 1:
+//                        startActivity(new Intent(main.this, MainActivity.class));
+//                        break;
+//                    case 2:
+//                        startActivity(new Intent(main.this,QAActivity.class));
+//                        break;
+////                    case 7:
+////                        startActivity(new Intent(main.this,MusicActivity.class));
+////                        break;
+////                    case 8:
+////                        startActivity(new Intent(main.this, com.diet.MainActivity.class));
+////                        break;
+////                    case 9:
+////                        startActivity(new Intent(main.this, UserActivity.class));
+////
+////                        break;
+////                    case 10:
+////                        finish();
+////                        break;
+//                }
+//            }
+//        });
+//
+//
+//        Log.i("TAG", Integer.toString(memberlist.size()));
+//
+//        if (nodata == 1)
+//        {
+//            addmember();
+//        }
+//        else
+//        {
+//
+//            final CharSequence[] child_id = new String[memberlist.size()];
+//
+//            selector = 0;
+//
+//            for(int i = 0 ;i<memberlist.size(); i++)
+//            {
+//                child_id[i] = memberlist.get(i).name;
+//                //Log.i(TAG, childlist.get(i).name);
+//            }
+//
+//            account = child_id[selector].toString();
+//
+//            Log.i("TAG", "account: " + account);
+//
+//            refresh_msg();
+//
+//        }
 
     }
 
 
+    private void setupViewPager(ViewPager viewPager) {
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        mfragment_food=new fragment_food();
+       mfragment_share =new fragment_share();
+        mfragment_setting=new fragment_setting();
+        mfragment_sport=new fragment_sport();
+        mfragment_teach=new fragment_teach();
+        adapter.addFragment(mfragment_sport);
+        adapter.addFragment(mfragment_share);
+        adapter.addFragment(mfragment_setting);
+        adapter.addFragment(mfragment_food);
+        adapter.addFragment(mfragment_teach);
+        viewPager.setAdapter(adapter);
+    }
 
     public void refresh_msg()
     {
