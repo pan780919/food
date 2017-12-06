@@ -11,13 +11,13 @@
                     "endOffset": 205
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 55,
+                        "startOffset": 105,
                         "endColumn": 104,
-                        "endOffset": 155
+                        "endOffset": 205
                     }
                 }
             },
@@ -26,17 +26,17 @@
                     "startLine": 3,
                     "startColumn": 4,
                     "startOffset": 210,
-                    "endColumn": 107,
-                    "endOffset": 313
+                    "endColumn": 97,
+                    "endOffset": 303
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 160,
-                        "endColumn": 107,
-                        "endOffset": 263
+                        "startOffset": 210,
+                        "endColumn": 97,
+                        "endOffset": 303
                     }
                 }
             },
@@ -44,18 +44,18 @@
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 318,
-                    "endColumn": 122,
-                    "endOffset": 436
+                    "startOffset": 308,
+                    "endColumn": 111,
+                    "endOffset": 415
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 268,
-                        "endColumn": 122,
-                        "endOffset": 386
+                        "startOffset": 308,
+                        "endColumn": 111,
+                        "endOffset": 415
                     }
                 }
             },
@@ -63,18 +63,18 @@
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 441,
-                    "endColumn": 97,
-                    "endOffset": 534
+                    "startOffset": 420,
+                    "endColumn": 85,
+                    "endOffset": 501
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 391,
-                        "endColumn": 97,
-                        "endOffset": 484
+                        "startOffset": 420,
+                        "endColumn": 85,
+                        "endOffset": 501
                     }
                 }
             },
@@ -82,18 +82,18 @@
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 539,
-                    "endColumn": 111,
-                    "endOffset": 646
+                    "startOffset": 506,
+                    "endColumn": 104,
+                    "endOffset": 606
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 489,
-                        "endColumn": 111,
-                        "endOffset": 596
+                        "startOffset": 506,
+                        "endColumn": 104,
+                        "endOffset": 606
                     }
                 }
             },
@@ -101,18 +101,18 @@
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 651,
-                    "endColumn": 85,
-                    "endOffset": 732
+                    "startOffset": 611,
+                    "endColumn": 114,
+                    "endOffset": 721
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 601,
-                        "endColumn": 85,
-                        "endOffset": 682
+                        "startOffset": 611,
+                        "endColumn": 114,
+                        "endOffset": 721
                     }
                 }
             },
@@ -120,18 +120,18 @@
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 737,
-                    "endColumn": 104,
-                    "endOffset": 837
+                    "startOffset": 726,
+                    "endColumn": 76,
+                    "endOffset": 798
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 687,
-                        "endColumn": 104,
-                        "endOffset": 787
+                        "startOffset": 726,
+                        "endColumn": 76,
+                        "endOffset": 798
                     }
                 }
             },
@@ -139,18 +139,18 @@
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 842,
-                    "endColumn": 114,
-                    "endOffset": 952
+                    "startOffset": 803,
+                    "endColumn": 75,
+                    "endOffset": 874
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 792,
-                        "endColumn": 114,
-                        "endOffset": 902
+                        "startOffset": 803,
+                        "endColumn": 75,
+                        "endOffset": 874
                     }
                 }
             },
@@ -158,18 +158,18 @@
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 957,
-                    "endColumn": 76,
-                    "endOffset": 1029
+                    "startOffset": 879,
+                    "endColumn": 81,
+                    "endOffset": 956
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 907,
-                        "endColumn": 76,
-                        "endOffset": 979
+                        "startOffset": 879,
+                        "endColumn": 81,
+                        "endOffset": 956
                     }
                 }
             },
@@ -177,18 +177,18 @@
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 1034,
-                    "endColumn": 75,
-                    "endOffset": 1105
+                    "startOffset": 961,
+                    "endColumn": 110,
+                    "endOffset": 1067
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 984,
-                        "endColumn": 75,
-                        "endOffset": 1055
+                        "startOffset": 961,
+                        "endColumn": 110,
+                        "endOffset": 1067
                     }
                 }
             },
@@ -196,18 +196,18 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 1110,
-                    "endColumn": 81,
-                    "endOffset": 1187
+                    "startOffset": 1072,
+                    "endColumn": 102,
+                    "endOffset": 1170
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 1060,
-                        "endColumn": 81,
-                        "endOffset": 1137
+                        "startOffset": 1072,
+                        "endColumn": 102,
+                        "endOffset": 1170
                     }
                 }
             },
@@ -215,18 +215,18 @@
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 1192,
-                    "endColumn": 110,
-                    "endOffset": 1298
+                    "startOffset": 1175,
+                    "endColumn": 98,
+                    "endOffset": 1269
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 1142,
-                        "endColumn": 110,
-                        "endOffset": 1248
+                        "startOffset": 1175,
+                        "endColumn": 98,
+                        "endOffset": 1269
                     }
                 }
             },
@@ -234,18 +234,18 @@
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 1303,
-                    "endColumn": 102,
-                    "endOffset": 1401
+                    "startOffset": 1274,
+                    "endColumn": 110,
+                    "endOffset": 1380
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 1253,
-                        "endColumn": 102,
-                        "endOffset": 1351
+                        "startOffset": 1274,
+                        "endColumn": 110,
+                        "endOffset": 1380
                     }
                 }
             },
@@ -253,18 +253,18 @@
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 1406,
-                    "endColumn": 98,
-                    "endOffset": 1500
+                    "startOffset": 1385,
+                    "endColumn": 101,
+                    "endOffset": 1482
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 1356,
-                        "endColumn": 98,
-                        "endOffset": 1450
+                        "startOffset": 1385,
+                        "endColumn": 101,
+                        "endOffset": 1482
                     }
                 }
             },
@@ -272,18 +272,18 @@
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 1505,
-                    "endColumn": 110,
-                    "endOffset": 1611
+                    "startOffset": 1487,
+                    "endColumn": 106,
+                    "endOffset": 1589
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 1455,
-                        "endColumn": 110,
-                        "endOffset": 1561
+                        "startOffset": 1487,
+                        "endColumn": 106,
+                        "endOffset": 1589
                     }
                 }
             },
@@ -291,18 +291,18 @@
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1616,
-                    "endColumn": 101,
-                    "endOffset": 1713
+                    "startOffset": 1594,
+                    "endColumn": 155,
+                    "endOffset": 1745
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 1566,
-                        "endColumn": 101,
-                        "endOffset": 1663
+                        "startOffset": 1594,
+                        "endColumn": 155,
+                        "endOffset": 1745
                     }
                 }
             },
@@ -310,18 +310,18 @@
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1718,
-                    "endColumn": 106,
-                    "endOffset": 1820
+                    "startOffset": 1750,
+                    "endColumn": 101,
+                    "endOffset": 1847
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 1668,
-                        "endColumn": 106,
-                        "endOffset": 1770
+                        "startOffset": 1750,
+                        "endColumn": 101,
+                        "endOffset": 1847
                     }
                 }
             },
@@ -329,47 +329,9 @@
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1825,
-                    "endColumn": 121,
-                    "endOffset": 1942
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 1775,
-                        "endColumn": 121,
-                        "endOffset": 1892
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 20,
-                    "startColumn": 4,
-                    "startOffset": 1947,
-                    "endColumn": 101,
-                    "endOffset": 2044
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 1897,
-                        "endColumn": 101,
-                        "endOffset": 1994
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 21,
-                    "startColumn": 4,
-                    "startOffset": 2049,
+                    "startOffset": 1852,
                     "endColumn": 76,
-                    "endOffset": 2121
+                    "endOffset": 1924
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.0.1/res/values-de/values.xml",
@@ -384,11 +346,11 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 2126,
+                    "startOffset": 1929,
                     "endColumn": 84,
-                    "endOffset": 2206
+                    "endOffset": 2009
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -403,11 +365,11 @@
             },
             {
                 "to": {
-                    "startLine": 23,
+                    "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 2211,
+                    "startOffset": 2014,
                     "endColumn": 112,
-                    "endOffset": 2319
+                    "endOffset": 2122
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -422,11 +384,11 @@
             },
             {
                 "to": {
-                    "startLine": 24,
+                    "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 2324,
+                    "startOffset": 2127,
                     "endColumn": 89,
-                    "endOffset": 2409
+                    "endOffset": 2212
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -441,11 +403,11 @@
             },
             {
                 "to": {
-                    "startLine": 25,
+                    "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 2414,
+                    "startOffset": 2217,
                     "endColumn": 117,
-                    "endOffset": 2527
+                    "endOffset": 2330
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -460,11 +422,11 @@
             },
             {
                 "to": {
-                    "startLine": 26,
+                    "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 2532,
+                    "startOffset": 2335,
                     "endColumn": 93,
-                    "endOffset": 2621
+                    "endOffset": 2424
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -479,11 +441,11 @@
             },
             {
                 "to": {
-                    "startLine": 27,
+                    "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 2626,
+                    "startOffset": 2429,
                     "endColumn": 178,
-                    "endOffset": 2800
+                    "endOffset": 2603
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -498,11 +460,11 @@
             },
             {
                 "to": {
-                    "startLine": 28,
+                    "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 2805,
+                    "startOffset": 2608,
                     "endColumn": 117,
-                    "endOffset": 2918
+                    "endOffset": 2721
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -517,11 +479,11 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 2923,
+                    "startOffset": 2726,
                     "endColumn": 110,
-                    "endOffset": 3029
+                    "endOffset": 2832
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -536,11 +498,11 @@
             },
             {
                 "to": {
-                    "startLine": 30,
+                    "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 3034,
+                    "startOffset": 2837,
                     "endColumn": 115,
-                    "endOffset": 3145
+                    "endOffset": 2948
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -555,11 +517,11 @@
             },
             {
                 "to": {
-                    "startLine": 31,
+                    "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 3150,
+                    "startOffset": 2953,
                     "endColumn": 104,
-                    "endOffset": 3250
+                    "endOffset": 3053
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -574,11 +536,11 @@
             },
             {
                 "to": {
-                    "startLine": 32,
+                    "startLine": 30,
                     "startColumn": 4,
-                    "startOffset": 3255,
+                    "startOffset": 3058,
                     "endColumn": 109,
-                    "endOffset": 3360
+                    "endOffset": 3163
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -593,11 +555,11 @@
             },
             {
                 "to": {
-                    "startLine": 33,
+                    "startLine": 31,
                     "startColumn": 4,
-                    "startOffset": 3365,
+                    "startOffset": 3168,
                     "endColumn": 80,
-                    "endOffset": 3441
+                    "endOffset": 3244
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -612,11 +574,11 @@
             },
             {
                 "to": {
-                    "startLine": 34,
+                    "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 3446,
+                    "startOffset": 3249,
                     "endColumn": 95,
-                    "endOffset": 3537
+                    "endOffset": 3340
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -631,11 +593,11 @@
             },
             {
                 "to": {
-                    "startLine": 35,
+                    "startLine": 33,
                     "startColumn": 4,
-                    "startOffset": 3542,
+                    "startOffset": 3345,
                     "endColumn": 95,
-                    "endOffset": 3633
+                    "endOffset": 3436
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -650,11 +612,11 @@
             },
             {
                 "to": {
-                    "startLine": 36,
+                    "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 3638,
+                    "startOffset": 3441,
                     "endColumn": 107,
-                    "endOffset": 3741
+                    "endOffset": 3544
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -669,11 +631,11 @@
             },
             {
                 "to": {
-                    "startLine": 37,
+                    "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 3746,
+                    "startOffset": 3549,
                     "endColumn": 81,
-                    "endOffset": 3823
+                    "endOffset": 3626
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -688,11 +650,11 @@
             },
             {
                 "to": {
-                    "startLine": 38,
+                    "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 3828,
+                    "startOffset": 3631,
                     "endColumn": 137,
-                    "endOffset": 3961
+                    "endOffset": 3764
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.0.1/res/values-de/values.xml",
@@ -707,11 +669,11 @@
             },
             {
                 "to": {
-                    "startLine": 39,
+                    "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 3966,
+                    "startOffset": 3769,
                     "endColumn": 156,
-                    "endOffset": 4118
+                    "endOffset": 3921
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.0.1/res/values-de/values.xml",
@@ -726,11 +688,11 @@
             },
             {
                 "to": {
-                    "startLine": 40,
+                    "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 4123,
+                    "startOffset": 3926,
                     "endColumn": 106,
-                    "endOffset": 4225
+                    "endOffset": 4028
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.0.1/res/values-de/values.xml",
@@ -745,11 +707,11 @@
             },
             {
                 "to": {
-                    "startLine": 41,
+                    "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 4230,
+                    "startOffset": 4033,
                     "endColumn": 78,
-                    "endOffset": 4304
+                    "endOffset": 4107
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -764,11 +726,11 @@
             },
             {
                 "to": {
-                    "startLine": 42,
+                    "startLine": 40,
                     "startColumn": 4,
-                    "startOffset": 4309,
+                    "startOffset": 4112,
                     "endColumn": 79,
-                    "endOffset": 4384
+                    "endOffset": 4187
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -783,11 +745,11 @@
             },
             {
                 "to": {
-                    "startLine": 43,
+                    "startLine": 41,
                     "startColumn": 4,
-                    "startOffset": 4389,
+                    "startOffset": 4192,
                     "endColumn": 82,
-                    "endOffset": 4467
+                    "endOffset": 4270
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -802,11 +764,11 @@
             },
             {
                 "to": {
-                    "startLine": 44,
+                    "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 4472,
+                    "startOffset": 4275,
                     "endColumn": 97,
-                    "endOffset": 4565
+                    "endOffset": 4368
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -821,11 +783,11 @@
             },
             {
                 "to": {
-                    "startLine": 45,
+                    "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 4570,
+                    "startOffset": 4373,
                     "endColumn": 97,
-                    "endOffset": 4663
+                    "endOffset": 4466
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -840,11 +802,11 @@
             },
             {
                 "to": {
-                    "startLine": 46,
+                    "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 4668,
+                    "startOffset": 4471,
                     "endColumn": 92,
-                    "endOffset": 4756
+                    "endOffset": 4559
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -859,11 +821,11 @@
             },
             {
                 "to": {
-                    "startLine": 47,
+                    "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 4761,
+                    "startOffset": 4564,
                     "endColumn": 102,
-                    "endOffset": 4859
+                    "endOffset": 4662
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -878,11 +840,11 @@
             },
             {
                 "to": {
-                    "startLine": 48,
+                    "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 4864,
+                    "startOffset": 4667,
                     "endColumn": 104,
-                    "endOffset": 4964
+                    "endOffset": 4767
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -897,11 +859,11 @@
             },
             {
                 "to": {
-                    "startLine": 49,
+                    "startLine": 47,
                     "startColumn": 4,
-                    "startOffset": 4969,
+                    "startOffset": 4772,
                     "endColumn": 75,
-                    "endOffset": 5040
+                    "endOffset": 4843
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -916,11 +878,11 @@
             },
             {
                 "to": {
-                    "startLine": 50,
+                    "startLine": 48,
                     "startColumn": 4,
-                    "startOffset": 5045,
+                    "startOffset": 4848,
                     "endColumn": 98,
-                    "endOffset": 5139
+                    "endOffset": 4942
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -935,11 +897,11 @@
             },
             {
                 "to": {
-                    "startLine": 51,
+                    "startLine": 49,
                     "startColumn": 4,
-                    "startOffset": 5144,
+                    "startOffset": 4947,
                     "endColumn": 96,
-                    "endOffset": 5236
+                    "endOffset": 5039
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -954,11 +916,11 @@
             },
             {
                 "to": {
-                    "startLine": 52,
+                    "startLine": 50,
                     "startColumn": 4,
-                    "startOffset": 5241,
+                    "startOffset": 5044,
                     "endColumn": 101,
-                    "endOffset": 5338
+                    "endOffset": 5141
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -973,11 +935,11 @@
             },
             {
                 "to": {
-                    "startLine": 53,
+                    "startLine": 51,
                     "startColumn": 4,
-                    "startOffset": 5343,
+                    "startOffset": 5146,
                     "endColumn": 111,
-                    "endOffset": 5450
+                    "endOffset": 5253
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -992,11 +954,11 @@
             },
             {
                 "to": {
-                    "startLine": 54,
+                    "startLine": 52,
                     "startColumn": 4,
-                    "startOffset": 5455,
+                    "startOffset": 5258,
                     "endColumn": 143,
-                    "endOffset": 5594
+                    "endOffset": 5397
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -1011,11 +973,11 @@
             },
             {
                 "to": {
-                    "startLine": 55,
+                    "startLine": 53,
                     "startColumn": 4,
-                    "startOffset": 5599,
+                    "startOffset": 5402,
                     "endColumn": 128,
-                    "endOffset": 5723
+                    "endOffset": 5526
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -1030,11 +992,11 @@
             },
             {
                 "to": {
-                    "startLine": 56,
+                    "startLine": 54,
                     "startColumn": 4,
-                    "startOffset": 5728,
+                    "startOffset": 5531,
                     "endColumn": 126,
-                    "endOffset": 5850
+                    "endOffset": 5653
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -1049,11 +1011,11 @@
             },
             {
                 "to": {
-                    "startLine": 57,
+                    "startLine": 55,
                     "startColumn": 4,
-                    "startOffset": 5855,
+                    "startOffset": 5658,
                     "endColumn": 95,
-                    "endOffset": 5946
+                    "endOffset": 5749
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -1068,11 +1030,11 @@
             },
             {
                 "to": {
-                    "startLine": 58,
+                    "startLine": 56,
                     "startColumn": 4,
-                    "startOffset": 5951,
+                    "startOffset": 5754,
                     "endColumn": 90,
-                    "endOffset": 6037
+                    "endOffset": 5840
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -1087,11 +1049,11 @@
             },
             {
                 "to": {
-                    "startLine": 59,
+                    "startLine": 57,
                     "startColumn": 4,
-                    "startOffset": 6042,
+                    "startOffset": 5845,
                     "endColumn": 105,
-                    "endOffset": 6143
+                    "endOffset": 5946
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -1106,11 +1068,11 @@
             },
             {
                 "to": {
-                    "startLine": 60,
+                    "startLine": 58,
                     "startColumn": 4,
-                    "startOffset": 6148,
+                    "startOffset": 5951,
                     "endColumn": 93,
-                    "endOffset": 6237
+                    "endOffset": 6040
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/values-de/values.xml",
@@ -1125,14 +1087,14 @@
             },
             {
                 "to": {
-                    "startLine": 61,
+                    "startLine": 59,
                     "startColumn": 4,
-                    "startOffset": 6242,
+                    "startOffset": 6045,
                     "endColumn": 162,
-                    "endOffset": 6400
+                    "endOffset": 6203
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -1144,14 +1106,14 @@
             },
             {
                 "to": {
-                    "startLine": 62,
+                    "startLine": 60,
                     "startColumn": 4,
-                    "startOffset": 6405,
+                    "startOffset": 6208,
                     "endColumn": 139,
-                    "endOffset": 6540
+                    "endOffset": 6343
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -1163,14 +1125,14 @@
             },
             {
                 "to": {
-                    "startLine": 63,
+                    "startLine": 61,
                     "startColumn": 4,
-                    "startOffset": 6545,
+                    "startOffset": 6348,
                     "endColumn": 141,
-                    "endOffset": 6682
+                    "endOffset": 6485
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -1182,14 +1144,14 @@
             },
             {
                 "to": {
-                    "startLine": 64,
+                    "startLine": 62,
                     "startColumn": 4,
-                    "startOffset": 6687,
+                    "startOffset": 6490,
                     "endColumn": 120,
-                    "endOffset": 6803
+                    "endOffset": 6606
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -1201,14 +1163,14 @@
             },
             {
                 "to": {
-                    "startLine": 65,
+                    "startLine": 63,
                     "startColumn": 4,
-                    "startOffset": 6808,
+                    "startOffset": 6611,
                     "endColumn": 87,
-                    "endOffset": 6891
+                    "endOffset": 6694
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -1220,14 +1182,14 @@
             },
             {
                 "to": {
-                    "startLine": 66,
+                    "startLine": 64,
                     "startColumn": 4,
-                    "startOffset": 6896,
+                    "startOffset": 6699,
                     "endColumn": 91,
-                    "endOffset": 6983
+                    "endOffset": 6786
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -1239,14 +1201,14 @@
             },
             {
                 "to": {
-                    "startLine": 67,
+                    "startLine": 65,
                     "startColumn": 4,
-                    "startOffset": 6988,
+                    "startOffset": 6791,
                     "endColumn": 82,
-                    "endOffset": 7066
+                    "endOffset": 6869
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -1258,14 +1220,14 @@
             },
             {
                 "to": {
-                    "startLine": 68,
+                    "startLine": 66,
                     "startColumn": 4,
-                    "startOffset": 7071,
+                    "startOffset": 6874,
                     "endColumn": 91,
-                    "endOffset": 7158
+                    "endOffset": 6961
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -1277,14 +1239,14 @@
             },
             {
                 "to": {
-                    "startLine": 69,
+                    "startLine": 67,
                     "startColumn": 4,
-                    "startOffset": 7163,
+                    "startOffset": 6966,
                     "endColumn": 95,
-                    "endOffset": 7254
+                    "endOffset": 7057
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -1296,14 +1258,14 @@
             },
             {
                 "to": {
-                    "startLine": 70,
+                    "startLine": 68,
                     "startColumn": 4,
-                    "startOffset": 7259,
+                    "startOffset": 7062,
                     "endColumn": 110,
-                    "endOffset": 7365
+                    "endOffset": 7168
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -1315,14 +1277,14 @@
             },
             {
                 "to": {
-                    "startLine": 71,
+                    "startLine": 69,
                     "startColumn": 4,
-                    "startOffset": 7370,
+                    "startOffset": 7173,
                     "endColumn": 108,
-                    "endOffset": 7474
+                    "endOffset": 7277
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -1334,14 +1296,14 @@
             },
             {
                 "to": {
-                    "startLine": 72,
+                    "startLine": 70,
                     "startColumn": 4,
-                    "startOffset": 7479,
+                    "startOffset": 7282,
                     "endColumn": 91,
-                    "endOffset": 7566
+                    "endOffset": 7369
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -1353,14 +1315,14 @@
             },
             {
                 "to": {
-                    "startLine": 73,
+                    "startLine": 71,
                     "startColumn": 4,
-                    "startOffset": 7571,
+                    "startOffset": 7374,
                     "endColumn": 91,
-                    "endOffset": 7658
+                    "endOffset": 7461
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -1372,14 +1334,14 @@
             },
             {
                 "to": {
-                    "startLine": 74,
+                    "startLine": 72,
                     "startColumn": 4,
-                    "startOffset": 7663,
+                    "startOffset": 7466,
                     "endColumn": 101,
-                    "endOffset": 7760
+                    "endOffset": 7563
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -1391,14 +1353,14 @@
             },
             {
                 "to": {
-                    "startLine": 75,
+                    "startLine": 73,
                     "startColumn": 4,
-                    "startOffset": 7765,
+                    "startOffset": 7568,
                     "endColumn": 116,
-                    "endOffset": 7877
+                    "endOffset": 7680
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -1410,14 +1372,14 @@
             },
             {
                 "to": {
-                    "startLine": 76,
+                    "startLine": 74,
                     "startColumn": 4,
-                    "startOffset": 7882,
+                    "startOffset": 7685,
                     "endColumn": 81,
-                    "endOffset": 7959
+                    "endOffset": 7762
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -1429,14 +1391,14 @@
             },
             {
                 "to": {
-                    "startLine": 77,
+                    "startLine": 75,
                     "startColumn": 4,
-                    "startOffset": 7964,
+                    "startOffset": 7767,
                     "endColumn": 82,
-                    "endOffset": 8042
+                    "endOffset": 7845
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -1448,14 +1410,14 @@
             },
             {
                 "to": {
-                    "startLine": 78,
+                    "startLine": 76,
                     "startColumn": 4,
-                    "startOffset": 8047,
+                    "startOffset": 7850,
                     "endColumn": 206,
-                    "endOffset": 8249
+                    "endOffset": 8052
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -1467,14 +1429,14 @@
             },
             {
                 "to": {
-                    "startLine": 79,
+                    "startLine": 77,
                     "startColumn": 4,
-                    "startOffset": 8254,
+                    "startOffset": 8057,
                     "endColumn": 95,
-                    "endOffset": 8345
+                    "endOffset": 8148
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -1486,14 +1448,14 @@
             },
             {
                 "to": {
-                    "startLine": 80,
+                    "startLine": 78,
                     "startColumn": 4,
-                    "startOffset": 8350,
+                    "startOffset": 8153,
                     "endColumn": 108,
-                    "endOffset": 8454
+                    "endOffset": 8257
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -1505,14 +1467,14 @@
             },
             {
                 "to": {
-                    "startLine": 81,
+                    "startLine": 79,
                     "startColumn": 4,
-                    "startOffset": 8459,
+                    "startOffset": 8262,
                     "endColumn": 110,
-                    "endOffset": 8565
+                    "endOffset": 8368
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -1524,14 +1486,14 @@
             },
             {
                 "to": {
-                    "startLine": 82,
+                    "startLine": 80,
                     "startColumn": 4,
-                    "startOffset": 8570,
+                    "startOffset": 8373,
                     "endColumn": 109,
-                    "endOffset": 8675
+                    "endOffset": 8478
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -1543,14 +1505,14 @@
             },
             {
                 "to": {
-                    "startLine": 83,
+                    "startLine": 81,
                     "startColumn": 4,
-                    "startOffset": 8680,
+                    "startOffset": 8483,
                     "endColumn": 137,
-                    "endOffset": 8813
+                    "endOffset": 8616
                 },
                 "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.28.0/res/values-de/values-de.xml",
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/values-de/values-de.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
@@ -1562,11 +1524,11 @@
             },
             {
                 "to": {
-                    "startLine": 84,
+                    "startLine": 82,
                     "startColumn": 4,
-                    "startOffset": 8818,
+                    "startOffset": 8621,
                     "endColumn": 110,
-                    "endOffset": 8924
+                    "endOffset": 8727
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/values-de/values.xml",
@@ -1581,11 +1543,11 @@
             },
             {
                 "to": {
-                    "startLine": 85,
+                    "startLine": 83,
                     "startColumn": 4,
-                    "startOffset": 8929,
+                    "startOffset": 8732,
                     "endColumn": 195,
-                    "endOffset": 9120
+                    "endOffset": 8923
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/values-de/values.xml",
@@ -1600,11 +1562,11 @@
             },
             {
                 "to": {
-                    "startLine": 86,
+                    "startLine": 84,
                     "startColumn": 4,
-                    "startOffset": 9125,
+                    "startOffset": 8928,
                     "endColumn": 129,
-                    "endOffset": 9250
+                    "endOffset": 9053
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/values-de/values.xml",
@@ -1619,11 +1581,11 @@
             },
             {
                 "to": {
-                    "startLine": 87,
+                    "startLine": 85,
                     "startColumn": 4,
-                    "startOffset": 9255,
+                    "startOffset": 9058,
                     "endColumn": 113,
-                    "endOffset": 9364
+                    "endOffset": 9167
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/values-de/values.xml",
@@ -1638,11 +1600,11 @@
             },
             {
                 "to": {
-                    "startLine": 88,
+                    "startLine": 86,
                     "startColumn": 4,
-                    "startOffset": 9369,
+                    "startOffset": 9172,
                     "endColumn": 236,
-                    "endOffset": 9601
+                    "endOffset": 9404
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/values-de/values.xml",
@@ -1657,11 +1619,11 @@
             },
             {
                 "to": {
-                    "startLine": 89,
+                    "startLine": 87,
                     "startColumn": 4,
-                    "startOffset": 9606,
+                    "startOffset": 9409,
                     "endColumn": 132,
-                    "endOffset": 9734
+                    "endOffset": 9537
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/values-de/values.xml",
@@ -1676,11 +1638,11 @@
             },
             {
                 "to": {
-                    "startLine": 90,
+                    "startLine": 88,
                     "startColumn": 4,
-                    "startOffset": 9739,
+                    "startOffset": 9542,
                     "endColumn": 147,
-                    "endOffset": 9882
+                    "endOffset": 9685
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/values-de/values.xml",
@@ -1695,11 +1657,11 @@
             },
             {
                 "to": {
-                    "startLine": 91,
+                    "startLine": 89,
                     "startColumn": 4,
-                    "startOffset": 9887,
+                    "startOffset": 9690,
                     "endColumn": 203,
-                    "endOffset": 10086
+                    "endOffset": 9889
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.1/res/values-de/values.xml",
@@ -1714,11 +1676,11 @@
             },
             {
                 "to": {
-                    "startLine": 92,
+                    "startLine": 90,
                     "startColumn": 4,
-                    "startOffset": 10091,
+                    "startOffset": 9894,
                     "endColumn": 238,
-                    "endOffset": 10325
+                    "endOffset": 10128
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/values-de/values.xml",
@@ -1733,11 +1695,11 @@
             },
             {
                 "to": {
-                    "startLine": 93,
+                    "startLine": 91,
                     "startColumn": 4,
-                    "startOffset": 10330,
+                    "startOffset": 10133,
                     "endColumn": 113,
-                    "endOffset": 10439
+                    "endOffset": 10242
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/values-de/values.xml",
@@ -1752,11 +1714,11 @@
             },
             {
                 "to": {
-                    "startLine": 94,
+                    "startLine": 92,
                     "startColumn": 4,
-                    "startOffset": 10444,
+                    "startOffset": 10247,
                     "endColumn": 199,
-                    "endOffset": 10639
+                    "endOffset": 10442
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/values-de/values.xml",
@@ -1771,11 +1733,11 @@
             },
             {
                 "to": {
-                    "startLine": 95,
+                    "startLine": 93,
                     "startColumn": 4,
-                    "startOffset": 10644,
+                    "startOffset": 10447,
                     "endColumn": 132,
-                    "endOffset": 10772
+                    "endOffset": 10575
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/values-de/values.xml",
@@ -1790,11 +1752,11 @@
             },
             {
                 "to": {
-                    "startLine": 96,
+                    "startLine": 94,
                     "startColumn": 4,
-                    "startOffset": 10777,
+                    "startOffset": 10580,
                     "endColumn": 220,
-                    "endOffset": 10993
+                    "endOffset": 10796
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/values-de/values.xml",
@@ -1809,11 +1771,11 @@
             },
             {
                 "to": {
-                    "startLine": 97,
+                    "startLine": 95,
                     "startColumn": 4,
-                    "startOffset": 10998,
+                    "startOffset": 10801,
                     "endColumn": 205,
-                    "endOffset": 11199
+                    "endOffset": 11002
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/values-de/values.xml",
@@ -1828,11 +1790,11 @@
             },
             {
                 "to": {
-                    "startLine": 98,
+                    "startLine": 96,
                     "startColumn": 4,
-                    "startOffset": 11204,
+                    "startOffset": 11007,
                     "endColumn": 100,
-                    "endOffset": 11300
+                    "endOffset": 11103
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/values-de/values.xml",
@@ -1847,11 +1809,11 @@
             },
             {
                 "to": {
-                    "startLine": 99,
+                    "startLine": 97,
                     "startColumn": 4,
-                    "startOffset": 11305,
+                    "startOffset": 11108,
                     "endColumn": 92,
-                    "endOffset": 11393
+                    "endOffset": 11196
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/values-de/values.xml",
@@ -1866,11 +1828,11 @@
             },
             {
                 "to": {
-                    "startLine": 100,
+                    "startLine": 98,
                     "startColumn": 4,
-                    "startOffset": 11398,
+                    "startOffset": 11201,
                     "endColumn": 108,
-                    "endOffset": 11502
+                    "endOffset": 11305
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/values-de/values.xml",
@@ -1885,11 +1847,11 @@
             },
             {
                 "to": {
-                    "startLine": 101,
+                    "startLine": 99,
                     "startColumn": 4,
-                    "startOffset": 11507,
+                    "startOffset": 11310,
                     "endColumn": 134,
-                    "endOffset": 11637
+                    "endOffset": 11440
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.0.1/res/values-de/values.xml",
@@ -1904,11 +1866,11 @@
             },
             {
                 "to": {
-                    "startLine": 102,
+                    "startLine": 100,
                     "startColumn": 4,
-                    "startOffset": 11642,
+                    "startOffset": 11445,
                     "endColumn": 104,
-                    "endOffset": 11742
+                    "endOffset": 11545
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.0.1/res/values-de/values.xml",
@@ -1923,11 +1885,11 @@
             },
             {
                 "to": {
-                    "startLine": 103,
+                    "startLine": 101,
                     "startColumn": 4,
-                    "startOffset": 11747,
+                    "startOffset": 11550,
                     "endColumn": 109,
-                    "endOffset": 11852
+                    "endOffset": 11655
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.0.1/res/values-de/values.xml",
@@ -1942,11 +1904,11 @@
             },
             {
                 "to": {
-                    "startLine": 104,
+                    "startLine": 102,
                     "startColumn": 4,
-                    "startOffset": 11857,
+                    "startOffset": 11660,
                     "endColumn": 103,
-                    "endOffset": 11956
+                    "endOffset": 11759
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.0.1/res/values-de/values.xml",
@@ -1961,11 +1923,11 @@
             },
             {
                 "to": {
-                    "startLine": 105,
+                    "startLine": 103,
                     "startColumn": 4,
-                    "startOffset": 11961,
+                    "startOffset": 11764,
                     "endColumn": 105,
-                    "endOffset": 12062
+                    "endOffset": 11865
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.0.1/res/values-de/values.xml",
@@ -1980,11 +1942,11 @@
             },
             {
                 "to": {
-                    "startLine": 106,
+                    "startLine": 104,
                     "startColumn": 4,
-                    "startOffset": 12067,
+                    "startOffset": 11870,
                     "endColumn": 99,
-                    "endOffset": 12162
+                    "endOffset": 11965
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.0.1/res/values-de/values.xml",
@@ -1999,11 +1961,11 @@
             },
             {
                 "to": {
-                    "startLine": 107,
+                    "startLine": 105,
                     "startColumn": 4,
-                    "startOffset": 12167,
+                    "startOffset": 11970,
                     "endColumn": 74,
-                    "endOffset": 12237
+                    "endOffset": 12040
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.0.1/res/values-de/values.xml",
@@ -2018,11 +1980,11 @@
             },
             {
                 "to": {
-                    "startLine": 108,
+                    "startLine": 106,
                     "startColumn": 4,
-                    "startOffset": 12242,
+                    "startOffset": 12045,
                     "endColumn": 76,
-                    "endOffset": 12314
+                    "endOffset": 12117
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/values-de/values-de.xml",
@@ -2037,11 +1999,11 @@
             },
             {
                 "to": {
-                    "startLine": 109,
+                    "startLine": 107,
                     "startColumn": 4,
-                    "startOffset": 12319,
+                    "startOffset": 12122,
                     "endColumn": 74,
-                    "endOffset": 12389
+                    "endOffset": 12192
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/values-de/values-de.xml",
@@ -2056,11 +2018,11 @@
             },
             {
                 "to": {
-                    "startLine": 110,
+                    "startLine": 108,
                     "startColumn": 4,
-                    "startOffset": 12394,
+                    "startOffset": 12197,
                     "endColumn": 70,
-                    "endOffset": 12460
+                    "endOffset": 12263
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/values-de/values-de.xml",
@@ -2075,11 +2037,11 @@
             },
             {
                 "to": {
-                    "startLine": 111,
+                    "startLine": 109,
                     "startColumn": 4,
-                    "startOffset": 12465,
+                    "startOffset": 12268,
                     "endColumn": 70,
-                    "endOffset": 12531
+                    "endOffset": 12334
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/values-de/values-de.xml",
@@ -2094,11 +2056,11 @@
             },
             {
                 "to": {
-                    "startLine": 112,
+                    "startLine": 110,
                     "startColumn": 4,
-                    "startOffset": 12536,
+                    "startOffset": 12339,
                     "endColumn": 80,
-                    "endOffset": 12612
+                    "endOffset": 12415
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/values-de/values-de.xml",
@@ -2113,11 +2075,11 @@
             },
             {
                 "to": {
-                    "startLine": 113,
+                    "startLine": 111,
                     "startColumn": 4,
-                    "startOffset": 12617,
+                    "startOffset": 12420,
                     "endColumn": 74,
-                    "endOffset": 12687
+                    "endOffset": 12490
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/values-de/values-de.xml",
@@ -2132,11 +2094,11 @@
             },
             {
                 "to": {
-                    "startLine": 114,
+                    "startLine": 112,
                     "startColumn": 4,
-                    "startOffset": 12692,
+                    "startOffset": 12495,
                     "endColumn": 67,
-                    "endOffset": 12755
+                    "endOffset": 12558
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/values-de/values-de.xml",
@@ -2151,11 +2113,11 @@
             },
             {
                 "to": {
-                    "startLine": 115,
+                    "startLine": 113,
                     "startColumn": 4,
-                    "startOffset": 12760,
+                    "startOffset": 12563,
                     "endColumn": 99,
-                    "endOffset": 12855
+                    "endOffset": 12658
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-de/values-de.xml",
@@ -2170,11 +2132,11 @@
             },
             {
                 "to": {
-                    "startLine": 116,
+                    "startLine": 114,
                     "startColumn": 4,
-                    "startOffset": 12860,
+                    "startOffset": 12663,
                     "endColumn": 101,
-                    "endOffset": 12957
+                    "endOffset": 12760
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-de/values-de.xml",
@@ -2189,11 +2151,11 @@
             },
             {
                 "to": {
-                    "startLine": 117,
+                    "startLine": 115,
                     "startColumn": 4,
-                    "startOffset": 12962,
+                    "startOffset": 12765,
                     "endColumn": 86,
-                    "endOffset": 13044
+                    "endOffset": 12847
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-de/values-de.xml",
@@ -2208,11 +2170,11 @@
             },
             {
                 "to": {
-                    "startLine": 118,
+                    "startLine": 116,
                     "startColumn": 4,
-                    "startOffset": 13049,
+                    "startOffset": 12852,
                     "endColumn": 92,
-                    "endOffset": 13137
+                    "endOffset": 12940
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-de/values-de.xml",
@@ -2227,11 +2189,11 @@
             },
             {
                 "to": {
-                    "startLine": 119,
+                    "startLine": 117,
                     "startColumn": 4,
-                    "startOffset": 13142,
+                    "startOffset": 12945,
                     "endColumn": 113,
-                    "endOffset": 13251
+                    "endOffset": 13054
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-de/values-de.xml",
@@ -2246,11 +2208,11 @@
             },
             {
                 "to": {
-                    "startLine": 120,
+                    "startLine": 118,
                     "startColumn": 4,
-                    "startOffset": 13256,
+                    "startOffset": 13059,
                     "endColumn": 99,
-                    "endOffset": 13351
+                    "endOffset": 13154
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-de/values-de.xml",
@@ -2265,11 +2227,11 @@
             },
             {
                 "to": {
-                    "startLine": 121,
+                    "startLine": 119,
                     "startColumn": 4,
-                    "startOffset": 13356,
+                    "startOffset": 13159,
                     "endColumn": 97,
-                    "endOffset": 13449
+                    "endOffset": 13252
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-de/values-de.xml",
@@ -2284,11 +2246,11 @@
             },
             {
                 "to": {
-                    "startLine": 122,
+                    "startLine": 120,
                     "startColumn": 4,
-                    "startOffset": 13454,
+                    "startOffset": 13257,
                     "endColumn": 101,
-                    "endOffset": 13551
+                    "endOffset": 13354
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-de/values-de.xml",
@@ -2303,11 +2265,11 @@
             },
             {
                 "to": {
-                    "startLine": 123,
+                    "startLine": 121,
                     "startColumn": 4,
-                    "startOffset": 13556,
+                    "startOffset": 13359,
                     "endColumn": 95,
-                    "endOffset": 13647
+                    "endOffset": 13450
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-de/values-de.xml",
@@ -2322,11 +2284,11 @@
             },
             {
                 "to": {
-                    "startLine": 124,
+                    "startLine": 122,
                     "startColumn": 4,
-                    "startOffset": 13652,
+                    "startOffset": 13455,
                     "endColumn": 119,
-                    "endOffset": 13767
+                    "endOffset": 13570
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-de/values-de.xml",
@@ -2341,11 +2303,11 @@
             },
             {
                 "to": {
-                    "startLine": 125,
+                    "startLine": 123,
                     "startColumn": 4,
-                    "startOffset": 13772,
+                    "startOffset": 13575,
                     "endColumn": 113,
-                    "endOffset": 13881
+                    "endOffset": 13684
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-de/values-de.xml",
@@ -2360,11 +2322,11 @@
             },
             {
                 "to": {
-                    "startLine": 126,
+                    "startLine": 124,
                     "startColumn": 4,
-                    "startOffset": 13886,
+                    "startOffset": 13689,
                     "endColumn": 87,
-                    "endOffset": 13969
+                    "endOffset": 13772
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-de/values-de.xml",
@@ -2379,11 +2341,11 @@
             },
             {
                 "to": {
-                    "startLine": 127,
+                    "startLine": 125,
                     "startColumn": 4,
-                    "startOffset": 13974,
+                    "startOffset": 13777,
                     "endColumn": 87,
-                    "endOffset": 14057
+                    "endOffset": 13860
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-de/values-de.xml",
@@ -2398,11 +2360,11 @@
             },
             {
                 "to": {
-                    "startLine": 128,
+                    "startLine": 126,
                     "startColumn": 4,
-                    "startOffset": 14062,
+                    "startOffset": 13865,
                     "endColumn": 94,
-                    "endOffset": 14152
+                    "endOffset": 13955
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-de/values-de.xml",
@@ -2417,11 +2379,11 @@
             },
             {
                 "to": {
-                    "startLine": 129,
+                    "startLine": 127,
                     "startColumn": 4,
-                    "startOffset": 14157,
+                    "startOffset": 13960,
                     "endColumn": 85,
-                    "endOffset": 14238
+                    "endOffset": 14041
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-de/values-de.xml",
@@ -2436,11 +2398,11 @@
             },
             {
                 "to": {
-                    "startLine": 130,
+                    "startLine": 128,
                     "startColumn": 4,
-                    "startOffset": 14243,
+                    "startOffset": 14046,
                     "endColumn": 92,
-                    "endOffset": 14331
+                    "endOffset": 14134
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-de/values-de.xml",
@@ -2455,11 +2417,11 @@
             },
             {
                 "to": {
-                    "startLine": 131,
+                    "startLine": 129,
                     "startColumn": 4,
-                    "startOffset": 14336,
+                    "startOffset": 14139,
                     "endColumn": 108,
-                    "endOffset": 14440
+                    "endOffset": 14243
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/10.0.1/res/values-de/values.xml",
@@ -2474,11 +2436,11 @@
             },
             {
                 "to": {
-                    "startLine": 132,
+                    "startLine": 130,
                     "startColumn": 4,
-                    "startOffset": 14445,
+                    "startOffset": 14248,
                     "endColumn": 94,
-                    "endOffset": 14535
+                    "endOffset": 14338
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/10.0.1/res/values-de/values.xml",
@@ -2493,49 +2455,49 @@
             },
             {
                 "to": {
+                    "startLine": 131,
+                    "startColumn": 4,
+                    "startOffset": 14343,
+                    "endColumn": 81,
+                    "endOffset": 14420
+                },
+                "from": {
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/values-de/values-de.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1852,
+                        "endColumn": 81,
+                        "endOffset": 1929
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 132,
+                    "startColumn": 4,
+                    "startOffset": 14425,
+                    "endColumn": 100,
+                    "endOffset": 14521
+                },
+                "from": {
+                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-compat/27.0.1/res/values-de/values-de.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 100,
+                        "endOffset": 151
+                    }
+                }
+            },
+            {
+                "to": {
                     "startLine": 133,
                     "startColumn": 4,
-                    "startOffset": 14540,
-                    "endColumn": 81,
-                    "endOffset": 14617
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 4,
-                        "startOffset": 1999,
-                        "endColumn": 81,
-                        "endOffset": 2076
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 134,
-                    "startColumn": 4,
-                    "startOffset": 14622,
-                    "endColumn": 100,
-                    "endOffset": 14718
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-de/values-de.xml",
-                    "position": {
-                        "startLine": 22,
-                        "startColumn": 4,
-                        "startOffset": 2081,
-                        "endColumn": 100,
-                        "endOffset": 2177
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 135,
-                    "startColumn": 4,
-                    "startOffset": 14723,
+                    "startOffset": 14526,
                     "endColumn": 141,
-                    "endOffset": 14860
+                    "endOffset": 14663
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.0.1/res/values-de/values.xml",
@@ -2550,11 +2512,11 @@
             },
             {
                 "to": {
-                    "startLine": 136,
+                    "startLine": 134,
                     "startColumn": 4,
-                    "startOffset": 14865,
+                    "startOffset": 14668,
                     "endColumn": 92,
-                    "endOffset": 14953
+                    "endOffset": 14756
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.0.1/res/values-de/values.xml",
@@ -2569,11 +2531,11 @@
             },
             {
                 "to": {
-                    "startLine": 137,
+                    "startLine": 135,
                     "startColumn": 4,
-                    "startOffset": 14958,
+                    "startOffset": 14761,
                     "endColumn": 106,
-                    "endOffset": 15060
+                    "endOffset": 14863
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/10.0.1/res/values-de/values.xml",

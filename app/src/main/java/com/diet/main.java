@@ -42,6 +42,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Images.Media;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Base64;
 import android.util.Log;
@@ -63,7 +64,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 //主選單
-public class main extends Activity
+public class main extends AppCompatActivity
 {
     private ListView listview;
     private String abouttp;

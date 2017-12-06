@@ -4,12 +4,12 @@
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-v4-impl/10.0.1/res/raw/gtm_analytics"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/raw/running.mp3",
-        "source": "/Users/jackpan/food/app/src/main/res/raw/running.mp3"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/raw/likey.mp3",
         "source": "/Users/jackpan/food/app/src/main/res/raw/likey.mp3"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/raw/running.mp3",
+        "source": "/Users/jackpan/food/app/src/main/res/raw/running.mp3"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/raw/run.wav",

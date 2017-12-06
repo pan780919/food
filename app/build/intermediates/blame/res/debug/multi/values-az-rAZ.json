@@ -7,350 +7,8 @@
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
-                    "endColumn": 107,
-                    "endOffset": 158
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 107,
-                        "endOffset": 158
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 3,
-                    "startColumn": 4,
-                    "startOffset": 163,
-                    "endColumn": 107,
-                    "endOffset": 266
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 163,
-                        "endColumn": 107,
-                        "endOffset": 266
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 4,
-                    "startColumn": 4,
-                    "startOffset": 271,
-                    "endColumn": 122,
-                    "endOffset": 389
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 271,
-                        "endColumn": 122,
-                        "endOffset": 389
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 5,
-                    "startColumn": 4,
-                    "startOffset": 394,
-                    "endColumn": 98,
-                    "endOffset": 488
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 394,
-                        "endColumn": 98,
-                        "endOffset": 488
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 6,
-                    "startColumn": 4,
-                    "startOffset": 493,
-                    "endColumn": 111,
-                    "endOffset": 600
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 493,
-                        "endColumn": 111,
-                        "endOffset": 600
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 7,
-                    "startColumn": 4,
-                    "startOffset": 605,
-                    "endColumn": 87,
-                    "endOffset": 688
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 605,
-                        "endColumn": 87,
-                        "endOffset": 688
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 8,
-                    "startColumn": 4,
-                    "startOffset": 693,
-                    "endColumn": 106,
-                    "endOffset": 795
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 693,
-                        "endColumn": 106,
-                        "endOffset": 795
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 9,
-                    "startColumn": 4,
-                    "startOffset": 800,
-                    "endColumn": 113,
-                    "endOffset": 909
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 800,
-                        "endColumn": 113,
-                        "endOffset": 909
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 10,
-                    "startColumn": 4,
-                    "startOffset": 914,
                     "endColumn": 80,
-                    "endOffset": 990
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 914,
-                        "endColumn": 80,
-                        "endOffset": 990
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 11,
-                    "startColumn": 4,
-                    "startOffset": 995,
-                    "endColumn": 78,
-                    "endOffset": 1069
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 995,
-                        "endColumn": 78,
-                        "endOffset": 1069
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 12,
-                    "startColumn": 4,
-                    "startOffset": 1074,
-                    "endColumn": 84,
-                    "endOffset": 1154
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 1074,
-                        "endColumn": 84,
-                        "endOffset": 1154
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 13,
-                    "startColumn": 4,
-                    "startOffset": 1159,
-                    "endColumn": 106,
-                    "endOffset": 1261
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 1159,
-                        "endColumn": 106,
-                        "endOffset": 1261
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 14,
-                    "startColumn": 4,
-                    "startOffset": 1266,
-                    "endColumn": 106,
-                    "endOffset": 1368
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 1266,
-                        "endColumn": 106,
-                        "endOffset": 1368
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 15,
-                    "startColumn": 4,
-                    "startOffset": 1373,
-                    "endColumn": 99,
-                    "endOffset": 1468
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 1373,
-                        "endColumn": 99,
-                        "endOffset": 1468
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 16,
-                    "startColumn": 4,
-                    "startOffset": 1473,
-                    "endColumn": 108,
-                    "endOffset": 1577
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 1473,
-                        "endColumn": 108,
-                        "endOffset": 1577
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 17,
-                    "startColumn": 4,
-                    "startOffset": 1582,
-                    "endColumn": 103,
-                    "endOffset": 1681
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 1582,
-                        "endColumn": 103,
-                        "endOffset": 1681
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 18,
-                    "startColumn": 4,
-                    "startOffset": 1686,
-                    "endColumn": 109,
-                    "endOffset": 1791
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 4,
-                        "startOffset": 1686,
-                        "endColumn": 109,
-                        "endOffset": 1791
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 19,
-                    "startColumn": 4,
-                    "startOffset": 1796,
-                    "endColumn": 96,
-                    "endOffset": 1888
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 1796,
-                        "endColumn": 96,
-                        "endOffset": 1888
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 20,
-                    "startColumn": 4,
-                    "startOffset": 1893,
-                    "endColumn": 80,
-                    "endOffset": 1969
+                    "endOffset": 131
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/values-az-rAZ/values-az-rAZ.xml",
@@ -365,11 +23,11 @@
             },
             {
                 "to": {
-                    "startLine": 21,
+                    "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 1974,
+                    "startOffset": 136,
                     "endColumn": 72,
-                    "endOffset": 2042
+                    "endOffset": 204
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/values-az-rAZ/values-az-rAZ.xml",
@@ -384,11 +42,11 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 2047,
+                    "startOffset": 209,
                     "endColumn": 66,
-                    "endOffset": 2109
+                    "endOffset": 271
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/values-az-rAZ/values-az-rAZ.xml",
@@ -403,11 +61,11 @@
             },
             {
                 "to": {
-                    "startLine": 23,
+                    "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 2114,
+                    "startOffset": 276,
                     "endColumn": 64,
-                    "endOffset": 2174
+                    "endOffset": 336
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/values-az-rAZ/values-az-rAZ.xml",
@@ -422,11 +80,11 @@
             },
             {
                 "to": {
-                    "startLine": 24,
+                    "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 2179,
+                    "startOffset": 341,
                     "endColumn": 75,
-                    "endOffset": 2250
+                    "endOffset": 412
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/values-az-rAZ/values-az-rAZ.xml",
@@ -441,11 +99,11 @@
             },
             {
                 "to": {
-                    "startLine": 25,
+                    "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 2255,
+                    "startOffset": 417,
                     "endColumn": 73,
-                    "endOffset": 2324
+                    "endOffset": 486
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/values-az-rAZ/values-az-rAZ.xml",
@@ -460,11 +118,11 @@
             },
             {
                 "to": {
-                    "startLine": 26,
+                    "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 2329,
+                    "startOffset": 491,
                     "endColumn": 68,
-                    "endOffset": 2393
+                    "endOffset": 555
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/values-az-rAZ/values-az-rAZ.xml",
@@ -479,11 +137,11 @@
             },
             {
                 "to": {
-                    "startLine": 27,
+                    "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 2398,
+                    "startOffset": 560,
                     "endColumn": 101,
-                    "endOffset": 2495
+                    "endOffset": 657
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-az-rAZ/values-az-rAZ.xml",
@@ -498,11 +156,11 @@
             },
             {
                 "to": {
-                    "startLine": 28,
+                    "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 2500,
+                    "startOffset": 662,
                     "endColumn": 97,
-                    "endOffset": 2593
+                    "endOffset": 755
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-az-rAZ/values-az-rAZ.xml",
@@ -517,11 +175,11 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 2598,
+                    "startOffset": 760,
                     "endColumn": 89,
-                    "endOffset": 2683
+                    "endOffset": 845
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-az-rAZ/values-az-rAZ.xml",
@@ -536,11 +194,11 @@
             },
             {
                 "to": {
-                    "startLine": 30,
+                    "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 2688,
+                    "startOffset": 850,
                     "endColumn": 98,
-                    "endOffset": 2782
+                    "endOffset": 944
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-az-rAZ/values-az-rAZ.xml",
@@ -555,11 +213,11 @@
             },
             {
                 "to": {
-                    "startLine": 31,
+                    "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 2787,
+                    "startOffset": 949,
                     "endColumn": 103,
-                    "endOffset": 2886
+                    "endOffset": 1048
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-az-rAZ/values-az-rAZ.xml",
@@ -574,11 +232,11 @@
             },
             {
                 "to": {
-                    "startLine": 32,
+                    "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 2891,
+                    "startOffset": 1053,
                     "endColumn": 97,
-                    "endOffset": 2984
+                    "endOffset": 1146
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-az-rAZ/values-az-rAZ.xml",
@@ -593,11 +251,11 @@
             },
             {
                 "to": {
-                    "startLine": 33,
+                    "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 2989,
+                    "startOffset": 1151,
                     "endColumn": 101,
-                    "endOffset": 3086
+                    "endOffset": 1248
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-az-rAZ/values-az-rAZ.xml",
@@ -612,11 +270,11 @@
             },
             {
                 "to": {
-                    "startLine": 34,
+                    "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 3091,
+                    "startOffset": 1253,
                     "endColumn": 99,
-                    "endOffset": 3186
+                    "endOffset": 1348
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-az-rAZ/values-az-rAZ.xml",
@@ -631,11 +289,11 @@
             },
             {
                 "to": {
-                    "startLine": 35,
+                    "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 3191,
+                    "startOffset": 1353,
                     "endColumn": 98,
-                    "endOffset": 3285
+                    "endOffset": 1447
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-az-rAZ/values-az-rAZ.xml",
@@ -650,11 +308,11 @@
             },
             {
                 "to": {
-                    "startLine": 36,
+                    "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 3290,
+                    "startOffset": 1452,
                     "endColumn": 112,
-                    "endOffset": 3398
+                    "endOffset": 1560
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-az-rAZ/values-az-rAZ.xml",
@@ -669,11 +327,11 @@
             },
             {
                 "to": {
-                    "startLine": 37,
+                    "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 3403,
+                    "startOffset": 1565,
                     "endColumn": 114,
-                    "endOffset": 3513
+                    "endOffset": 1675
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-az-rAZ/values-az-rAZ.xml",
@@ -688,11 +346,11 @@
             },
             {
                 "to": {
-                    "startLine": 38,
+                    "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 3518,
+                    "startOffset": 1680,
                     "endColumn": 86,
-                    "endOffset": 3600
+                    "endOffset": 1762
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-az-rAZ/values-az-rAZ.xml",
@@ -707,11 +365,11 @@
             },
             {
                 "to": {
-                    "startLine": 39,
+                    "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 3605,
+                    "startOffset": 1767,
                     "endColumn": 83,
-                    "endOffset": 3684
+                    "endOffset": 1846
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-az-rAZ/values-az-rAZ.xml",
@@ -726,11 +384,11 @@
             },
             {
                 "to": {
-                    "startLine": 40,
+                    "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 3689,
+                    "startOffset": 1851,
                     "endColumn": 94,
-                    "endOffset": 3779
+                    "endOffset": 1941
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-az-rAZ/values-az-rAZ.xml",
@@ -745,11 +403,11 @@
             },
             {
                 "to": {
-                    "startLine": 41,
+                    "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 3784,
+                    "startOffset": 1946,
                     "endColumn": 85,
-                    "endOffset": 3865
+                    "endOffset": 2027
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-az-rAZ/values-az-rAZ.xml",
@@ -764,11 +422,11 @@
             },
             {
                 "to": {
-                    "startLine": 42,
+                    "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 3870,
+                    "startOffset": 2032,
                     "endColumn": 94,
-                    "endOffset": 3960
+                    "endOffset": 2122
                 },
                 "from": {
                     "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-az-rAZ/values-az-rAZ.xml",
@@ -778,44 +436,6 @@
                         "startOffset": 1527,
                         "endColumn": 94,
                         "endOffset": 1617
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 43,
-                    "startColumn": 4,
-                    "startOffset": 3965,
-                    "endColumn": 82,
-                    "endOffset": 4043
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 1893,
-                        "endColumn": 82,
-                        "endOffset": 1971
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 44,
-                    "startColumn": 4,
-                    "startOffset": 4048,
-                    "endColumn": 100,
-                    "endOffset": 4144
-                },
-                "from": {
-                    "file": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-az-rAZ/values-az-rAZ.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 4,
-                        "startOffset": 1976,
-                        "endColumn": 100,
-                        "endOffset": 2072
                     }
                 }
             }
