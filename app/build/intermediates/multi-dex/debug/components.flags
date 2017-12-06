@@ -13,8 +13,8 @@
 -printconfiguration /Users/jackpan/food/app/build/intermediates/multi-dex/debug/components.flags
 
 
-# view AndroidManifest.xml #generated:45
--keep class android.support.multidex.MultiDexApplication {
+# view AndroidManifest.xml #generated:47
+-keep class com.diet.MyApplication {
     <init>(...);
 }
 

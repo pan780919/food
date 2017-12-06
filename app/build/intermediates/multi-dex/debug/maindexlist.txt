@@ -310,6 +310,7 @@ android/support/v4/media/session/MediaButtonReceiver.class
 com/google/android/gms/internal/zzaro.class
 android/support/v4/widget/TextViewCompat$TextViewCompatApi27Impl.class
 com/google/android/exoplayer2/extractor/mp4/AtomParsers.class
+com/diet/MyApplication.class
 com/google/android/exoplayer2/extractor/SeekMap.class
 com/google/android/gms/wearable/ChannelApi.class
 android/support/v4/view/ViewCompat$ViewCompatApi21Impl$1.class
@@ -828,6 +829,7 @@ com/google/android/gms/internal/zzir.class
 com/google/android/gms/internal/zzsf$1.class
 com/google/android/gms/nearby/messages/internal/zzj.class
 com/google/android/gms/internal/zzef.class
+com/google/firebase/analytics/FirebaseAnalytics.class
 com/google/ads/mediation/MediationBannerListener.class
 android/support/v4/widget/CircularProgressDrawable$1.class
 com/google/android/gms/ads/internal/zzl.class

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:2:1-154:12
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:2:1-156:12
 	package
 		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:3:5-23
 		INJECTED from /Users/jackpan/food/app/src/main/AndroidManifest.xml
@@ -82,8 +82,12 @@ uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
 ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:25:5-98
 	android:name
 		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:25:22-95
+uses-permission#android.permission.INTERNAL_SYSTEM_WINDOW
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:27:5-81
+	android:name
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:27:22-78
 application
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:27:5-152:19
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:29:5-154:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.2/AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.android:audience-network-sdk:4.26.1] /Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/audience-network-sdk/4.26.1/AndroidManifest.xml:14:5-18:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.29.0] /Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.29.0/AndroidManifest.xml:28:5-29:19
@@ -143,246 +147,246 @@ MERGED from [com.google.android.gms:play-services-basement:10.0.1] /Users/jackpa
 MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/26.0.1/AndroidManifest.xml:22:5-26:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/jackpan/food/app/build/intermediates/exploded-aar/android.arch.lifecycle/runtime/1.0.0/AndroidManifest.xml:24:5-28:19
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:31:9-41
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:33:9-41
 	android:supportsRtl
 		ADDED from [com.facebook.android:facebook-android-sdk:4.29.0] /Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.29.0/AndroidManifest.xml:28:18-44
 	android:icon
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:30:9-38
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:32:9-38
 	android:largeHeap
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:29:9-33
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:31:9-33
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:32:9-40
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:34:9-40
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:28:9-68
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:30:9-38
 activity#com.diet.diet
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:34:9-38:20
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:36:9-40:20
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:36:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:38:13-45
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:35:13-33
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:37:13-33
 activity#com.diet.dlogin
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:39:9-41:48
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:41:9-43:48
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:41:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:43:13-45
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:40:13-35
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:42:13-35
 activity#com.diet.food
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:42:9-45:46
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:44:9-47:46
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:44:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:46:13-45
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:45:13-44
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:47:13-44
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:43:13-33
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:45:13-33
 activity#com.diet.checkfood
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:46:9-48:48
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:48:9-50:48
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:48:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:50:13-45
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:47:13-38
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:49:13-38
 activity#com.diet.checkfoodhot
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:49:9-51:48
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:51:9-53:48
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:51:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:53:13-45
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:50:13-41
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:52:13-41
 activity#com.diet.main
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:52:9-54:48
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:54:9-56:48
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:54:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:56:13-45
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:53:13-33
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:55:13-33
 activity#com.diet.sport
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:55:9-58:46
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:57:9-60:46
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:57:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:59:13-45
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:58:13-44
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:60:13-44
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:56:13-34
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:58:13-34
 activity#com.diet.DiaryList
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:59:9-62:46
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:61:9-64:46
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:61:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:63:13-45
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:62:13-44
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:64:13-44
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:60:13-38
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:62:13-38
 activity#com.diet.DiaryEdit
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:63:9-66:46
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:65:9-68:46
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:65:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:67:13-45
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:66:13-44
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:68:13-44
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:64:13-38
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:66:13-38
 activity#com.diet.DiaryShow
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:67:9-70:46
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:69:9-72:46
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:69:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:71:13-45
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:70:13-44
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:72:13-44
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:68:13-38
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:70:13-38
 activity#com.diet.DiaryFoodList
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:71:9-73:48
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:73:9-75:48
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:73:13-45
-	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:72:13-42
-activity#com.diet.WalKStepActivity
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:74:9-78:61
-	android:screenOrientation
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:78:13-49
-	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:76:13-45
-	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:77:13-44
-	android:name
 		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:75:13-45
+	android:name
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:74:13-42
+activity#com.diet.WalKStepActivity
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:76:9-80:61
+	android:screenOrientation
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:80:13-49
+	android:label
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:78:13-45
+	android:theme
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:79:13-44
+	android:name
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:77:13-45
 activity#com.diet.Query
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:79:9-83:61
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:81:9-85:61
 	android:screenOrientation
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:83:13-49
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:85:13-49
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:81:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:83:13-45
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:82:13-44
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:84:13-44
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:80:13-34
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:82:13-34
 activity#com.diet.UserMgr
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:84:9-88:61
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:86:9-90:61
 	android:screenOrientation
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:88:13-49
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:90:13-49
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:86:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:88:13-45
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:87:13-44
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:89:13-44
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:85:13-36
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:87:13-36
 activity#com.weather.MainActivity
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:89:9-90:69
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:91:9-92:69
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:90:13-56
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:92:13-56
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:89:19-58
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:91:19-58
 activity#com.diet.GridViewActivity
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:91:9-94:68
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:93:9-96:68
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:93:13-61
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:95:13-61
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:94:13-56
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:96:13-56
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:92:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:94:13-45
 activity#com.diet.QAActivity
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:95:9-98:68
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:97:9-100:68
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:97:13-61
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:99:13-61
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:98:13-56
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:100:13-56
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:96:13-39
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:98:13-39
 activity#com.diet.LoginActivity
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:99:9-112:20
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:101:9-114:20
 	android:screenOrientation
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:106:13-49
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:108:13-49
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:105:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:107:13-45
 	android:hardwareAccelerated
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:104:13-47
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:106:13-47
 	android:configChanges
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:103:13-59
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:105:13-59
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:100:13-69
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:102:13-69
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:102:13-42
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:104:13-42
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:107:13-111:29
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:109:13-113:29
 action#android.intent.action.MAIN
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:108:17-69
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:110:17-69
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:108:25-66
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:110:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:110:17-77
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:112:17-77
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:110:27-74
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:112:27-74
 activity#com.diet.MusicActivity
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:114:9-116:20
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:116:9-118:20
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:115:13-44
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:117:13-44
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:114:19-48
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:116:19-48
 activity#com.diet.MainActivity
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:118:9-120:20
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:120:9-122:20
 	android:launchMode
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:119:13-44
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:121:13-44
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:118:48-79
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:120:48-79
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:118:19-47
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:120:19-47
 activity#com.diet.TwoActivity
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:122:9-124:20
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:124:9-126:20
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:123:13-44
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:125:13-44
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:122:19-46
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:124:19-46
 activity#com.diet.ForIdeaAndShareActivity
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:126:9-128:20
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:128:9-130:20
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:127:13-44
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:129:13-44
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:126:19-58
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:128:19-58
 activity#com.diet.UserActivity
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:129:9-131:20
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:131:9-133:20
 	android:theme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:130:13-44
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:132:13-44
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:129:19-47
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:131:19-47
 activity#com.diet.UserMessgeActivity
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:132:9-133:20
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:134:9-135:20
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:132:19-53
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:134:19-53
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:134:9-135:54
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:136:9-137:54
 	android:value
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:135:13-52
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:137:13-52
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:134:20-65
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:136:20-65
 activity#com.facebook.FacebookActivity
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:137:9-140:48
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:139:9-142:48
 MERGED from [com.facebook.android:facebook-common:4.29.0] /Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.29.0/AndroidManifest.xml:29:9-32:66
 	android:label
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:140:13-45
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:142:13-45
 	android:configChanges
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:138:13-113
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:140:13-113
 	android:theme
 		ADDED from [com.facebook.android:facebook-common:4.29.0] /Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-common/4.29.0/AndroidManifest.xml:32:13-63
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:137:19-63
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:139:19-63
 activity#com.facebook.CustomTabActivity
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:141:9-150:20
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:143:9-152:20
 	android:exported
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:143:13-36
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:145:13-36
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:142:13-58
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:144:13-58
 intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:144:13-149:29
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:146:13-151:29
 action#android.intent.action.VIEW
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:145:17-69
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:147:17-69
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:145:25-66
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:147:25-66
 category#android.intent.category.DEFAULT
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:146:17-76
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:148:17-76
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:146:27-73
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:148:27-73
 category#android.intent.category.BROWSABLE
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:147:17-78
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:149:17-78
 	android:name
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:147:27-75
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:149:27-75
 data
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:148:17-75
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:150:17-75
 	android:scheme
-		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:148:23-72
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:150:23-72
 uses-sdk
 INJECTED from /Users/jackpan/food/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:multidex:1.0.1] /Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/AndroidManifest.xml:18:5-42

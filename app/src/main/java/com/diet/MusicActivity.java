@@ -1,15 +1,23 @@
 package com.diet;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.database.Cursor;
+import android.graphics.PixelFormat;
+import android.graphics.Point;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Display;
+import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -63,19 +71,20 @@ public class MusicActivity extends AppCompatActivity implements
 
     void prepareMedia() {
         btnPlay.setText("播放");    //將按鈕文字恢復為 "播放"
-        btnPlay.setEnabled(false);   //使播放鈕不能按 (要等準備好才能按)
+        btnPlay.setEnabled(true);   //使播放鈕不能按 (要等準備好才能按)
         btnStop.setEnabled(false);   //使停止鈕不能按
-
-        try {
-            mper.reset();       //如果之前有播過, 必須 reset 後才能更換
-            mper.setDataSource(this, uri);  //指定影音檔來源
-            mper.setLooping(ckbLoop.isChecked()); //設定是否重複播放
-            mper.prepareAsync();  //要求 MediaPlayer 準備播放指定的影音檔
-        } catch (Exception e) {    //攔截錯誤並顯示訊息
-            tos.setText("指定影音檔錯誤！" + e.toString());
-            tos.show();
-        }
-        MySharedPrefernces.saveMusicState(MusicActivity.this,1);
+//        createView(uri,"123",ckbLoop.isChecked());
+//        finish();
+//        try {
+//            mper.reset();       //如果之前有播過, 必須 reset 後才能更換
+//            mper.setDataSource(this, uri);  //指定影音檔來源
+//            mper.setLooping(ckbLoop.isChecked()); //設定是否重複播放
+//            mper.prepareAsync();  //要求 MediaPlayer 準備播放指定的影音檔
+//        } catch (Exception e) {    //攔截錯誤並顯示訊息
+//            tos.setText("指定影音檔錯誤！" + e.toString());
+//            tos.show();
+//        }
+//        MySharedPrefernces.saveMusicState(MusicActivity.this,1);
     }
 
     public void onPick(View v) {
@@ -136,7 +145,9 @@ public class MusicActivity extends AppCompatActivity implements
 
     //********************************************************
 
-    public void onMpPlay(View v) {   //按下【播放】鈕時
+    public void onMpPlay(View v) {
+        createView(uri,"123",ckbLoop.isChecked());
+        finish();//按下【播放】鈕時
         if(isVideo) {   //如果是影片
             Intent it = new Intent(this, MediaStore.Video.class); //建立開啟 Video Activity 的 Intent
             it.putExtra("uri", uri.toString());   //將影片的 Uri 以 "uri" 為名加入 Intent 中
@@ -219,5 +230,87 @@ public class MusicActivity extends AppCompatActivity implements
 //        mper.release();  //釋放 MediaPlayer 物件
         super.onDestroy();
     }
+    private WindowManager wm = null;
+    private WindowManager.LayoutParams wmParams = null;
+    private MyFloatView myFV = null;
+    @TargetApi(26)
+    @RequiresApi(api = 26)
+    private void createView(Uri url, String title, boolean b) {
+        myFV = new MyFloatView(getApplicationContext(), url, title,b, new myFloatViewListener() {
+            @Override
+            public void onTaskComplete(boolean b) {
+//                isPlay = b;
+            }
+        });
+        wm = (WindowManager) getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
+        //設置LayoutParams(全局變數）相關參數
+        wmParams = ((MyApplication) getApplication()).getmWParams();        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            wmParams.type =  WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;   //設置window type
+            wmParams.format = PixelFormat.RGBA_8888;
+            //設置Window flag
+            wmParams.flags = WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL
+                    | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
+            wmParams.gravity = Gravity.LEFT | Gravity.TOP;   //調整懸浮視窗至左上角
+            //以屏幕左上角為原點，設置x、y初始值
+            Display display = wm.getDefaultDisplay();
+            Point size = new Point();
+            display.getSize(size);
+            int width = size.x;
+            int height = size.y;
+            wmParams.x = (width / 2) - 130;
+            wmParams.y = height - 330;
+            //設置懸浮視窗長寬數據
+            wmParams.width = WindowManager.LayoutParams.WRAP_CONTENT;
+            wmParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
+            //顯示myFloatView圖像
+            wm.addView(myFV, wmParams);
+        } else {
+            wmParams.type = WindowManager.LayoutParams.TYPE_PHONE;   //設置window type
+            wmParams.format = PixelFormat.RGBA_8888;
+            //設置Window flag
+            wmParams.flags = WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL
+                    | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
+            wmParams.gravity = Gravity.LEFT | Gravity.TOP;   //調整懸浮視窗至左上角
+            //以屏幕左上角為原點，設置x、y初始值
+            Display display = wm.getDefaultDisplay();
+            Point size = new Point();
+            display.getSize(size);
+            int width = size.x;
+            int height = size.y;
+            wmParams.x = (width / 2) - 130;
+            wmParams.y = height - 330;
+            //設置懸浮視窗長寬數據
+            wmParams.width = WindowManager.LayoutParams.WRAP_CONTENT;
+            wmParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
+            //顯示myFloatView圖像
+            wm.addView(myFV, wmParams);
+        }
 
+        //獲取WindowManager
+
+
+
+
+
+
+    }
+//    public void permission(){
+//        if (Build.VERSION.SDK_INT >= 23) {
+//            if(!Settings.canDrawOverlays(this)) {
+//                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION);
+//                startActivity(intent);
+//                return;
+//            } else {
+//                //Android6.0以上
+//                if (mFloatView!=null && mFloatView.isShow()==false) {
+//                    mFloatView.show();
+//                }
+//            }
+//        } else {
+//            //Android6.0以下，不用动态声明权限
+//            if (mFloatView!=null && mFloatView.isShow()==false) {
+//                mFloatView.show();
+//            }
+//        }
+//    }
 }
