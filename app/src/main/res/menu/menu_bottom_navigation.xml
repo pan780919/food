@@ -3,32 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_call"
-        android:checked="true"
-        android:icon="@drawable/ic_media_play"
+        android:checked="false"
+        android:icon="@drawable/menu1"
         android:title="運動"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_chat"
         android:checked="false"
-        android:icon="@drawable/ic_media_pause"
+        android:icon="@drawable/menu4"
         android:title="討論區"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_contact"
-        android:checked="false"
-        android:icon="@drawable/quantum_ic_forward_10_white_24"
+        android:checked="true"
+        android:icon="@drawable/menu5"
         android:title="系統"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_food"
         android:checked="false"
-        android:icon="@drawable/quantum_ic_bigtop_updates_white_24"
+        android:icon="@drawable/menu2"
         android:title="飲食"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_teach"
         android:checked="false"
-        android:icon="@drawable/quantum_ic_volume_up_grey600_36"
+        android:icon="@drawable/menu3"
         android:title="教學"
         app:showAsAction="ifRoom" />
 </menu>

@@ -2,8 +2,10 @@ package com.diet;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.graphics.PixelFormat;
@@ -12,6 +14,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
@@ -43,7 +46,7 @@ public class MusicActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_main_music);
         super.onCreate(savedInstanceState);
 
-
+        doBindService();
         //設定螢幕不隨手機旋轉、以及畫面直向顯示
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);//設定螢幕不隨手機旋轉
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//設定螢幕直向顯示
@@ -72,7 +75,7 @@ public class MusicActivity extends AppCompatActivity implements
     void prepareMedia() {
         btnPlay.setText("播放");    //將按鈕文字恢復為 "播放"
         btnPlay.setEnabled(true);   //使播放鈕不能按 (要等準備好才能按)
-        btnStop.setEnabled(false);   //使停止鈕不能按
+        btnStop.setEnabled(true);   //使停止鈕不能按
 //        createView(uri,"123",ckbLoop.isChecked());
 //        finish();
 //        try {
@@ -132,7 +135,7 @@ public class MusicActivity extends AppCompatActivity implements
     public void onCompletion(MediaPlayer mp) {
         mper.seekTo(0);             //將播放位置歸 0
         btnPlay.setText("播放");    //讓播放鈕顯示 "播放"
-        btnStop.setEnabled(false);  //讓停止鈕不能按
+        btnStop.setEnabled(true);  //讓停止鈕不能按
 
     }
 
@@ -146,31 +149,34 @@ public class MusicActivity extends AppCompatActivity implements
     //********************************************************
 
     public void onMpPlay(View v) {
-        createView(uri,"123",ckbLoop.isChecked());
-        finish();//按下【播放】鈕時
+//        createView(uri,"123",ckbLoop.isChecked());
+//        finish();//按下【播放】鈕時
         if(isVideo) {   //如果是影片
             Intent it = new Intent(this, MediaStore.Video.class); //建立開啟 Video Activity 的 Intent
             it.putExtra("uri", uri.toString());   //將影片的 Uri 以 "uri" 為名加入 Intent 中
             startActivity(it);    //啟動 Video Activity
             return;
         }
-
-        if (mper.isPlaying()) {  //如果正在播, 就暫停
-            mper.pause();   //暫停播放
-            btnPlay.setText("繼續");
-        }
-        else {  //如果沒有在播, 就開始播
-            mper.start();   //開始播放
-            btnPlay.setText("暫停");
-            btnStop.setEnabled(true);
-        }
+        Intent svc=new Intent(this, BackgroundSoundService.class);
+        svc.putExtra("uri", uri.toString());
+        startService(svc);//OR stopService(svc);
+//        if (mper.isPlaying()) {  //如果正在播, 就暫停
+//            mper.pause();   //暫停播放
+//            btnPlay.setText("繼續");
+//        }
+//        else {  //如果沒有在播, 就開始播
+//            mper.start();   //開始播放
+//            btnPlay.setText("暫停");
+//            btnStop.setEnabled(true);
+//        }
     }
 
     public void onMpStop(View v) {   //按下【停止】鈕時
         mper.pause();   //暫停播放
         mper.seekTo(0); //移到音樂中 0 秒的位置
         btnPlay.setText("播放");
-        btnStop.setEnabled(false);
+        btnStop.setEnabled(true);
+        backgroundSoundService.stopMusic();
         MySharedPrefernces.saveMusicState(MusicActivity.this,0);
     }
 
@@ -214,14 +220,6 @@ public class MusicActivity extends AppCompatActivity implements
     @Override
     protected void onResume() {
         super.onResume();
-
-        state =  MySharedPrefernces.getMusicState(MusicActivity.this);
-        if(state == 1){
-            btnStop.setEnabled(true);
-        }else
-        {
-            btnStop.setEnabled(false);
-        }
         Toast.makeText(this, "onResume", Toast.LENGTH_LONG).show();
     }
 
@@ -313,4 +311,35 @@ public class MusicActivity extends AppCompatActivity implements
 //            }
 //        }
 //    }
+
+    private boolean mIsBound = false;
+    private  BackgroundSoundService backgroundSoundService;
+    private ServiceConnection Scon =new ServiceConnection(){
+
+        public void onServiceConnected(ComponentName name, IBinder
+                binder) {
+            backgroundSoundService = ((BackgroundSoundService.ServiceBinder) binder).getService();
+
+        }
+
+        public void onServiceDisconnected(ComponentName name) {
+            backgroundSoundService = null;
+        }
+    };
+
+    void doBindService(){
+        bindService(new Intent(this,BackgroundSoundService.class),
+                Scon,Context.BIND_AUTO_CREATE);
+        mIsBound = true;
+    }
+
+    void doUnbindService()
+    {
+        if(mIsBound)
+        {
+            unbindService(Scon);
+            mIsBound = false;
+        }
+    }
+
 }

@@ -58,7 +58,7 @@ public class MyFloatView extends RelativeLayout implements View.OnClickListener 
             mMediaPlayer.setLooping(true); //設定是否重複播放
             mMediaPlayer.prepareAsync();  //要求 MediaPlayer 準備播放指定的影音檔
 
-            Log.d(TAG, "handleMessage: "+mMediaPlayer.isPlaying());
+            Log.d(TAG, "handleMessage: "+Uri.parse("android.resource://" +context.getPackageName() + "/" + R.raw.likey));
         } catch (Exception e) {
             e.printStackTrace();
             Log.d(TAG, "handleMessage: "+e.getMessage());

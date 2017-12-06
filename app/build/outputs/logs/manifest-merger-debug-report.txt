@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:2:1-156:12
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:2:1-158:12
 	package
 		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:3:5-23
 		INJECTED from /Users/jackpan/food/app/src/main/AndroidManifest.xml
@@ -87,7 +87,7 @@ ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:27:5-81
 	android:name
 		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:27:22-78
 application
-ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:29:5-154:19
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:29:5-156:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.2/AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.android:audience-network-sdk:4.26.1] /Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/audience-network-sdk/4.26.1/AndroidManifest.xml:14:5-18:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.29.0] /Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.29.0/AndroidManifest.xml:28:5-29:19
@@ -387,6 +387,12 @@ data
 ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:150:17-75
 	android:scheme
 		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:150:23-72
+service#com.diet.BackgroundSoundService
+ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:153:9-154:46
+	android:enabled
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:154:13-35
+	android:name
+		ADDED from /Users/jackpan/food/app/src/main/AndroidManifest.xml:153:18-56
 uses-sdk
 INJECTED from /Users/jackpan/food/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:multidex:1.0.1] /Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/AndroidManifest.xml:18:5-42

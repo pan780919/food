@@ -136,12 +136,12 @@
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
-        "source": "/Users/jackpan/food/app/src/main/res/layout/activity_login.xml"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/dlayout.xml",
         "source": "/Users/jackpan/food/app/src/main/res/layout/dlayout.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/activity_login.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/cast_tracks_chooser_dialog_layout.xml",
@@ -170,6 +170,10 @@
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/place_autocomplete_item_powered_by_google.xml",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/10.0.1/res/layout/place_autocomplete_item_powered_by_google.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.1/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
