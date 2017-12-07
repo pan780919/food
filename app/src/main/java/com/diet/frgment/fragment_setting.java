@@ -252,6 +252,8 @@ public class fragment_setting extends Fragment {
 
                 memberlist.add(sitem);
                 cursor.moveToNext();
+
+                refresh_msg();
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -261,6 +263,7 @@ public class fragment_setting extends Fragment {
         return v;
     }
 
+    private static final String TAG = "fragment_setting";
     public void refresh_msg() {
         String rmsg = "";
 
@@ -314,7 +317,7 @@ public class fragment_setting extends Fragment {
         //rmsg += "目前的熱量/消耗熱量:" + food.hot + "/" + sport.hot + "\n";
         rmsg += "體重" + weight + "\n";
         rmsg += "基礎代謝率(BMR):" + mDecimalFormat.format(bmr) + "\n";
-        String rbmi = (bmi > 8.5 && bmi < 24) ? "(BMI正常)" : "(異常BMI)";
+        String rbmi = (bmi > 18.5 && bmi < 24) ? "(BMI正常)" : "(異常BMI)";
         rmsg += "BMI:" + mDecimalFormat.format(bmi) + rbmi + "\n";
         //String rst =(standrdweight < (weight*0.1))?"(體重正常)":"(體重太重)";
         rmsg += "標準體重:" + ((Math.round(standrdweight) / 10) * 10) + "\n";
@@ -353,7 +356,7 @@ public class fragment_setting extends Fragment {
                 sitem.dhot = cursor.getString(3);
                 sitem.shot = cursor.getString(4);
                 sitem.rdate = cursor.getString(5);
-
+                Log.d(TAG, "refresh_msg: "+sitem.dhot);
                 if (!sitem.dhot.equals("-1")) {
                     getdata += Double.valueOf(sitem.dhot);
                 }
@@ -366,8 +369,10 @@ public class fragment_setting extends Fragment {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        rmsg += "今日總共攝取熱量:" + getdata + "\n";
-        rmsg += "今日總共消耗熱量:" + costdata + "\n";
+        rmsg += "今日總共攝取熱量:" +  MySharedPrefernces.getUserhot(getActivity()) + "\n";
+        rmsg += "今日總共消耗熱量:" + MySharedPrefernces.getUserDhot(getActivity()) + "\n";
+        rmsg += "今日總公里數:" + MySharedPrefernces.getUserKm(getActivity()) + "\n";
+        rmsg += "今日總步數:" + MySharedPrefernces.getUserStep(getActivity()) + "\n";
 
         msg.setText(rmsg);
     }

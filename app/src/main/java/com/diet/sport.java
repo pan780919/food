@@ -54,10 +54,12 @@ public class sport extends Activity implements OnClickListener
 	foodStruct item = null;
 
 	//GUI: 輸入食物的量
-	private TextView showlist;
+	private ListView showlist;
 	private TextView cb[];
 	private EditText et[];
+	private ArrayAdapter<String> listAdapter;
 
+	String n ;
 	//總熱量
 	public static int hot = 0;
 
@@ -125,7 +127,8 @@ public class sport extends Activity implements OnClickListener
 
 
 		//Gui
-		showlist = (TextView)findViewById(R.id.showlist);
+		showlist = (ListView)findViewById(R.id.showlist);
+		listAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,listarray);
 
 		//四按鈕: 計算, 清除, 離開, food選擇
 		Button A = (Button)findViewById(R.id.cal);
@@ -174,7 +177,13 @@ public class sport extends Activity implements OnClickListener
 
 				//選了計算
 				//listv = showlist.getText().toString();
+				if(MySharedPrefernces.getUserhot(getApplication()).equals("")){
+					MySharedPrefernces.saveUserhot(getApplicationContext(),String.valueOf(hot));
+				}else {
+					MySharedPrefernces.saveUserhot(getApplicationContext(),String.valueOf(hot+
+							Integer.parseInt(MySharedPrefernces.getUserhot(getApplication()))));
 
+				}
 				//輸出結果
 				openOptionsDialog("總熱量 ＝ " + hot + "卡");
 
@@ -182,8 +191,11 @@ public class sport extends Activity implements OnClickListener
 			case R.id.clear:
 				//清除選單和總熱量
 				listarray.clear();
-				showlist.setText("");
+				listAdapter.clear();
+				listAdapter.notifyDataSetChanged();
 				hot = 0;
+				listv = "";
+				n  ="";
 				break;
 			case R.id.exit:
 				//離開
@@ -225,15 +237,14 @@ public class sport extends Activity implements OnClickListener
 										{
 											//用迴圈把所有使用者輸入的東西整理出來: 食物, 依量來計算總熱量
 											int total = 0;
-											listv = "";
 											for(int i = 0; i < item.foodname.size(); i++)
 											{
 												//若是0代表food沒吃
 												if (et[i].getText().toString().equals("0") || et[i].getText().toString().equals("")) continue;
-
+												Log.d(TAG, "onClick: "+et[i].getText().toString());
 												//顯示用
-
 												listarray.add(et[i].getText().toString()+"份"+item.foodname.get(i) + "(" + item.hot.get(i) *Integer.parseInt(et[i].getText().toString())+ "卡"+"\t"+"日期："+date+")");
+
 												//計算熱量
 												try
 												{
@@ -253,9 +264,16 @@ public class sport extends Activity implements OnClickListener
 
 											for (int j=0; j<listarray.size(); j++)
 											{
-												listv = listv + listarray.get(j) + "\n";
+												Log.d(TAG, "onClick: "+listarray.get(j));
+												listv=listarray.get(j) + "\n";
+												Log.d(TAG, "onClick: "+listv);
+
 											}
-											showlist.setText(listv);
+											showlist.setAdapter(listAdapter);
+											Log.d(TAG, "onClick: "+listv);
+											Log.d(TAG, "onClick: "+n);
+											listAdapter.notifyDataSetChanged();
+
 										}
 									});
 

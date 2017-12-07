@@ -159,4 +159,71 @@ public class MySharedPrefernces {
         SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
         return sp.getInt(KEY_SEX,0);
     }
+
+
+
+
+
+    // 儲存 useremail
+    public static final String KEY_STEP = "userstep";
+
+    public static void saveUserStep(Context context, String userid) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        sp.edit().putString(KEY_STEP, userid).commit();
+
+
+    }
+
+    public static String getUserStep(Context context) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        return sp.getString(KEY_STEP,"");
+    }
+
+
+    // 儲存 useremail
+    public static final String KEY_KM = "userkm";
+
+    public static void saveUserKm(Context context, String userid) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        sp.edit().putString(KEY_KM, userid).commit();
+
+
+    }
+
+    public static String getUserKm(Context context) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        return sp.getString(KEY_KM,"");
+    }
+
+
+
+    public static final String KEY_DHOT = "userdhot";
+
+    public static void saveUserDhot(Context context, String userid) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        sp.edit().putString(KEY_DHOT, userid).commit();
+
+
+    }
+
+    public static String getUserDhot(Context context) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        return sp.getString(KEY_DHOT,"");
+    }
+
+
+
+    public static final String KEY_HOT = "userhot";
+
+    public static void saveUserhot(Context context, String userid) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        sp.edit().putString(KEY_HOT, userid).commit();
+
+
+    }
+
+    public static String getUserhot(Context context) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        return sp.getString(KEY_HOT,"");
+    }
 }

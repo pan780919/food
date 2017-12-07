@@ -145,7 +145,9 @@ public class main extends AppCompatActivity
         setContentView(R.layout.main);
         bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottom_navigation);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
-        viewPager.setCurrentItem(2);
+        bottomNavigationView.getMenu().findItem(R.id.action_contact).setChecked(true);
+
+
         bottomNavigationView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -186,7 +188,7 @@ public class main extends AppCompatActivity
                 }
                 else
                 {
-                    bottomNavigationView.getMenu().getItem(0).setChecked(false);
+                    bottomNavigationView.getMenu().getItem(2).setChecked(false);
                 }
                 Log.d("page", "onPageSelected: "+position);
                 bottomNavigationView.getMenu().getItem(position).setChecked(true);
@@ -212,6 +214,7 @@ public class main extends AppCompatActivity
         */
 
         setupViewPager(viewPager);
+        viewPager.setCurrentItem(2);
 
 //        mymain=this;
 //
@@ -406,6 +409,8 @@ public class main extends AppCompatActivity
         mfragment_setting=new fragment_setting();
         mfragment_sport=new fragment_sport();
         mfragment_teach=new fragment_teach();
+
+
         adapter.addFragment(mfragment_sport);
         adapter.addFragment(mfragment_share);
         adapter.addFragment(mfragment_setting);

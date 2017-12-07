@@ -260,11 +260,20 @@ public class WalKStepActivity extends Activity {
                         String now_status = "跑了 " + k + "/ 花了 " + s + "/ 消耗" + kr + "/ 目前 " + steps;
 
                         SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section),
-                                kr, Integer.toString(steps),
-                                k, now_status, "暫停");
+                                kr, Integer.toString(steps),k, now_status, "暫停");
 
-                        DBSQL.insertDiary(WalKStepActivity.this, "-1", "-1", "計步器", kr);
+                        double dhot =time*weight;
+                        Log.d(TAG, "onClick: "+dhot);
+                        if(MySharedPrefernces.getUserDhot(WalKStepActivity.this).equals("")){
 
+                        }else {
+                            Double dh =Double.parseDouble(MySharedPrefernces.getUserDhot(WalKStepActivity.this));
+
+                            MySharedPrefernces.saveUserDhot(WalKStepActivity.this,String.valueOf(dh+dhot));
+
+                        }
+
+                        DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
                         pause = 1;
                         start = 0;
                     }
@@ -309,7 +318,19 @@ public class WalKStepActivity extends Activity {
 
                 SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "reset");
 
-                DBSQL.insertDiary(WalKStepActivity.this, "-1", "-1", "計步器", kr);
+                double dhot =time*weight;
+                Log.d(TAG, "onClick: "+dhot);
+                if(MySharedPrefernces.getUserDhot(WalKStepActivity.this).equals("")){
+
+                }else {
+                    Double dh =Double.parseDouble(MySharedPrefernces.getUserDhot(WalKStepActivity.this));
+
+                    MySharedPrefernces.saveUserDhot(WalKStepActivity.this,String.valueOf(dh+dhot));
+
+                }
+
+
+                DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
 
                 counter = 0;
                 running.setEnabled(true);
@@ -341,7 +362,18 @@ public class WalKStepActivity extends Activity {
 
                 SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "完成");
 
-                DBSQL.insertDiary(WalKStepActivity.this, "-1", "-1", "計步器", kr);
+                double dhot =time*weight;
+                Log.d(TAG, "onClick: "+dhot);
+                if(MySharedPrefernces.getUserDhot(WalKStepActivity.this).equals("")){
+
+                }else {
+                    Double dh =Double.parseDouble(MySharedPrefernces.getUserDhot(WalKStepActivity.this));
+
+                    MySharedPrefernces.saveUserDhot(WalKStepActivity.this,String.valueOf(dh+dhot));
+
+                }
+
+                DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
 
                 counter = 0;
                 running.setEnabled(true);
@@ -533,6 +565,7 @@ public class WalKStepActivity extends Activity {
                                         @Override
                                         public void onClick(DialogInterface dialogInterface, int i) {
                                             mper.pause();
+                                            mygoal = 0;
                                             dialogInterface.dismiss();
                                         }
                                     });
@@ -599,7 +632,7 @@ public class WalKStepActivity extends Activity {
         // TODO Auto-generated method stub
         return false;
     }
-
+    private  double time;
     public Handler myHandler = new Handler() {
         public void handleMessage(Message msg) {
             switch (msg.what) {
@@ -607,7 +640,7 @@ public class WalKStepActivity extends Activity {
                     int hours = counter / 3600;
                     int minutes = (counter % 3600) / 60;
                     int seconds = counter % 60;
-
+                    time=hours+minutes+seconds;
                     ttimer.setText(minutes + ":" + seconds);
                     counter++;
 

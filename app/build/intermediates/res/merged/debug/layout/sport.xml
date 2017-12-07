@@ -76,9 +76,9 @@
     <TableRow
         android:id="@+id/widget13"
         android:layout_width="fill_parent"
+        android:layout_height="80dp"
         android:baselineAligned="false"
-        android:orientation="horizontal"
-        android:layout_height="68dp">
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/wmsg"
@@ -105,21 +105,14 @@
         android:baselineAligned="false"
         android:orientation="horizontal">
 
-        <ScrollView
-            android:id="@+id/ScrollView01"
+        <ListView
+            android:id="@+id/showlist"
             android:layout_width="fill_parent"
-            android:layout_height="200dp">
+            android:layout_height="match_parent"
+            android:text="清單"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
-
-            <TextView
-                android:id="@+id/showlist"
-                android:layout_width="fill_parent"
-                android:layout_height="200dp"
-                android:text="清單"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-        </ScrollView>
     </TableRow>
 
     <TableRow

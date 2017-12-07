@@ -191,6 +191,8 @@ public class Query extends Activity {
 
                 listitem.add(map);
             }
+            MySharedPrefernces.saveUserKm(Query.this, String.valueOf(times2));
+            MySharedPrefernces.saveUserStep(Query.this, String.valueOf(steps));
 
             HashMap<String, Object> map = new HashMap<String, Object>();
             map.put("ItemTitle", "= 今日 總消耗 " + times + "卡 = ");

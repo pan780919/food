@@ -249,6 +249,9 @@ public class UserActivity extends Activity implements MfirebaeCallback {
             DBSQL.deleteAll(mActivty);
             MySharedPrefernces.saveUserId(mActivty,"");
             MySharedPrefernces.saveUserName(mActivty,"");
+            MySharedPrefernces.saveUserKm(mActivty,"");
+            MySharedPrefernces.saveUserStep(mActivty,"");
+            MySharedPrefernces.saveUserDhot(mActivty,"");
         }else {
 
         }
