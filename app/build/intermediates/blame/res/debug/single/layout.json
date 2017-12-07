@@ -478,5 +478,9 @@
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/layout/fragment_sport2.xml",
+        "source": "/Users/jackpan/food/app/src/main/res/layout/fragment_sport2.xml"
     }
 ]

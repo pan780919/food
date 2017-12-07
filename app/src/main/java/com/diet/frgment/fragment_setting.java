@@ -26,6 +26,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.diet.DBSQL;
+import com.diet.MySharedPrefernces;
 import com.diet.QAActivity;
 import com.diet.R;
 import com.diet.main;
@@ -43,7 +44,7 @@ import java.util.HashMap;
  * Created by JackPan on 2017/12/6.
  */
 
-public class fragment_setting extends Fragment{
+public class fragment_setting extends Fragment {
     private View v;
     private ListView listview;
     private ArrayList<HashMap<String, Object>> menu;
@@ -61,8 +62,10 @@ public class fragment_setting extends Fragment{
     int myYear, myMonth, myDay;
     String n1, n2, n3, n4, n5, n6;
     private int year, month, day;
+    public static main mymain;
 
     public static String account;
+
     public fragment_setting() {
         // Required empty public constructor
     }
@@ -71,12 +74,12 @@ public class fragment_setting extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        v =inflater.inflate(R.layout.fragment_sport, container, false);
-        listview = (ListView)v.findViewById(R.id.listview);
+        // Inflate the layout for this vfragment
+        v = inflater.inflate(R.layout.fragment_sport2, container, false);
+        listview = (ListView) v.findViewById(R.id.listview);
 
         menu = new ArrayList<HashMap<String, Object>>();
-        msg = (TextView)v.findViewById(R.id.rrmsg);
+        msg = (TextView) v.findViewById(R.id.rrmsg);
 
         HashMap<String, Object> map = new HashMap<String, Object>();
 //        map = new HashMap<String, Object>();
@@ -95,7 +98,7 @@ public class fragment_setting extends Fragment{
 //        menu.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("ItemTitle", "基本資料設定" );
+        map.put("ItemTitle", "基本資料設定");
         map.put("ItemText", "setup");
         menu.add(map);
 
@@ -104,12 +107,12 @@ public class fragment_setting extends Fragment{
 //        map.put("ItemText", "Pedometer");
 //        menu.add(map);
         map = new HashMap<String, Object>();
-        map.put("ItemTitle", "天氣預報" );
+        map.put("ItemTitle", "天氣預報");
         map.put("ItemText", "weather");
         menu.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("ItemTitle", "常見問題" );
+        map.put("ItemTitle", "常見問題");
         map.put("ItemText", "QANDA");
         menu.add(map);
 //
@@ -132,24 +135,21 @@ public class fragment_setting extends Fragment{
 //        menu.add(map);
 
         //然後加入項目之後就準備接下來的工作
-        SimpleAdapter listitemAdapter=new SimpleAdapter(getActivity(),
+        SimpleAdapter listitemAdapter = new SimpleAdapter(getActivity(),
                 menu,
                 R.layout.no_listview_style,
-                new String[]{"ItemTitle","ItemText"},
-                new int[]{R.id.topTextView,R.id.bottomTextView}
+                new String[]{"ItemTitle", "ItemText"},
+                new int[]{R.id.topTextView, R.id.bottomTextView}
         );
         listview.setAdapter(listitemAdapter);
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-                                    long arg3)
-            {
+                                    long arg3) {
                 //看使用者選什麼，就會去開啟服務
                 Intent intent = null;
 
-                switch (arg2)
-                {
+                switch (arg2) {
 //                    case 0:
 //                        intent = new Intent();
 //                        intent.setClass(main.this, GridViewActivity.class);
@@ -167,7 +167,13 @@ public class fragment_setting extends Fragment{
 //                        break;
                     case 0:
 //
-                        fixmember();
+                        if (MySharedPrefernces.getIsBuyed(getActivity())) {
+                            addmember();
+                        } else {
+                            fixmember();
+                        }
+
+
                         break;
 //                    case 4:
 //                        intent = new Intent();
@@ -179,7 +185,7 @@ public class fragment_setting extends Fragment{
                         startActivity(new Intent(getActivity(), MainActivity.class));
                         break;
                     case 2:
-                        startActivity(new Intent(getActivity(),QAActivity.class));
+                        startActivity(new Intent(getActivity(), QAActivity.class));
                         break;
 //                    case 7:
 //                        startActivity(new Intent(main.this,MusicActivity.class));
@@ -197,10 +203,65 @@ public class fragment_setting extends Fragment{
                 }
             }
         });
+
+
+        final Calendar c = Calendar.getInstance();
+        myYear = c.get(Calendar.YEAR);
+        myMonth = c.get(Calendar.MONTH);
+        myDay = c.get(Calendar.DAY_OF_MONTH);
+
+        //資料庫
+        try {
+            dbHelper = new SQLiteHelper(getActivity(), SQLiteHelper.DB_NAME, null, DB_VERSION);
+            db = dbHelper.getWritableDatabase();
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+            ++DB_VERSION;
+            dbHelper.onUpgrade(db, --DB_VERSION, DB_VERSION);
+        }
+
+
+        int nodata = 0;
+
+        memberlist = new ArrayList<member>();
+
+        //first login
+        try {
+            cursor = db.query(SQLiteHelper.TB_NAME, null, null, null, null, null, null);
+
+            cursor.moveToFirst();
+
+            //no data
+            if (cursor.isAfterLast()) {
+//                openOptionsDialog("查無data, 請更新database");
+                nodata = 1;
+                //return;
+            }
+
+
+            while (!cursor.isAfterLast()) {
+                member sitem = new member();
+                sitem.id = cursor.getString(0);
+                sitem.name = cursor.getString(1);
+                sitem.sex = cursor.getString(2);
+                sitem.weight = cursor.getString(3);
+                sitem.height = cursor.getString(4);
+                sitem.waist = cursor.getString(5);
+                sitem.age = cursor.getInt(6);
+                sitem.rdate = cursor.getString(7);
+
+                memberlist.add(sitem);
+                cursor.moveToNext();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
         return v;
     }
-    public void refresh_msg()
-    {
+
+    public void refresh_msg() {
         String rmsg = "";
 
         //selector = diet.dt.selector;
@@ -215,35 +276,32 @@ public class fragment_setting extends Fragment{
         String rwaist = "";
 
         //cal bmr
-        if (mydata.sex.equals("0"))
-        {
-            bmr = (13.7*weight)+(5.0*height)-(6.8*age)+66;
+        if (mydata.sex.equals("0")) {
+            bmr = (13.7 * weight) + (5.0 * height) - (6.8 * age) + 66;
             //標準體重好像我公式有給錯 正確公式＝身高(m)×身高(m)×22
-            rwaist = (waist <= 94)?"正常":"異常";
-        }
-        else
-        {
-            bmr = (9.6*weight)+(1.8*height)-(4.7*age)+655;
-            rwaist = (waist <= 80)?"正常":"異常";
+            rwaist = (waist <= 94) ? "正常" : "異常";
+        } else {
+            bmr = (9.6 * weight) + (1.8 * height) - (4.7 * age) + 655;
+            rwaist = (waist <= 80) ? "正常" : "異常";
         }
 
         //cal bmi
         //bmi = (double) weight / (height*height);
-        double h2 = (double) height/100;
+        double h2 = (double) height / 100;
 
         standrdweight = (h2 * h2) * 22;
 
         //計算BMI
         bmi = (double) weight / (h2 * h2);
 
-        double standrdweightratio	= weight/standrdweight;
+        double standrdweightratio = weight / standrdweight;
 
-        double sResult=standrdweight*30;
+        double sResult = standrdweight * 30;
 
         DecimalFormat mDecimalFormat = new DecimalFormat("#.##");
 
-        if(standrdweightratio<=0.9)sResult=standrdweight*35;
-        if(standrdweightratio>=1.1)sResult=standrdweight*25;
+        if (standrdweightratio <= 0.9) sResult = standrdweight * 35;
+        if (standrdweightratio >= 1.1) sResult = standrdweight * 25;
 
         //1公斤=2.2046磅
         //增重:體重磅數*18
@@ -255,12 +313,12 @@ public class fragment_setting extends Fragment{
 
         //rmsg += "目前的熱量/消耗熱量:" + food.hot + "/" + sport.hot + "\n";
         rmsg += "體重" + weight + "\n";
-        rmsg += "基礎代謝率(BMR):" + mDecimalFormat.format(bmr) +	"\n";
-        String rbmi =(bmi > 8.5 && bmi <  24)?"(BMI正常)":"(異常BMI)";
+        rmsg += "基礎代謝率(BMR):" + mDecimalFormat.format(bmr) + "\n";
+        String rbmi = (bmi > 8.5 && bmi < 24) ? "(BMI正常)" : "(異常BMI)";
         rmsg += "BMI:" + mDecimalFormat.format(bmi) + rbmi + "\n";
         //String rst =(standrdweight < (weight*0.1))?"(體重正常)":"(體重太重)";
-        rmsg += "標準體重:" + ((Math.round(standrdweight)/10)*10) + "\n";
-        rmsg += "理想體重範圍:" + Math.round(standrdweight*.9*10)/10 + " ~ " + Math.round(standrdweight*1.1*10)/10 + "\n";
+        rmsg += "標準體重:" + ((Math.round(standrdweight) / 10) * 10) + "\n";
+        rmsg += "理想體重範圍:" + Math.round(standrdweight * .9 * 10) / 10 + " ~ " + Math.round(standrdweight * 1.1 * 10) / 10 + "\n";
         rmsg += "建議熱量:" + mDecimalFormat.format(sResult) + "\n";
 
         final Calendar c = Calendar.getInstance();
@@ -268,28 +326,26 @@ public class fragment_setting extends Fragment{
         myMonth = c.get(Calendar.MONTH);
         myDay = c.get(Calendar.DAY_OF_MONTH);
 
-        String date = String.valueOf(year) + "-" + String.valueOf(myMonth+1) + "-" + String.valueOf(myDay);
+        String date = String.valueOf(year) + "-" + String.valueOf(myMonth + 1) + "-" + String.valueOf(myDay);
 
-        String[] whereValue={date};
+        String[] whereValue = {date};
 
         double getdata = 0;
         double costdata = 0;
 
-        try{
+        try {
             cursor = db.query(SQLiteHelper.DIARY_NAME, null, hotdiary.RDATE + "=?", whereValue, null, null, null);
 
             cursor.moveToFirst();
 
             //no data
-            if (cursor.isAfterLast())
-            {
+            if (cursor.isAfterLast()) {
                 //openOptionsDialog("找不到資料");
                 //return;
             }
 
 
-            while(!cursor.isAfterLast())
-            {
+            while (!cursor.isAfterLast()) {
                 hotdiary sitem = new hotdiary();
                 sitem.id = cursor.getString(0);
                 sitem.ditem = cursor.getString(1);
@@ -298,8 +354,7 @@ public class fragment_setting extends Fragment{
                 sitem.shot = cursor.getString(4);
                 sitem.rdate = cursor.getString(5);
 
-                if (!sitem.dhot.equals("-1"))
-                {
+                if (!sitem.dhot.equals("-1")) {
                     getdata += Double.valueOf(sitem.dhot);
                 }
 
@@ -308,18 +363,16 @@ public class fragment_setting extends Fragment{
                 cursor.moveToNext();
 
             }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         rmsg += "今日總共攝取熱量:" + getdata + "\n";
-        rmsg += "今日總共消耗熱量:" + costdata+ "\n";
+        rmsg += "今日總共消耗熱量:" + costdata + "\n";
 
         msg.setText(rmsg);
     }
-    private void addmember()
-    {
+
+    private void addmember() {
         AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
 
         alert.setTitle("個人資料設定");
@@ -339,8 +392,8 @@ public class fragment_setting extends Fragment{
         tsex = new TextView(getActivity());
         tsex.setText("性別: ");
         sex = new Spinner(getActivity());
-        String sexs[] = {"男","女"};
-        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getActivity(),   android.R.layout.simple_spinner_item, sexs);
+        final String sexs[] = {"男", "女"};
+        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, sexs);
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down vieww
         sex.setAdapter(spinnerArrayAdapter);
 
@@ -379,8 +432,7 @@ public class fragment_setting extends Fragment{
         alert.setView(sv);
 
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton)
-            {
+            public void onClick(DialogInterface dialog, int whichButton) {
                 n1 = name.getText().toString();
                 n2 = Integer.toString(sex.getSelectedItemPosition());
                 n3 = we.getText().toString();
@@ -388,23 +440,23 @@ public class fragment_setting extends Fragment{
                 n5 = "28";
                 n6 = age.getText().toString();
 
-                if (n1.equals("") || n2.equals("") ||n3.equals("") ||n4.equals("") ||n5.equals("")||n6.equals(""))
-                {
+                if (n1.equals("") || n2.equals("") || n3.equals("") || n4.equals("") || n5.equals("") || n6.equals("")) {
                     openOptionsDialog("有值沒填");
                     getActivity().finish();
                     return;
-                }
-                else
-                {
+                } else {
+                    MySharedPrefernces.saveUserName(getActivity(), n1);
+                    MySharedPrefernces.saveUserSex(getActivity(),sex.getSelectedItemPosition());
+                    MySharedPrefernces.saveUserTall(getActivity(),Integer.parseInt(n4));
+                    MySharedPrefernces.saveUserWeight(getActivity(),Integer.parseInt(n3));
                     DBSQL.insert(getActivity(), n1, n2, n4, n3, n6, n5);
                     memberlist.clear();
-                    try{
+                    try {
                         cursor = db.query(SQLiteHelper.TB_NAME, null, null, null, null, null, null);
 
                         cursor.moveToFirst();
 
-                        while(!cursor.isAfterLast())
-                        {
+                        while (!cursor.isAfterLast()) {
                             member sitem = new member();
                             sitem.id = cursor.getString(0);
                             sitem.name = cursor.getString(1);
@@ -419,36 +471,32 @@ public class fragment_setting extends Fragment{
                             memberlist.add(sitem);
                             cursor.moveToNext();
                         }
-                    }
-                    catch (Exception e)
-                    {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
 
-                    selector = memberlist.size()-1;
+                    selector = memberlist.size() - 1;
 
                     account = n1;
                     refresh_msg();
-
+                    MySharedPrefernces.saveIsBuyed(getActivity(), true);
                 }
-
 
 
             }
         });
 
         alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton)
-            {
+            public void onClick(DialogInterface dialog, int whichButton) {
             }
         });
 
         alert.show();
 
 
-
     }
-    private  void  setData(){
+
+    private void setData() {
         int mYear, mMonth, mDay;
 
         final Calendar c = Calendar.getInstance();
@@ -459,34 +507,33 @@ public class fragment_setting extends Fragment{
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
 
-                age.setText(setDateFormat(year,month,day));
+                age.setText(setDateFormat(year, month, day));
             }
 
-        }, mYear,mMonth, mDay).show();
+        }, mYear, mMonth, mDay).show();
     }
-    private String setDateFormat(int year,int monthOfYear,int dayOfMonth){
+
+    private String setDateFormat(int year, int monthOfYear, int dayOfMonth) {
         return String.valueOf(year) + "-"
                 + String.valueOf(monthOfYear + 1) + "-"
                 + String.valueOf(dayOfMonth);
     }
-    private void openOptionsDialog(String info)
-    {
+
+    private void openOptionsDialog(String info) {
         new AlertDialog.Builder(getActivity())
                 .setTitle("msg")
                 .setMessage(info)
                 .setPositiveButton("OK",
-                        new DialogInterface.OnClickListener()
-                        {
-                            public void onClick(DialogInterface dialoginterface, int i)
-                            {
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialoginterface, int i) {
 
                             }
                         }
                 )
                 .show();
     }
-    private void fixmember()
-    {
+
+    private void fixmember() {
         AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
 
         alert.setTitle("修改");
@@ -506,12 +553,10 @@ public class fragment_setting extends Fragment{
         tsex = new TextView(getActivity());
         tsex.setText("性別: ");
         sex = new Spinner(getActivity());
-        final String sexs[] = {"男","女"};
-        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getActivity(),   android.R.layout.simple_spinner_item, sexs);
+        final String sexs[] = {"男", "女"};
+        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, sexs);
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down vieww
         sex.setAdapter(spinnerArrayAdapter);
-
-
 
 
         ll.addView(tsex);
@@ -548,7 +593,7 @@ public class fragment_setting extends Fragment{
         ll.addView(age);
         // Set an EditText view to get user input
 
-        if(memberlist.size()==0){
+        if (memberlist.size() == 0) {
             we.setText("有值沒填");
             he.setText("有值沒填");
             age.setText("有值沒填");
@@ -556,11 +601,11 @@ public class fragment_setting extends Fragment{
             sex.setSelection(0);
 
 
-        }else {
+        } else {
             name.setText(memberlist.get(selector).name);
             we.setText(memberlist.get(selector).weight);
             he.setText(memberlist.get(selector).height);
-            age.setText(memberlist.get(selector).age);
+            age.setText(memberlist.get(selector).age+"");
             if (memberlist.get(selector).sex.equals("0"))
                 sex.setSelection(0);
             else
@@ -569,8 +614,7 @@ public class fragment_setting extends Fragment{
         alert.setView(sv);
 
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton)
-            {
+            public void onClick(DialogInterface dialog, int whichButton) {
                 String id = memberlist.get(selector).id;
                 n1 = name.getText().toString();
                 n2 = Integer.toString(sex.getSelectedItemPosition());
@@ -581,22 +625,22 @@ public class fragment_setting extends Fragment{
 
                 Log.i("TAG", "n2: " + n2);
 
-                if (n3.equals("") ||n4.equals("") ||n5.equals("")||n6.equals("")||n1.equals(""))
-                {
+                if (n3.equals("") || n4.equals("") || n5.equals("") || n6.equals("") || n1.equals("")) {
                     openOptionsDialog("有值沒填");
                     return;
-                }
-                else
-                {
+                } else {
+                    MySharedPrefernces.saveUserName(getActivity(), n1);
+                    MySharedPrefernces.saveUserSex(getActivity(),sex.getSelectedItemPosition());
+                    MySharedPrefernces.saveUserTall(getActivity(),Integer.parseInt(n4));
+                    MySharedPrefernces.saveUserWeight(getActivity(),Integer.parseInt(n3));
                     DBSQL.update(getActivity(), n1, n2, n3, n4, n5, n6, id);
                     memberlist.clear();
-                    try{
+                    try {
                         cursor = db.query(SQLiteHelper.TB_NAME, null, null, null, null, null, null);
 
                         cursor.moveToFirst();
 
-                        while(!cursor.isAfterLast())
-                        {
+                        while (!cursor.isAfterLast()) {
                             member sitem = new member();
                             sitem.id = cursor.getString(0);
                             sitem.name = cursor.getString(1);
@@ -610,31 +654,26 @@ public class fragment_setting extends Fragment{
                             memberlist.add(sitem);
                             cursor.moveToNext();
                         }
-                    }
-                    catch (Exception e)
-                    {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
 
-                    selector = memberlist.size()-1;
+                    selector = memberlist.size() - 1;
 
                     refresh_msg();
 
                 }
 
 
-
             }
         });
 
         alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton)
-            {
+            public void onClick(DialogInterface dialog, int whichButton) {
             }
         });
 
         alert.show();
-
 
 
     }

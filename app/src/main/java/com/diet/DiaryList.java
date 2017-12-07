@@ -227,7 +227,7 @@ public class DiaryList extends ListActivity
         builder.setPositiveButton("YES", new OnClickListener() {
         	@Override
         	public void onClick(DialogInterface dialog, int which) {
-        		DBSQL.deleteAll(DiaryList.this);
+
           		list.clear();
           		adapter.notifyDataSetChanged();
         	}

@@ -107,7 +107,6 @@ public class main extends AppCompatActivity
 
     String url_list;
 
-    static main mymain;
 
 
 
@@ -146,6 +145,7 @@ public class main extends AppCompatActivity
         setContentView(R.layout.main);
         bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottom_navigation);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
+        viewPager.setCurrentItem(2);
         bottomNavigationView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -215,66 +215,11 @@ public class main extends AppCompatActivity
 
 //        mymain=this;
 //
-//        tips = this.getResources().getStringArray(R.array.diet_tips);
+        tips = this.getResources().getStringArray(R.array.diet_tips);
 //
 //        tips_size = tips.length;
 //
-//        final Calendar c = Calendar.getInstance();
-//        myYear = c.get(Calendar.YEAR);
-//        myMonth = c.get(Calendar.MONTH);
-//        myDay = c.get(Calendar.DAY_OF_MONTH);
-//
-//        //資料庫
-//        try{
-//            dbHelper = new SQLiteHelper(this, SQLiteHelper.DB_NAME, null, DB_VERSION);
-//            db = dbHelper.getWritableDatabase();
-//        }
-//        catch(IllegalArgumentException e){
-//            e.printStackTrace();
-//            ++ DB_VERSION;
-//            dbHelper.onUpgrade(db, --DB_VERSION, DB_VERSION);
-//        }
-//
-//
-//        int nodata=0;
-//
-//        memberlist = new ArrayList<member>();
-//
-//        //first login
-//        try{
-//            cursor = db.query(SQLiteHelper.TB_NAME, null, null, null, null, null, null);
-//
-//            cursor.moveToFirst();
-//
-//            //no data
-//            if (cursor.isAfterLast())
-//            {
-//                //openOptionsDialog("查無data, 請更新database");
-//                nodata=1;
-//                //return;
-//            }
-//
-//
-//            while(!cursor.isAfterLast())
-//            {
-//                member sitem = new member();
-//                sitem.id = cursor.getString(0);
-//                sitem.name = cursor.getString(1);
-//                sitem.sex = cursor.getString(2);
-//                sitem.weight = cursor.getString(3);
-//                sitem.height = cursor.getString(4);
-//                sitem.waist = cursor.getString(5);
-//                sitem.age = cursor.getInt(6);
-//                sitem.rdate = cursor.getString(7);
-//
-//                memberlist.add(sitem);
-//                cursor.moveToNext();
-//            }
-//        }
-//        catch (Exception e)
-//        {
-//            e.printStackTrace();
-//        }
+
 //
 //        PackageInfo info;
 //        try {

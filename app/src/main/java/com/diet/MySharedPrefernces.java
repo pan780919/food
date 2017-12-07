@@ -9,6 +9,20 @@ public class MySharedPrefernces {
 
     public static final String NAME = "MySharedPrefernces";
 
+
+    //首頁-是否第一次使用
+    public static final String KEY_IS_BUY = "isBuy";
+    public static void saveIsBuyed(Context context, boolean isBuyed) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        sp.edit().putBoolean(KEY_IS_BUY, isBuyed).apply();
+    }
+
+    public static boolean getIsBuyed(Context context) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        return sp.getBoolean(KEY_IS_BUY, false);
+    }
+
+
     // 儲存
     public static final String KEY_ID = "id";
 
@@ -98,5 +112,51 @@ public class MySharedPrefernces {
     public static String getUserMail(Context context) {
         SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
         return sp.getString(KEY_USERMAIL, "");
+    }
+    // 儲存 useremail
+    public static final String KEY_USERTALL = "usertall";
+
+    public static void saveUserTall(Context context, int userid) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        sp.edit().putInt(KEY_USERTALL, userid).commit();
+
+
+    }
+
+    public static int getUserTall(Context context) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        return sp.getInt(KEY_USERTALL, 0);
+    }
+
+
+    // 儲存 useremail
+    public static final String KEY_WEIGHT = "userweight";
+
+    public static void saveUserWeight(Context context, int userid) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        sp.edit().putInt(KEY_WEIGHT, userid).commit();
+
+
+    }
+
+    public static int getUserWeight(Context context) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        return sp.getInt(KEY_WEIGHT,0);
+    }
+
+
+    // 儲存 useremail
+    public static final String KEY_SEX = "usersex";
+
+    public static void saveUserSex(Context context, int userid) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        sp.edit().putInt(KEY_SEX, userid).commit();
+
+
+    }
+
+    public static int getUserSex(Context context) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        return sp.getInt(KEY_SEX,0);
     }
 }

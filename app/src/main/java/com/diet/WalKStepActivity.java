@@ -68,6 +68,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 //import android.widget.Toast;
 
+import com.diet.frgment.fragment_setting;
 import com.sqlite.SQLiteHelper;
 import com.sqlite.account;
 import com.sqlite.hotdiary;
@@ -424,14 +425,14 @@ public class WalKStepActivity extends Activity {
 
         section = 1;
         mchildid = 0;
-        if (main.mymain.memberlist.size() == 0) {
+        if (MySharedPrefernces.getUserName(WalKStepActivity.this).equals("")) {
             return;
         } else {
-            name = main.mymain.memberlist.get(mchildid).name;
+            name = MySharedPrefernces.getUserName(WalKStepActivity.this);
             age = 20;
-            tsex = Integer.valueOf(main.mymain.memberlist.get(mchildid).sex);
-            weight = Integer.valueOf(main.mymain.memberlist.get(mchildid).weight);
-            tall = Integer.valueOf(main.mymain.memberlist.get(mchildid).height);
+            tsex = MySharedPrefernces.getUserSex(WalKStepActivity.this);
+            weight = MySharedPrefernces.getUserWeight(WalKStepActivity.this);
+            tall =MySharedPrefernces.getUserTall(WalKStepActivity.this);
 
         }
 

@@ -137,7 +137,7 @@ public class fragment_sport  extends Fragment{
 ////
 ////                        fixmember();
 //                        break;
-                    case 4:
+                    case 1:
                         intent = new Intent();
                         intent.setClass(getActivity(), WalKStepActivity.class);
 
@@ -149,7 +149,7 @@ public class fragment_sport  extends Fragment{
 //                    case 2:
 //                        startActivity(new Intent(getActivity(),QAActivity.class));
 //                        break;
-                    case 7:
+                    case 2:
                         startActivity(new Intent(getActivity(),MusicActivity.class));
                         break;
 //                    case 8:

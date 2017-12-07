@@ -590,7 +590,6 @@ com/google/android/gms/internal/zzoy.class
 com/fasterxml/jackson/databind/annotation/JsonValueInstantiator.class
 com/google/android/gms/wallet/ProxyCard.class
 android/support/v7/widget/ViewBoundsCheck.class
-com/facebook/ads/internal/f.class
 com/google/zxing/common/BitMatrix.class
 com/google/android/gms/games/achievement/Achievement.class
 com/google/android/exoplayer2/extractor/mp4/PsshAtomUtil.class
@@ -883,6 +882,7 @@ com/google/android/gms/ads/internal/zzb.class
 android/support/v7/app/ActionBar$OnNavigationListener.class
 com/google/android/gms/common/internal/zzaj.class
 android/support/v4/view/accessibility/AccessibilityNodeProviderCompat.class
+com/facebook/ads/internal/protocol/c.class
 android/support/v7/appcompat/R.class
 com/facebook/share/widget/LikeView$AuxiliaryViewPosition.class
 android/support/v7/view/menu/CascadingMenuPopup$1.class
@@ -1420,8 +1420,8 @@ com/google/firebase/database/ThrowOnExtraProperties.class
 android/support/v7/widget/Toolbar.class
 com/google/android/gms/internal/zzqp.class
 com/google/android/gms/internal/zzpw.class
-com/facebook/ads/MediaView.class
 com/fasterxml/jackson/core/util/VersionUtil.class
+com/facebook/ads/MediaView.class
 com/google/android/gms/internal/zzqj.class
 com/google/android/gms/wearable/CapabilityApi$CapabilityFilterType.class
 com/bumptech/glide/load/model/stream/StreamByteArrayLoader.class
@@ -1582,7 +1582,6 @@ com/google/android/exoplayer2/drm/UnsupportedDrmException$Reason.class
 android/support/design/R$style.class
 com/google/android/exoplayer2/extractor/mp4/FragmentedMp4Extractor.class
 com/google/android/gms/common/api/Api$zzg.class
-com/facebook/ads/internal/adapters/ab.class
 com/google/android/gms/cast/CastRemoteDisplay$1.class
 com/google/android/gms/cast/CastRemoteDisplay$Configuration.class
 com/fasterxml/jackson/databind/util/Converter.class
