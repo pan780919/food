@@ -4,31 +4,31 @@
     <item
         android:id="@+id/action_call"
         android:checked="false"
-        android:icon="@drawable/menu1"
+        android:icon="@drawable/ic_reorder_black_24dp"
         android:title="運動"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_chat"
         android:checked="false"
-        android:icon="@drawable/menu4"
+        android:icon="@drawable/ic_media_play"
         android:title="討論區"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_contact"
         android:checked="true"
-        android:icon="@drawable/menu5"
+        android:icon="@drawable/ic_search"
         android:title="系統"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_food"
         android:checked="false"
-        android:icon="@drawable/menu2"
+        android:icon="@drawable/ic_accessibility_black_24dp"
         android:title="飲食"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_teach"
         android:checked="false"
-        android:icon="@drawable/menu3"
+        android:icon="@drawable/ic_book_cate"
         android:title="教學"
         app:showAsAction="ifRoom" />
 </menu>

@@ -29,6 +29,7 @@ import com.diet.DBSQL;
 import com.diet.MySharedPrefernces;
 import com.diet.QAActivity;
 import com.diet.R;
+import com.diet.UserActivity;
 import com.diet.main;
 import com.sqlite.SQLiteHelper;
 import com.sqlite.hotdiary;
@@ -80,7 +81,7 @@ public class fragment_setting extends Fragment {
 
         menu = new ArrayList<HashMap<String, Object>>();
         msg = (TextView) v.findViewById(R.id.rrmsg);
-
+        memberlist = new ArrayList<member>();
         HashMap<String, Object> map = new HashMap<String, Object>();
 //        map = new HashMap<String, Object>();
 //        map.put("ItemTitle", "虛擬教練" );
@@ -125,10 +126,10 @@ public class fragment_setting extends Fragment {
 //        map.put("ItemTitle", "討論區" );
 //        map.put("ItemText","share");
 //        menu.add(map);
-//        map = new HashMap<String, Object>();
-//        map.put("ItemTitle", "會員中心" );
-//        map.put("ItemText","membercenter");
-//        menu.add(map);
+        map = new HashMap<String, Object>();
+        map.put("ItemTitle", "會員中心" );
+        map.put("ItemText","membercenter");
+        menu.add(map);
 //        map = new HashMap<String, Object>();
 //        map.put("ItemTitle", "結束程式" );
 //        map.put("ItemText", "login out");
@@ -193,10 +194,10 @@ public class fragment_setting extends Fragment {
 //                    case 8:
 //                        startActivity(new Intent(main.this, com.diet.MainActivity.class));
 //                        break;
-//                    case 9:
-//                        startActivity(new Intent(main.this, UserActivity.class));
-//
-//                        break;
+                    case 3:
+                        startActivity(new Intent(getActivity(), UserActivity.class));
+
+                        break;
 //                    case 10:
 //                        finish();
 //                        break;
@@ -223,7 +224,7 @@ public class fragment_setting extends Fragment {
 
         int nodata = 0;
 
-        memberlist = new ArrayList<member>();
+
 
         //first login
         try {
@@ -253,20 +254,23 @@ public class fragment_setting extends Fragment {
                 memberlist.add(sitem);
                 cursor.moveToNext();
 
-                refresh_msg();
+
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-
+        refresh_msg();
         return v;
     }
 
     private static final String TAG = "fragment_setting";
     public void refresh_msg() {
         String rmsg = "";
-
+        if(memberlist.size()==0){
+            addmember();
+            return;
+        }
         //selector = diet.dt.selector;
         mydata = memberlist.get(selector);
 
@@ -620,7 +624,7 @@ public class fragment_setting extends Fragment {
 
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
-                String id = memberlist.get(selector).id;
+                String id ="122345";
                 n1 = name.getText().toString();
                 n2 = Integer.toString(sex.getSelectedItemPosition());
                 n3 = we.getText().toString();

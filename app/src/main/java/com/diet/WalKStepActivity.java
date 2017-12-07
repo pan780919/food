@@ -358,6 +358,9 @@ public class WalKStepActivity extends Activity {
                 String kr = shows.getText().toString();
                 String stepss = ssteps.getText().toString();
 
+                MySharedPrefernces.saveUserKm(getApplicationContext(), String.valueOf(kr));
+                MySharedPrefernces.saveUserStep(getApplicationContext(), String.valueOf(steps));
+
                 String now_status = "跑了 " + k + "- 花了 " + s + "- 消耗" + kr + "- 目前 " + stepss;
 
                 SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "完成");

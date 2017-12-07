@@ -4,6 +4,10 @@
         "source": "/Users/jackpan/food/app/src/main/res/drawable-hdpi/undo.png"
     },
     {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_reorder_black_24dp.png",
+        "source": "/Users/jackpan/food/app/build/generated/res/pngs/debug/drawable-hdpi/ic_reorder_black_24dp.png"
+    },
+    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-hdpi/rent.png",
         "source": "/Users/jackpan/food/app/src/main/res/drawable-hdpi/rent.png"
     },
@@ -46,6 +50,10 @@
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-hdpi/exec.png",
         "source": "/Users/jackpan/food/app/src/main/res/drawable-hdpi/exec.png"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_accessibility_black_24dp.png",
+        "source": "/Users/jackpan/food/app/build/generated/res/pngs/debug/drawable-hdpi/ic_accessibility_black_24dp.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-hdpi/cycle.png",

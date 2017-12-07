@@ -1,5 +1,13 @@
 [
     {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_reorder_black_24dp.xml",
+        "source": "/Users/jackpan/food/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_reorder_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_accessibility_black_24dp.xml",
+        "source": "/Users/jackpan/food/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_accessibility_black_24dp.xml"
+    },
+    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/design/26.0.1/res/drawable-anydpi-v21/design_ic_visibility.xml"
     },
