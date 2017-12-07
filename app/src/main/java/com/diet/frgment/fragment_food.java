@@ -11,6 +11,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.diet.R;
+import com.diet.sport;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -116,12 +117,12 @@ public class fragment_food extends Fragment{
 //                        intent.setClass(main.this, GridViewActivity.class);
 //                        startActivity(intent);
 //                        break;
-//                    case 1:
-//                        intent = new Intent();
-//                        intent.setClass(main.this, sport.class);
-//
-//                        startActivity(intent);
-//                        break;
+                    case 0:
+                        intent = new Intent();
+                        intent.setClass(getActivity(), sport.class);
+
+                        startActivity(intent);
+                        break;
 //                    case 2:
 //                        tips_selector = 0;
 //                        choice();

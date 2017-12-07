@@ -11,8 +11,11 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.diet.GridViewActivity;
+import com.diet.MusicActivity;
 import com.diet.QAActivity;
 import com.diet.R;
+import com.diet.WalKStepActivity;
 import com.diet.main;
 import com.weather.MainActivity;
 
@@ -44,10 +47,10 @@ public class fragment_sport  extends Fragment{
         menu = new ArrayList<HashMap<String, Object>>();
 
         HashMap<String, Object> map = new HashMap<String, Object>();
-//        map = new HashMap<String, Object>();
-//        map.put("ItemTitle", "虛擬教練" );
-//        map.put("ItemText", "sport man");
-//        menu.add(map);
+        map = new HashMap<String, Object>();
+        map.put("ItemTitle", "虛擬教練" );
+        map.put("ItemText", "sport man");
+        menu.add(map);
 //
 //        map = new HashMap<String, Object>();
 //        map.put("ItemTitle", "卡路里計算" );
@@ -59,29 +62,29 @@ public class fragment_sport  extends Fragment{
 //        map.put("ItemText", "training video");
 //        menu.add(map);
 
-        map = new HashMap<String, Object>();
-        map.put("ItemTitle", "基本資料設定" );
-        map.put("ItemText", "setup");
-        menu.add(map);
-
 //        map = new HashMap<String, Object>();
-//        map.put("ItemTitle", "計步器" );
-//        map.put("ItemText", "Pedometer");
+//        map.put("ItemTitle", "基本資料設定" );
+//        map.put("ItemText", "setup");
 //        menu.add(map);
-        map = new HashMap<String, Object>();
-        map.put("ItemTitle", "天氣預報" );
-        map.put("ItemText", "weather");
-        menu.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("ItemTitle", "常見問題" );
-        map.put("ItemText", "QANDA");
+        map.put("ItemTitle", "計步器" );
+        map.put("ItemText", "Pedometer");
         menu.add(map);
+//        map = new HashMap<String, Object>();
+//        map.put("ItemTitle", "天氣預報" );
+//        map.put("ItemText", "weather");
+//        menu.add(map);
 //
 //        map = new HashMap<String, Object>();
-//        map.put("ItemTitle", "音樂播放器" );
-//        map.put("ItemText", "MusicPlayer");
+//        map.put("ItemTitle", "常見問題" );
+//        map.put("ItemText", "QANDA");
 //        menu.add(map);
+//
+        map = new HashMap<String, Object>();
+        map.put("ItemTitle", "音樂播放器" );
+        map.put("ItemText", "MusicPlayer");
+        menu.add(map);
 //
 //        map = new HashMap<String, Object>();
 //        map.put("ItemTitle", "討論區" );
@@ -115,11 +118,11 @@ public class fragment_sport  extends Fragment{
 
                 switch (arg2)
                 {
-//                    case 0:
-//                        intent = new Intent();
-//                        intent.setClass(main.this, GridViewActivity.class);
-//                        startActivity(intent);
-//                        break;
+                    case 0:
+                        intent = new Intent();
+                        intent.setClass(getActivity(), GridViewActivity.class);
+                        startActivity(intent);
+                        break;
 //                    case 1:
 //                        intent = new Intent();
 //                        intent.setClass(main.this, sport.class);
@@ -130,25 +133,25 @@ public class fragment_sport  extends Fragment{
 //                        tips_selector = 0;
 //                        choice();
 //                        break;
-                    case 0:
-//
-//                        fixmember();
-                        break;
-//                    case 4:
-//                        intent = new Intent();
-//                        intent.setClass(main.this, WalKStepActivity.class);
-//
-//                        startActivity(intent);
+//                    case 0:
+////
+////                        fixmember();
 //                        break;
-                    case 1:
-                        startActivity(new Intent(getActivity(), MainActivity.class));
+                    case 4:
+                        intent = new Intent();
+                        intent.setClass(getActivity(), WalKStepActivity.class);
+
+                        startActivity(intent);
                         break;
-                    case 2:
-                        startActivity(new Intent(getActivity(),QAActivity.class));
-                        break;
-//                    case 7:
-//                        startActivity(new Intent(main.this,MusicActivity.class));
+//                    case 1:
+//                        startActivity(new Intent(getActivity(), MainActivity.class));
 //                        break;
+//                    case 2:
+//                        startActivity(new Intent(getActivity(),QAActivity.class));
+//                        break;
+                    case 7:
+                        startActivity(new Intent(getActivity(),MusicActivity.class));
+                        break;
 //                    case 8:
 //                        startActivity(new Intent(main.this, com.diet.MainActivity.class));
 //                        break;

@@ -1,5 +1,8 @@
 package com.diet.frgment;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.net.Uri;
 import android.support.v4.app.Fragment;
 
 import android.content.Intent;
@@ -12,6 +15,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.diet.R;
+import com.diet.main;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,8 +28,10 @@ public class fragment_teach extends Fragment{
     private View v;
     private ListView listview;
     private ArrayList<HashMap<String, Object>> menu;
-
-
+    int tips_selector=0;
+    int selector1 = 0;
+    CharSequence[] child_id = null;
+    int selector2;
     public fragment_teach() {
         // Required empty public constructor
     }
@@ -41,10 +47,10 @@ public class fragment_teach extends Fragment{
         menu = new ArrayList<HashMap<String, Object>>();
 
         HashMap<String, Object> map = new HashMap<String, Object>();
-        map = new HashMap<String, Object>();
-        map.put("ItemTitle", "虛擬教練" );
-        map.put("ItemText", "sport man");
-        menu.add(map);
+//        map = new HashMap<String, Object>();
+//        map.put("ItemTitle", "虛擬教練" );
+//        map.put("ItemText", "sport man");
+//        menu.add(map);
 //
 //        map = new HashMap<String, Object>();
 //        map.put("ItemTitle", "卡路里計算" );
@@ -75,10 +81,10 @@ public class fragment_teach extends Fragment{
 //        map.put("ItemText", "QANDA");
 //        menu.add(map);
 //
-        map = new HashMap<String, Object>();
-        map.put("ItemTitle", "音樂播放器" );
-        map.put("ItemText", "MusicPlayer");
-        menu.add(map);
+//        map = new HashMap<String, Object>();
+//        map.put("ItemTitle", "音樂播放器" );
+//        map.put("ItemText", "MusicPlayer");
+//        menu.add(map);
 //
 //        map = new HashMap<String, Object>();
 //        map.put("ItemTitle", "討論區" );
@@ -123,10 +129,10 @@ public class fragment_teach extends Fragment{
 //
 //                        startActivity(intent);
 //                        break;
-//                    case 2:
-//                        tips_selector = 0;
-//                        choice();
-//                        break;
+                    case 0:
+                        tips_selector = 0;
+                        choice();
+                        break;
 //                    case 0:
 ////
 //                        fixmember();
@@ -161,5 +167,80 @@ public class fragment_teach extends Fragment{
         });
         return v;
     }
+    void choice()
+    {
+        final CharSequence[] child_id = new String[]{"全身","腹","臂","腿"};
+        int checked = 0;
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("選擇想看的部位?");
+
+        selector1 = 0;
+
+        builder.setSingleChoiceItems(child_id, checked, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which)
+            {
+                selector1 = which;
+            }
+        });
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which)
+            {
+                choice2();
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+    void choice2()
+    {
+
+        if (selector1 == 0)
+        {
+            child_id = new String[]{"全身1 側彈跳","全身2 鳥狗式"};
+        }
+        else if (selector1 == 1)
+        {
+            child_id = new String[]{"腹1 船式轉底船式","腹2 登山者"};
+        }
+        else if (selector1 == 2)
+        {
+            child_id = new String[]{"臂1 板式交替撐地"};
+        }
+        else if (selector1 == 3)
+        {
+            child_id = new String[]{"腿1 原地跑步", "腿2 直腿腳踏車式", "腿3 分腿跳","腿4 自重深蹲", "腿5 跨欄步", "腿6 側弓箭步", "腿7 下落屈蹲"};
+        }
+
+        int checked = 0;
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("選擇想看什麼?");
+
+        selector2 = 0;
+
+        builder.setSingleChoiceItems(child_id, checked, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which)
+            {
+                selector2 = which;
+            }
+        });
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which)
+            {
+                String newVideoPath = "http://163.13.201.96:8081/video/" + selector1 + "/" + selector2 + ".mp4";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(newVideoPath));
+                intent.setDataAndType(Uri.parse(newVideoPath), "video/mp4");
+                startActivity(intent);
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+
 
 }

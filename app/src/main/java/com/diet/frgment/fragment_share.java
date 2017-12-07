@@ -146,9 +146,9 @@ public class fragment_share extends Fragment{
 //                    case 7:
 //                        startActivity(new Intent(main.this,MusicActivity.class));
 //                        break;
-//                    case 8:
-//                        startActivity(new Intent(main.this, com.diet.MainActivity.class));
-//                        break;
+                    case 0:
+                        startActivity(new Intent(getActivity(), com.diet.MainActivity.class));
+                        break;
 //                    case 9:
 //                        startActivity(new Intent(main.this, UserActivity.class));
 //
