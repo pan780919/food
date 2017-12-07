@@ -188,9 +188,7 @@ public class WalKStepActivity extends Activity {
         // TODO Auto-generated method stub
         super.onCreate(icicle);
         setContentView(R.layout.main2);
-
         my = this;
-
         uri = Uri.parse("android.resource://" + //預設會播放程式內的音樂檔
                 getPackageName() + "/" + R.raw.goal);
         Log.d(TAG, "onCreate: "+uri);
