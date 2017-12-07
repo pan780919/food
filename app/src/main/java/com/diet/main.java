@@ -83,29 +83,25 @@ public class main extends AppCompatActivity
     private int result_check;
 
     private String murl = "";
-    public static String account;
 
-    private int year, month, day;
+
 
     public ProgressDialog myDialog = null;
 
-    public ArrayList<member> memberlist;
 
-    private TextView tname, tsex, twe, the, twa, tage;
-    private EditText name, we, he, wa, age;
-    private Spinner sex;
-    String n1, n2, n3, n4, n5, n6;
+
+
 
     public String tips [] = null;
 
     String mtime;
 
-    int selector = 0;
+
 
 
     EditText ddate;
 
-    TextView msg;
+
 
     final Calendar c = Calendar.getInstance();
 
@@ -113,13 +109,9 @@ public class main extends AppCompatActivity
 
     static main mymain;
 
-    member mydata;
 
-    private SQLiteDatabase db;
-    private SQLiteHelper dbHelper;
-    private Cursor cursor;
 
-    private static int DB_VERSION = 1;
+
 
     int tips_size=6;
 
@@ -127,7 +119,6 @@ public class main extends AppCompatActivity
     String pic;
     String picfilename;
 
-    int myYear, myMonth, myDay;
 
 
     private DatePickerDialog datePickerDialog;
@@ -308,7 +299,6 @@ public class main extends AppCompatActivity
 //        day = c.get(Calendar.DAY_OF_MONTH);
 //
 //        //登入後, 顯示下列主選單
-//        msg = (TextView)findViewById(R.id.rrmsg);
 //        listview = (ListView)findViewById(R.id.listview);
 //
 //        menu = new ArrayList<HashMap<String, Object>>();
@@ -479,582 +469,181 @@ public class main extends AppCompatActivity
         viewPager.setAdapter(adapter);
     }
 
-    public void refresh_msg()
-    {
-        String rmsg = "";
 
-        //selector = diet.dt.selector;
-        mydata = memberlist.get(selector);
 
-        double bmr = 0, bmi = 0, standrdweight = 0;
-        int weight = Integer.valueOf(mydata.weight);
-        int height = Integer.valueOf(mydata.height);
-        int age = 20;
 
-        double waist = Double.valueOf(mydata.waist);
-        String rwaist = "";
-
-        //cal bmr
-        if (mydata.sex.equals("0"))
-        {
-            bmr = (13.7*weight)+(5.0*height)-(6.8*age)+66;
-            //標準體重好像我公式有給錯 正確公式＝身高(m)×身高(m)×22
-            rwaist = (waist <= 94)?"正常":"異常";
-        }
-        else
-        {
-            bmr = (9.6*weight)+(1.8*height)-(4.7*age)+655;
-            rwaist = (waist <= 80)?"正常":"異常";
-        }
-
-        //cal bmi
-        //bmi = (double) weight / (height*height);
-        double h2 = (double) height/100;
-
-        standrdweight = (h2 * h2) * 22;
-
-        //計算BMI
-        bmi = (double) weight / (h2 * h2);
-
-        double standrdweightratio	= weight/standrdweight;
-
-        double sResult=standrdweight*30;
-
-        DecimalFormat mDecimalFormat = new DecimalFormat("#.##");
-
-        if(standrdweightratio<=0.9)sResult=standrdweight*35;
-        if(standrdweightratio>=1.1)sResult=standrdweight*25;
-
-        //1公斤=2.2046磅
-        //增重:體重磅數*18
-        double inc = weight * 2.2046 * 18;
-        //保持:體重磅數*15
-        double keep = weight * 2.2046 * 15;
-        //減重:體重磅數*12
-        double dec = weight * 2.2046 * 12;
-
-        //rmsg += "目前的熱量/消耗熱量:" + food.hot + "/" + sport.hot + "\n";
-        rmsg += "體重" + weight + "\n";
-        rmsg += "基礎代謝率(BMR):" + mDecimalFormat.format(bmr) +	"\n";
-        String rbmi =(bmi > 8.5 && bmi <  24)?"(BMI正常)":"(異常BMI)";
-        rmsg += "BMI:" + mDecimalFormat.format(bmi) + rbmi + "\n";
-        //String rst =(standrdweight < (weight*0.1))?"(體重正常)":"(體重太重)";
-        rmsg += "標準體重:" + ((Math.round(standrdweight)/10)*10) + "\n";
-        rmsg += "理想體重範圍:" + Math.round(standrdweight*.9*10)/10 + " ~ " + Math.round(standrdweight*1.1*10)/10 + "\n";
-        rmsg += "建議熱量:" + mDecimalFormat.format(sResult) + "\n";
-
-        final Calendar c = Calendar.getInstance();
-        myYear = c.get(Calendar.YEAR);
-        myMonth = c.get(Calendar.MONTH);
-        myDay = c.get(Calendar.DAY_OF_MONTH);
-
-        String date = String.valueOf(year) + "-" + String.valueOf(myMonth+1) + "-" + String.valueOf(myDay);
-
-        String[] whereValue={date};
-
-        double getdata = 0;
-        double costdata = 0;
-
-        try{
-            cursor = db.query(SQLiteHelper.DIARY_NAME, null, hotdiary.RDATE + "=?", whereValue, null, null, null);
-
-            cursor.moveToFirst();
-
-            //no data
-            if (cursor.isAfterLast())
-            {
-                //openOptionsDialog("找不到資料");
-                //return;
-            }
-
-
-            while(!cursor.isAfterLast())
-            {
-                hotdiary sitem = new hotdiary();
-                sitem.id = cursor.getString(0);
-                sitem.ditem = cursor.getString(1);
-                sitem.sitem = cursor.getString(2);
-                sitem.dhot = cursor.getString(3);
-                sitem.shot = cursor.getString(4);
-                sitem.rdate = cursor.getString(5);
-
-                if (!sitem.dhot.equals("-1"))
-                {
-                    getdata += Double.valueOf(sitem.dhot);
-                }
-
-                costdata += Double.valueOf(sitem.dhot);
-
-                cursor.moveToNext();
-
-            }
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-        rmsg += "今日總共攝取熱量:" + getdata + "\n";
-        rmsg += "今日總共消耗熱量:" + costdata+ "\n";
-
-        msg.setText(rmsg);
-    }
-
-
-    private void addmember()
-    {
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-
-        alert.setTitle("個人資料設定");
-//        alert.setMessage("請輸入帳號 和 密碼");
-        ScrollView sv = new ScrollView(this);
-        LinearLayout ll = new LinearLayout(this);
-        ll.setOrientation(LinearLayout.VERTICAL);
-        sv.addView(ll);
-
-        tname = new TextView(this);
-        tname.setText("姓名: ");
-        name = new EditText(this);
-        name.setText("");
-        ll.addView(tname);
-        ll.addView(name);
-
-        tsex = new TextView(this);
-        tsex.setText("性別: ");
-        sex = new Spinner(this);
-        String sexs[] = {"男","女"};
-        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this,   android.R.layout.simple_spinner_item, sexs);
-        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down vieww
-        sex.setAdapter(spinnerArrayAdapter);
-
-        ll.addView(tsex);
-        ll.addView(sex);
-
-        twe = new TextView(this);
-        twe.setText("體重: ");
-        we = new EditText(this);
-        we.setText("");
-        ll.addView(twe);
-        ll.addView(we);
-
-        the = new TextView(this);
-        the.setText("身高: ");
-        he = new EditText(this);
-        he.setText("");
-        ll.addView(the);
-        ll.addView(he);
-
-        tage = new TextView(this);
-        tage.setText("生日: ");
-        age = new EditText(this);
-        age.setInputType(InputType.TYPE_NULL); // 關閉軟鍵盤
-
-        age.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setData();
-            }
-        });
-        age.setText("");
-        ll.addView(tage);
-        ll.addView(age);
-        // Set an EditText view to get user input
-        alert.setView(sv);
-
-        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton)
-            {
-                n1 = name.getText().toString();
-                n2 = Integer.toString(sex.getSelectedItemPosition());
-                n3 = we.getText().toString();
-                n4 = he.getText().toString();
-                n5 = "28";
-                n6 = age.getText().toString();
-
-                if (n1.equals("") || n2.equals("") ||n3.equals("") ||n4.equals("") ||n5.equals("")||n6.equals(""))
-                {
-                    openOptionsDialog("有值沒填");
-                    finish();
-                    return;
-                }
-                else
-                {
-                    DBSQL.insert(main.this, n1, n2, n4, n3, n6, n5);
-                    memberlist.clear();
-                    try{
-                        cursor = db.query(SQLiteHelper.TB_NAME, null, null, null, null, null, null);
-
-                        cursor.moveToFirst();
-
-                        while(!cursor.isAfterLast())
-                        {
-                            member sitem = new member();
-                            sitem.id = cursor.getString(0);
-                            sitem.name = cursor.getString(1);
-                            sitem.sex = cursor.getString(2);
-
-                            sitem.weight = cursor.getString(3);
-                            sitem.height = cursor.getString(4);
-                            sitem.waist = cursor.getString(5);
-                            sitem.age = cursor.getInt(6);
-                            sitem.rdate = cursor.getString(7);
-
-                            memberlist.add(sitem);
-                            cursor.moveToNext();
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        e.printStackTrace();
-                    }
-
-                    selector = memberlist.size()-1;
-
-                    account = n1;
-                    refresh_msg();
-
-                }
-
-
-
-            }
-        });
-
-        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton)
-            {
-            }
-        });
-
-        alert.show();
-
-
-
-    }
-
-
-    private void modifymember()
-    {
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-
-        alert.setTitle("基本資料");
-
-        ScrollView sv = new ScrollView(this);
-        LinearLayout ll = new LinearLayout(this);
-        ll.setOrientation(LinearLayout.VERTICAL);
-        sv.addView(ll);
-        tname = new TextView(this);
-        tname.setText("姓名: ");
-        TextView textViewname = new TextView(this);
-
-        ll.addView(tname);
-        ll.addView(textViewname);
-
-        tsex = new TextView(this);
-        tsex.setText("性別: ");
-        TextView textViewsex = new TextView(this);
-
-        ll.addView(tsex);
-        ll.addView(textViewsex);
-
-        twe = new TextView(this);
-        twe.setText("體重: ");
-        TextView textViewwe = new TextView(this);
-
-        ll.addView(twe);
-        ll.addView(textViewwe);
-
-        the = new TextView(this);
-        the.setText("身高: ");
-        TextView textViewhe = new TextView(this);
-
-        ll.addView(the);
-        ll.addView(textViewhe);
-
-        tage = new TextView(this);
-        tage.setText("生日: ");
-        TextView textViewage = new TextView(this);
-        ll.addView(tage);
-        ll.addView(textViewage);
-        // Set an EditText view to get user input
-
-        if(memberlist.size()==0){
-            we.setText("有值沒填");
-            he.setText("有值沒填");
-            age.setText("有值沒填");
-            name.setText("有值沒填");
-            sex.setSelection(0);
-
-
-        }else {
-            name.setText(memberlist.get(selector).name);
-            we.setText(memberlist.get(selector).weight);
-            he.setText(memberlist.get(selector).height);
-            age.setText(memberlist.get(selector).age);
-            if (memberlist.get(selector).sex.equals("0"))
-                sex.setSelection(0);
-            else
-                sex.setSelection(1);
-        }
-        alert.setView(sv);
 //
-//        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+//    private void modifymember()
+//    {
+//        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+//
+//        alert.setTitle("基本資料");
+//
+//        ScrollView sv = new ScrollView(this);
+//        LinearLayout ll = new LinearLayout(this);
+//        ll.setOrientation(LinearLayout.VERTICAL);
+//        sv.addView(ll);
+//        tname = new TextView(this);
+//        tname.setText("姓名: ");
+//        TextView textViewname = new TextView(this);
+//
+//        ll.addView(tname);
+//        ll.addView(textViewname);
+//
+//        tsex = new TextView(this);
+//        tsex.setText("性別: ");
+//        TextView textViewsex = new TextView(this);
+//
+//        ll.addView(tsex);
+//        ll.addView(textViewsex);
+//
+//        twe = new TextView(this);
+//        twe.setText("體重: ");
+//        TextView textViewwe = new TextView(this);
+//
+//        ll.addView(twe);
+//        ll.addView(textViewwe);
+//
+//        the = new TextView(this);
+//        the.setText("身高: ");
+//        TextView textViewhe = new TextView(this);
+//
+//        ll.addView(the);
+//        ll.addView(textViewhe);
+//
+//        tage = new TextView(this);
+//        tage.setText("生日: ");
+//        TextView textViewage = new TextView(this);
+//        ll.addView(tage);
+//        ll.addView(textViewage);
+//        // Set an EditText view to get user input
+//
+//        if(memberlist.size()==0){
+//            we.setText("有值沒填");
+//            he.setText("有值沒填");
+//            age.setText("有值沒填");
+//            name.setText("有值沒填");
+//            sex.setSelection(0);
+//
+//
+//        }else {
+//            name.setText(memberlist.get(selector).name);
+//            we.setText(memberlist.get(selector).weight);
+//            he.setText(memberlist.get(selector).height);
+//            age.setText(memberlist.get(selector).age);
+//            if (memberlist.get(selector).sex.equals("0"))
+//                sex.setSelection(0);
+//            else
+//                sex.setSelection(1);
+//        }
+//        alert.setView(sv);
+////
+////        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+////            public void onClick(DialogInterface dialog, int whichButton)
+////            {
+////                String id = memberlist.get(selector).id;
+////                n1 = name.getText().toString();
+////                n2 = Integer.toString(sex.getSelectedItemPosition());
+////                n3 = we.getText().toString();
+////                n4 = he.getText().toString();
+////                n5 = "28";
+////                n6 = age.getText().toString();
+////
+////                Log.i("TAG", "n2: " + n2);
+////
+////                if (n3.equals("") ||n4.equals("") ||n5.equals("")||n6.equals("")||n1.equals(""))
+////                {
+////                    openOptionsDialog("有值沒填");
+////                    return;
+////                }
+////                else
+////                {
+////                    DBSQL.update(main.this, n1, n2, n3, n4, n5, n6, id);
+////                    memberlist.clear();
+////                    try{
+////                        cursor = db.query(SQLiteHelper.TB_NAME, null, null, null, null, null, null);
+////
+////                        cursor.moveToFirst();
+////
+////                        while(!cursor.isAfterLast())
+////                        {
+////                            member sitem = new member();
+////                            sitem.id = cursor.getString(0);
+////                            sitem.name = cursor.getString(1);
+////                            sitem.sex = cursor.getString(2);
+////                            sitem.weight = cursor.getString(3);
+////                            sitem.height = cursor.getString(4);
+////                            sitem.waist = cursor.getString(5);
+////                            sitem.age = cursor.getString(6);
+////                            sitem.rdate = cursor.getString(7);
+////
+////                            memberlist.add(sitem);
+////                            cursor.moveToNext();
+////                        }
+////                    }
+////                    catch (Exception e)
+////                    {
+////                        e.printStackTrace();
+////                    }
+////
+////                    selector = memberlist.size()-1;
+////
+////                    refresh_msg();
+////
+////                }
+////
+////
+////
+////            }
+////        });
+//
+//        alert.setNegativeButton("ok", new DialogInterface.OnClickListener() {
 //            public void onClick(DialogInterface dialog, int whichButton)
 //            {
-//                String id = memberlist.get(selector).id;
-//                n1 = name.getText().toString();
-//                n2 = Integer.toString(sex.getSelectedItemPosition());
-//                n3 = we.getText().toString();
-//                n4 = he.getText().toString();
-//                n5 = "28";
-//                n6 = age.getText().toString();
-//
-//                Log.i("TAG", "n2: " + n2);
-//
-//                if (n3.equals("") ||n4.equals("") ||n5.equals("")||n6.equals("")||n1.equals(""))
-//                {
-//                    openOptionsDialog("有值沒填");
-//                    return;
-//                }
-//                else
-//                {
-//                    DBSQL.update(main.this, n1, n2, n3, n4, n5, n6, id);
-//                    memberlist.clear();
-//                    try{
-//                        cursor = db.query(SQLiteHelper.TB_NAME, null, null, null, null, null, null);
-//
-//                        cursor.moveToFirst();
-//
-//                        while(!cursor.isAfterLast())
-//                        {
-//                            member sitem = new member();
-//                            sitem.id = cursor.getString(0);
-//                            sitem.name = cursor.getString(1);
-//                            sitem.sex = cursor.getString(2);
-//                            sitem.weight = cursor.getString(3);
-//                            sitem.height = cursor.getString(4);
-//                            sitem.waist = cursor.getString(5);
-//                            sitem.age = cursor.getString(6);
-//                            sitem.rdate = cursor.getString(7);
-//
-//                            memberlist.add(sitem);
-//                            cursor.moveToNext();
-//                        }
-//                    }
-//                    catch (Exception e)
-//                    {
-//                        e.printStackTrace();
-//                    }
-//
-//                    selector = memberlist.size()-1;
-//
-//                    refresh_msg();
-//
-//                }
-//
-//
-//
+//                dialog.dismiss();
 //            }
 //        });
-
-        alert.setNegativeButton("ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton)
-            {
-                dialog.dismiss();
-            }
-        });
-
-        alert.show();
+//
+//        alert.show();
+//
+//
+//
+//    }
 
 
 
-    }
-    private void fixmember()
-    {
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-
-        alert.setTitle("修改");
-        alert.setMessage("請輸入");
-
-        ScrollView sv = new ScrollView(this);
-        LinearLayout ll = new LinearLayout(this);
-        ll.setOrientation(LinearLayout.VERTICAL);
-        sv.addView(ll);
-        tname = new TextView(this);
-        tname.setText("姓名: ");
-        name = new EditText(this);
-
-        ll.addView(tname);
-        ll.addView(name);
-
-        tsex = new TextView(this);
-        tsex.setText("性別: ");
-        sex = new Spinner(this);
-        final String sexs[] = {"男","女"};
-        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this,   android.R.layout.simple_spinner_item, sexs);
-        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down vieww
-        sex.setAdapter(spinnerArrayAdapter);
-
-
-
-
-        ll.addView(tsex);
-        ll.addView(sex);
-
-        twe = new TextView(this);
-        twe.setText("體重: ");
-        we = new EditText(this);
-
-        ll.addView(twe);
-        ll.addView(we);
-
-        the = new TextView(this);
-        the.setText("身高: ");
-        he = new EditText(this);
-
-        ll.addView(the);
-        ll.addView(he);
-
-        tage = new TextView(this);
-        tage.setText("生日: ");
-        age = new EditText(this);
-        age.setInputType(InputType.TYPE_NULL); // 關閉軟鍵盤
-
-        age.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                age.setInputType(InputType.TYPE_NULL); // 關閉軟鍵盤
-
-                setData();
-            }
-        });
-        ll.addView(tage);
-        ll.addView(age);
-        // Set an EditText view to get user input
-
-        if(memberlist.size()==0){
-            we.setText("有值沒填");
-            he.setText("有值沒填");
-            age.setText("有值沒填");
-            name.setText("有值沒填");
-            sex.setSelection(0);
-
-
-        }else {
-            name.setText(memberlist.get(selector).name);
-            we.setText(memberlist.get(selector).weight);
-            he.setText(memberlist.get(selector).height);
-            age.setText(memberlist.get(selector).age);
-            if (memberlist.get(selector).sex.equals("0"))
-                sex.setSelection(0);
-            else
-                sex.setSelection(1);
-        }
-        alert.setView(sv);
-
-        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton)
-            {
-                String id = memberlist.get(selector).id;
-                n1 = name.getText().toString();
-                n2 = Integer.toString(sex.getSelectedItemPosition());
-                n3 = we.getText().toString();
-                n4 = he.getText().toString();
-                n5 = "28";
-                n6 = age.getText().toString();
-
-                Log.i("TAG", "n2: " + n2);
-
-                if (n3.equals("") ||n4.equals("") ||n5.equals("")||n6.equals("")||n1.equals(""))
-                {
-                    openOptionsDialog("有值沒填");
-                    return;
-                }
-                else
-                {
-                    DBSQL.update(main.this, n1, n2, n3, n4, n5, n6, id);
-                    memberlist.clear();
-                    try{
-                        cursor = db.query(SQLiteHelper.TB_NAME, null, null, null, null, null, null);
-
-                        cursor.moveToFirst();
-
-                        while(!cursor.isAfterLast())
-                        {
-                            member sitem = new member();
-                            sitem.id = cursor.getString(0);
-                            sitem.name = cursor.getString(1);
-                            sitem.sex = cursor.getString(2);
-                            sitem.weight = cursor.getString(3);
-                            sitem.height = cursor.getString(4);
-                            sitem.waist = cursor.getString(5);
-                            sitem.age = cursor.getInt(6);
-                            sitem.rdate = cursor.getString(7);
-
-                            memberlist.add(sitem);
-                            cursor.moveToNext();
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        e.printStackTrace();
-                    }
-
-                    selector = memberlist.size()-1;
-
-                    refresh_msg();
-
-                }
-
-
-
-            }
-        });
-
-        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton)
-            {
-            }
-        });
-
-        alert.show();
-
-
-
-    }
-
-
-    public void insertweight()
-    {
-        result_check = 0;
-
-        java.text.SimpleDateFormat dateFormat = new java.text.SimpleDateFormat("yyyy-MM-dd");
-        String mtime = dateFormat.format(new Date());
-
-
-        String[] whereValue={mtime};
-        //first login
-        try{
-            cursor = db.query(SQLiteHelper.DIARYWEIGHT_NAME, null, RecWeight.RDATE + "=?", whereValue, null, null, null);
-
-            cursor.moveToFirst();
-
-            //no data
-            if (cursor.isAfterLast())
-            {
-                inputweight();
-
-                return;
-            }
-            else
-            {
-                openOptionsDialog("今日已經寫入");
-            }
-        } catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-
-    }
+//    public void insertweight()
+//    {
+//        result_check = 0;
+//
+//        java.text.SimpleDateFormat dateFormat = new java.text.SimpleDateFormat("yyyy-MM-dd");
+//        String mtime = dateFormat.format(new Date());
+//
+//
+//        String[] whereValue={mtime};
+//        //first login
+//        try{
+//            cursor = db.query(SQLiteHelper.DIARYWEIGHT_NAME, null, RecWeight.RDATE + "=?", whereValue, null, null, null);
+//
+//            cursor.moveToFirst();
+//
+//            //no data
+//            if (cursor.isAfterLast())
+//            {
+//                inputweight();
+//
+//                return;
+//            }
+//            else
+//            {
+//                openOptionsDialog("今日已經寫入");
+//            }
+//        } catch (Exception e)
+//        {
+//            e.printStackTrace();
+//        }
+//
+//    }
 
     public static String getRealPathFromUri(Activity activity, Uri contentUri) {
         String[] proj = { MediaStore.Images.Media.DATA };
@@ -1067,14 +656,14 @@ public class main extends AppCompatActivity
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1) {
-
-            if (resultCode == RESULT_OK)
-            {
-                DBSQL.insertDiaryWeight(main.this, n1, picfilename);
-                Toast.makeText(main.this, "insert OK", Toast.LENGTH_LONG).show();
-            }
-        }
+//        if (requestCode == 1) {
+//
+//            if (resultCode == RESULT_OK)
+//            {
+//                DBSQL.insertDiaryWeight(main.this, n1, picfilename);
+//                Toast.makeText(main.this, "insert OK", Toast.LENGTH_LONG).show();
+//            }
+//        }
     }
 
     private Uri customizedFilePath() {
@@ -1091,154 +680,154 @@ public class main extends AppCompatActivity
         return uri;
     }
 
-    public void inputweight()
-    {
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-
-        alert.setTitle("今日體重");
-        alert.setMessage("input weight?");
-
-        ScrollView sv = new ScrollView(this);
-        LinearLayout ll = new LinearLayout(this);
-        ll.setOrientation(LinearLayout.VERTICAL);
-        sv.addView(ll);
-
-        java.text.SimpleDateFormat dateFormat = new java.text.SimpleDateFormat("yyyy-MM-dd");
-        mtime = dateFormat.format(new Date());
-
-        TextView tdate = new TextView(this);
-        tdate.setText("今日的體重: ");
-        ddate = new EditText(this);
-        ddate.setText(mydata.weight);
-        ll.addView(tdate);
-        ll.addView(ddate);
-
-        alert.setView(sv);
-
-        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton)
-            {
-                n1 = ddate.getText().toString();
-                Intent it = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                it.putExtra(MediaStore.EXTRA_OUTPUT, customizedFilePath());
-                startActivityForResult(it, 1);
-            }
-        });
-
-        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton)
-            {
-            }
-        });
-
-        alert.show();
-
-    }
-
-
-
-    public void query_hot()
-    {
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-
-        alert.setTitle("Query");
-        alert.setMessage("input date?");
-
-        ScrollView sv = new ScrollView(this);
-        LinearLayout ll = new LinearLayout(this);
-        ll.setOrientation(LinearLayout.VERTICAL);
-        sv.addView(ll);
-
-        java.text.SimpleDateFormat dateFormat = new java.text.SimpleDateFormat("yyyy-MM-dd");
-        mtime = dateFormat.format(new Date());
-
-        TextView tdate = new TextView(this);
-        tdate.setText("日期: ");
-        ddate = new EditText(this);
-        ddate.setText(mtime);
-        ll.addView(tdate);
-        ll.addView(ddate);
-
-        alert.setView(sv);
-
-        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton)
-            {
-                n1 = ddate.getText().toString();
-
-                if (n1.equals(""))
-                {
-                    openOptionsDialog("有值沒填");
-                    return;
-                }
-                else
-                {
+//    public void inputweight()
+//    {
+//        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+//
+//        alert.setTitle("今日體重");
+//        alert.setMessage("input weight?");
+//
+//        ScrollView sv = new ScrollView(this);
+//        LinearLayout ll = new LinearLayout(this);
+//        ll.setOrientation(LinearLayout.VERTICAL);
+//        sv.addView(ll);
+//
+//        java.text.SimpleDateFormat dateFormat = new java.text.SimpleDateFormat("yyyy-MM-dd");
+//        mtime = dateFormat.format(new Date());
+//
+//        TextView tdate = new TextView(this);
+//        tdate.setText("今日的體重: ");
+//        ddate = new EditText(this);
+//        ddate.setText(mydata.weight);
+//        ll.addView(tdate);
+//        ll.addView(ddate);
+//
+//        alert.setView(sv);
+//
+//        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface dialog, int whichButton)
+//            {
+//                n1 = ddate.getText().toString();
+//                Intent it = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//                it.putExtra(MediaStore.EXTRA_OUTPUT, customizedFilePath());
+//                startActivityForResult(it, 1);
+//            }
+//        });
+//
+//        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface dialog, int whichButton)
+//            {
+//            }
+//        });
+//
+//        alert.show();
+//
+//    }
 
 
-                }
-            }
-        });
 
-        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton)
-            {
-            }
-        });
+//    public void query_hot()
+//    {
+//        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+//
+//        alert.setTitle("Query");
+//        alert.setMessage("input date?");
+//
+//        ScrollView sv = new ScrollView(this);
+//        LinearLayout ll = new LinearLayout(this);
+//        ll.setOrientation(LinearLayout.VERTICAL);
+//        sv.addView(ll);
+//
+//        java.text.SimpleDateFormat dateFormat = new java.text.SimpleDateFormat("yyyy-MM-dd");
+//        mtime = dateFormat.format(new Date());
+//
+//        TextView tdate = new TextView(this);
+//        tdate.setText("日期: ");
+//        ddate = new EditText(this);
+//        ddate.setText(mtime);
+//        ll.addView(tdate);
+//        ll.addView(ddate);
+//
+//        alert.setView(sv);
+//
+//        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface dialog, int whichButton)
+//            {
+//                n1 = ddate.getText().toString();
+//
+//                if (n1.equals(""))
+//                {
+//                    openOptionsDialog("有值沒填");
+//                    return;
+//                }
+//                else
+//                {
+//
+//
+//                }
+//            }
+//        });
+//
+//        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface dialog, int whichButton)
+//            {
+//            }
+//        });
+//
+//        alert.show();
+//
+//    }
 
-        alert.show();
-
-    }
-
-
-    public void query_weight()
-    {
-        //n1 = mydate;
-
-        if (n1.equals(""))
-        {
-            openOptionsDialog("有值沒填");
-            return;
-        }
-        else
-        {
-            String[] whereValue={n1};
-            //first login
-            try{
-                cursor = db.query(SQLiteHelper.DIARYWEIGHT_NAME, null, RecWeight.RDATE + "=?", whereValue, null, null, null);
-                cursor.moveToFirst();
-
-                //no data
-                if (cursor.isAfterLast())
-                {
-                    return;
-                }
-
-                RecWeight sitem = new RecWeight();
-                while(!cursor.isAfterLast())
-                {
-                    sitem.id = cursor.getString(0);
-                    sitem.weight = cursor.getString(1);
-                    sitem.pic = cursor.getString(2);
-                    sitem.rdate = cursor.getString(3);
-
-                    cursor.moveToNext();
-                }
-
-                String rmsg = sitem.rdate  + " \n";
-                rmsg +=  "那天的體重: " + sitem.weight  + " \n";
-
-                Log.i("TAG", sitem.pic);
-
-                ShowQueryWeight(rmsg, sitem.pic);
-
-
-            } catch (Exception e)
-            {
-                e.printStackTrace();
-            }
-
-        }
-    }
+//
+//    public void query_weight()
+//    {
+//        //n1 = mydate;
+//
+//        if (n1.equals(""))
+//        {
+//            openOptionsDialog("有值沒填");
+//            return;
+//        }
+//        else
+//        {
+//            String[] whereValue={n1};
+//            //first login
+//            try{
+//                cursor = db.query(SQLiteHelper.DIARYWEIGHT_NAME, null, RecWeight.RDATE + "=?", whereValue, null, null, null);
+//                cursor.moveToFirst();
+//
+//                //no data
+//                if (cursor.isAfterLast())
+//                {
+//                    return;
+//                }
+//
+//                RecWeight sitem = new RecWeight();
+//                while(!cursor.isAfterLast())
+//                {
+//                    sitem.id = cursor.getString(0);
+//                    sitem.weight = cursor.getString(1);
+//                    sitem.pic = cursor.getString(2);
+//                    sitem.rdate = cursor.getString(3);
+//
+//                    cursor.moveToNext();
+//                }
+//
+//                String rmsg = sitem.rdate  + " \n";
+//                rmsg +=  "那天的體重: " + sitem.weight  + " \n";
+//
+//                Log.i("TAG", sitem.pic);
+//
+//                ShowQueryWeight(rmsg, sitem.pic);
+//
+//
+//            } catch (Exception e)
+//            {
+//                e.printStackTrace();
+//            }
+//
+//        }
+//    }
 
     @Override
     protected Dialog onCreateDialog(int id) {
@@ -1246,138 +835,123 @@ public class main extends AppCompatActivity
         switch(id){
             case 1:
 
-                return new DatePickerDialog(this,
-                        myDateSetListener,
-                        myYear, myMonth, myDay);
+//                return new DatePickerDialog(this,
+//                        myDateSetListener,
+//                        myYear, myMonth, myDay);
         }
 
         return null;
     }
 
+//
+//    private DatePickerDialog.OnDateSetListener myDateSetListener = new DatePickerDialog.OnDateSetListener(){
+//
+//        @Override
+//        public void onDateSet(DatePicker view, int year,
+//                              int monthOfYear, int dayOfMonth) {
+//            // TODO Auto-generated method stub
+//            String date = String.valueOf(year) + "-" + String.valueOf(monthOfYear+1) + "-" + String.valueOf(dayOfMonth);
+//
+//            n1 = date;
+//
+//            String[] whereValue={date};
+//            //first login
+//            try{
+//                cursor = db.query(SQLiteHelper.DIARY_NAME, null, hotdiary.RDATE + "=?", whereValue, null, null, null);
+//
+//                cursor.moveToFirst();
+//
+//                //no data
+//                if (cursor.isAfterLast())
+//                {
+//                    ShowQueryDialog("找不到資料");
+//                    return;
+//                }
+//
+//                String rmsg = "";
+//
+//                hotdiary sitem = new hotdiary();
+//                while(!cursor.isAfterLast())
+//                {
+//                    sitem.id = cursor.getString(0);
+//                    sitem.ditem = cursor.getString(1);
+//                    sitem.sitem = cursor.getString(2);
+//                    sitem.dhot = cursor.getString(3);
+//                    sitem.shot = cursor.getString(4);
+//                    sitem.rdate = cursor.getString(5);
+//
+//                    rmsg = sitem.rdate  + " \n";
+//                    if (!sitem.dhot.equals("-1"))
+//                    {
+//                        rmsg +=  "熱量: " + sitem.dhot  + " \n";
+//                        rmsg +=  "項目: " + sitem.ditem  + " \n";
+//                    }
+//                    rmsg +=  "消耗熱量: " + sitem.shot  + " \n";
+//                    rmsg +=  "項目: " + sitem.sitem  + " \n";
+//
+//                    cursor.moveToNext();
+//                }
+//
+//
+//
+//                ShowQueryDialog(rmsg);
+//
+//            } catch (Exception e)
+//            {
+//                e.printStackTrace();
+//            }
+//        }
+//    };
 
-    private DatePickerDialog.OnDateSetListener myDateSetListener = new DatePickerDialog.OnDateSetListener(){
-
-        @Override
-        public void onDateSet(DatePicker view, int year,
-                              int monthOfYear, int dayOfMonth) {
-            // TODO Auto-generated method stub
-            String date = String.valueOf(year) + "-" + String.valueOf(monthOfYear+1) + "-" + String.valueOf(dayOfMonth);
-
-            n1 = date;
-
-            String[] whereValue={date};
-            //first login
-            try{
-                cursor = db.query(SQLiteHelper.DIARY_NAME, null, hotdiary.RDATE + "=?", whereValue, null, null, null);
-
-                cursor.moveToFirst();
-
-                //no data
-                if (cursor.isAfterLast())
-                {
-                    ShowQueryDialog("找不到資料");
-                    return;
-                }
-
-                String rmsg = "";
-
-                hotdiary sitem = new hotdiary();
-                while(!cursor.isAfterLast())
-                {
-                    sitem.id = cursor.getString(0);
-                    sitem.ditem = cursor.getString(1);
-                    sitem.sitem = cursor.getString(2);
-                    sitem.dhot = cursor.getString(3);
-                    sitem.shot = cursor.getString(4);
-                    sitem.rdate = cursor.getString(5);
-
-                    rmsg = sitem.rdate  + " \n";
-                    if (!sitem.dhot.equals("-1"))
-                    {
-                        rmsg +=  "熱量: " + sitem.dhot  + " \n";
-                        rmsg +=  "項目: " + sitem.ditem  + " \n";
-                    }
-                    rmsg +=  "消耗熱量: " + sitem.shot  + " \n";
-                    rmsg +=  "項目: " + sitem.sitem  + " \n";
-
-                    cursor.moveToNext();
-                }
 
 
 
-                ShowQueryDialog(rmsg);
+//    private void ShowQueryDialog(String info)
+//    {
+//        new AlertDialog.Builder(this)
+//                .setTitle("msg")
+//                .setMessage(info)
+//                .setPositiveButton("OK",
+//                        new DialogInterface.OnClickListener()
+//                        {
+//                            public void onClick(DialogInterface dialoginterface, int i)
+//                            {
+//                                query_weight();
+//                            }
+//                        }
+//                )
+//                .show();
+//    }
 
-            } catch (Exception e)
-            {
-                e.printStackTrace();
-            }
-        }
-    };
-
-
-    private void openOptionsDialog(String info)
-    {
-        new AlertDialog.Builder(this)
-                .setTitle("msg")
-                .setMessage(info)
-                .setPositiveButton("OK",
-                        new DialogInterface.OnClickListener()
-                        {
-                            public void onClick(DialogInterface dialoginterface, int i)
-                            {
-
-                            }
-                        }
-                )
-                .show();
-    }
-
-    private void ShowQueryDialog(String info)
-    {
-        new AlertDialog.Builder(this)
-                .setTitle("msg")
-                .setMessage(info)
-                .setPositiveButton("OK",
-                        new DialogInterface.OnClickListener()
-                        {
-                            public void onClick(DialogInterface dialoginterface, int i)
-                            {
-                                query_weight();
-                            }
-                        }
-                )
-                .show();
-    }
-
-    private void ShowQueryWeight(String msg, String pic)
-    {
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-
-        alert.setTitle(n1);
-        alert.setMessage(msg);
-
-        ScrollView sv = new ScrollView(this);
-        LinearLayout ll = new LinearLayout(this);
-        ll.setOrientation(LinearLayout.VERTICAL);
-        sv.addView(ll);
-
-        ImageView t1 = new ImageView(this);
-        ll.addView(t1);
-
-        Bitmap bMap = BitmapFactory.decodeFile(pic);
-        t1.setImageBitmap(bMap);
-
-        alert.setView(sv);
-
-        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton)
-            {
-            }
-        });
-
-        alert.show();
-
-    }
+//    private void ShowQueryWeight(String msg, String pic)
+//    {
+//        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+//
+//        alert.setTitle(n1);
+//        alert.setMessage(msg);
+//
+//        ScrollView sv = new ScrollView(this);
+//        LinearLayout ll = new LinearLayout(this);
+//        ll.setOrientation(LinearLayout.VERTICAL);
+//        sv.addView(ll);
+//
+//        ImageView t1 = new ImageView(this);
+//        ll.addView(t1);
+//
+//        Bitmap bMap = BitmapFactory.decodeFile(pic);
+//        t1.setImageBitmap(bMap);
+//
+//        alert.setView(sv);
+//
+//        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface dialog, int whichButton)
+//            {
+//            }
+//        });
+//
+//        alert.show();
+//
+//    }
 
     //按下上鍵
     public boolean onKeyDown(int keyCode, KeyEvent event)
@@ -1527,28 +1101,8 @@ public class main extends AppCompatActivity
 //                .show();
 //    }
 
-    private  void  setData(){
-        int mYear, mMonth, mDay;
 
-        final Calendar c = Calendar.getInstance();
-        mYear = c.get(Calendar.YEAR);
-        mMonth = c.get(Calendar.MONTH);
-        mDay = c.get(Calendar.DAY_OF_MONTH);
-        new DatePickerDialog(main.this, new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int day) {
 
-              age.setText(setDateFormat(year,month,day));
-            }
-
-        }, mYear,mMonth, mDay).show();
-}
-
-    private String setDateFormat(int year,int monthOfYear,int dayOfMonth){
-        return String.valueOf(year) + "-"
-                + String.valueOf(monthOfYear + 1) + "-"
-                + String.valueOf(dayOfMonth);
-    }
 
 }
 
