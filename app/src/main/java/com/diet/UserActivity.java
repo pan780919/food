@@ -246,7 +246,7 @@ public class UserActivity extends Activity implements MfirebaeCallback {
             Toast.makeText(mActivty,"會員登出成功",Toast.LENGTH_SHORT).show();
             startActivity(new Intent(mActivty,LoginActivity.class));
             mActivty.finish();
-            DBSQL.deleteAll(mActivty);
+            DBSQL.removeAll(mActivty);
             MySharedPrefernces.saveUserId(mActivty,"");
             MySharedPrefernces.saveUserName(mActivty,"");
             MySharedPrefernces.saveUserKm(mActivty,"");

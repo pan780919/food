@@ -201,6 +201,8 @@ public class Query extends Activity {
             // scalendar.add(Calendar.DATE, -1);
             //date=scalendar.getTime();
             //term = sdf.format(date);
+            Log.d(TAG, "getStoreList: "+times);
+            Log.d(TAG, "getStoreList: "+times2);
         }
 
         return listitem;

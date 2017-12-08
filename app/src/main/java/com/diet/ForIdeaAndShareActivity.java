@@ -167,6 +167,55 @@ public class ForIdeaAndShareActivity extends Activity implements View.OnClickLis
         });
     }
 
+
+    private void setFireBaseDB2(String id, String tittle, String message, String name, String date
+    ) {
+        String url = "https://food-4997e.firebaseio.com/"+id;
+        Firebase mFirebaseRef = new Firebase(url);
+//		Firebase userRef = mFirebaseRef.child("user");
+//		Map newUserData = new HashMap();
+//		newUserData.put("age", 30);
+//		newUserData.put("city", "Provo, UT");
+        Firebase newPostRef = mFirebaseRef.child("posts").push();
+//        String newPostKey = newPostRef.getKey();
+//        Log.d(TAG, "setFireBaseDB: " + newPostKey);ㄐ
+
+        Map newPost = new HashMap();
+        newPost.put("id", id);
+        newPost.put("name", name);
+        newPost.put("tittle", tittle);
+        newPost.put("message", message);
+        newPost.put("date", date);
+        newPost.put("tomsg","");
+        Map updatedUserData = new HashMap();
+//		updatedUserData.put("3/posts/" + newPostKey, true);
+        updatedUserData.put(id, newPost);
+        mFirebaseRef.updateChildren(updatedUserData, new Firebase.CompletionListener() {
+            @Override
+            public void onComplete(FirebaseError firebaseError, Firebase firebase) {
+                if (firebaseError != null) {
+                    Log.d(TAG, "onComplete: " + "Error updating data: " + firebaseError.getMessage());
+                }else{
+                    Log.d(TAG, "onComplete: "+"is true");
+                    new AlertDialog.Builder(ForIdeaAndShareActivity.this)
+                            .setTitle("訊息")
+                            .setMessage("您已經發布文章成功,將跳回首頁！！")
+                            .setPositiveButton("好", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void  onClick(DialogInterface dialog, int which) {
+                                    ForIdeaAndShareActivity.this.finish();
+                                    dialog.dismiss();
+
+
+                                }
+                            }).show();
+                }
+            }
+
+        });
+    }
+
+
     private void upLoad() {
 
 //				sharePicWithUri(uri);

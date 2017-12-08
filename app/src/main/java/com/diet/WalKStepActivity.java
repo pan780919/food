@@ -12,6 +12,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -72,6 +74,7 @@ import com.diet.frgment.fragment_setting;
 import com.sqlite.SQLiteHelper;
 import com.sqlite.account;
 import com.sqlite.hotdiary;
+import com.sqlite.recdata;
 
 public class WalKStepActivity extends Activity {
     private static final int MSG_DIALOG_REFRESH = 1;
@@ -178,8 +181,8 @@ public class WalKStepActivity extends Activity {
             R.drawable.p05, R.drawable.p06, R.drawable.p07,
             R.drawable.p08, R.drawable.p09, R.drawable.p10,
             R.drawable.p12, R.drawable.p13, R.drawable.p14,
-            R.drawable.p15,R.drawable.p16,R.drawable.p17,R.drawable.p18,
-            R.drawable.p19,R.drawable.p20,R.drawable.p21,R.drawable.p22,
+            R.drawable.p15, R.drawable.p16, R.drawable.p17, R.drawable.p18,
+            R.drawable.p19, R.drawable.p20, R.drawable.p21, R.drawable.p22,
 
     };
 
@@ -191,7 +194,7 @@ public class WalKStepActivity extends Activity {
         my = this;
         uri = Uri.parse("android.resource://" + //預設會播放程式內的音樂檔
                 getPackageName() + "/" + R.raw.goal);
-        Log.d(TAG, "onCreate: "+uri);
+        Log.d(TAG, "onCreate: " + uri);
         mper = new MediaPlayer();           //建立 MediaPlayer 物件
         try {
             mper.reset();       //如果之前有播過, 必須 reset 後才能更換
@@ -199,10 +202,10 @@ public class WalKStepActivity extends Activity {
             mper.setLooping(false); //設定是否重複播放
             mper.prepareAsync();  //要求 MediaPlayer 準備播放指定的影音檔
 
-            Log.d(TAG, "handleMessage: "+mper.isPlaying());
+            Log.d(TAG, "handleMessage: " + mper.isPlaying());
         } catch (Exception e) {
             e.printStackTrace();
-            Log.d(TAG, "handleMessage: "+e.getMessage());
+            Log.d(TAG, "handleMessage: " + e.getMessage());
         }
         start = 0;
 
@@ -219,6 +222,7 @@ public class WalKStepActivity extends Activity {
             if (dbHelper != null)
                 dbHelper.onUpgrade(db, --DB_VERSION, DB_VERSION);
         }
+
 
         sview = (ScrollView) findViewById(R.id.sview);
         ssteps = (TextView) findViewById(R.id.textView1);
@@ -257,21 +261,27 @@ public class WalKStepActivity extends Activity {
 
                         String now_status = "跑了 " + k + "/ 花了 " + s + "/ 消耗" + kr + "/ 目前 " + steps;
 
-                        SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section),
-                                kr, Integer.toString(steps),k, now_status, "暫停");
-
-                        double dhot =time*weight;
-                        Log.d(TAG, "onClick: "+dhot);
-                        if(MySharedPrefernces.getUserDhot(WalKStepActivity.this).equals("")){
-
-                        }else {
-                            Double dh =Double.parseDouble(MySharedPrefernces.getUserDhot(WalKStepActivity.this));
-
-                            MySharedPrefernces.saveUserDhot(WalKStepActivity.this,String.valueOf(dh+dhot));
-
-                        }
-
-                        DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
+//                        SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section),
+//                                kr, Integer.toString(steps),k, now_status, "暫停");
+//                        if(MySharedPrefernces.getUserKm(getApplicationContext()).equals("")){
+//                            MySharedPrefernces.saveUserKm(getApplicationContext(), String.valueOf(kr));
+//
+//                        }else {
+//                            Double k1= Double.parseDouble(MySharedPrefernces.getUserKm(getApplication()));
+//                            Double k2 = Double.parseDouble(k);
+//                            MySharedPrefernces.saveUserKm(getApplicationContext(),String.valueOf(k1+k2));
+//                        }
+//                        if(MySharedPrefernces.getUserStep(getApplicationContext()).equals("")){
+//                            MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(steps));
+//                        }else {
+//                            Integer s1 =Integer.parseInt(MySharedPrefernces.getUserStep(getApplicationContext())) ;
+//                            Integer s0 = s1+steps;
+//                            MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(s0));
+//
+//                        }
+//                        double dhot =time*weight;
+//
+//                        DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
                         pause = 1;
                         start = 0;
                     }
@@ -314,21 +324,26 @@ public class WalKStepActivity extends Activity {
 
                 String now_status = "跑了 " + k + "- 花了 " + s + "- 消耗" + kr + "- 目前 " + stepss;
 
-                SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "reset");
-
-                double dhot =time*weight;
-                Log.d(TAG, "onClick: "+dhot);
-                if(MySharedPrefernces.getUserDhot(WalKStepActivity.this).equals("")){
-
-                }else {
-                    Double dh =Double.parseDouble(MySharedPrefernces.getUserDhot(WalKStepActivity.this));
-
-                    MySharedPrefernces.saveUserDhot(WalKStepActivity.this,String.valueOf(dh+dhot));
-
-                }
-
-
-                DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
+//                SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "reset");
+//                if(MySharedPrefernces.getUserKm(getApplicationContext()).equals("")){
+//                    MySharedPrefernces.saveUserKm(getApplicationContext(), String.valueOf(kr));
+//
+//                }else {
+//                    Double k1= Double.parseDouble(MySharedPrefernces.getUserKm(getApplication()));
+//                    Double k2 = Double.parseDouble(k);
+//                    MySharedPrefernces.saveUserKm(getApplicationContext(),String.valueOf(k1+k2));
+//                }
+//                if(MySharedPrefernces.getUserStep(getApplicationContext()).equals("")){
+//                    MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(steps));
+//                }else {
+//                    Integer s1 =Integer.parseInt(MySharedPrefernces.getUserStep(getApplicationContext())) ;
+//                    Integer s0 = s1+steps;
+//                    MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(s0));
+//
+//                }
+//                double dhot =time*weight;
+//
+//                DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
 
                 counter = 0;
                 running.setEnabled(true);
@@ -356,25 +371,14 @@ public class WalKStepActivity extends Activity {
                 String kr = shows.getText().toString();
                 String stepss = ssteps.getText().toString();
 
-                MySharedPrefernces.saveUserKm(getApplicationContext(), String.valueOf(kr));
-                MySharedPrefernces.saveUserStep(getApplicationContext(), String.valueOf(steps));
-
                 String now_status = "跑了 " + k + "- 花了 " + s + "- 消耗" + kr + "- 目前 " + stepss;
 
                 SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "完成");
 
-                double dhot =time*weight;
-                Log.d(TAG, "onClick: "+dhot);
-                if(MySharedPrefernces.getUserDhot(WalKStepActivity.this).equals("")){
+                double dhot = time * weight;
+                Log.d(TAG, "onClick: " + dhot);
 
-                }else {
-                    Double dh =Double.parseDouble(MySharedPrefernces.getUserDhot(WalKStepActivity.this));
-
-                    MySharedPrefernces.saveUserDhot(WalKStepActivity.this,String.valueOf(dh+dhot));
-
-                }
-
-                DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
+                DBSQL.insertDiary(WalKStepActivity.this, String.valueOf(dhot), "-1", "計步器", kr);
 
                 counter = 0;
                 running.setEnabled(true);
@@ -384,6 +388,7 @@ public class WalKStepActivity extends Activity {
                 start = 0;
                 steps = 0;
                 ssteps.setText("0" + "步");
+                getStoreList();
             }
 
         });
@@ -462,7 +467,7 @@ public class WalKStepActivity extends Activity {
         age = 20;
         tsex = MySharedPrefernces.getUserSex(WalKStepActivity.this);
         weight = MySharedPrefernces.getUserWeight(WalKStepActivity.this);
-        tall =MySharedPrefernces.getUserTall(WalKStepActivity.this);
+        tall = MySharedPrefernces.getUserTall(WalKStepActivity.this);
 
         mmode.setText("未設定目標");
 
@@ -550,8 +555,9 @@ public class WalKStepActivity extends Activity {
                     java.text.DecimalFormat nf2 = new java.text.DecimalFormat("###,##0.0000");
                     shows.setText(nf2.format(now_shows));
 
+
                     ssteps.setText(Integer.toString(steps) + "步");
-                    if(mygoal!=0){
+                    if (mygoal != 0) {
                         if (steps >= mygoal) {
                             mper.start();
                             new AlertDialog.Builder(WalKStepActivity.this)
@@ -566,7 +572,6 @@ public class WalKStepActivity extends Activity {
                                             mper.release();
                                         }
                                     });
-
 
 
                         }
@@ -629,7 +634,8 @@ public class WalKStepActivity extends Activity {
         // TODO Auto-generated method stub
         return false;
     }
-    private  double time;
+
+    private double time;
     public Handler myHandler = new Handler() {
         public void handleMessage(Message msg) {
             switch (msg.what) {
@@ -637,7 +643,7 @@ public class WalKStepActivity extends Activity {
                     int hours = counter / 3600;
                     int minutes = (counter % 3600) / 60;
                     int seconds = counter % 60;
-                    time=hours+minutes+seconds;
+                    time = hours + minutes + seconds;
                     ttimer.setText(minutes + ":" + seconds);
                     counter++;
 
@@ -882,5 +888,69 @@ public class WalKStepActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
+    }
+
+    public void getStoreList() {
+//int search_list_size = MyGoogleMap.my.search_list.size();
+
+        Date today = Calendar.getInstance().getTime();
+        Date date;
+        sdf = new SimpleDateFormat("yyyy/MM/dd");
+        String sdate = sdf.format(today);
+
+        Calendar scalendar = new GregorianCalendar(2010, 1, 1);
+        scalendar.setTime(today);
+
+        int times = 0, times2 = 0;
+        int steps = 0;
+        //for (int i=0; i<=0; i++)
+        {
+            //Query DATABASE
+            try {
+                Log.i("TAG", recdata.NAME + "='" + name + "' and " + recdata.CTIME + "='" + sdate + "'");
+                cursor = db.query(SQLiteHelper.USER_REC_TABLE, null, recdata.NAME + "='" + name + "' and " + recdata.CTIME + "='" + sdate + "'", null, null, null, null);
+
+                cursor.moveToFirst();
+
+                //no data
+                times = 0;
+                while (!cursor.isAfterLast()) {
+                    recdata ndata = new recdata();
+                    ndata.id = cursor.getString(0);
+                    ndata.name = cursor.getString(1);
+                    ndata.mode = cursor.getString(2);
+                    ndata.kl = cursor.getString(3);
+                    times += Double.valueOf(ndata.kl);
+                    ndata.step = cursor.getString(4);
+                    steps += Integer.valueOf(ndata.step);
+                    ndata.distance = cursor.getString(5);
+                    times2 += Double.valueOf(ndata.distance);
+                    ndata.detail = cursor.getString(6);
+                    ndata.detail2 = cursor.getString(7);
+                    ndata.ctime = cursor.getString(8);
+                    cursor.moveToNext();
+                    Log.d(TAG, "getStoreList: " + steps);
+
+                    Log.d(TAG, "getStoreList: " + times);
+                    Log.d(TAG, "getStoreList: " + times2);
+                    MySharedPrefernces.saveUserDhot(WalKStepActivity.this, String.valueOf(times));
+                    MySharedPrefernces.saveUserKm(getApplicationContext(),String.valueOf(times2));
+                    MySharedPrefernces.saveUserStep(getApplicationContext(), String.valueOf(steps));
+
+                }
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();
+
+                ++DB_VERSION;
+                dbHelper.onUpgrade(db, --DB_VERSION, DB_VERSION);
+            }
+
+
+            // scalendar.add(Calendar.DATE, -1);
+            //date=scalendar.getTime();
+            //term = sdf.format(date);
+
+        }
+
     }
 }

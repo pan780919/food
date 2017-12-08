@@ -260,8 +260,15 @@ public class fragment_setting extends Fragment {
             e.printStackTrace();
         }
 
-        refresh_msg();
+
         return v;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume: "+"in");
+        refresh_msg();
     }
 
     private static final String TAG = "fragment_setting";
@@ -318,7 +325,7 @@ public class fragment_setting extends Fragment {
         //減重:體重磅數*12
         double dec = weight * 2.2046 * 12;
 
-        //rmsg += "目前的熱量/消耗熱量:" + food.hot + "/" + sport.hot + "\n";
+//        rmsg += "目前的熱量/消耗熱量:" + food.hot + "/" + sport.hot + "\n";
         rmsg += "體重" + weight + "\n";
         rmsg += "基礎代謝率(BMR):" + mDecimalFormat.format(bmr) + "\n";
         String rbmi = (bmi > 18.5 && bmi < 24) ? "(BMI正常)" : "(異常BMI)";
@@ -373,6 +380,7 @@ public class fragment_setting extends Fragment {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        Log.d(TAG, "refresh_msg: "+ MySharedPrefernces.getUserDhot(getActivity()));
         rmsg += "今日總共攝取熱量:" +  MySharedPrefernces.getUserhot(getActivity()) + "\n";
         rmsg += "今日總共消耗熱量:" + MySharedPrefernces.getUserDhot(getActivity()) + "\n";
         rmsg += "今日總公里數:" + MySharedPrefernces.getUserKm(getActivity()) + "\n";
