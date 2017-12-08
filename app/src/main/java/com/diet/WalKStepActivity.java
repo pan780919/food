@@ -257,27 +257,27 @@ public class WalKStepActivity extends Activity {
 
                         String now_status = "跑了 " + k + "/ 花了 " + s + "/ 消耗" + kr + "/ 目前 " + steps;
 
-                        SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section),
-                                kr, Integer.toString(steps),k, now_status, "暫停");
-                        if(MySharedPrefernces.getUserKm(getApplicationContext()).equals("")){
-                            MySharedPrefernces.saveUserKm(getApplicationContext(), String.valueOf(kr));
-
-                        }else {
-                            Double k1= Double.parseDouble(MySharedPrefernces.getUserKm(getApplication()));
-                            Double k2 = Double.parseDouble(k);
-                            MySharedPrefernces.saveUserKm(getApplicationContext(),String.valueOf(k1+k2));
-                        }
-                        if(MySharedPrefernces.getUserStep(getApplicationContext()).equals("")){
-                            MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(steps));
-                        }else {
-                            Integer s1 =Integer.parseInt(MySharedPrefernces.getUserStep(getApplicationContext())) ;
-                            Integer s0 = s1+steps;
-                            MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(s0));
-
-                        }
-                        double dhot =time*weight;
-
-                        DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
+//                        SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section),
+//                                kr, Integer.toString(steps),k, now_status, "暫停");
+//                        if(MySharedPrefernces.getUserKm(getApplicationContext()).equals("")){
+//                            MySharedPrefernces.saveUserKm(getApplicationContext(), String.valueOf(kr));
+//
+//                        }else {
+//                            Double k1= Double.parseDouble(MySharedPrefernces.getUserKm(getApplication()));
+//                            Double k2 = Double.parseDouble(k);
+//                            MySharedPrefernces.saveUserKm(getApplicationContext(),String.valueOf(k1+k2));
+//                        }
+//                        if(MySharedPrefernces.getUserStep(getApplicationContext()).equals("")){
+//                            MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(steps));
+//                        }else {
+//                            Integer s1 =Integer.parseInt(MySharedPrefernces.getUserStep(getApplicationContext())) ;
+//                            Integer s0 = s1+steps;
+//                            MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(s0));
+//
+//                        }
+//                        double dhot =time*weight;
+//
+//                        DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
                         pause = 1;
                         start = 0;
                     }
@@ -320,26 +320,26 @@ public class WalKStepActivity extends Activity {
 
                 String now_status = "跑了 " + k + "- 花了 " + s + "- 消耗" + kr + "- 目前 " + stepss;
 
-                SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "reset");
-                if(MySharedPrefernces.getUserKm(getApplicationContext()).equals("")){
-                    MySharedPrefernces.saveUserKm(getApplicationContext(), String.valueOf(kr));
-
-                }else {
-                    Double k1= Double.parseDouble(MySharedPrefernces.getUserKm(getApplication()));
-                    Double k2 = Double.parseDouble(k);
-                    MySharedPrefernces.saveUserKm(getApplicationContext(),String.valueOf(k1+k2));
-                }
-                if(MySharedPrefernces.getUserStep(getApplicationContext()).equals("")){
-                    MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(steps));
-                }else {
-                    Integer s1 =Integer.parseInt(MySharedPrefernces.getUserStep(getApplicationContext())) ;
-                    Integer s0 = s1+steps;
-                    MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(s0));
-
-                }
-                double dhot =time*weight;
-
-                DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
+//                SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "reset");
+//                if(MySharedPrefernces.getUserKm(getApplicationContext()).equals("")){
+//                    MySharedPrefernces.saveUserKm(getApplicationContext(), String.valueOf(kr));
+//
+//                }else {
+//                    Double k1= Double.parseDouble(MySharedPrefernces.getUserKm(getApplication()));
+//                    Double k2 = Double.parseDouble(k);
+//                    MySharedPrefernces.saveUserKm(getApplicationContext(),String.valueOf(k1+k2));
+//                }
+//                if(MySharedPrefernces.getUserStep(getApplicationContext()).equals("")){
+//                    MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(steps));
+//                }else {
+//                    Integer s1 =Integer.parseInt(MySharedPrefernces.getUserStep(getApplicationContext())) ;
+//                    Integer s0 = s1+steps;
+//                    MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(s0));
+//
+//                }
+//                double dhot =time*weight;
+//
+//                DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
 
                 counter = 0;
                 running.setEnabled(true);
