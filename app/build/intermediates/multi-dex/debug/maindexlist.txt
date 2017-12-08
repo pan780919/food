@@ -958,6 +958,7 @@ com/fasterxml/jackson/databind/deser/std/JacksonDeserializers.class
 android/support/v7/widget/FastScroller.class
 android/support/v4/media/session/MediaSessionCompat$2.class
 com/google/android/gms/common/api/Api.class
+com/diet/MySharedPrefernces.class
 com/google/android/gms/internal/zzmj.class
 android/support/v4/media/AudioAttributesCompatApi21.class
 com/google/android/gms/common/GooglePlayServicesUtil.class
