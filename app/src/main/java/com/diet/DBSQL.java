@@ -156,13 +156,29 @@ public class DBSQL {
 	
 	public static void deleteAll(Context context){
 		SQLiteHelper helper = new SQLiteHelper(context, SQLiteHelper.DB_NAME, null, 1);
+
 		SQLiteDatabase db = helper.getWritableDatabase();
 		String sql = "DELETE FROM "+SQLiteHelper.SPORT_NAME;
 		db.execSQL(sql);
 		db.close();
 		Toast.makeText(context, "delete all", Toast.LENGTH_LONG).show();
 	}
-	
+
+
+	public static void removeAll(Context context)
+	{
+		SQLiteHelper helper = new SQLiteHelper(context, SQLiteHelper.DB_NAME, null, 1);
+
+		// db.delete(String tableName, String whereClause, String[] whereArgs);
+		// If whereClause is null, it will delete all rows.
+		SQLiteDatabase db = helper.getWritableDatabase(); // helper is object extends SQLiteOpenHelper
+		db.delete(SQLiteHelper.TB_NAME, null, null);
+		db.delete(SQLiteHelper.INFO_TABLE, null, null);
+		db.delete(SQLiteHelper.USER_REC_TABLE, null, null);
+		db.delete(SQLiteHelper.DIARY_NAME, null, null);
+		db.delete(SQLiteHelper.SPORT_NAME, null, null);
+	}
+
 	public static Cursor selectAll(Context context){
 		SQLiteHelper helper = new SQLiteHelper(context, SQLiteHelper.DB_NAME, null, 1);
 		SQLiteDatabase db = helper.getReadableDatabase();

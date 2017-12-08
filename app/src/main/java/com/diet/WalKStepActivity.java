@@ -196,7 +196,7 @@ public class WalKStepActivity extends Activity {
         try {
             mper.reset();       //如果之前有播過, 必須 reset 後才能更換
             mper.setDataSource(WalKStepActivity.this, uri);  //指定影音檔來源
-            mper.setLooping(true); //設定是否重複播放
+            mper.setLooping(false); //設定是否重複播放
             mper.prepareAsync();  //要求 MediaPlayer 準備播放指定的影音檔
 
             Log.d(TAG, "handleMessage: "+mper.isPlaying());
@@ -259,7 +259,22 @@ public class WalKStepActivity extends Activity {
 
                         SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section),
                                 kr, Integer.toString(steps),k, now_status, "暫停");
+                        if(MySharedPrefernces.getUserKm(getApplicationContext()).equals("")){
+                            MySharedPrefernces.saveUserKm(getApplicationContext(), String.valueOf(kr));
 
+                        }else {
+                            Double k1= Double.parseDouble(MySharedPrefernces.getUserKm(getApplication()));
+                            Double k2 = Double.parseDouble(k);
+                            MySharedPrefernces.saveUserKm(getApplicationContext(),String.valueOf(k1+k2));
+                        }
+                        if(MySharedPrefernces.getUserStep(getApplicationContext()).equals("")){
+                            MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(steps));
+                        }else {
+                            Integer s1 =Integer.parseInt(MySharedPrefernces.getUserStep(getApplicationContext())) ;
+                            Integer s0 = s1+steps;
+                            MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(s0));
+
+                        }
                         double dhot =time*weight;
                         Log.d(TAG, "onClick: "+dhot);
                         if(MySharedPrefernces.getUserDhot(WalKStepActivity.this).equals("")){
@@ -315,7 +330,22 @@ public class WalKStepActivity extends Activity {
                 String now_status = "跑了 " + k + "- 花了 " + s + "- 消耗" + kr + "- 目前 " + stepss;
 
                 SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "reset");
+                if(MySharedPrefernces.getUserKm(getApplicationContext()).equals("")){
+                    MySharedPrefernces.saveUserKm(getApplicationContext(), String.valueOf(kr));
 
+                }else {
+                    Double k1= Double.parseDouble(MySharedPrefernces.getUserKm(getApplication()));
+                    Double k2 = Double.parseDouble(k);
+                    MySharedPrefernces.saveUserKm(getApplicationContext(),String.valueOf(k1+k2));
+                }
+                if(MySharedPrefernces.getUserStep(getApplicationContext()).equals("")){
+                    MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(steps));
+                }else {
+                    Integer s1 =Integer.parseInt(MySharedPrefernces.getUserStep(getApplicationContext())) ;
+                    Integer s0 = s1+steps;
+                    MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(s0));
+
+                }
                 double dhot =time*weight;
                 Log.d(TAG, "onClick: "+dhot);
                 if(MySharedPrefernces.getUserDhot(WalKStepActivity.this).equals("")){
@@ -355,9 +385,23 @@ public class WalKStepActivity extends Activity {
                 String s = ttimer.getText().toString();
                 String kr = shows.getText().toString();
                 String stepss = ssteps.getText().toString();
+                if(MySharedPrefernces.getUserKm(getApplicationContext()).equals("")){
+                    MySharedPrefernces.saveUserKm(getApplicationContext(), String.valueOf(kr));
 
-                MySharedPrefernces.saveUserKm(getApplicationContext(), String.valueOf(kr));
-                MySharedPrefernces.saveUserStep(getApplicationContext(), String.valueOf(steps));
+                }else {
+                    Double k1= Double.parseDouble(MySharedPrefernces.getUserKm(getApplication()));
+                    Double k2 = Double.parseDouble(k);
+                    MySharedPrefernces.saveUserKm(getApplicationContext(),String.valueOf(k1+k2));
+                }
+                if(MySharedPrefernces.getUserStep(getApplicationContext()).equals("")){
+                    MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(steps));
+                }else {
+                    Integer s1 =Integer.parseInt(MySharedPrefernces.getUserStep(getApplicationContext())) ;
+                    Integer s0 = s1+steps;
+                    MySharedPrefernces.saveUserStep(getApplicationContext(),String.valueOf(s0));
+
+                }
+
 
                 String now_status = "跑了 " + k + "- 花了 " + s + "- 消耗" + kr + "- 目前 " + stepss;
 
@@ -458,16 +502,11 @@ public class WalKStepActivity extends Activity {
 
         section = 1;
         mchildid = 0;
-        if (MySharedPrefernces.getUserName(WalKStepActivity.this).equals("")) {
-            return;
-        } else {
-            name = MySharedPrefernces.getUserName(WalKStepActivity.this);
-            age = 20;
-            tsex = MySharedPrefernces.getUserSex(WalKStepActivity.this);
-            weight = MySharedPrefernces.getUserWeight(WalKStepActivity.this);
-            tall =MySharedPrefernces.getUserTall(WalKStepActivity.this);
-
-        }
+        name = MySharedPrefernces.getUserName(WalKStepActivity.this);
+        age = 20;
+        tsex = MySharedPrefernces.getUserSex(WalKStepActivity.this);
+        weight = MySharedPrefernces.getUserWeight(WalKStepActivity.this);
+        tall =MySharedPrefernces.getUserTall(WalKStepActivity.this);
 
         mmode.setText("未設定目標");
 
@@ -499,11 +538,11 @@ public class WalKStepActivity extends Activity {
         if (section == 1) {
             //mmode.setText("健走模式");
             //sview.setBackgroundResource(R.drawable.index);
-            sview.setBackgroundColor(Color.LTGRAY);
+//            sview.setBackgroundColor(Color.LTGRAY);
 
         } else {
             //mmode.setText("跑步模式");
-            sview.setBackgroundResource(R.drawable.back);
+//            sview.setBackgroundResource(R.drawable.back);
         }
 
         sensorMgr.registerListener(SensorL, sensor, SensorManager.SENSOR_DELAY_GAME);
@@ -793,7 +832,7 @@ public class WalKStepActivity extends Activity {
                     sview.setBackgroundColor(Color.LTGRAY);
                 } else {
                     //mmode.setText("跑步模式");
-                    sview.setBackgroundResource(R.drawable.back);
+//                    sview.setBackgroundResource(R.drawable.back);
                 }
 
                 sensorMgr.registerListener(SensorL, sensor, SensorManager.SENSOR_DELAY_GAME);

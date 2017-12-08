@@ -260,8 +260,15 @@ public class fragment_setting extends Fragment {
             e.printStackTrace();
         }
 
-        refresh_msg();
+
         return v;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume: "+"in");
+        refresh_msg();
     }
 
     private static final String TAG = "fragment_setting";
