@@ -80,12 +80,12 @@
         "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/ic_trophy.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi/nav_mag.png",
-        "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/nav_mag.png"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi/img_success.png",
         "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/img_success.png"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi/nav_mag.png",
+        "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/nav_mag.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_launcher.png",
@@ -96,16 +96,16 @@
         "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/img_triangles_s.png"
     },
     {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi/icon_coin.png",
+        "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/icon_coin.png"
+    },
+    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi/mo_play_fill.png",
         "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/mo_play_fill.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi/readmoo_logo_56.png",
         "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/readmoo_logo_56.png"
-    },
-    {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi/icon_coin.png",
-        "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/icon_coin.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi/loading_logo.png",
