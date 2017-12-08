@@ -49,6 +49,7 @@ public class MyApplication extends MultiDexApplication {
                 MySharedPrefernces.saveUserKm(getApplicationContext(),"");
                 MySharedPrefernces.saveUserStep(getApplicationContext(),"");
                 MySharedPrefernces.saveUserDhot(getApplicationContext(),"");
+                MySharedPrefernces.saveUserhot(getApplicationContext(),"");
 
 
             }
