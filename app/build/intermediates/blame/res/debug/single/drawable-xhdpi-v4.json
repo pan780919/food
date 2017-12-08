@@ -16,12 +16,12 @@
         "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/p03.jpg"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/p05.JPG",
-        "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/p05.JPG"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/p17.jpg",
         "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/p17.jpg"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/p05.JPG",
+        "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/p05.JPG"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/quantum_ic_forward_10_white_24.png",
@@ -52,28 +52,28 @@
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_cast_dark.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_connecting_12_light.png",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_connecting_12_light.png"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/com_facebook_button_send_icon_white.png",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-share/4.29.0/res/drawable-xhdpi-v4/com_facebook_button_send_icon_white.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_connecting_22_light.png",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_connecting_22_light.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/com_facebook_button_send_icon_white.png",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-share/4.29.0/res/drawable-xhdpi-v4/com_facebook_button_send_icon_white.png"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_connecting_12_light.png",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_connecting_12_light.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/exo_controls_next.png",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/drawable-xhdpi-v4/exo_controls_next.png"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_connecting_02_dark.png",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_connecting_02_dark.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_on_12_dark.png",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_on_12_dark.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_connecting_02_dark.png",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_connecting_02_dark.png"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/exo_controls_next.png",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/drawable-xhdpi-v4/exo_controls_next.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_on_13_light.png",
@@ -84,16 +84,16 @@
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/drawable-xhdpi-v4/quantum_ic_replay_30_white_24.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/exo_controls_fastforward.png",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/drawable-xhdpi-v4/exo_controls_fastforward.png"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_on_03_light.png",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_on_03_light.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal.9.png",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal.9.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_on_03_light.png",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_on_03_light.png"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/exo_controls_fastforward.png",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/drawable-xhdpi-v4/exo_controls_fastforward.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/p22.jpg",
@@ -112,28 +112,28 @@
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/res/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal.9.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_pause.png",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_pause.png"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/cast_ic_stop_circle_filled_white.png",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/drawable-xhdpi-v4/cast_ic_stop_circle_filled_white.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/com_facebook_tooltip_blue_xout.png",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_xout.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/cast_ic_stop_circle_filled_white.png",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/drawable-xhdpi-v4/cast_ic_stop_circle_filled_white.png"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_pause.png",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_pause.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/p19.jpg",
         "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/p19.jpg"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/cast_ic_notification_on.png",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.0.1/res/drawable-xhdpi-v4/cast_ic_notification_on.png"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_on_19_light.png",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_on_19_light.png"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/cast_ic_notification_on.png",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.0.1/res/drawable-xhdpi-v4/cast_ic_notification_on.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png",
@@ -160,16 +160,16 @@
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_on_09_light.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_connecting_11_dark.png",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_connecting_11_dark.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_connecting_03_light.png",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_connecting_03_light.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_connecting_11_dark.png",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_connecting_11_dark.png"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/messenger_bubble_large_white.png",
@@ -200,16 +200,16 @@
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_on_18_light.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_on_12_light.png",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_on_12_light.png"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_connecting_13_light.png",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_connecting_13_light.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/notification_bg_low_normal.9.png",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/support-compat/27.0.1/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_connecting_13_light.png",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_connecting_13_light.png"
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_on_12_light.png",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_on_12_light.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
@@ -704,12 +704,12 @@
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.facebook.android/facebook-login/4.29.0/res/drawable-xhdpi-v4/com_facebook_tooltip_black_bottomnub.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_on_20_light.png",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_on_20_light.png"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_connecting_15_light.png",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_connecting_15_light.png"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_on_20_light.png",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_on_20_light.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/com_facebook_button_icon_white.png",

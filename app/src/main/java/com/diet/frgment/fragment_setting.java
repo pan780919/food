@@ -325,7 +325,7 @@ public class fragment_setting extends Fragment {
         //減重:體重磅數*12
         double dec = weight * 2.2046 * 12;
 
-        //rmsg += "目前的熱量/消耗熱量:" + food.hot + "/" + sport.hot + "\n";
+//        rmsg += "目前的熱量/消耗熱量:" + food.hot + "/" + sport.hot + "\n";
         rmsg += "體重" + weight + "\n";
         rmsg += "基礎代謝率(BMR):" + mDecimalFormat.format(bmr) + "\n";
         String rbmi = (bmi > 18.5 && bmi < 24) ? "(BMI正常)" : "(異常BMI)";

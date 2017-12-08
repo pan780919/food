@@ -149,6 +149,15 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
             @Override
             public void onError(FacebookException error) {
                 Log.d(TAG, "onError: ");
+                new AlertDialog.Builder(getApplicationContext())
+                        .setTitle("錯誤代碼"+error.hashCode())
+                        .setMessage(error.getMessage())
+                        .setNegativeButton("確定", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+                        });
 
             }
 
