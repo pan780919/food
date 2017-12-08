@@ -380,6 +380,7 @@ public class fragment_setting extends Fragment {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        Log.d(TAG, "refresh_msg: "+ MySharedPrefernces.getUserDhot(getActivity()));
         rmsg += "今日總共攝取熱量:" +  MySharedPrefernces.getUserhot(getActivity()) + "\n";
         rmsg += "今日總共消耗熱量:" + MySharedPrefernces.getUserDhot(getActivity()) + "\n";
         rmsg += "今日總公里數:" + MySharedPrefernces.getUserKm(getActivity()) + "\n";

@@ -276,16 +276,6 @@ public class WalKStepActivity extends Activity {
 
                         }
                         double dhot =time*weight;
-                        Log.d(TAG, "onClick: "+dhot);
-                        if(MySharedPrefernces.getUserDhot(WalKStepActivity.this).equals("")){
-                            MySharedPrefernces.saveUserDhot(WalKStepActivity.this,String.valueOf(dhot));
-
-                        }else {
-                            Double dh =Double.parseDouble(MySharedPrefernces.getUserDhot(WalKStepActivity.this));
-
-                            MySharedPrefernces.saveUserDhot(WalKStepActivity.this,String.valueOf(dh+dhot));
-
-                        }
 
                         DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
                         pause = 1;
@@ -348,16 +338,6 @@ public class WalKStepActivity extends Activity {
 
                 }
                 double dhot =time*weight;
-                Log.d(TAG, "onClick: "+dhot);
-                if(MySharedPrefernces.getUserDhot(WalKStepActivity.this).equals("")){
-                    MySharedPrefernces.saveUserDhot(WalKStepActivity.this,String.valueOf(dhot));
-
-                }else {
-                    Double dh =Double.parseDouble(MySharedPrefernces.getUserDhot(WalKStepActivity.this));
-
-                    MySharedPrefernces.saveUserDhot(WalKStepActivity.this,String.valueOf(dh+dhot));
-
-                }
 
                 DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
 
@@ -410,15 +390,6 @@ public class WalKStepActivity extends Activity {
 
                 double dhot =time*weight;
                 Log.d(TAG, "onClick: "+dhot);
-                if(MySharedPrefernces.getUserDhot(WalKStepActivity.this).equals("")){
-                    MySharedPrefernces.saveUserDhot(WalKStepActivity.this,String.valueOf(dhot));
-
-                }else {
-                    Double dh =Double.parseDouble(MySharedPrefernces.getUserDhot(WalKStepActivity.this));
-
-                    MySharedPrefernces.saveUserDhot(WalKStepActivity.this,String.valueOf(dh+dhot));
-
-                }
 
                 DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
 
@@ -595,6 +566,15 @@ public class WalKStepActivity extends Activity {
 
                     java.text.DecimalFormat nf2 = new java.text.DecimalFormat("###,##0.0000");
                     shows.setText(nf2.format(now_shows));
+                    if(MySharedPrefernces.getUserDhot(WalKStepActivity.this).equals("")){
+                        MySharedPrefernces.saveUserDhot(WalKStepActivity.this,nf2.format(now_shows));
+
+                    }else {
+                        Double dh =Double.parseDouble(MySharedPrefernces.getUserDhot(WalKStepActivity.this));
+
+                        MySharedPrefernces.saveUserDhot(WalKStepActivity.this,String.valueOf(dh+now_shows));
+
+                    }
 
                     ssteps.setText(Integer.toString(steps) + "步");
                     if(mygoal!=0){
