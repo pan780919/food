@@ -3,21 +3,21 @@
     android:id="@+id/widget35"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/myb"
+    android:background="#FFFFFF"
     android:orientation="vertical">
 
     <TableRow
         android:id="@+id/widget36"
         android:layout_width="fill_parent"
         android:layout_height="43dp"
-        android:background="#ffffccff"
+        android:background="#00BFFF"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/widget37"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="#ffffccff"
+            android:background="#00BFFF"
             android:gravity="center"
             android:text="&#39135;&#29289;&#25885;&#21462;"
             android:textColor="@color/black"
@@ -59,6 +59,7 @@
             android:layout_gravity="left">
 
             <Button
+                android:background="#00BFFF"
                 android:id="@+id/button"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -92,7 +93,7 @@
             android:id="@+id/foodchoice"
             android:layout_width="150dp"
             android:layout_height="80dp"
-            android:background="@drawable/buttonbg"
+            android:background="#00BFFF"
             android:padding="20dp"
             android:text="請選擇"></Button>
     </TableRow>
@@ -125,7 +126,7 @@
             android:id="@+id/cal"
             android:layout_width="100dp"
             android:layout_height="65dp"
-            android:background="@drawable/buttonbg"
+            android:background="#00BFFF"
             android:padding="20dp"
             android:text="計算" />
 
@@ -133,7 +134,7 @@
             android:id="@+id/clear"
             android:layout_width="100dp"
             android:layout_height="65dp"
-            android:background="@drawable/buttonbg"
+            android:background="#00BFFF"
             android:gravity="center"
             android:padding="20dp"
             android:text="清除" />
@@ -142,7 +143,7 @@
             android:id="@+id/exit"
             android:layout_width="100dp"
             android:layout_height="65dp"
-            android:background="@drawable/buttonbg"
+            android:background="#00BFFF"
             android:gravity="center"
             android:padding="20dp"
             android:text="取消" />
