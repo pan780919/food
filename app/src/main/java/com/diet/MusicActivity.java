@@ -149,7 +149,6 @@ public class MusicActivity extends AppCompatActivity implements
     //********************************************************
 
     public void onMpPlay(View v) {
-//        createView(uri,"123",ckbLoop.isChecked());
 //        finish();//按下【播放】鈕時
         if(isVideo) {   //如果是影片
             Intent it = new Intent(this, MediaStore.Video.class); //建立開啟 Video Activity 的 Intent
