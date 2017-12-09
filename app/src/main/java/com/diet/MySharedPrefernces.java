@@ -229,7 +229,19 @@ public class MySharedPrefernces {
         return sp.getString(KEY_HOT,"");
     }
 
+    public static final String KEY_PHOTO = "userphoto";
 
+    public static void saveUserPhoto(Context context, String userid) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        sp.edit().putString(KEY_PHOTO, userid).commit();
+
+
+    }
+
+    public static String getUserphoto(Context context) {
+        SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
+        return sp.getString(KEY_PHOTO,"");
+    }
 
 
     // 	// 通知中心 時間記錄

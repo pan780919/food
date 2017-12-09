@@ -62,6 +62,8 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
     String email = "";
     String password = "";
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +71,11 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
         callbackManager = CallbackManager.Factory.create();
         mfiebaselibsClass = new MfiebaselibsClass(this, LoginActivity.this);
         mfiebaselibsClass.userLoginCheck();
+
+
+
+
+
         setContentView(R.layout.activity_login);
         findViewById(R.id.button).setOnClickListener(this);
         findViewById(R.id.button3).setOnClickListener(this);
@@ -135,7 +142,6 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
                 setUsetProfile();
                 Log.d(TAG, "onComplete: "+loginResult.getAccessToken().getUserId());
                 MySharedPrefernces.saveUserId(LoginActivity.this, loginResult.getAccessToken().getUserId());
-
                 Toast.makeText(LoginActivity.this, "登入成功,將跳到列表", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(LoginActivity.this, main.class));
                 LoginActivity.this.finish();
@@ -209,6 +215,7 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
                     //登入
 //                    fbName.setText(currentProfile.getName());
                     loadImage(String.valueOf(currentProfile.getProfilePictureUri(150, 150)), fbImg, LoginActivity.this);
+                    MySharedPrefernces.saveUserPic(LoginActivity.this,String.valueOf(currentProfile.getProfilePictureUri(150, 150)));
 
                 }
 

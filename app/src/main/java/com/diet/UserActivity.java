@@ -249,10 +249,11 @@ public class UserActivity extends Activity implements MfirebaeCallback {
             DBSQL.removeAll(mActivty);
             MySharedPrefernces.saveUserId(mActivty,"");
             MySharedPrefernces.saveUserName(mActivty,"");
-            MySharedPrefernces.saveUserKm(mActivty,"");
-            MySharedPrefernces.saveUserStep(mActivty,"");
-            MySharedPrefernces.saveUserDhot(mActivty,"");
-            MySharedPrefernces.saveUserhot(mActivty,"");
+            MySharedPrefernces.saveUserPic(mActivty,"");
+//            MySharedPrefernces.saveUserKm(mActivty,"");
+//            MySharedPrefernces.saveUserStep(mActivty,"");
+//            MySharedPrefernces.saveUserDhot(mActivty,"");
+//            MySharedPrefernces.saveUserhot(mActivty,"");
         }else {
 
         }
@@ -467,6 +468,7 @@ public class UserActivity extends Activity implements MfirebaeCallback {
 //                        mMessageEdt.getText().toString().trim(),
 //                        taskSnapshot.getDownloadUrl().toString());
 //                test(picUri);
+                MySharedPrefernces.saveUserPic(UserActivity.this,taskSnapshot.getDownloadUrl().toString());
                 updateUserPic(taskSnapshot.getDownloadUrl().toString());
 
 
