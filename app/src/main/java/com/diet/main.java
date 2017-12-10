@@ -135,7 +135,7 @@ public class main extends AppCompatActivity
     fragment_teach mfragment_teach;
 
     MenuItem prevMenuItem;
-
+    public  static  boolean aBoolean;
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -145,6 +145,12 @@ public class main extends AppCompatActivity
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.main);
+
+        Bundle b =this.getIntent().getExtras();
+
+        aBoolean  = b.getBoolean("boolean");
+
+
         bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottom_navigation);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         bottomNavigationView.getMenu().findItem(R.id.action_contact).setChecked(true);

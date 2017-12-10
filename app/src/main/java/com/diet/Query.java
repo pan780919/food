@@ -197,6 +197,9 @@ public class Query extends Activity {
             map.put("ItemTitle", "= 今日 總消耗 " + times + "卡 = ");
             map.put("ItemText",  "= 今日 公里數  " + times2 + "km =\n" + "= 今日 總步數  " + steps + "步 =");
             listitem.add(map);
+            MySharedPrefernces.saveUserDhot(getApplicationContext(),times+"");
+            MySharedPrefernces.saveUserKm(getApplicationContext(),times2+"");
+            MySharedPrefernces.saveUserStep(getApplicationContext(),steps+"");
 
             // scalendar.add(Calendar.DATE, -1);
             //date=scalendar.getTime();

@@ -20,6 +20,8 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
 import com.facebook.Profile;
 import com.facebook.ProfileTracker;
 import com.facebook.login.LoginManager;
@@ -35,6 +37,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.jackpan.libs.mfirebaselib.MfiebaselibsClass;
 import com.jackpan.libs.mfirebaselib.MfirebaeCallback;
 import com.weather.Model.Main;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -140,6 +145,20 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
                 Log.d(TAG, "onSuccess: " + loginResult.getAccessToken());
                 handleFacebookAccessToken(loginResult.getAccessToken());
                 setUsetProfile();
+
+                GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
+
+                    @Override
+                    public void onCompleted(JSONObject object, GraphResponse response) {
+                        Log.i("LoginActivity", response.toString());
+                        // Get facebook data from login
+                        Bundle bFacebookData = getFacebookData(object);
+                    }
+                });
+                Bundle parameters = new Bundle();
+                parameters.putString("fields", "id, first_name, last_name, email,gender, birthday, location"); // Parámetros que pedimos a facebook
+                request.setParameters(parameters);
+                request.executeAsync();
                 Log.d(TAG, "onComplete: "+loginResult.getAccessToken().getUserId());
                 MySharedPrefernces.saveUserId(LoginActivity.this, loginResult.getAccessToken().getUserId());
                 Toast.makeText(LoginActivity.this, "登入成功,將跳到列表", Toast.LENGTH_SHORT).show();
@@ -191,6 +210,7 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInWithCredential", task.getException());
+
                         }
 
                         // [START_EXCLUDE]
@@ -248,8 +268,14 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
     public void createUserState(boolean b) {
         if (b) {
             Toast.makeText(this, "註冊成功,將跳到列表", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(LoginActivity.this, main.class));
+            Intent intent = new Intent();
+            intent.setClass(LoginActivity.this, main.class);
+            Bundle bundle= new Bundle();
+            bundle.putBoolean("boolean",false);
+            intent.putExtras(bundle);
+            startActivity(intent);
             LoginActivity.this.finish();
+            MySharedPrefernces.saveIsBuyed(LoginActivity.this,false);
         } else {
 
         }
@@ -260,9 +286,14 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
     public void useLognState(boolean b) {
         if (b) {
             Toast.makeText(this, "登入成功,將跳到列表", Toast.LENGTH_SHORT).show();
-
-            startActivity(new Intent(LoginActivity.this, main.class));
+            Intent intent = new Intent();
+            intent.setClass(LoginActivity.this, main.class);
+            Bundle bundle= new Bundle();
+            bundle.putBoolean("boolean",true);
+            intent.putExtras(bundle);
+            startActivity(intent);
             LoginActivity.this.finish();
+            MySharedPrefernces.saveIsBuyed(LoginActivity.this,true);
         } else {
             new AlertDialog.Builder(LoginActivity.this)
                     .setTitle("登入問題")
@@ -392,5 +423,42 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
 
         }.start();
 
+    }
+    private Bundle getFacebookData(JSONObject object) {
+
+        try {
+            Bundle bundle = new Bundle();
+            String id = object.getString("id");
+
+            try {
+                URL profile_pic = new URL("https://graph.facebook.com/" + id + "/picture?width=200&height=150");
+                Log.i("profile_pic", profile_pic + "");
+                bundle.putString("profile_pic", profile_pic.toString());
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+                return null;
+            }
+
+            bundle.putString("idFacebook", id);
+            if (object.has("first_name"))
+                bundle.putString("first_name", object.getString("first_name"));
+            if (object.has("last_name"))
+                bundle.putString("last_name", object.getString("last_name"));
+            if (object.has("email"))
+                bundle.putString("email", object.getString("email"));
+            if (object.has("gender"))
+                bundle.putString("gender", object.getString("gender"));
+            if (object.has("birthday"))
+                bundle.putString("birthday", object.getString("birthday"));
+            if (object.has("location"))
+                bundle.putString("location", object.getJSONObject("location").getString("name"));
+            MySharedPrefernces.saveUserMail(LoginActivity.this,object.getString("email"));
+            return bundle;
+        }
+        catch(JSONException e) {
+            Log.d(TAG,"Error parsing JSON");
+        }
+        return null;
     }
 }

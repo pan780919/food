@@ -92,7 +92,9 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
     public String MEMBER_PHOTO;
     public static String account;
     private MfiebaselibsClass mfiebaselibsClass;
-    MemberData mMemberData;
+    private  boolean b;
+    MemberData mMemberData =null;
+    private  main mMain;
     String url = "https://food-4997e.firebaseio.com/";
     FirebaseAuth auth;
     FirebaseAuth.AuthStateListener authListener;
@@ -305,6 +307,7 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
     public void onResume() {
         super.onResume();
         Log.d(TAG, "onResume: " + "in");
+        Log.d(TAG, "onResume: "+mMemberData);
         refresh_msg();
         progressDialog.dismiss();
 
@@ -313,9 +316,10 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         progressDialog = ProgressDialog.show(getActivity(),"讀取中","請稍候");
+
         mfiebaselibsClass = new MfiebaselibsClass(getActivity(), fragment_setting.this);
         mfiebaselibsClass.getFirebaseDatabase(url +MySharedPrefernces.getUserId(getActivity()), "id");
-        Log.d("FRAG", "onCreate");
+
     }
 
     private static final String TAG = "fragment_setting";
@@ -328,13 +332,28 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
 //            addmember();
 //            return;
 //        }
+        boolean b = MySharedPrefernces.getIsBuyed(getActivity());
+        Log.d(TAG, "refresh_msg: "+b);
+        if(!b){
+            Log.d(TAG, "refresh_msg: "+"false");
+            addmember();
+            return;
+        }else {
+            Log.d(TAG, "refresh_msg: "+"true");
+
+        }
+
+
 //        if (mMemberData == null) {
 //            addmember();
 //            return;
 //        }
         //selector = diet.dt.selector;
 //        mydata = memberlist.get(selector);
-        if(mMemberData==null) return;
+//        if(mMemberData==null){
+//            addmember();
+//            return;
+//        }
         int weight = Integer.valueOf(mMemberData.weight);
         int height = Integer.valueOf(mMemberData.height);
         int age = 20;
@@ -465,6 +484,13 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
         TODAY_KM = MySharedPrefernces.getUserKm(getActivity());
         TODAY_STEPS = MySharedPrefernces.getUserStep(getActivity());
         msg.setText(rmsg);
+        Log.d(TAG, "refresh_msg: "+msg.getText().toString());
+        if(msg.getText().toString().equals("無資料")){
+            Log.d(TAG, "refresh_msg: "+"1");
+        }else {
+            Log.d(TAG, "refresh_msg: "+"2");
+
+        }
         setMemberlist();
 
     }
@@ -742,15 +768,14 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
                     MySharedPrefernces.saveUserWeight(getActivity(), Integer.parseInt(n3));
                     NAME = name.getText().toString();
                     SEX = Integer.toString(sex.getSelectedItemPosition());
-                    HEIGHT = we.getText().toString();
-                    WEIGHT = he.getText().toString();
+                    HEIGHT = he.getText().toString();
+                    WEIGHT = we.getText().toString();
                     BIRTHDAY = age.getText().toString();
                     mMemberData.name = NAME;
                     mMemberData.sex = SEX;
                     mMemberData.height = HEIGHT;
                     mMemberData.weight = WEIGHT;
                     mMemberData.birthday = BIRTHDAY;
-                    Log.d(TAG, "onClick: "+NAME);
 //                    setMember(NAME,SEX,HEIGHT,WEIGHT,BIRTHDAY);
                     DBSQL.update(getActivity(), n1, n2, n3, n4, n5, n6, id);
                     memberlist.clear();
@@ -804,11 +829,15 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
         Log.d(TAG, "getDatabaseData: " + jsonInString);
         mMemberData = gson.fromJson(jsonInString, MemberData.class);
         Log.d(TAG, "getDatabaseData: " + mMemberData.toString());
-        if (mMemberData.id == null) {
+        if (mMemberData == null) {
             addmember();
-
-
         } else {
+            MySharedPrefernces.saveUserName(getActivity(),mMemberData.name);
+            MySharedPrefernces.saveUserPic(getActivity(),mMemberData.member_photo);
+            MySharedPrefernces.saveUserStep(getActivity(),mMemberData.today_steps);
+            MySharedPrefernces.saveUserKm(getActivity(),mMemberData.toady_km);
+            MySharedPrefernces.saveUserhot(getActivity(),mMemberData.today_hot);
+            MySharedPrefernces.saveUserDhot(getActivity(),mMemberData.today_dhot);
             refresh_msg();
             progressDialog.dismiss();
 

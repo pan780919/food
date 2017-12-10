@@ -250,10 +250,10 @@ public class UserActivity extends Activity implements MfirebaeCallback {
             MySharedPrefernces.saveUserId(mActivty,"");
             MySharedPrefernces.saveUserName(mActivty,"");
             MySharedPrefernces.saveUserPic(mActivty,"");
-//            MySharedPrefernces.saveUserKm(mActivty,"");
-//            MySharedPrefernces.saveUserStep(mActivty,"");
-//            MySharedPrefernces.saveUserDhot(mActivty,"");
-//            MySharedPrefernces.saveUserhot(mActivty,"");
+            MySharedPrefernces.saveUserKm(mActivty,"");
+            MySharedPrefernces.saveUserStep(mActivty,"");
+            MySharedPrefernces.saveUserDhot(mActivty,"");
+            MySharedPrefernces.saveUserhot(mActivty,"");
         }else {
 
         }
