@@ -471,10 +471,10 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        rmsg += "今日總共攝取熱量:" + MySharedPrefernces.getUserhot(getActivity()) + "\n";
-        rmsg += "今日總共消耗熱量:" + MySharedPrefernces.getUserDhot(getActivity()) + "\n";
-        rmsg += "今日總公里數:" + MySharedPrefernces.getUserKm(getActivity()) + "\n";
-        rmsg += "今日總步數:" + MySharedPrefernces.getUserStep(getActivity()) + "\n";
+        rmsg += "今日總共攝取熱量:" +MemberData.TODAY_HOT + "\n";
+        rmsg += "今日總共消耗熱量:" + MemberData.TODAY_DHOT + "\n";
+        rmsg += "今日總公里數:" + MemberData.TODAY_KM + "\n";
+        rmsg += "今日總步數:" + MemberData.TODAY_STEPS + "\n";
         if(mMemberData!=null){
             NAME = mMemberData.name;
             HEIGHT = mMemberData.height;
@@ -617,7 +617,7 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
                     selector = memberlist.size() - 1;
 
                     account = n1;
-                    setMemberlist();
+                        setMemberlist();
                     refresh_msg();
                     MySharedPrefernces.saveIsBuyed(getActivity(), true);
                 }
@@ -954,10 +954,10 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
         map.put(MemberData.WEIGHTRANGE, WEIGHTRANGE);
         map.put(MemberData.RECOMMENDEDGEAT, RECOMMENDEDGEAT);
         map.put(MemberData.STANDARDWEIGHT, STANDARDWEIGHT);
-        map.put(MemberData.TODAY_DHOT, TODAY_DHOT);
-        map.put(MemberData.TODAY_HOT, TODAY_HOT);
-        map.put(MemberData.TODAY_KM, TODAY_KM);
-        map.put(MemberData.TODAY_STEPS, TODAY_STEPS);
+        map.put(MemberData.TODAY_DHOT, MySharedPrefernces.getUserDhot(getActivity()));
+        map.put(MemberData.TODAY_HOT, MySharedPrefernces.getUserhot(getActivity()));
+        map.put(MemberData.TODAY_KM, MySharedPrefernces.getUserKm(getActivity()));
+        map.put(MemberData.TODAY_STEPS, MySharedPrefernces.getUserStep(getActivity()));
         map.put(MemberData.MEMBER_PHOTO, MySharedPrefernces.getUserPic(getActivity()));
         mfiebaselibsClass.setFireBaseDB(url + key, key, map);
 

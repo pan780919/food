@@ -282,7 +282,7 @@ public class WalKStepActivity extends Activity {
                         double dhot = time * weight;
                         Log.d(TAG, "onClick: " + dhot);
 
-                        DBSQL.insertDiary(WalKStepActivity.this, String.valueOf(dhot), "-1", "計步器", kr);                        pause = 1;
+//                        DBSQL.insertDiary(WalKStepActivity.this, String.valueOf(dhot), "-1", "計步器", kr);                        pause = 1;
                         start = 0;
                     }
                 } else {
@@ -343,12 +343,12 @@ public class WalKStepActivity extends Activity {
 //                }
 //                double dhot =time*weight;
 //
-                SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "完成");
+//                SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "完成");
 
                 double dhot = time * weight;
                 Log.d(TAG, "onClick: " + dhot);
 
-                DBSQL.insertDiary(WalKStepActivity.this, String.valueOf(dhot), "-1", "計步器", kr);
+//                DBSQL.insertDiary(WalKStepActivity.this, String.valueOf(dhot), "-1", "計步器", kr);
                 counter = 0;
                 running.setEnabled(true);
                 ttimer.setText("0:0");
@@ -547,6 +547,7 @@ public class WalKStepActivity extends Activity {
                     } else {
                         now_shows = (now_km / 1000) * weight * 0.98;
                     }
+
 
 //                    Message msg = new Message();
 //                    msg.what = MSG_UPDATE_KM;
@@ -949,10 +950,6 @@ public class WalKStepActivity extends Activity {
                 dbHelper.onUpgrade(db, --DB_VERSION, DB_VERSION);
             }
 
-
-            // scalendar.add(Calendar.DATE, -1);
-            //date=scalendar.getTime();
-            //term = sdf.format(date);
 
         }
 
