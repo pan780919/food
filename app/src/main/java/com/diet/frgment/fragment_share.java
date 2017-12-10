@@ -1,5 +1,6 @@
 package com.diet.frgment;
 
+import android.graphics.Color;
 import android.support.v4.app.Fragment;
 
 import android.content.Intent;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 
 import com.diet.R;
 

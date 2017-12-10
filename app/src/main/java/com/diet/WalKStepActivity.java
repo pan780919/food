@@ -201,11 +201,8 @@ public class WalKStepActivity extends Activity {
             mper.setDataSource(WalKStepActivity.this, uri);  //指定影音檔來源
             mper.setLooping(false); //設定是否重複播放
             mper.prepareAsync();  //要求 MediaPlayer 準備播放指定的影音檔
-
-            Log.d(TAG, "handleMessage: " + mper.isPlaying());
         } catch (Exception e) {
             e.printStackTrace();
-            Log.d(TAG, "handleMessage: " + e.getMessage());
         }
         start = 0;
 
@@ -257,10 +254,7 @@ public class WalKStepActivity extends Activity {
                         String k = km.getText().toString();
                         String s = ttimer.getText().toString();
                         String kr = shows.getText().toString();
-                        //String steps = ssteps.getText().toString();
-
-                        String now_status = "跑了 " + k + "/ 花了 " + s + "/ 消耗" + kr + "/ 目前 " + steps;
-
+                        String stepss = ssteps.getText().toString();
 //                        SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section),
 //                                kr, Integer.toString(steps),k, now_status, "暫停");
 //                        if(MySharedPrefernces.getUserKm(getApplicationContext()).equals("")){
@@ -281,8 +275,14 @@ public class WalKStepActivity extends Activity {
 //                        }
 //                        double dhot =time*weight;
 //
-//                        DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
-                        pause = 1;
+                        String now_status = "跑了 " + k + "- 花了 " + s + "- 消耗" + kr + "- 目前 " + stepss;
+
+                        SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "完成");
+
+                        double dhot = time * weight;
+                        Log.d(TAG, "onClick: " + dhot);
+
+                        DBSQL.insertDiary(WalKStepActivity.this, String.valueOf(dhot), "-1", "計步器", kr);                        pause = 1;
                         start = 0;
                     }
                 } else {
@@ -299,7 +299,7 @@ public class WalKStepActivity extends Activity {
         listbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent app = new Intent(WalKStepActivity.my, Query.class);
+                Intent app = new Intent(WalKStepActivity.this, Query.class);
                 Bundle rdata = new Bundle();
                 rdata.putString("name", name);
                 app.putExtras(rdata);
@@ -343,8 +343,12 @@ public class WalKStepActivity extends Activity {
 //                }
 //                double dhot =time*weight;
 //
-//                DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
+                SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "完成");
 
+                double dhot = time * weight;
+                Log.d(TAG, "onClick: " + dhot);
+
+                DBSQL.insertDiary(WalKStepActivity.this, String.valueOf(dhot), "-1", "計步器", kr);
                 counter = 0;
                 running.setEnabled(true);
                 ttimer.setText("0:0");
@@ -557,21 +561,21 @@ public class WalKStepActivity extends Activity {
 
 
                     ssteps.setText(Integer.toString(steps) + "步");
+                    Log.d(TAG, "onSensorChanged: "+mygoal);
                     if (mygoal != 0) {
                         if (steps >= mygoal) {
                             mper.start();
-                            new AlertDialog.Builder(WalKStepActivity.this)
-                                    .setTitle("達成目標")
-                                    .setMessage("恭喜您！達成目標成就")
-                                    .setNegativeButton("確定", new DialogInterface.OnClickListener() {
-                                        @Override
-                                        public void onClick(DialogInterface dialogInterface, int i) {
-                                            mygoal = 0;
-                                            dialogInterface.dismiss();
-                                            mper.stop();
-                                            mper.release();
-                                        }
-                                    });
+                            if(steps>mygoal){
+                                if(mper.isPlaying()) {
+                                    Log.d(TAG, "onSensorChanged: " + "isplay");
+                                    mper.pause();
+                                    mygoal = 0;
+                                }else {
+                                    Log.d(TAG, "onSensorChanged: "+"no");
+                                    mper.start();
+                                }
+
+                            }
 
 
                         }

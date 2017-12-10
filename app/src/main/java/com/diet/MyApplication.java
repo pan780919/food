@@ -6,6 +6,7 @@ import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 import android.view.WindowManager;
 
+import com.firebase.client.Firebase;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.iid.InstanceID;
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -31,6 +32,8 @@ public class MyApplication extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+        Firebase.setAndroidContext(this);
+
         if (MySharedPrefernces.getMyCardTime(getApplicationContext()).equals("")) {
             System.currentTimeMillis();
             Log.d(TAG, "onCreate: "+"1");
