@@ -194,10 +194,36 @@ public class Query extends Activity {
 
 
             HashMap<String, Object> map = new HashMap<String, Object>();
-            map.put("ItemTitle", "= 今日 總消耗 " + times + "卡 = ");
-            map.put("ItemText",  "= 今日 公里數  " + times2 + "km =\n" + "= 今日 總步數  " + steps + "步 =");
+            map.put("ItemTitle", "= 總消耗 " + times + "卡 = ");
+            map.put("ItemText",  "= 公里數  " + times2 + "km =\n" + "=總步數  " + steps + "步 =");
             listitem.add(map);
+            if(MySharedPrefernces.getUserDhot(Query.this).equals("")){
+                MySharedPrefernces.saveUserDhot(getApplicationContext(),times+"");
 
+            }else {
+                int dhot = Integer.parseInt(MySharedPrefernces.getUserDhot(Query.this));
+                int dhot2 = dhot+times;
+                MySharedPrefernces.saveUserDhot(getApplicationContext(),dhot2+"");
+            }
+            if(MySharedPrefernces.getUserKm(getApplicationContext()).equals("")){
+                MySharedPrefernces.saveUserKm(getApplicationContext(),times2+"");
+
+            }else {
+                int km  = Integer.parseInt(MySharedPrefernces.getUserKm(getApplicationContext()));
+                int kmAll = km+times2;
+                MySharedPrefernces.saveUserKm(getApplicationContext(),kmAll+"");
+
+            }
+            if(MySharedPrefernces.getUserStep(getApplicationContext()).equals("")){
+                MySharedPrefernces.saveUserStep(getApplicationContext(),steps+"");
+
+            }else {
+                int step =Integer.parseInt(MySharedPrefernces.getUserStep(getApplicationContext())) ;
+                int stepAll = step+steps;
+                MySharedPrefernces.saveUserStep(getApplicationContext(),stepAll+"");
+
+            }
+            
             // scalendar.add(Calendar.DATE, -1);
             //date=scalendar.getTime();
             //term = sdf.format(date);
