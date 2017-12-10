@@ -299,7 +299,7 @@ public class WalKStepActivity extends Activity {
         listbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent app = new Intent(WalKStepActivity.my, Query.class);
+                Intent app = new Intent(WalKStepActivity.this, Query.class);
                 Bundle rdata = new Bundle();
                 rdata.putString("name", name);
                 app.putExtras(rdata);

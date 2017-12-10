@@ -1,4 +1,5 @@
 package com.diet;
+
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -37,6 +38,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.google.gson.Gson;
 import com.jackpan.libs.mfirebaselib.MfiebaselibsClass;
 import com.jackpan.libs.mfirebaselib.MfirebaeCallback;
 
@@ -44,16 +46,17 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.HashMap;
 
 public class UserActivity extends Activity implements MfirebaeCallback {
     private ImageView mUsetImg;
-    private TextView mUserName,mUserId,mUserEmail,mUserLv;
+    private TextView mUserName, mUserId, mUserEmail, mUserLv;
     Activity mActivty;
-    private  String mUserPicStr,mUserNameStr,mUserIdStr,mUserMailStr;
+    private String mUserPicStr, mUserNameStr, mUserIdStr, mUserMailStr;
     boolean mUserLvBoolean;
     private static final String TAG = "UserActivity";
     private DisplayMetrics mPhone;
-    private Button mUserLogoutBtn,mResetPassword;
+    private Button mUserLogoutBtn, mResetPassword;
     MfiebaselibsClass mfiebaselibsClass;
     private final static int CAMERA = 66;
     private final static int PHOTO = 99;
@@ -62,6 +65,7 @@ public class UserActivity extends Activity implements MfirebaeCallback {
     private static final int PICKER = 100;
 
     private ProgressDialog progressDialog;
+    private MemberData memberData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +73,7 @@ public class UserActivity extends Activity implements MfirebaeCallback {
         setContentView(R.layout.activity_user);
         getWindow().setFormat(PixelFormat.TRANSPARENT);
         mActivty = this;
-        mfiebaselibsClass = new MfiebaselibsClass(mActivty,UserActivity.this);
+        mfiebaselibsClass = new MfiebaselibsClass(mActivty, UserActivity.this);
 
         getUser();
         initLayout();
@@ -78,17 +82,20 @@ public class UserActivity extends Activity implements MfirebaeCallback {
     }
 
     private void getUser() {
+        Gson gson = new Gson();
+        Bundle bundle = this.getIntent().getExtras();
+        String data = bundle.getString("data");
+        memberData = gson.fromJson(data, MemberData.class);
         mUserPicStr = MySharedPrefernces.getUserPic(mActivty);
         mUserIdStr = MySharedPrefernces.getUserId(mActivty);
         mUserNameStr = MySharedPrefernces.getUserName(mActivty);
         mUserMailStr = MySharedPrefernces.getUserMail(mActivty);
 
 
-
     }
 
 
-    private void initLayout(){
+    private void initLayout() {
 
         mPhone = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(mPhone);
@@ -141,7 +148,7 @@ public class UserActivity extends Activity implements MfirebaeCallback {
                                                     Toast.makeText(UserActivity.this, "請勿輸入空白", Toast.LENGTH_SHORT).show();
                                                     return;
                                                 }
-                                                mfiebaselibsClass.resetPassWord(oldPassword,newPassword);
+                                                mfiebaselibsClass.resetPassWord(oldPassword, newPassword);
                                                 dialogInterface.dismiss();
                                             }
                                         }).show();
@@ -154,6 +161,7 @@ public class UserActivity extends Activity implements MfirebaeCallback {
         });
 
     }
+
     private void setUser() {
         Glide.with(mActivty)
 
@@ -168,10 +176,10 @@ public class UserActivity extends Activity implements MfirebaeCallback {
                 .into(mUsetImg);
         mUserId.setText(mUserIdStr);
         mUserName.setText(mUserNameStr);
-        if(mUserMailStr.equals("")) mUserEmail.setText("無資料");
+        if (mUserMailStr.equals("")) mUserEmail.setText("無資料");
         else mUserEmail.setText(mUserMailStr);
         if (!mUserLvBoolean) mUserLv.setText("普通會員");
-        else  mUserLv.setText("尊榮會員");
+        else mUserLv.setText("尊榮會員");
     }
 
     @Override
@@ -180,7 +188,7 @@ public class UserActivity extends Activity implements MfirebaeCallback {
     }
 
     @Override
-    public void getDeleteState(boolean b, String s ,Object o) {
+    public void getDeleteState(boolean b, String s, Object o) {
 
     }
 
@@ -206,10 +214,10 @@ public class UserActivity extends Activity implements MfirebaeCallback {
 
     @Override
     public void resetPassWordState(boolean b) {
-        if(b){
+        if (b) {
             Toast.makeText(this, "成功修改密碼！！", Toast.LENGTH_SHORT).show();
 
-        }else {
+        } else {
             Toast.makeText(this, "發生錯誤,查無此帳號", Toast.LENGTH_SHORT).show();
         }
 
@@ -242,25 +250,25 @@ public class UserActivity extends Activity implements MfirebaeCallback {
 
     @Override
     public void getUserLogoutState(boolean b) {
-        if(b){
-            Toast.makeText(mActivty,"會員登出成功",Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(mActivty,LoginActivity.class));
+        if (b) {
+            Toast.makeText(mActivty, "會員登出成功", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(mActivty, LoginActivity.class));
             mActivty.finish();
             DBSQL.removeAll(mActivty);
-            MySharedPrefernces.saveUserId(mActivty,"");
-            MySharedPrefernces.saveUserName(mActivty,"");
-            MySharedPrefernces.saveUserPic(mActivty,"");
-            MySharedPrefernces.saveUserKm(mActivty,"");
-            MySharedPrefernces.saveUserStep(mActivty,"");
-            MySharedPrefernces.saveUserDhot(mActivty,"");
-            MySharedPrefernces.saveUserhot(mActivty,"");
-        }else {
+            MySharedPrefernces.saveUserId(mActivty, "");
+            MySharedPrefernces.saveUserName(mActivty, "");
+            MySharedPrefernces.saveUserPic(mActivty, "");
+            MySharedPrefernces.saveUserKm(mActivty, "");
+            MySharedPrefernces.saveUserStep(mActivty, "");
+            MySharedPrefernces.saveUserDhot(mActivty, "");
+            MySharedPrefernces.saveUserhot(mActivty, "");
+        } else {
 
         }
 
     }
 
-    private void updateUserPic(String picUri) {
+    private void updateUserPic(final String picUri) {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
         UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
@@ -273,10 +281,12 @@ public class UserActivity extends Activity implements MfirebaeCallback {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(mActivty,"更新照片成功,將於下次登入後更新!!",Toast.LENGTH_SHORT).show();
+                            MySharedPrefernces.saveUserPic(UserActivity.this, picUri);
+                            setMemberlist();
+                            Toast.makeText(mActivty, "更新照片成功,將於下次登入後更新!!", Toast.LENGTH_SHORT).show();
                             progressDialog.dismiss();
-                        }else{
-                            Toast.makeText(mActivty,"更新照片失敗",Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(mActivty, "更新照片失敗", Toast.LENGTH_SHORT).show();
                             progressDialog.dismiss();
                         }
 
@@ -373,12 +383,13 @@ public class UserActivity extends Activity implements MfirebaeCallback {
         }
 
     }
+
     @TargetApi(Build.VERSION_CODES.KITKAT)
     private void uploadFromPic(Uri datauri) {
         final boolean after44 = Build.VERSION.SDK_INT >= 19;
         String filePath = "";
 
-        if(after44){
+        if (after44) {
             String wholeID = DocumentsContract.getDocumentId(datauri);
 
 // Split at colon, use second item in the array
@@ -403,10 +414,10 @@ public class UserActivity extends Activity implements MfirebaeCallback {
             }
 
             cursor.close();
-        }else {
+        } else {
 
             try {
-                String[] filePathColumn = { MediaStore.Images.Media.DATA };
+                String[] filePathColumn = {MediaStore.Images.Media.DATA};
 
                 Cursor cursor = getContentResolver().query(datauri,
                         filePathColumn, null, null, null);
@@ -414,7 +425,7 @@ public class UserActivity extends Activity implements MfirebaeCallback {
 
                 int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
                 filePath = cursor.getString(columnIndex);
-                Log.d(TAG, "uploadFromPic:"+filePath);
+                Log.d(TAG, "uploadFromPic:" + filePath);
                 cursor.close();
             } catch (Exception e) {
                 // TODO: handle exception
@@ -449,10 +460,10 @@ public class UserActivity extends Activity implements MfirebaeCallback {
 
             @Override
             public void onFailure(@NonNull Exception exception) {
-                Log.d(TAG, "onFailure: " + "onFailure: "+ exception.getMessage()
+                Log.d(TAG, "onFailure: " + "onFailure: " + exception.getMessage()
                 );
                 progressDialog.dismiss();
-                Toast.makeText(mActivty,"上傳失敗",Toast.LENGTH_SHORT).show();
+                Toast.makeText(mActivty, "上傳失敗", Toast.LENGTH_SHORT).show();
 
             }
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -468,9 +479,7 @@ public class UserActivity extends Activity implements MfirebaeCallback {
 //                        mMessageEdt.getText().toString().trim(),
 //                        taskSnapshot.getDownloadUrl().toString());
 //                test(picUri);
-                MySharedPrefernces.saveUserPic(UserActivity.this,taskSnapshot.getDownloadUrl().toString());
                 updateUserPic(taskSnapshot.getDownloadUrl().toString());
-
 
 
             }
@@ -506,4 +515,36 @@ public class UserActivity extends Activity implements MfirebaeCallback {
 ////			}
 
     }
+
+    private void setMemberlist() {
+        if (memberData == null) {
+
+            Toast.makeText(this, "資料庫建立失敗", Toast.LENGTH_LONG).show();
+            return;
+        } else {
+            String url = "https://food-4997e.firebaseio.com/";
+            HashMap<String, String> map = new HashMap<>();
+            String key = MySharedPrefernces.getUserId(this);
+            map.put(MemberData.ID, key);
+            map.put(MemberData.NAME, memberData.name);
+            map.put(MemberData.SEX, memberData.sex);
+            map.put(MemberData.HEIGHT, memberData.height);
+            map.put(MemberData.WEIGHT, memberData.weight);
+            map.put(MemberData.BIRTHDAY, memberData.birthday);
+            map.put(MemberData.BMI, memberData.bmi);
+            map.put(MemberData.BMR, memberData.bmr);
+            map.put(MemberData.WEIGHTRANGE, memberData.Weightrange);
+            map.put(MemberData.RECOMMENDEDGEAT, memberData.Recommendedheat);
+            map.put(MemberData.STANDARDWEIGHT, memberData.StandardWeight);
+            map.put(MemberData.TODAY_DHOT, memberData.today_dhot);
+            map.put(MemberData.TODAY_HOT, memberData.today_hot);
+            map.put(MemberData.TODAY_KM, memberData.toady_km);
+            map.put(MemberData.TODAY_STEPS, memberData.today_steps);
+            map.put(MemberData.MEMBER_PHOTO, MySharedPrefernces.getUserPic(this));
+            mfiebaselibsClass.setFireBaseDB(url + key, key, map);
+        }
+
+
+    }
+
 }

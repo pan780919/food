@@ -100,6 +100,7 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
     FirebaseAuth.AuthStateListener authListener;
     private String userUID;
     private ProgressDialog progressDialog;
+    private  String object ;
     public fragment_setting() {
         // Required empty public constructor
     }
@@ -234,7 +235,15 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
 //                        startActivity(new Intent(main.this, com.diet.MainActivity.class));
 //                        break;
                     case 3:
-                        startActivity(new Intent(getActivity(), UserActivity.class));
+//                        startActivity(new Intent(getActivity(), UserActivity.class));
+                        Intent i = new Intent();
+
+                        Bundle b = new Bundle();
+                        b.putString("data",object);
+                        i.putExtras(b);
+                        i.setClass(getActivity(), UserActivity.class);
+                        startActivity(i);
+
 
                         break;
 //                    case 10:
@@ -344,10 +353,9 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
         }
 
 
-//        if (mMemberData == null) {
-//            addmember();
-//            return;
-//        }
+        if (mMemberData == null) {
+            return;
+        }
         //selector = diet.dt.selector;
 //        mydata = memberlist.get(selector);
 //        if(mMemberData==null){
@@ -824,8 +832,10 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
 
     @Override
     public void getDatabaseData(Object o) {
+
         Gson gson = new Gson();
         String jsonInString = gson.toJson(o);
+        object = gson.toJson(o);
         Log.d(TAG, "getDatabaseData: " + jsonInString);
         mMemberData = gson.fromJson(jsonInString, MemberData.class);
         Log.d(TAG, "getDatabaseData: " + mMemberData.toString());
