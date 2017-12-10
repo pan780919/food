@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
@@ -193,6 +194,14 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
     }
 
     private void handleFacebookAccessToken(AccessToken token) {
+
+
+        accessTokenTracker = new AccessTokenTracker() {
+            @Override
+            protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken newAccessToken) {
+                updateWithToken(newAccessToken);
+            }
+        };
 
         // [START_EXCLUDE silent]
 
@@ -460,5 +469,13 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
             Log.d(TAG,"Error parsing JSON");
         }
         return null;
+    }
+    private void updateWithToken(AccessToken currentAccessToken) {
+
+        if (currentAccessToken != null) {
+            MySharedPrefernces.saveIsBuyed(LoginActivity.this,true);
+        } else {
+           MySharedPrefernces.saveIsBuyed(LoginActivity.this,false);
+        }
     }
 }
