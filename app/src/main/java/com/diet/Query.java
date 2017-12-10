@@ -192,9 +192,6 @@ public class Query extends Activity {
                 listitem.add(map);
             }
 
-            times+= Integer.parseInt(MySharedPrefernces.getUserDhot(Query.this));
-            times2 +=  Integer.parseInt(MySharedPrefernces.getUserKm(getApplicationContext()));
-            steps +=Integer.parseInt(MySharedPrefernces.getUserStep(getApplicationContext())) ;
             HashMap<String, Object> map = new HashMap<String, Object>();
             map.put("ItemTitle", "= 總消耗 " + times + "卡 = ");
             map.put("ItemText",  "= 公里數  " + times2 + "km =\n" + "=總步數  " + steps + "步 =");
@@ -207,6 +204,7 @@ public class Query extends Activity {
                 int dhot2 = dhot+times;
                 MySharedPrefernces.saveUserDhot(getApplicationContext(),dhot2+"");
             }
+
             if(MySharedPrefernces.getUserKm(getApplicationContext()).equals("")){
                 MySharedPrefernces.saveUserKm(getApplicationContext(),times2+"");
 

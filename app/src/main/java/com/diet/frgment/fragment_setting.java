@@ -471,10 +471,15 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        rmsg += "今日總共攝取熱量:" +MemberData.TODAY_HOT + "\n";
-        rmsg += "今日總共消耗熱量:" + MemberData.TODAY_DHOT + "\n";
-        rmsg += "今日總公里數:" + MemberData.TODAY_KM + "\n";
-        rmsg += "今日總步數:" + MemberData.TODAY_STEPS + "\n";
+
+        TODAY_DHOT = MySharedPrefernces.getUserDhot(getActivity());
+        TODAY_HOT = MySharedPrefernces.getUserhot(getActivity());
+        TODAY_KM = MySharedPrefernces.getUserKm(getActivity());
+        TODAY_STEPS = MySharedPrefernces.getUserStep(getActivity());
+        rmsg += "今日總共攝取熱量:" +TODAY_HOT + "\n";
+        rmsg += "今日總共消耗熱量:" + TODAY_DHOT + "\n";
+        rmsg += "今日總公里數:" + TODAY_KM + "\n";
+        rmsg += "今日總步數:" +  TODAY_STEPS + "\n";
         if(mMemberData!=null){
             NAME = mMemberData.name;
             HEIGHT = mMemberData.height;
@@ -487,10 +492,6 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
             RECOMMENDEDGEAT = mMemberData.Recommendedheat;
 
         }
-        TODAY_DHOT = MySharedPrefernces.getUserDhot(getActivity());
-        TODAY_HOT = MySharedPrefernces.getUserDhot(getActivity());
-        TODAY_KM = MySharedPrefernces.getUserKm(getActivity());
-        TODAY_STEPS = MySharedPrefernces.getUserStep(getActivity());
         msg.setText(rmsg);
         Log.d(TAG, "refresh_msg: "+msg.getText().toString());
         if(msg.getText().toString().equals("無資料")){
