@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Tue Dec 12 01:13:23 CST 2017
+=======
+#Mon Dec 11 17:32:21 CST 2017
+>>>>>>> 3dd9cba2f66043f77344ae260d2bd88bfcb886fb
 base.0=/Users/jackpan/food/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.1=classes2.dex
 renamed.0=classes.dex

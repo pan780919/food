@@ -472,17 +472,23 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
             e.printStackTrace();
         }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3dd9cba2f66043f77344ae260d2bd88bfcb886fb
         TODAY_DHOT = MySharedPrefernces.getUserDhot(getActivity());
         TODAY_HOT = MySharedPrefernces.getUserhot(getActivity());
         TODAY_KM = MySharedPrefernces.getUserKm(getActivity());
         TODAY_STEPS = MySharedPrefernces.getUserStep(getActivity());
+<<<<<<< HEAD
         if(!TODAY_DHOT.equals("")){
             double d = Double.parseDouble(TODAY_DHOT);
             rmsg += "今日總共消耗熱量:" +String.format("%.3f", d) + "\n";
         }
 
 
+=======
+>>>>>>> 3dd9cba2f66043f77344ae260d2bd88bfcb886fb
         rmsg += "今日總共攝取熱量:" +TODAY_HOT + "\n";
         rmsg += "今日總共消耗熱量:" +TODAY_DHOT + "\n";
         rmsg += "今日總公里數:" + TODAY_KM + "\n";
@@ -620,7 +626,11 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
                     selector = memberlist.size() - 1;
 
                     account = n1;
+<<<<<<< HEAD
                     setMemberlist();
+=======
+                        setMemberlist();
+>>>>>>> 3dd9cba2f66043f77344ae260d2bd88bfcb886fb
                     refresh_msg();
                     MySharedPrefernces.saveIsBuyed(getActivity(), true);
                 }
@@ -851,9 +861,12 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
             MySharedPrefernces.saveUserKm(getActivity(),mMemberData.today_km);
             MySharedPrefernces.saveUserhot(getActivity(),mMemberData.today_hot);
             MySharedPrefernces.saveUserDhot(getActivity(),mMemberData.today_dhot);
+<<<<<<< HEAD
             MySharedPrefernces.saveUserName(getActivity(),mMemberData.name);
             MySharedPrefernces.saveUserTall(getActivity(),Integer.parseInt(mMemberData.height));
             MySharedPrefernces.saveUserWeight(getActivity(),Integer.parseInt(mMemberData.weight));
+=======
+>>>>>>> 3dd9cba2f66043f77344ae260d2bd88bfcb886fb
             refresh_msg();
             progressDialog.dismiss();
 
