@@ -359,11 +359,11 @@ public class WalKStepActivity extends Activity {
                 double dhot = time * weight;
                 Log.d(TAG, "onClick: " + dhot);
                 if(MySharedPrefernces.getUserDhot(getApplicationContext()).equals("")){
-                    MySharedPrefernces.saveUserDhot(getApplicationContext(),nf1.format(now_km / 1000)+"");
+                    MySharedPrefernces.saveUserDhot(getApplicationContext(),nf2.format(now_shows)+"");
 
                 }else {
                     double dhot11 = Double.parseDouble(MySharedPrefernces.getUserDhot(getApplicationContext()));
-                    double dhot2 = dhot11+Double.parseDouble(nf1.format(now_km / 1000));
+                    double dhot2 = dhot11+Double.parseDouble(nf2.format(now_shows));
                     MySharedPrefernces.saveUserDhot(getApplicationContext(),dhot2+"");
                 }
 

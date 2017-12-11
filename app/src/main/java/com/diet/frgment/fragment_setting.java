@@ -341,16 +341,16 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
 //            addmember();
 //            return;
 //        }
-        boolean b = MySharedPrefernces.getIsBuyed(getActivity());
-        Log.d(TAG, "refresh_msg: "+b);
-        if(!b){
-            Log.d(TAG, "refresh_msg: "+"false");
-            addmember();
-            return;
-        }else {
-            Log.d(TAG, "refresh_msg: "+"true");
+//        boolean b = MySharedPrefernces.getIsBuyed(getActivity());
+//        Log.d(TAG, "refresh_msg: "+b);
+//        if(!b){
+//            Log.d(TAG, "refresh_msg: "+"false");
+//            addmember();
+//            return;
+//        }else {
+//            Log.d(TAG, "refresh_msg: "+"true");
 
-        }
+//        }
 
 
         if (mMemberData == null) {

@@ -1,4 +1,4 @@
-#Mon Dec 11 10:59:38 CST 2017
+#Mon Dec 11 14:02:51 CST 2017
 base.0=/Users/jackpan/food/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.1=classes2.dex
 renamed.0=classes.dex
