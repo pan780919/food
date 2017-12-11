@@ -64,7 +64,7 @@ public class UserMessgeActivity extends Activity implements View.OnClickListener
     }
     private void toMsg(final String msg) {
         String value = tomsg;
-        String Usrmsg ="你"+"對"+name+"說："+"\t"+msg+"\t"+s;
+        String Usrmsg="對"+name+"說："+"\t"+msg+"\t"+s;
         String tomsg = Usrmsg+"\n"+value;
         String url = "https://food-4997e.firebaseio.com/foodList";
         Firebase mFirebaseRef = new Firebase(url);

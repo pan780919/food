@@ -3,9 +3,6 @@ package com.diet;
 //import java.util.ArrayList;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.text.SimpleDateFormat;
 
 
@@ -13,48 +10,32 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 //import android.graphics.drawable.Drawable;
-import android.location.Address;
-import android.location.Criteria;
-import android.location.Geocoder;
 import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
-import android.provider.MediaStore;
 //import android.util.Log;
-import android.telephony.TelephonyManager;
 import android.text.InputType;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -63,17 +44,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RatingBar;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 //import android.widget.Toast;
 
-import com.diet.frgment.fragment_setting;
 import com.sqlite.SQLiteHelper;
 import com.sqlite.account;
-import com.sqlite.hotdiary;
 import com.sqlite.recdata;
 
 public class WalKStepActivity extends Activity {
@@ -201,11 +178,8 @@ public class WalKStepActivity extends Activity {
             mper.setDataSource(WalKStepActivity.this, uri);  //指定影音檔來源
             mper.setLooping(false); //設定是否重複播放
             mper.prepareAsync();  //要求 MediaPlayer 準備播放指定的影音檔
-
-            Log.d(TAG, "handleMessage: " + mper.isPlaying());
         } catch (Exception e) {
             e.printStackTrace();
-            Log.d(TAG, "handleMessage: " + e.getMessage());
         }
         start = 0;
 
@@ -223,7 +197,11 @@ public class WalKStepActivity extends Activity {
                 dbHelper.onUpgrade(db, --DB_VERSION, DB_VERSION);
         }
 
-
+        name = MySharedPrefernces.getUserName(WalKStepActivity.this);
+        age = 20;
+        tsex = MySharedPrefernces.getUserSex(WalKStepActivity.this);
+        weight =MySharedPrefernces.getUserWeight(WalKStepActivity.this);
+        tall = MySharedPrefernces.getUserTall(WalKStepActivity.this);
         sview = (ScrollView) findViewById(R.id.sview);
         ssteps = (TextView) findViewById(R.id.textView1);
         ttimer = (TextView) findViewById(R.id.textView7);
@@ -257,10 +235,7 @@ public class WalKStepActivity extends Activity {
                         String k = km.getText().toString();
                         String s = ttimer.getText().toString();
                         String kr = shows.getText().toString();
-                        //String steps = ssteps.getText().toString();
-
-                        String now_status = "跑了 " + k + "/ 花了 " + s + "/ 消耗" + kr + "/ 目前 " + steps;
-
+                        String stepss = ssteps.getText().toString();
 //                        SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section),
 //                                kr, Integer.toString(steps),k, now_status, "暫停");
 //                        if(MySharedPrefernces.getUserKm(getApplicationContext()).equals("")){
@@ -281,10 +256,16 @@ public class WalKStepActivity extends Activity {
 //                        }
 //                        double dhot =time*weight;
 //
-//                        DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
+                        String now_status = "跑了 " + k + "- 花了 " + s + "- 消耗" + kr + "- 目前 " + stepss;
+
+                        SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "完成");
+
+                        double dhot = time * weight;
+                        Log.d(TAG, "onClick: " + dhot);
+
+//                        DBSQL.insertDiary(WalKStepActivity.this, String.valueOf(dhot), "-1", "計步器", kr);                        pause = 1;
                         pause = 1;
-                        start = 0;
-                    }
+                        start = 0;                 }
                 } else {
                     tpause.setText("暫停");
                     pause = 0;
@@ -299,7 +280,7 @@ public class WalKStepActivity extends Activity {
         listbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent app = new Intent(WalKStepActivity.my, Query.class);
+                Intent app = new Intent(WalKStepActivity.this, Query.class);
                 Bundle rdata = new Bundle();
                 rdata.putString("name", name);
                 app.putExtras(rdata);
@@ -343,17 +324,21 @@ public class WalKStepActivity extends Activity {
 //                }
 //                double dhot =time*weight;
 //
-//                DBSQL.insertDiary(WalKStepActivity.this,String.valueOf(dhot) , "-1", "計步器", kr);
+//                SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "完成");
 
+                double dhot = time * weight;
+                Log.d(TAG, "onClick: " + dhot);
+
+//                DBSQL.insertDiary(WalKStepActivity.this, String.valueOf(dhot), "-1", "計步器", kr);
                 counter = 0;
                 running.setEnabled(true);
                 ttimer.setText("0:0");
                 tpause.setEnabled(false);
                 treset.setEnabled(false);
-                km.setText("0 km");
+                km.setText("0");
                 start = 0;
                 steps = 0;
-                ssteps.setText("0" + "步");
+                ssteps.setText("0");
 
             }
 
@@ -373,22 +358,54 @@ public class WalKStepActivity extends Activity {
 
                 String now_status = "跑了 " + k + "- 花了 " + s + "- 消耗" + kr + "- 目前 " + stepss;
 
-                SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "完成");
-
                 double dhot = time * weight;
                 Log.d(TAG, "onClick: " + dhot);
 
-                DBSQL.insertDiary(WalKStepActivity.this, String.valueOf(dhot), "-1", "計步器", kr);
+                SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "完成");
 
+                DBSQL.insertDiary(WalKStepActivity.this, "-1", "-1", "計步器", kr);
+
+
+
+                if(MySharedPrefernces.getUserDhot(getApplicationContext()).equals("")){
+                    MySharedPrefernces.saveUserDhot(getApplicationContext(),kr);
+
+                }else {
+                    double dhot11 = Double.parseDouble(MySharedPrefernces.getUserDhot(getApplicationContext()));
+                    double dhot2 = dhot11+Double.parseDouble(kr);
+                    MySharedPrefernces.saveUserDhot(getApplicationContext(),dhot2+"");
+                }
+
+                if(MySharedPrefernces.getUserKm(getApplicationContext()).equals("")){
+                    MySharedPrefernces.saveUserKm(getApplicationContext(),k);
+
+                }else {
+                    Double km  = Double.parseDouble(MySharedPrefernces.getUserKm(getApplicationContext()));
+                    Double kmAll =km+Double.parseDouble(k);
+                    MySharedPrefernces.saveUserKm(getApplicationContext(),kmAll+"");
+
+                }
+                if(MySharedPrefernces.getUserStep(getApplicationContext()).equals("")){
+                    MySharedPrefernces.saveUserStep(getApplicationContext(),stepss);
+
+                }else {
+                    int step =Integer.parseInt(MySharedPrefernces.getUserStep(getApplicationContext())) ;
+                    int stepAll = step+Integer.parseInt(stepss);
+                    MySharedPrefernces.saveUserStep(getApplicationContext(),stepAll+"");
+
+                }
                 counter = 0;
                 running.setEnabled(true);
                 ttimer.setText("0:0");
                 tpause.setEnabled(false);
-                km.setText("0 km");
+                km.setText("0");
                 start = 0;
                 steps = 0;
-                ssteps.setText("0" + "步");
-                getStoreList();
+                ssteps.setText("0");
+                shows.setText("0");
+
+
+//                getStoreList();
             }
 
         });
@@ -463,11 +480,11 @@ public class WalKStepActivity extends Activity {
 
         section = 1;
         mchildid = 0;
-        name = MySharedPrefernces.getUserName(WalKStepActivity.this);
-        age = 20;
-        tsex = MySharedPrefernces.getUserSex(WalKStepActivity.this);
-        weight = MySharedPrefernces.getUserWeight(WalKStepActivity.this);
-        tall = MySharedPrefernces.getUserTall(WalKStepActivity.this);
+//        name = MySharedPrefernces.getUserName(WalKStepActivity.this);
+//        age = 20;
+//        tsex = MySharedPrefernces.getUserSex(WalKStepActivity.this);
+//        weight = MySharedPrefernces.getUserWeight(WalKStepActivity.this);
+//        tall = MySharedPrefernces.getUserTall(WalKStepActivity.this);
 
         mmode.setText("未設定目標");
 
@@ -513,7 +530,6 @@ public class WalKStepActivity extends Activity {
         }
     }
 
-
     private final SensorEventListener SensorL = new SensorEventListener() {
         public void onSensorChanged(SensorEvent event) {
             if (pause == 0 && start == 1) {
@@ -543,6 +559,7 @@ public class WalKStepActivity extends Activity {
                     } else {
                         now_shows = (now_km / 1000) * weight * 0.98;
                     }
+                    Log.d(TAG, "onSensorChanged: "+weight);
 
 //                    Message msg = new Message();
 //                    msg.what = MSG_UPDATE_KM;
@@ -554,24 +571,24 @@ public class WalKStepActivity extends Activity {
 
                     java.text.DecimalFormat nf2 = new java.text.DecimalFormat("###,##0.0000");
                     shows.setText(nf2.format(now_shows));
+                    Log.i("TAG", "data: " + nf2.format(now_shows));
 
-
-                    ssteps.setText(Integer.toString(steps) + "步");
+                    ssteps.setText(Integer.toString(steps));
+                    Log.d(TAG, "onSensorChanged: "+mygoal);
                     if (mygoal != 0) {
                         if (steps >= mygoal) {
                             mper.start();
-                            new AlertDialog.Builder(WalKStepActivity.this)
-                                    .setTitle("達成目標")
-                                    .setMessage("恭喜您！達成目標成就")
-                                    .setNegativeButton("確定", new DialogInterface.OnClickListener() {
-                                        @Override
-                                        public void onClick(DialogInterface dialogInterface, int i) {
-                                            mygoal = 0;
-                                            dialogInterface.dismiss();
-                                            mper.stop();
-                                            mper.release();
-                                        }
-                                    });
+                            if(steps>mygoal){
+                                if(mper.isPlaying()) {
+                                    Log.d(TAG, "onSensorChanged: " + "isplay");
+                                    mper.pause();
+                                    mygoal = 0;
+                                }else {
+                                    Log.d(TAG, "onSensorChanged: "+"no");
+                                    mper.start();
+                                }
+
+                            }
 
 
                         }
@@ -593,41 +610,41 @@ public class WalKStepActivity extends Activity {
         if (timer != null)
             timer.cancel();
     }
-
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-
-        menu.add(0, MENU_QUERY, 0, "每日查詢");
-        menu.add(0, MENU_LOGIN, 0, "切換使用者");
-        menu.add(0, MENU_USERMGR, 0, "使用者管理");
-
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case MENU_QUERY:
-                Intent app = new Intent(WalKStepActivity.my, Query.class);
-                Bundle rdata = new Bundle();
-                rdata.putString("name", name);
-                app.putExtras(rdata);
-                startActivity(app);
-                return true;
-            case MENU_LOGIN:
-                login();
-                return true;
-            case MENU_USERMGR:
-                app = new Intent(WalKStepActivity.my, UserMgr.class);
-                startActivity(app);
-                return true;
-            case MENU_EXIT:
-
-                return true;
-        }
-
-        return true;
-    }
+//
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        super.onCreateOptionsMenu(menu);
+//
+//        menu.add(0, MENU_QUERY, 0, "每日查詢");
+//        menu.add(0, MENU_LOGIN, 0, "切換使用者");
+//        menu.add(0, MENU_USERMGR, 0, "使用者管理");
+//
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {
+//            case MENU_QUERY:
+//                Intent app = new Intent(WalKStepActivity.my, Query.class);
+//                Bundle rdata = new Bundle();
+//                rdata.putString("name", name);
+//                app.putExtras(rdata);
+//                startActivity(app);
+//                return true;
+//            case MENU_LOGIN:
+//                login();
+//                return true;
+//            case MENU_USERMGR:
+//                app = new Intent(WalKStepActivity.my, UserMgr.class);
+//                startActivity(app);
+//                return true;
+//            case MENU_EXIT:
+//
+//                return true;
+//        }
+//
+//        return true;
+//    }
 
 
     protected boolean isRouteDisplayed() {
@@ -945,10 +962,6 @@ public class WalKStepActivity extends Activity {
                 dbHelper.onUpgrade(db, --DB_VERSION, DB_VERSION);
             }
 
-
-            // scalendar.add(Calendar.DATE, -1);
-            //date=scalendar.getTime();
-            //term = sdf.format(date);
 
         }
 

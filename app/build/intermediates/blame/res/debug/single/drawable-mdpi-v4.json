@@ -392,12 +392,12 @@
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/10.0.1/res/drawable-mdpi-v4/places_ic_search.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_forward_30_grey600_36.png",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/res/drawable-mdpi-v4/quantum_ic_forward_30_grey600_36.png"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/27.0.1/res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",

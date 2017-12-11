@@ -2,6 +2,7 @@ package com.diet.frgment;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -26,11 +27,21 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.diet.DBSQL;
+import com.diet.MemberData;
 import com.diet.MySharedPrefernces;
 import com.diet.QAActivity;
 import com.diet.R;
+import com.diet.ResultData;
 import com.diet.UserActivity;
 import com.diet.main;
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.gson.Gson;
+import com.jackpan.libs.mfirebaselib.MfiebaselibsClass;
+import com.jackpan.libs.mfirebaselib.MfirebaeCallback;
 import com.sqlite.SQLiteHelper;
 import com.sqlite.hotdiary;
 import com.sqlite.member;
@@ -45,7 +56,7 @@ import java.util.HashMap;
  * Created by JackPan on 2017/12/6.
  */
 
-public class fragment_setting extends Fragment {
+public class fragment_setting extends Fragment implements MfirebaeCallback {
     private View v;
     private ListView listview;
     private ArrayList<HashMap<String, Object>> menu;
@@ -64,9 +75,32 @@ public class fragment_setting extends Fragment {
     String n1, n2, n3, n4, n5, n6;
     private int year, month, day;
     public static main mymain;
-
+    public String NAME;
+    public String SEX;
+    public String HEIGHT;
+    public String WEIGHT;
+    public String BIRTHDAY;
+    public String BMR;
+    public String BMI;
+    public String STANDARDWEIGHT;
+    public String WEIGHTRANGE;
+    public String RECOMMENDEDGEAT;
+    public String TODAY_HOT;
+    public String TODAY_DHOT;
+    public String TODAY_KM;
+    public String TODAY_STEPS;
+    public String MEMBER_PHOTO;
     public static String account;
-
+    private MfiebaselibsClass mfiebaselibsClass;
+    private  boolean b;
+    MemberData mMemberData =null;
+    private  main mMain;
+    String url = "https://food-4997e.firebaseio.com/";
+    FirebaseAuth auth;
+    FirebaseAuth.AuthStateListener authListener;
+    private String userUID;
+    private ProgressDialog progressDialog;
+    private  String object ;
     public fragment_setting() {
         // Required empty public constructor
     }
@@ -76,13 +110,19 @@ public class fragment_setting extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this vfragment
+
+
+
+
         v = inflater.inflate(R.layout.fragment_sport2, container, false);
         listview = (ListView) v.findViewById(R.id.listview);
+        Log.d(TAG, "onCreateView: " + MySharedPrefernces.getUserId(getActivity()));
 
         menu = new ArrayList<HashMap<String, Object>>();
         msg = (TextView) v.findViewById(R.id.rrmsg);
         memberlist = new ArrayList<member>();
         HashMap<String, Object> map = new HashMap<String, Object>();
+
 //        map = new HashMap<String, Object>();
 //        map.put("ItemTitle", "虛擬教練" );
 //        map.put("ItemText", "sport man");
@@ -127,8 +167,8 @@ public class fragment_setting extends Fragment {
 //        map.put("ItemText","share");
 //        menu.add(map);
         map = new HashMap<String, Object>();
-        map.put("ItemTitle", "會員中心" );
-        map.put("ItemText","membercenter");
+        map.put("ItemTitle", "會員中心");
+        map.put("ItemText", "membercenter");
         menu.add(map);
 //        map = new HashMap<String, Object>();
 //        map.put("ItemTitle", "結束程式" );
@@ -168,7 +208,7 @@ public class fragment_setting extends Fragment {
 //                        break;
                     case 0:
 //
-                        if (MySharedPrefernces.getIsBuyed(getActivity())) {
+                        if (mMemberData==null) {
                             addmember();
                         } else {
                             fixmember();
@@ -195,7 +235,15 @@ public class fragment_setting extends Fragment {
 //                        startActivity(new Intent(main.this, com.diet.MainActivity.class));
 //                        break;
                     case 3:
-                        startActivity(new Intent(getActivity(), UserActivity.class));
+//                        startActivity(new Intent(getActivity(), UserActivity.class));
+                        Intent i = new Intent();
+
+                        Bundle b = new Bundle();
+                        b.putString("data",object);
+                        i.putExtras(b);
+                        i.setClass(getActivity(), UserActivity.class);
+                        startActivity(i);
+
 
                         break;
 //                    case 10:
@@ -223,7 +271,6 @@ public class fragment_setting extends Fragment {
 
 
         int nodata = 0;
-
 
 
         //first login
@@ -264,33 +311,66 @@ public class fragment_setting extends Fragment {
         return v;
     }
 
+
     @Override
     public void onResume() {
         super.onResume();
-        Log.d(TAG, "onResume: "+"in");
+        Log.d(TAG, "onResume: " + "in");
+        Log.d(TAG, "onResume: "+mMemberData);
         refresh_msg();
+        progressDialog.dismiss();
+
+    }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        progressDialog = ProgressDialog.show(getActivity(),"讀取中","請稍候");
+
+        mfiebaselibsClass = new MfiebaselibsClass(getActivity(), fragment_setting.this);
+        mfiebaselibsClass.getFirebaseDatabase(url +MySharedPrefernces.getUserId(getActivity()), "id");
+
     }
 
     private static final String TAG = "fragment_setting";
+
     public void refresh_msg() {
         String rmsg = "";
-        if(memberlist.size()==0){
-            addmember();
+        double bmr = 0, bmi = 0, standrdweight = 0;
+//
+//        if (memberlist.size() == 0) {
+//            addmember();
+//            return;
+//        }
+//        boolean b = MySharedPrefernces.getIsBuyed(getActivity());
+//        Log.d(TAG, "refresh_msg: "+b);
+//        if(!b){
+//            Log.d(TAG, "refresh_msg: "+"false");
+//            addmember();
+//            return;
+//        }else {
+//            Log.d(TAG, "refresh_msg: "+"true");
+
+//        }
+
+
+        if (mMemberData == null) {
             return;
         }
         //selector = diet.dt.selector;
-        mydata = memberlist.get(selector);
-
-        double bmr = 0, bmi = 0, standrdweight = 0;
-        int weight = Integer.valueOf(mydata.weight);
-        int height = Integer.valueOf(mydata.height);
+//        mydata = memberlist.get(selector);
+//        if(mMemberData==null){
+//            addmember();
+//            return;
+//        }
+        int weight = Integer.valueOf(mMemberData.weight);
+        int height = Integer.valueOf(mMemberData.height);
         int age = 20;
 
-        double waist = Double.valueOf(mydata.waist);
+        double waist = Double.valueOf(28);
         String rwaist = "";
 
         //cal bmr
-        if (mydata.sex.equals("0")) {
+        if (mMemberData.sex.equals("0")) {
             bmr = (13.7 * weight) + (5.0 * height) - (6.8 * age) + 66;
             //標準體重好像我公式有給錯 正確公式＝身高(m)×身高(m)×22
             rwaist = (waist <= 94) ? "正常" : "異常";
@@ -307,6 +387,7 @@ public class fragment_setting extends Fragment {
 
         //計算BMI
         bmi = (double) weight / (h2 * h2);
+
 
         double standrdweightratio = weight / standrdweight;
 
@@ -334,7 +415,17 @@ public class fragment_setting extends Fragment {
         rmsg += "標準體重:" + ((Math.round(standrdweight) / 10) * 10) + "\n";
         rmsg += "理想體重範圍:" + Math.round(standrdweight * .9 * 10) / 10 + " ~ " + Math.round(standrdweight * 1.1 * 10) / 10 + "\n";
         rmsg += "建議熱量:" + mDecimalFormat.format(sResult) + "\n";
+        NAME = mMemberData.name;
+        HEIGHT = mMemberData.height;
+        BIRTHDAY = mMemberData.birthday;
 
+
+        WEIGHT = String.valueOf(weight);
+        BMR = mDecimalFormat.format(bmr);
+        BMI = mDecimalFormat.format(bmi) + rbmi;
+        WEIGHTRANGE = String.valueOf(((Math.round(standrdweight) / 10) * 10));
+        STANDARDWEIGHT = Math.round(standrdweight * .9 * 10) / 10 + " ~ " + Math.round(standrdweight * 1.1 * 10) / 10;
+        RECOMMENDEDGEAT = mDecimalFormat.format(sResult);
         final Calendar c = Calendar.getInstance();
         myYear = c.get(Calendar.YEAR);
         myMonth = c.get(Calendar.MONTH);
@@ -367,7 +458,7 @@ public class fragment_setting extends Fragment {
                 sitem.dhot = cursor.getString(3);
                 sitem.shot = cursor.getString(4);
                 sitem.rdate = cursor.getString(5);
-                Log.d(TAG, "refresh_msg: "+sitem.dhot);
+                Log.d(TAG, "refresh_msg: " + sitem.dhot);
                 if (!sitem.dhot.equals("-1")) {
                     getdata += Double.valueOf(sitem.dhot);
                 }
@@ -380,16 +471,43 @@ public class fragment_setting extends Fragment {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        Log.d(TAG, "refresh_msg: "+ MySharedPrefernces.getUserDhot(getActivity()));
-        rmsg += "今日總共攝取熱量:" +  MySharedPrefernces.getUserhot(getActivity()) + "\n";
-        rmsg += "今日總共消耗熱量:" + MySharedPrefernces.getUserDhot(getActivity()) + "\n";
-        rmsg += "今日總公里數:" + MySharedPrefernces.getUserKm(getActivity()) + "\n";
-        rmsg += "今日總步數:" + MySharedPrefernces.getUserStep(getActivity()) + "\n";
 
+
+        TODAY_DHOT = MySharedPrefernces.getUserDhot(getActivity());
+        TODAY_HOT = MySharedPrefernces.getUserhot(getActivity());
+        TODAY_KM = MySharedPrefernces.getUserKm(getActivity());
+        TODAY_STEPS = MySharedPrefernces.getUserStep(getActivity());
+        if(!TODAY_DHOT.equals("")){
+            double d = Double.parseDouble(TODAY_DHOT);
+            rmsg += "今日總共消耗熱量:" +String.format("%.3f", d) + "\n";
+        }
+
+
+        rmsg += "今日總共攝取熱量:" +TODAY_HOT + "\n";
+        rmsg += "今日總共消耗熱量:" +TODAY_DHOT + "\n";
+        rmsg += "今日總公里數:" + TODAY_KM + "\n";
+        rmsg += "今日總步數:" + TODAY_STEPS + "\n";
+        if(mMemberData!=null){
+            NAME = mMemberData.name;
+            HEIGHT = mMemberData.height;
+            BIRTHDAY = mMemberData.birthday;
+            WEIGHT = mMemberData.weight;
+            BMR = mMemberData.bmr;
+            BMI = mMemberData.bmi;
+            WEIGHTRANGE = mMemberData.Weightrange;
+            STANDARDWEIGHT =mMemberData.StandardWeight;
+            RECOMMENDEDGEAT = mMemberData.Recommendedheat;
+
+        }
+        Log.d(TAG, "refresh_msg: "+TODAY_KM);
         msg.setText(rmsg);
+        Log.d(TAG, "refresh_msg: "+msg.getText().toString());
+        setMemberlist();
+
     }
 
     private void addmember() {
+
         AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
 
         alert.setTitle("個人資料設定");
@@ -463,9 +581,16 @@ public class fragment_setting extends Fragment {
                     return;
                 } else {
                     MySharedPrefernces.saveUserName(getActivity(), n1);
-                    MySharedPrefernces.saveUserSex(getActivity(),sex.getSelectedItemPosition());
-                    MySharedPrefernces.saveUserTall(getActivity(),Integer.parseInt(n4));
-                    MySharedPrefernces.saveUserWeight(getActivity(),Integer.parseInt(n3));
+                    MySharedPrefernces.saveUserSex(getActivity(), sex.getSelectedItemPosition());
+                    MySharedPrefernces.saveUserTall(getActivity(), Integer.parseInt(n4));
+                    MySharedPrefernces.saveUserWeight(getActivity(), Integer.parseInt(n3));
+                    NAME = n1;
+                    SEX = String.valueOf(sex.getSelectedItemPosition());
+                    HEIGHT = n4;
+                    WEIGHT = n3;
+                    BIRTHDAY = n6;
+
+
                     DBSQL.insert(getActivity(), n1, n2, n4, n3, n6, n5);
                     memberlist.clear();
                     try {
@@ -495,6 +620,7 @@ public class fragment_setting extends Fragment {
                     selector = memberlist.size() - 1;
 
                     account = n1;
+                    setMemberlist();
                     refresh_msg();
                     MySharedPrefernces.saveIsBuyed(getActivity(), true);
                 }
@@ -551,6 +677,7 @@ public class fragment_setting extends Fragment {
     }
 
     private void fixmember() {
+        Log.d(TAG, "fixmember: "+"in");
         AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
 
         alert.setTitle("修改");
@@ -610,7 +737,7 @@ public class fragment_setting extends Fragment {
         ll.addView(age);
         // Set an EditText view to get user input
 
-        if (memberlist.size() == 0) {
+        if (mMemberData == null) {
             we.setText("有值沒填");
             he.setText("有值沒填");
             age.setText("有值沒填");
@@ -619,11 +746,11 @@ public class fragment_setting extends Fragment {
 
 
         } else {
-            name.setText(memberlist.get(selector).name);
-            we.setText(memberlist.get(selector).weight);
-            he.setText(memberlist.get(selector).height);
-            age.setText(memberlist.get(selector).age+"");
-            if (memberlist.get(selector).sex.equals("0"))
+            name.setText(mMemberData.name);
+            we.setText(mMemberData.weight);
+            he.setText(mMemberData.height);
+            age.setText(mMemberData.birthday + "");
+            if (mMemberData.sex.equals("0"))
                 sex.setSelection(0);
             else
                 sex.setSelection(1);
@@ -632,7 +759,7 @@ public class fragment_setting extends Fragment {
 
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
-                String id ="122345";
+                String id = "122345";
                 n1 = name.getText().toString();
                 n2 = Integer.toString(sex.getSelectedItemPosition());
                 n3 = we.getText().toString();
@@ -647,9 +774,20 @@ public class fragment_setting extends Fragment {
                     return;
                 } else {
                     MySharedPrefernces.saveUserName(getActivity(), n1);
-                    MySharedPrefernces.saveUserSex(getActivity(),sex.getSelectedItemPosition());
-                    MySharedPrefernces.saveUserTall(getActivity(),Integer.parseInt(n4));
-                    MySharedPrefernces.saveUserWeight(getActivity(),Integer.parseInt(n3));
+                    MySharedPrefernces.saveUserSex(getActivity(), sex.getSelectedItemPosition());
+                    MySharedPrefernces.saveUserTall(getActivity(), Integer.parseInt(n4));
+                    MySharedPrefernces.saveUserWeight(getActivity(), Integer.parseInt(n3));
+                    NAME = name.getText().toString();
+                    SEX = Integer.toString(sex.getSelectedItemPosition());
+                    HEIGHT = he.getText().toString();
+                    WEIGHT = we.getText().toString();
+                    BIRTHDAY = age.getText().toString();
+                    mMemberData.name = NAME;
+                    mMemberData.sex = SEX;
+                    mMemberData.height = HEIGHT;
+                    mMemberData.weight = WEIGHT;
+                    mMemberData.birthday = BIRTHDAY;
+//                    setMember(NAME,SEX,HEIGHT,WEIGHT,BIRTHDAY);
                     DBSQL.update(getActivity(), n1, n2, n3, n4, n5, n6, id);
                     memberlist.clear();
                     try {
@@ -692,6 +830,142 @@ public class fragment_setting extends Fragment {
 
         alert.show();
 
+
+    }
+
+    @Override
+    public void getDatabaseData(Object o) {
+
+        Gson gson = new Gson();
+        String jsonInString = gson.toJson(o);
+        object = gson.toJson(o);
+        Log.d(TAG, "getDatabaseData: " + jsonInString);
+        mMemberData = gson.fromJson(jsonInString, MemberData.class);
+        Log.d(TAG, "getDatabaseData: " + mMemberData.toString());
+        if (mMemberData == null) {
+            addmember();
+        } else {
+            MySharedPrefernces.saveUserName(getActivity(),mMemberData.name);
+            MySharedPrefernces.saveUserPic(getActivity(),mMemberData.member_photo);
+            MySharedPrefernces.saveUserStep(getActivity(),mMemberData.today_steps);
+            MySharedPrefernces.saveUserKm(getActivity(),mMemberData.today_km);
+            MySharedPrefernces.saveUserhot(getActivity(),mMemberData.today_hot);
+            MySharedPrefernces.saveUserDhot(getActivity(),mMemberData.today_dhot);
+            MySharedPrefernces.saveUserName(getActivity(),mMemberData.name);
+            MySharedPrefernces.saveUserTall(getActivity(),Integer.parseInt(mMemberData.height));
+            MySharedPrefernces.saveUserWeight(getActivity(),Integer.parseInt(mMemberData.weight));
+            refresh_msg();
+            progressDialog.dismiss();
+
+        }
+
+
+
+    }
+
+    @Override
+    public void getDeleteState(boolean b, String s, Object o) {
+
+    }
+
+    @Override
+    public void createUserState(boolean b) {
+
+    }
+
+    @Override
+    public void useLognState(boolean b) {
+
+    }
+
+    @Override
+    public void getuseLoginId(String s) {
+        Log.d(TAG, "getuseLoginId: " + s);
+
+    }
+
+    @Override
+    public void getuserLoginEmail(String s) {
+
+    }
+
+    @Override
+    public void resetPassWordState(boolean b) {
+
+    }
+
+    @Override
+    public void getFireBaseDBState(boolean b, String s) {
+        Log.d(TAG, "getFireBaseDBState: " + b);
+        Log.d(TAG, "getFireBaseDBState: " + s);
+        if(mMemberData==null){
+            Log.d(TAG, "getFireBaseDBState: "+"null");
+        }else {
+            mfiebaselibsClass = new MfiebaselibsClass(getActivity(), fragment_setting.this);
+
+
+        }
+
+    }
+
+    @Override
+    public void getFirebaseStorageState(boolean b) {
+
+    }
+
+    @Override
+    public void getFirebaseStorageType(String s, String s1) {
+
+    }
+
+    @Override
+    public void getsSndPasswordResetEmailState(boolean b) {
+
+    }
+
+    @Override
+    public void getUpdateUserName(boolean b) {
+
+    }
+
+    @Override
+    public void getUserLogoutState(boolean b) {
+
+    }
+
+    private  void setMember(String name,String sex , String h,String w,String b){
+        HashMap<String, String> map = new HashMap<>();
+        String key = MySharedPrefernces.getUserId(getActivity());
+        map.put(MemberData.ID, key);
+        map.put(MemberData.NAME, name);
+        map.put(MemberData.SEX, sex);
+        map.put(MemberData.HEIGHT, h);
+        map.put(MemberData.WEIGHT, w);
+        map.put(MemberData.BIRTHDAY, b);
+        mfiebaselibsClass.setFireBaseDB(url + key, key, map);
+
+    }
+    private void setMemberlist() {
+
+        HashMap<String, String> map = new HashMap<>();
+        String key = MySharedPrefernces.getUserId(getActivity());
+        map.put(MemberData.ID, key);
+        map.put(MemberData.NAME, NAME);
+        map.put(MemberData.SEX, SEX);
+        map.put(MemberData.HEIGHT, HEIGHT);
+        map.put(MemberData.WEIGHT, WEIGHT);
+        map.put(MemberData.BIRTHDAY, BIRTHDAY);
+        map.put(MemberData.BMI, BMI);
+        map.put(MemberData.BMR, BMR);
+        map.put(MemberData.WEIGHTRANGE, WEIGHTRANGE);
+        map.put(MemberData.RECOMMENDEDGEAT, RECOMMENDEDGEAT);
+        map.put(MemberData.STANDARDWEIGHT, STANDARDWEIGHT);
+        map.put(MemberData.TODAY_DHOT, MySharedPrefernces.getUserDhot(getActivity()));
+        map.put(MemberData.TODAY_HOT, MySharedPrefernces.getUserhot(getActivity()));
+        map.put(MemberData.TODAY_KM, MySharedPrefernces.getUserKm(getActivity()));
+        map.put(MemberData.TODAY_STEPS, MySharedPrefernces.getUserStep(getActivity()));
+        map.put(MemberData.MEMBER_PHOTO, MySharedPrefernces.getUserPic(getActivity()));
+        mfiebaselibsClass.setFireBaseDB(url + key, key, map);
 
     }
 

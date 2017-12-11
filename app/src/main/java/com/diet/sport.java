@@ -162,7 +162,6 @@ public class sport extends Activity implements OnClickListener {
     }
 
     private static final String TAG = "sport";
-
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.cal:
