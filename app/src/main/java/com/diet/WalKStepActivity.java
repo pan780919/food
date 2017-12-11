@@ -354,39 +354,42 @@ public class WalKStepActivity extends Activity {
 
                 String now_status = "跑了 " + k + "- 花了 " + s + "- 消耗" + kr + "- 目前 " + stepss;
 
-                SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "完成");
-
                 double dhot = time * weight;
                 Log.d(TAG, "onClick: " + dhot);
+
+                SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "完成");
+
+                DBSQL.insertDiary(WalKStepActivity.this, "-1", "-1", "計步器", kr);
+
+
+
                 if(MySharedPrefernces.getUserDhot(getApplicationContext()).equals("")){
-                    MySharedPrefernces.saveUserDhot(getApplicationContext(),nf2.format(now_shows)+"");
+                    MySharedPrefernces.saveUserDhot(getApplicationContext(),kr);
 
                 }else {
                     double dhot11 = Double.parseDouble(MySharedPrefernces.getUserDhot(getApplicationContext()));
-                    double dhot2 = dhot11+Double.parseDouble(nf2.format(now_shows));
+                    double dhot2 = dhot11+Double.parseDouble(kr);
                     MySharedPrefernces.saveUserDhot(getApplicationContext(),dhot2+"");
                 }
 
                 if(MySharedPrefernces.getUserKm(getApplicationContext()).equals("")){
-                    MySharedPrefernces.saveUserKm(getApplicationContext(),nf1.format(now_km / 1000)+"");
+                    MySharedPrefernces.saveUserKm(getApplicationContext(),k);
 
                 }else {
                     Double km  = Double.parseDouble(MySharedPrefernces.getUserKm(getApplicationContext()));
-                    Double kmAll =km+Double.parseDouble(nf1.format(now_km / 1000));
+                    Double kmAll =km+Double.parseDouble(k);
                     MySharedPrefernces.saveUserKm(getApplicationContext(),kmAll+"");
 
                 }
                 if(MySharedPrefernces.getUserStep(getApplicationContext()).equals("")){
-                    MySharedPrefernces.saveUserStep(getApplicationContext(),steps+"");
+                    MySharedPrefernces.saveUserStep(getApplicationContext(),stepss);
 
                 }else {
                     int step =Integer.parseInt(MySharedPrefernces.getUserStep(getApplicationContext())) ;
-                    int stepAll = step+steps;
+                    int stepAll = step+Integer.parseInt(stepss);
                     MySharedPrefernces.saveUserStep(getApplicationContext(),stepAll+"");
 
                 }
-                DBSQL.insertDiary(WalKStepActivity.this, String.valueOf(dhot), "-1", "計步器", kr);
-
                 counter = 0;
                 running.setEnabled(true);
                 ttimer.setText("0:0");
@@ -395,6 +398,9 @@ public class WalKStepActivity extends Activity {
                 start = 0;
                 steps = 0;
                 ssteps.setText("0" + "步");
+                shows.setText("0");
+
+
 //                getStoreList();
             }
 
@@ -555,12 +561,12 @@ public class WalKStepActivity extends Activity {
 //                    Message msg = new Message();
 //                    msg.what = MSG_UPDATE_KM;
 //                    myHandler.sendMessage(msg);
-                     nf1 = new java.text.DecimalFormat("###,##0.000");
+                    nf1 = new java.text.DecimalFormat("###,###");
                     km.setText(nf1.format(now_km / 1000));
 
                     Log.i("TAG", "data: " + nf1.format(now_km / 1000));
 
-                     nf2 = new java.text.DecimalFormat("###,##0.0000");
+                     nf2 = new java.text.DecimalFormat("###,###");
                     shows.setText(nf2.format(now_shows));
 
 
@@ -601,41 +607,41 @@ public class WalKStepActivity extends Activity {
         if (timer != null)
             timer.cancel();
     }
-
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-
-        menu.add(0, MENU_QUERY, 0, "每日查詢");
-        menu.add(0, MENU_LOGIN, 0, "切換使用者");
-        menu.add(0, MENU_USERMGR, 0, "使用者管理");
-
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case MENU_QUERY:
-                Intent app = new Intent(WalKStepActivity.my, Query.class);
-                Bundle rdata = new Bundle();
-                rdata.putString("name", name);
-                app.putExtras(rdata);
-                startActivity(app);
-                return true;
-            case MENU_LOGIN:
-                login();
-                return true;
-            case MENU_USERMGR:
-                app = new Intent(WalKStepActivity.my, UserMgr.class);
-                startActivity(app);
-                return true;
-            case MENU_EXIT:
-
-                return true;
-        }
-
-        return true;
-    }
+//
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        super.onCreateOptionsMenu(menu);
+//
+//        menu.add(0, MENU_QUERY, 0, "每日查詢");
+//        menu.add(0, MENU_LOGIN, 0, "切換使用者");
+//        menu.add(0, MENU_USERMGR, 0, "使用者管理");
+//
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {
+//            case MENU_QUERY:
+//                Intent app = new Intent(WalKStepActivity.my, Query.class);
+//                Bundle rdata = new Bundle();
+//                rdata.putString("name", name);
+//                app.putExtras(rdata);
+//                startActivity(app);
+//                return true;
+//            case MENU_LOGIN:
+//                login();
+//                return true;
+//            case MENU_USERMGR:
+//                app = new Intent(WalKStepActivity.my, UserMgr.class);
+//                startActivity(app);
+//                return true;
+//            case MENU_EXIT:
+//
+//                return true;
+//        }
+//
+//        return true;
+//    }
 
 
     protected boolean isRouteDisplayed() {

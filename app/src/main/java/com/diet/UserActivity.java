@@ -178,8 +178,9 @@ public class UserActivity extends Activity implements MfirebaeCallback {
         mUserName.setText(mUserNameStr);
         if (mUserMailStr.equals("")) mUserEmail.setText("無資料");
         else mUserEmail.setText(mUserMailStr);
-        if (!mUserLvBoolean) mUserLv.setText("普通會員");
-        else mUserLv.setText("尊榮會員");
+//
+//        if (!mUserLvBoolean) mUserLv.setText("普通會員");
+//        else mUserLv.setText("尊榮會員");
     }
 
     @Override

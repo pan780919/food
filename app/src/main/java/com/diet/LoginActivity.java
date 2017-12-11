@@ -286,7 +286,10 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mfi
             LoginActivity.this.finish();
             MySharedPrefernces.saveIsBuyed(LoginActivity.this,false);
         } else {
-
+            new AlertDialog.Builder(this)
+                    .setTitle("註冊失敗")
+                    .setMessage("註冊失敗 請重新註冊")
+                    .setNegativeButton("",null);
         }
 
     }
