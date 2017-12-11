@@ -59,11 +59,12 @@
             android:layout_gravity="left">
 
             <Button
+                android:visibility="gone"
                 android:background="#00BFFF"
                 android:id="@+id/button"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="選擇日期" />
+                android:text="日期" />
 
             <TextView
                 android:id="@+id/mdate"
@@ -117,7 +118,7 @@
     </TableRow>
 
     <TableRow
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         android:id="@+id/wi"
         android:layout_width="320dp"
         android:layout_height="93dp"

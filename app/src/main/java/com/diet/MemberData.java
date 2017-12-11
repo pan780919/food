@@ -36,7 +36,7 @@ public class MemberData {
     public String Recommendedheat;
     public String today_hot;
     public String today_dhot;
-    public String toady_km;
+    public String today_km;
     public String today_steps;
     public String member_photo;
 

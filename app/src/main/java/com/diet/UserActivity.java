@@ -538,7 +538,7 @@ public class UserActivity extends Activity implements MfirebaeCallback {
             map.put(MemberData.STANDARDWEIGHT, memberData.StandardWeight);
             map.put(MemberData.TODAY_DHOT, memberData.today_dhot);
             map.put(MemberData.TODAY_HOT, memberData.today_hot);
-            map.put(MemberData.TODAY_KM, memberData.toady_km);
+            map.put(MemberData.TODAY_KM, memberData.today_km);
             map.put(MemberData.TODAY_STEPS, memberData.today_steps);
             map.put(MemberData.MEMBER_PHOTO, MySharedPrefernces.getUserPic(this));
             mfiebaselibsClass.setFireBaseDB(url + key, key, map);
