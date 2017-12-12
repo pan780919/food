@@ -197,7 +197,11 @@ public class WalKStepActivity extends Activity {
                 dbHelper.onUpgrade(db, --DB_VERSION, DB_VERSION);
         }
 
-
+        name = MySharedPrefernces.getUserName(WalKStepActivity.this);
+        age = 20;
+        tsex = MySharedPrefernces.getUserSex(WalKStepActivity.this);
+        weight =MySharedPrefernces.getUserWeight(WalKStepActivity.this);
+        tall = MySharedPrefernces.getUserTall(WalKStepActivity.this);
         sview = (ScrollView) findViewById(R.id.sview);
         ssteps = (TextView) findViewById(R.id.textView1);
         ttimer = (TextView) findViewById(R.id.textView7);
@@ -331,10 +335,10 @@ public class WalKStepActivity extends Activity {
                 ttimer.setText("0:0");
                 tpause.setEnabled(false);
                 treset.setEnabled(false);
-                km.setText("0 km");
+                km.setText("0");
                 start = 0;
                 steps = 0;
-                ssteps.setText("0" + "步");
+                ssteps.setText("0");
 
             }
 
@@ -360,6 +364,17 @@ public class WalKStepActivity extends Activity {
                 SQLHandler.insert_data(WalKStepActivity.my, name, Integer.toString(section), kr, Integer.toString(steps), k, now_status, "完成");
 
                 DBSQL.insertDiary(WalKStepActivity.this, "-1", "-1", "計步器", kr);
+
+
+                if(MySharedPrefernces.getUserDhot(getApplicationContext()).equals("")){
+                    MySharedPrefernces.saveUserDhot(getApplicationContext(),kr);
+
+                }else {
+                    double dhot11 = Double.parseDouble(MySharedPrefernces.getUserDhot(getApplicationContext()));
+                    double dhot2 = dhot11+Double.parseDouble(kr);
+                    MySharedPrefernces.saveUserDhot(getApplicationContext(),dhot2+"");
+                }
+
 
 
 
@@ -394,10 +409,10 @@ public class WalKStepActivity extends Activity {
                 running.setEnabled(true);
                 ttimer.setText("0:0");
                 tpause.setEnabled(false);
-                km.setText("0 km");
+                km.setText("0");
                 start = 0;
                 steps = 0;
-                ssteps.setText("0" + "步");
+                ssteps.setText("0");
                 shows.setText("0");
 
 
@@ -476,11 +491,11 @@ public class WalKStepActivity extends Activity {
 
         section = 1;
         mchildid = 0;
-        name = MySharedPrefernces.getUserName(WalKStepActivity.this);
-        age = 20;
-        tsex = MySharedPrefernces.getUserSex(WalKStepActivity.this);
-        weight = MySharedPrefernces.getUserWeight(WalKStepActivity.this);
-        tall = MySharedPrefernces.getUserTall(WalKStepActivity.this);
+//        name = MySharedPrefernces.getUserName(WalKStepActivity.this);
+//        age = 20;
+//        tsex = MySharedPrefernces.getUserSex(WalKStepActivity.this);
+//        weight = MySharedPrefernces.getUserWeight(WalKStepActivity.this);
+//        tall = MySharedPrefernces.getUserTall(WalKStepActivity.this);
 
         mmode.setText("未設定目標");
 
@@ -526,7 +541,7 @@ public class WalKStepActivity extends Activity {
         }
     }
 
-    private  java.text.DecimalFormat nf1,nf2;
+
     private final SensorEventListener SensorL = new SensorEventListener() {
         public void onSensorChanged(SensorEvent event) {
             if (pause == 0 && start == 1) {
@@ -556,21 +571,23 @@ public class WalKStepActivity extends Activity {
                     } else {
                         now_shows = (now_km / 1000) * weight * 0.98;
                     }
+                    Log.d(TAG, "onSensorChanged: "+weight);
 
 
 //                    Message msg = new Message();
 //                    msg.what = MSG_UPDATE_KM;
 //                    myHandler.sendMessage(msg);
-                    nf1 = new java.text.DecimalFormat("###,###");
+                    java.text.DecimalFormat nf1 = new java.text.DecimalFormat("###,###");
                     km.setText(nf1.format(now_km / 1000));
 
                     Log.i("TAG", "data: " + nf1.format(now_km / 1000));
 
-                     nf2 = new java.text.DecimalFormat("###,###");
+                    java.text.DecimalFormat  nf2 = new java.text.DecimalFormat("###,###");
                     shows.setText(nf2.format(now_shows));
+                    Log.i("TAG", "data: " + nf2.format(now_shows));
 
+                    ssteps.setText(Integer.toString(steps));
 
-                    ssteps.setText(Integer.toString(steps) + "步");
                     Log.d(TAG, "onSensorChanged: "+mygoal);
                     if (mygoal != 0) {
                         if (steps >= mygoal) {

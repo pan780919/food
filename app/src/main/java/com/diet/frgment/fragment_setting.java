@@ -472,10 +472,20 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
             e.printStackTrace();
         }
 
+
         TODAY_DHOT = MySharedPrefernces.getUserDhot(getActivity());
         TODAY_HOT = MySharedPrefernces.getUserhot(getActivity());
         TODAY_KM = MySharedPrefernces.getUserKm(getActivity());
         TODAY_STEPS = MySharedPrefernces.getUserStep(getActivity());
+        if(!TODAY_DHOT.equals("")){
+            double d = Double.parseDouble(TODAY_DHOT);
+            rmsg += "今日總共消耗熱量:" +String.format("%.3f", d) + "\n";
+        }
+        if(!TODAY_KM.equals("")){
+            double d = Double.parseDouble(TODAY_KM);
+            rmsg += "今日總公里數:" + String.format("%.3f", d) + "\n";
+        }
+
         rmsg += "今日總共攝取熱量:" +TODAY_HOT + "\n";
         rmsg += "今日總共消耗熱量:" +TODAY_DHOT + "\n";
         rmsg += "今日總公里數:" + TODAY_KM + "\n";
@@ -613,7 +623,7 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
                     selector = memberlist.size() - 1;
 
                     account = n1;
-                        setMemberlist();
+                    setMemberlist();
                     refresh_msg();
                     MySharedPrefernces.saveIsBuyed(getActivity(), true);
                 }
@@ -844,6 +854,9 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
             MySharedPrefernces.saveUserKm(getActivity(),mMemberData.today_km);
             MySharedPrefernces.saveUserhot(getActivity(),mMemberData.today_hot);
             MySharedPrefernces.saveUserDhot(getActivity(),mMemberData.today_dhot);
+            MySharedPrefernces.saveUserName(getActivity(),mMemberData.name);
+            MySharedPrefernces.saveUserTall(getActivity(),Integer.parseInt(mMemberData.height));
+            MySharedPrefernces.saveUserWeight(getActivity(),Integer.parseInt(mMemberData.weight));
             refresh_msg();
             progressDialog.dismiss();
 

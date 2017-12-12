@@ -2,6 +2,9 @@ package com.diet;
 
 public class Item
 {
+
+
+
     public final String text;
     public final int icon;
     public Item(String text, Integer icon) {

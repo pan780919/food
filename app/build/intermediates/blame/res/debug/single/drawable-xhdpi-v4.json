@@ -68,12 +68,12 @@
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_connecting_02_dark.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_on_12_dark.png",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_on_12_dark.png"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/exo_controls_next.png",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.0.3/res/drawable-xhdpi-v4/exo_controls_next.png"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_on_12_dark.png",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_on_12_dark.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_on_13_light.png",
@@ -128,12 +128,12 @@
         "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/p19.jpg"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_on_19_light.png",
-        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_on_19_light.png"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/cast_ic_notification_on.png",
         "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.0.1/res/drawable-xhdpi-v4/cast_ic_notification_on.png"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_media_route_on_19_light.png",
+        "source": "/Users/jackpan/food/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/drawable-xhdpi-v4/ic_media_route_on_19_light.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png",
