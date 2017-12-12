@@ -202,6 +202,7 @@ public class WalKStepActivity extends Activity {
         tsex = MySharedPrefernces.getUserSex(WalKStepActivity.this);
         weight =MySharedPrefernces.getUserWeight(WalKStepActivity.this);
         tall = MySharedPrefernces.getUserTall(WalKStepActivity.this);
+
         sview = (ScrollView) findViewById(R.id.sview);
         ssteps = (TextView) findViewById(R.id.textView1);
         ttimer = (TextView) findViewById(R.id.textView7);
@@ -383,7 +384,9 @@ public class WalKStepActivity extends Activity {
 
                 }else {
                     double dhot11 = Double.parseDouble(MySharedPrefernces.getUserDhot(getApplicationContext()));
+                    Log.d(TAG, "onClick: "+dhot11);
                     double dhot2 = dhot11+Double.parseDouble(kr);
+                    Log.d(TAG, "onClick: "+dhot2);
                     MySharedPrefernces.saveUserDhot(getApplicationContext(),dhot2+"");
                 }
 
@@ -391,8 +394,10 @@ public class WalKStepActivity extends Activity {
                     MySharedPrefernces.saveUserKm(getApplicationContext(),k);
 
                 }else {
-                    Double km  = Double.parseDouble(MySharedPrefernces.getUserKm(getApplicationContext()));
-                    Double kmAll =km+Double.parseDouble(k);
+                    double km  = Double.parseDouble(MySharedPrefernces.getUserKm(getApplicationContext()));
+                    Log.d(TAG, "onClick: "+km);
+                    double kmAll =km+Double.parseDouble(k);
+                    Log.d(TAG, "onClick: "+kmAll);
                     MySharedPrefernces.saveUserKm(getApplicationContext(),kmAll+"");
 
                 }
@@ -577,12 +582,12 @@ public class WalKStepActivity extends Activity {
 //                    Message msg = new Message();
 //                    msg.what = MSG_UPDATE_KM;
 //                    myHandler.sendMessage(msg);
-                    java.text.DecimalFormat nf1 = new java.text.DecimalFormat("###,###");
+                    java.text.DecimalFormat nf1 = new java.text.DecimalFormat("###,##0.000");
                     km.setText(nf1.format(now_km / 1000));
 
                     Log.i("TAG", "data: " + nf1.format(now_km / 1000));
 
-                    java.text.DecimalFormat  nf2 = new java.text.DecimalFormat("###,###");
+                    java.text.DecimalFormat nf2 = new java.text.DecimalFormat("###,##0.0000");
                     shows.setText(nf2.format(now_shows));
                     Log.i("TAG", "data: " + nf2.format(now_shows));
 
@@ -590,21 +595,9 @@ public class WalKStepActivity extends Activity {
 
                     Log.d(TAG, "onSensorChanged: "+mygoal);
                     if (mygoal != 0) {
-                        if (steps >= mygoal) {
+                        if (steps == mygoal) {
                             mper.start();
-                            if(steps>mygoal){
-                                if(mper.isPlaying()) {
-                                    Log.d(TAG, "onSensorChanged: " + "isplay");
-                                    mper.pause();
-                                    mygoal = 0;
-                                }else {
-                                    Log.d(TAG, "onSensorChanged: "+"no");
-                                    mper.start();
-                                }
-
-                            }
-
-
+                            mygoal = 0;
                         }
 
                     }
@@ -624,6 +617,7 @@ public class WalKStepActivity extends Activity {
         if (timer != null)
             timer.cancel();
     }
+
 //
 //    public boolean onCreateOptionsMenu(Menu menu) {
 //        super.onCreateOptionsMenu(menu);
@@ -919,6 +913,9 @@ public class WalKStepActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
+        if(mper!=null){
+            mper.pause();
+        }
     }
 
     public void getStoreList() {

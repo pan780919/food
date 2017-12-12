@@ -477,18 +477,28 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
         TODAY_HOT = MySharedPrefernces.getUserhot(getActivity());
         TODAY_KM = MySharedPrefernces.getUserKm(getActivity());
         TODAY_STEPS = MySharedPrefernces.getUserStep(getActivity());
+        DecimalFormat mDecimalFormat2 = new DecimalFormat("#.##");
+
         if(!TODAY_DHOT.equals("")){
-            double d = Double.parseDouble(TODAY_DHOT);
-            rmsg += "今日總共消耗熱量:" +String.format("%.3f", d) + "\n";
+            Log.d(TAG, "refresh_msg: "+TODAY_DHOT);
+            rmsg += "今日總共消耗熱量:" + mDecimalFormat.format(Double.parseDouble(TODAY_DHOT)) + "\n";
+            Log.d(TAG, "refresh_msg: "+mDecimalFormat.format(Double.parseDouble(TODAY_DHOT)));
+        }else {
+            rmsg += "今日總共消耗熱量:" +TODAY_DHOT + "\n";
         }
         if(!TODAY_KM.equals("")){
             double d = Double.parseDouble(TODAY_KM);
-            rmsg += "今日總公里數:" + String.format("%.3f", d) + "\n";
+            Log.d(TAG, "refresh_msg: "+TODAY_KM);
+            rmsg += "今日總公里數:" + mDecimalFormat.format(Double.parseDouble(TODAY_KM))+ "\n";
+            Log.d(TAG, "refresh_msg: "+mDecimalFormat.format(Double.parseDouble(TODAY_KM)));
+
+        }else {
+            rmsg += "今日總公里數:" + TODAY_KM + "\n";
+
         }
 
         rmsg += "今日總共攝取熱量:" +TODAY_HOT + "\n";
-        rmsg += "今日總共消耗熱量:" +TODAY_DHOT + "\n";
-        rmsg += "今日總公里數:" + TODAY_KM + "\n";
+
         rmsg += "今日總步數:" + TODAY_STEPS + "\n";
         if(mMemberData!=null){
             NAME = mMemberData.name;
