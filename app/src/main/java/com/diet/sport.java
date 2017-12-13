@@ -15,6 +15,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -239,6 +240,7 @@ public class sport extends Activity implements OnClickListener {
                         cb[i].setText(item.foodname.get(i));
                         ll.addView(cb[i]);
                         et[i] = new EditText(this);
+                        et[i].setInputType(InputType.TYPE_CLASS_NUMBER);
                         et[i].setText("0");
                         ll.addView(et[i]);
                     }

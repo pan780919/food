@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.support.v4.app.Fragment;
 
 import android.content.Intent;
@@ -120,6 +121,9 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
 
         menu = new ArrayList<HashMap<String, Object>>();
         msg = (TextView) v.findViewById(R.id.rrmsg);
+        TextView t = (TextView) v.findViewById(R.id.widget37);
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/wt028.ttf");
+        t.setTypeface(font);
         memberlist = new ArrayList<member>();
         HashMap<String, Object> map = new HashMap<String, Object>();
 
@@ -552,12 +556,14 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
         twe.setText("體重: ");
         we = new EditText(getActivity());
         we.setText("");
+        we.setInputType(InputType.TYPE_CLASS_NUMBER);
         ll.addView(twe);
         ll.addView(we);
 
         the = new TextView(getActivity());
         the.setText("身高: ");
         he = new EditText(getActivity());
+        he.setInputType(InputType.TYPE_CLASS_NUMBER);
         he.setText("");
         ll.addView(the);
         ll.addView(he);
@@ -722,14 +728,14 @@ public class fragment_setting extends Fragment implements MfirebaeCallback {
         twe = new TextView(getActivity());
         twe.setText("體重: ");
         we = new EditText(getActivity());
-
+        we.setInputType(InputType.TYPE_CLASS_NUMBER);
         ll.addView(twe);
         ll.addView(we);
 
         the = new TextView(getActivity());
         the.setText("身高: ");
         he = new EditText(getActivity());
-
+        he.setInputType(InputType.TYPE_CLASS_NUMBER);
         ll.addView(the);
         ll.addView(he);
 

@@ -8,14 +8,15 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 <TextView android:text="TextView1" 
  android:id="@+id/topTextView"  
  android:layout_width="fill_parent"  
- android:textSize="14dp"
- android:textColor="#00BFFF"
+ android:textSize="20dp"
+ android:textColor="#0000CD"
  android:layout_height="wrap_content"></TextView>  
 
-<TextView android:text="TextView2" 
+<TextView android:text="TextView2"
+    android:textSize="18dp"
   android:id="@+id/bottomTextView"  
   android:layout_below="@+id/topTextView" 
   android:layout_width="fill_parent"   
-  android:textColor="#00BFFF"
+  android:textColor="#0000CD"
   android:layout_height="wrap_content"></TextView>  
 </RelativeLayout>

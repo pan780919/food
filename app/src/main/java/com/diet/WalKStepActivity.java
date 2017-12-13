@@ -471,6 +471,8 @@ public class WalKStepActivity extends Activity {
                 tdate.setText("(步)");
                 ddate = new EditText(WalKStepActivity.this);
                 ddate.setText("");
+                ddate.setInputType(InputType.TYPE_CLASS_NUMBER);
+
                 ll.addView(tdate);
                 ll.addView(ddate);
 
