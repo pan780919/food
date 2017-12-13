@@ -58,16 +58,13 @@ public class MusicActivity extends AppCompatActivity implements
         btnStop = (Button)findViewById(R.id.btnStop);   //參照到停止鈕
         ckbLoop = (CheckBox)findViewById(R.id.ckbLoop); //參照到重複播放多選鈕
 
-        uri = Uri.parse("android.resource://" + //預設會播放程式內的音樂檔
-                getPackageName() + "/" + R.raw.likey);
-        txvName.setText("Likey.mp3");         //在畫面中顯示檔名
-        txvUri.setText("程式內的樂曲：" + uri.toString());//顯示 Uri
+
 
         mper = new MediaPlayer();           //建立 MediaPlayer 物件
         mper.setOnPreparedListener(this);   //設定 3 個事件監聽器
         mper.setOnErrorListener(this);
         mper.setOnCompletionListener(this);
-        tos = Toast.makeText(this, "", Toast.LENGTH_SHORT); //建立 Toast 物件
+//        tos = Toast.makeText(this, "", Toast.LENGTH_SHORT); //建立 Toast 物件
         prepareMedia();   //準備播放指定的影音檔
 
     }
@@ -141,24 +138,43 @@ public class MusicActivity extends AppCompatActivity implements
 
     @Override
     public boolean onError(MediaPlayer mp, int what, int extra) {
-        tos.setText("發生錯誤，停止播放");  //顯示錯誤訊息
-        tos.show();
+//        tos.setText("發生錯誤，停止播放");  //顯示錯誤訊息
+//        tos.show();
         return true;
     }
 
     //********************************************************
 
     public void onMpPlay(View v) {
-//        finish();//按下【播放】鈕時
-        if(isVideo) {   //如果是影片
-            Intent it = new Intent(this, MediaStore.Video.class); //建立開啟 Video Activity 的 Intent
-            it.putExtra("uri", uri.toString());   //將影片的 Uri 以 "uri" 為名加入 Intent 中
-            startActivity(it);    //啟動 Video Activity
-            return;
+
+        try{
+            if(isVideo) {   //如果是影片
+                Intent it = new Intent(this, MediaStore.Video.class); //建立開啟 Video Activity 的 Intent
+                it.putExtra("uri", uri.toString());   //將影片的 Uri 以 "uri" 為名加入 Intent 中
+                startActivity(it);    //啟動 Video Activity
+                return;
+            }
+            Log.d(TAG, "onMpPlay: "+uri.toString());
+            if(uri == null){
+                return;
+            }
+            if(uri.equals("")){
+                return;
+            }
+
+            txvName.setText(getFilename(uri));         //在畫面中顯示檔名
+            txvUri.setText("程式內的樂曲：" + uri.toString());//顯示 Uri
+            Intent svc=new Intent(this, BackgroundSoundService.class);
+            svc.putExtra("uri", uri.toString());
+            Log.d(TAG, "onMpPlay: "+uri.toString());
+            startService(svc);
+
+        }catch (Exception e){
+            e.printStackTrace();
+
         }
-        Intent svc=new Intent(this, BackgroundSoundService.class);
-        svc.putExtra("uri", uri.toString());
-        startService(svc);//OR stopService(svc);
+//        finish();//按下【播放】鈕時
+//OR stopService(svc);
 //        if (mper.isPlaying()) {  //如果正在播, 就暫停
 //            mper.pause();   //暫停播放
 //            btnPlay.setText("繼續");
@@ -186,27 +202,34 @@ public class MusicActivity extends AppCompatActivity implements
             mper.setLooping(false);  //設定不要重複播放
     }
 
-    public void onMpBackward(View v) {   //按下倒退圖形鈕時
-        if(!btnPlay.isEnabled()) return; //如果還沒準備好(播放鈕不能按), 則不處理
-        int len = mper.getDuration();       //讀取音樂長度
-        int pos = mper.getCurrentPosition();//讀取目前播放位置
-        pos -= 10000;		                //倒退 10 秒 (10000ms)
-        if(pos <0) pos = 0;                 //不可小於 0
-        mper.seekTo(pos);                   //移動播放位置
-        tos.setText("倒退10秒：" + pos/1000 + "/" + len/1000);  //顯示訊息
-        tos.show();
+    public void onMpBackward(View v) {
+        backgroundSoundService.onMpBackward();
+        //按下倒退圖形鈕時
+//        if(!btnPlay.isEnabled()) return; //如果還沒準備好(播放鈕不能按), 則不處理
+//        int len = mper.getDuration();       //讀取音樂長度
+//        int pos = mper.getCurrentPosition();//讀取目前播放位置
+//        pos -= 10000;		                //倒退 10 秒 (10000ms)
+//        if(pos <0) pos = 0;                 //不可小於 0
+//        mper.seekTo(pos);                   //移動播放位置
+//        tos.setText("倒退10秒：" + pos/1000 + "/" + len/1000);  //顯示訊息
+//        tos.show();
     }
 
-    public void onMpForward(View v) {   //按下前進圖形鈕時
-        if(!btnPlay.isEnabled()) return; //如果還沒準備好(播放鈕不能按), 則不處理
-        int len = mper.getDuration();       //讀取音樂長度
-        int pos = mper.getCurrentPosition();//讀取目前播放位置
-        pos += 10000;		                //前進 10 秒 (10000ms)
-        if(pos > len) pos = len;            //不可大於總秒數
-        mper.seekTo(pos);                   //移動播放位置
-        tos.setText("前進10秒：" + pos/1000 + "/" + len/1000);  //顯示訊息
-        tos.show();
-    }
+    public void onMpForward(View v) {
+            backgroundSoundService.onMpForward();
+            ;}
+//按下前進圖形鈕時
+//        if(!btnPlay.isEnabled()) return; //如果還沒準備好(播放鈕不能按), 則不處理
+//        int len = mper.getDuration();       //讀取音樂長度
+//        int pos = mper.getCurrentPosition();//讀取目前播放位置
+//        Log.d(TAG, "onMpForward: "+len);
+//        Log.d(TAG, "onMpForward: "+pos);
+//        pos += 10000;		                //前進 10 秒 (10000ms)
+//        if(pos > len) pos = len;            //不可大於總秒數
+//        mper.seekTo(pos);                   //移動播放位置
+//        tos.setText("前進10秒：" + pos/1000 + "/" + len/1000);  //顯示訊息
+//        tos.show();
+
 
     //********************************************************
 
