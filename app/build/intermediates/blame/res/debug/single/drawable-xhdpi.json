@@ -80,12 +80,12 @@
         "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/ic_trophy.png"
     },
     {
-        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi/img_success.png",
-        "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/img_success.png"
-    },
-    {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi/nav_mag.png",
         "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/nav_mag.png"
+    },
+    {
+        "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi/img_success.png",
+        "source": "/Users/jackpan/food/app/src/main/res/drawable-xhdpi/img_success.png"
     },
     {
         "merged": "/Users/jackpan/food/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_launcher.png",

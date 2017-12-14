@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         >
         <LinearLayout
+            android:layout_marginTop="8dp"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:orientation="vertical"
@@ -32,31 +33,37 @@
                         android:textColor="#f9835e"
                         android:layout_marginLeft="12dp"
                         ></TextView>
+
                     <TextView
-                        android:layout_toRightOf="@+id/textView1"
-                        android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/textView1"
                         android:text="您的大名："
                         android:textColor="#313131"
 
                         ></TextView>
                 </RelativeLayout>
                 <LinearLayout
+                    android:layout_marginTop="16dp"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
                     android:orientation="vertical"
                     >
+
                     <EditText
-                        android:layout_height="35dp"
+                        android:id="@+id/nameedt"
                         android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="12dp"
                         android:layout_marginRight="12dp"
                         android:paddingLeft="8dp"
-                        android:id="@+id/nameedt"></EditText>
+                        android:layout_marginTop="12dp"></EditText>
                 </LinearLayout>
 
             </LinearLayout>>
             <LinearLayout
+                android:layout_marginTop="16dp"
+
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:orientation="vertical"
@@ -70,6 +77,7 @@
 
                     >
                     <TextView
+
                         android:id="@+id/textView2"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
@@ -87,12 +95,14 @@
                         ></TextView>
                 </RelativeLayout>
                 <LinearLayout
+                    android:layout_marginTop="20dp"
+
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
                     android:orientation="vertical"
                     >
                     <EditText
-                        android:layout_height="35dp"
+                        android:layout_height="match_parent"
                         android:layout_width="match_parent"
                         android:layout_marginLeft="12dp"
                         android:layout_marginRight="12dp"
@@ -102,6 +112,8 @@
 
             </LinearLayout>>
             <LinearLayout
+                android:layout_marginTop="8dp"
+
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:orientation="vertical"
@@ -183,13 +195,16 @@
                     android:layout_width="match_parent"
                     android:orientation="vertical"
                     >
+
                     <EditText
-                        android:layout_height="35dp"
+                        android:id="@+id/tittle"
                         android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="12dp"
                         android:layout_marginRight="12dp"
+                        android:layout_marginTop="16dp"
                         android:paddingLeft="8dp"
-                        android:id="@+id/tittle"></EditText>
+                        android:paddingTop="16dp"></EditText>
                 </LinearLayout>
 
             </LinearLayout>>
@@ -237,6 +252,7 @@
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
+                android:layout_marginTop="120dp"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:orientation="vertical"
