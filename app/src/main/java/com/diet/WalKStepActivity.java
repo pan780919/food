@@ -2,17 +2,6 @@ package com.diet;
 
 //import java.util.ArrayList;
 
-import java.io.File;
-import java.text.SimpleDateFormat;
-
-
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Timer;
-import java.util.TimerTask;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -25,7 +14,6 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-//import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
@@ -33,11 +21,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-//import android.util.Log;
 import android.text.InputType;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -47,11 +34,23 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
-//import android.widget.Toast;
 
 import com.sqlite.SQLiteHelper;
 import com.sqlite.account;
 import com.sqlite.recdata;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Timer;
+import java.util.TimerTask;
+
+//import android.graphics.drawable.Drawable;
+//import android.util.Log;
+//import android.widget.Toast;
 
 public class WalKStepActivity extends Activity {
     private static final int MSG_DIALOG_REFRESH = 1;
@@ -482,6 +481,7 @@ public class WalKStepActivity extends Activity {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         mygoal = Integer.valueOf(ddate.getText().toString());
                         mmode.setText("目標:" + mygoal);
+                        goalboolean = false;
 
                     }
                 });
@@ -548,7 +548,7 @@ public class WalKStepActivity extends Activity {
         }
     }
 
-
+    private  boolean goalboolean = true;
     private final SensorEventListener SensorL = new SensorEventListener() {
         public void onSensorChanged(SensorEvent event) {
             if (pause == 0 && start == 1) {
@@ -600,6 +600,10 @@ public class WalKStepActivity extends Activity {
                         if (steps == mygoal) {
                             mper.start();
                             mygoal = 0;
+                            goalboolean = true;
+                        }else if(steps<mygoal){
+                            goalboolean = false;
+
                         }
 
                     }
@@ -619,7 +623,6 @@ public class WalKStepActivity extends Activity {
         if (timer != null)
             timer.cancel();
     }
-
 //
 //    public boolean onCreateOptionsMenu(Menu menu) {
 //        super.onCreateOptionsMenu(menu);
@@ -918,8 +921,30 @@ public class WalKStepActivity extends Activity {
         if(mper!=null){
             mper.pause();
         }
-    }
 
+    }
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        // TODO Auto-generated method stub
+        if (keyCode == event.KEYCODE_BACK) {
+            Log.d(TAG, "onKeyDown: "+goalboolean);
+            if(!goalboolean){
+                Log.d(TAG, "onKeyDown: "+"in");
+                new AlertDialog.Builder(WalKStepActivity.this)
+                        .setTitle("小提醒")
+                        .setMessage("您的目標尚未完成")
+                        .setNegativeButton(" 確定", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                goalboolean = true;
+                                dialogInterface.dismiss();
+                                finish();
+                            }
+                        }).show();
+
+            }
+        }
+        return true;
+    }
     public void getStoreList() {
 //int search_list_size = MyGoogleMap.my.search_list.size();
 

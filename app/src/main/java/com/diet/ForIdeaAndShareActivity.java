@@ -91,6 +91,12 @@ public class ForIdeaAndShareActivity extends Activity implements View.OnClickLis
 
     private void initLayout() {
         mNameEdt = (EditText) findViewById(R.id.nameedt);
+        if(MySharedPrefernces.getUserName(getApplicationContext()).equals("")){
+            mNameEdt.setText("無暱稱,請輸入名字");
+        }else {
+          mNameEdt.setText(MySharedPrefernces.getUserName(getApplicationContext()));
+        }
+        Log.d(TAG, "initLayout: "+ mNameEdt.getText().toString().trim());
         mMailEdt = (EditText) findViewById(R.id.mailedt);
         mTiitleEdt = (EditText) findViewById(R.id.tittle);
         mMessageEdt = (EditText) findViewById(R.id.ideaedt);

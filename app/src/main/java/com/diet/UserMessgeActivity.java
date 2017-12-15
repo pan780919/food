@@ -1,11 +1,10 @@
 package com.diet;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
-import android.app.Activity;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
@@ -13,13 +12,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
-import com.firebase.client.MutableData;
-import com.firebase.client.Transaction;
 import com.firebase.client.ValueEventListener;
-import com.google.gson.Gson;
 
 import java.util.Calendar;
 import java.util.HashMap;
@@ -64,7 +61,7 @@ public class UserMessgeActivity extends Activity implements View.OnClickListener
     }
     private void toMsg(final String msg) {
         String value = tomsg;
-        String Usrmsg="對"+name+"說："+"\t"+msg+"\t"+s;
+        String Usrmsg=MySharedPrefernces.getUserName(getApplicationContext())+"對"+name+"說："+"\t"+msg+"\t"+s;
         String tomsg = Usrmsg+"\n"+value;
         String url = "https://food-4997e.firebaseio.com/foodList";
         Firebase mFirebaseRef = new Firebase(url);
